@@ -1,0 +1,110 @@
+
+.playlist-setting{
+    background-image: url('/assets/tablet-l/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    background-blend-mode:overlay;
+}
+.playlist-icon-top{
+    position: absolute;
+    top: 0%;
+    right: 50%;
+    transform: translate(50%);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 80px;
+}
+.playlist-icon-top h3{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 23px;
+    color: #444;
+    font-family: bree;
+}
+.playlist-icon-top img{
+    max-width: 200px;
+}
+.playlist-setting-footer{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 80px;
+}
+.playlist-setting-footer img{
+    max-width: 200px;
+}
+.playlist-setting-footer h3{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(42%);
+    font-size: 23px;
+    color: #444;
+    font-family: bree;
+}
+.main-card-container{
+    margin-top: 18%;
+}
+@media(max-width:768px)
+{
+    .playlist-setting{
+        height: 1000px;
+    }
+    .main-card-container{
+        margin-top: 40%;
+    }
+}
+@media(max-width:1149px)
+{
+    .playlist-setting{
+        height: 1020px;
+    }
+    .main-card-container{
+        margin-top: 40%;
+    }
+}
+@media(max-width:616px)
+{
+    .playlist-setting{
+        height: 1300px;
+    }
+    .main-card-container{
+        margin-top: 70%;
+    }
+}
+.leftRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    left: 0;
+}
+
+.rightRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    right: 0;
+}
+.activeImg{
+    cursor:pointer;
+}
