@@ -39,7 +39,26 @@
     font-weight: 500;
     font-family: bree;
 }
-
+.books{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    top: 12%;
+    color: #fff;
+    font-size: 25px;
+}
+.books img{
+    max-width: 140px;
+    border:none !important;
+    /* border-radius: 4px */
+}
+.mybtn{
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%);
+}
 .main-books-container{
     display: flex;
     width: 100%;
@@ -133,6 +152,9 @@
     font-family: bree;
     text-align: left;
 }
+.caption p{
+    padding: 8px;
+}
 .fav-btn{    
     position: absolute;
     top: 113%;
@@ -145,6 +167,7 @@
     width: 15px;
     height: 15px;
     margin-bottom: 10%;
+    cursor: pointer;
 }
 .fav-btn p{
     margin-right: auto;
@@ -154,6 +177,7 @@
     font-weight: bold;
     font-size: 12px;
     margin-top: 5%;
+    cursor: pointer;
 }
 #button-fav{
     display: flex;
@@ -164,11 +188,16 @@
     align-items: center;
     background: #fff;
     filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));
+    cursor: pointer;
 }
 #button-fav:focus{
     outline: none;
 }
-@media(max-width:1025px)
+favBtnClick{
+    color: white;
+    background-color: red;
+}
+/* @media(max-width:1025px)
 {    
     .books-section{
         background-size: contain;
@@ -186,19 +215,19 @@
         top: 15%;
         width: 20%;
     }
-}
-@media(max-width:500px)
+} */
+/* @media(max-width:500px)
 {
     .side-bar{
     position: relative;
     top: 10%;
-}
+    }
 .side-bar-contents img{
     transform: translate(-12%);
     width: 45px;
     height: 500px;
     border-radius: 15px;
-}
+    }
 .side-bar-contents p{
     position: absolute;
     top: 50%;
@@ -209,8 +238,9 @@
     color: #fff;
     font-weight: 500;
     font-family: bree;
-}
-}
+    }
+} */
+
 
 .playlist-icon-top{
     position: absolute;
@@ -233,6 +263,23 @@
 }
 .playlist-icon-top img{
     max-width: 200px;
+}
+.img-thumbnail{
+    border: 3px solid #fff !important;
+    position: relative;
+}
+.activeImg{
+    max-width: 100%;
+}
+.playbtn{
+    background-color: red !important;
+    color: white !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: .5em 1.5em;
+
 }
  .leftRs {
     position: absolute;
@@ -257,4 +304,111 @@
     border-radius: 999px;
     right: 0;
 }
+@media(max-width:736px){
+    .side-bar-contents img{
+        width: 60px;
+        height: 212px;
+    }
+    .side-bar{
+        top: 23%;
+    }
+    .side-bar-contents p{
+        top: 30%;
+    }
+    img.img-thumbnail{
+        width: 172px;
+    }
+    .main-books-container{
+        max-width: 80%;
+        height: 50%;
+    }
+    .rightRs{
+        top: -33px;
+        right: 26%;
+    }
+    .leftRs{
+        top: -33px;
+        left: 25%;
+    }
+    #video{
+        max-width: 60%;
+    }
 
+}
+@media(max-width:640px){
+    .rightRs{
+        right: 27%;
+    }
+    .leftRs{
+        left: 27%;
+    }
+}
+
+@media(max-width:1024px){
+.main-books-container{
+    max-width: 80%;
+    }
+    .rightRs{
+        right: 137px;
+        top: -110px;
+    }
+    .leftRs{
+        left: 138px;
+    }
+}
+
+
+/* test */
+
+
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    width: 100vw !important;
+    height: 100vh !important;
+    text-align: center;
+    z-index: -1;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    z-index: 1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

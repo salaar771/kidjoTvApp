@@ -16,8 +16,16 @@ export class SettingsComponent implements OnInit {
   langValue: any;
   off: any;
   testt: any[] = [];
+  selectedAge: any;
+  selectedTime: any;
+  selectedContent: any;
+  selectedLanguage: any;
   constructor() {
     this.off = "Off";
+    this.selectedAge = localStorage.getItem('Age');
+    this.selectedTime = localStorage.getItem('screenTimeLimit');
+    this.selectedContent = localStorage.getItem('selectedContentType');
+    this.selectedLanguage = localStorage.getItem('language');
   }
   ngOnInit() {
   }
@@ -54,16 +62,21 @@ export class SettingsComponent implements OnInit {
       return false;
     }
   }
+
   getAge(age: any) {
     localStorage.setItem('Age', age);
+    this.selectedAge = age;
   }
   getTime(time: any) {
     localStorage.setItem('screenTimeLimit', time);
+    this.selectedTime = time;
   }
   getContent(content: any) {
     localStorage.setItem('selectedContentType', content);
+    this.selectedContent = content;
   }
   getLanguage(lang: any) {
     localStorage.setItem('language', lang);
+    this.selectedLanguage = lang;
   }
 }

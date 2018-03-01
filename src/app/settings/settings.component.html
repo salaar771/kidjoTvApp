@@ -12,8 +12,8 @@
             <div class="text-box-1">
                 <h4>Filter by age</h4>
                 <ul style="    cursor: pointer;">
-                    <li style="left:50%;" *ngFor="let m of age" (click)="getAge(m)">{{m}}
-                        <img src="assets/svgs/settings_check.svg" *ngIf="setAgeTick(m)" style="  display: inline-block !important;   float: right;">
+                    <li [ngClass]="{'selected-text':selectedAge == m}" style="    text-align: center;" *ngFor="let m of age" (click)="getAge(m)">{{m}}
+                        <img src="assets/svgs/settings_check.svg" *ngIf="setAgeTick(m)">
                     </li>
                 </ul>
             </div>
@@ -23,10 +23,10 @@
             <div class="text-box-1">
                 <h4>Set time limit</h4>
                 <ul style=" cursor: pointer; ">
-                    <li *ngFor="let time of timeLimit " (click)="getTime(time) ">{{time}} Minutes
+                    <li [ngClass]="{'selected-text':selectedTime == time}" *ngFor="let time of timeLimit " (click)="getTime(time) ">{{time}} Minutes
                         <img src="assets/svgs/settings_check.svg" *ngIf="setTimeTick(time) " style=" display: inline-block !important; ">
                     </li>
-                    <li (click)="getTime(off) ">{{off}} <img src="assets/svgs/settings_check.svg " *ngIf="setTimeTick(off)" style=" display: inline-block !important; ">
+                    <li (click)="getTime(off) ">{{off}} <img src="assets/svgs/settings_check.svg " *ngIf="setTimeTick(off)">
                     </li>
                 </ul>
             </div>
@@ -37,8 +37,8 @@
             <div class="text-box-1">
                 <h4>Choose content</h4>
                 <ul style=" cursor: pointer; ">
-                    <li *ngFor="let c of content " (click)="getContent(c) ">{{c}}
-                        <img src="assets/svgs/settings_check.svg " *ngIf="setContentTick(c) " style=" display: inline-block !important; "></li>
+                    <li [ngClass]="{'selected-text':selectedContent == c}" *ngFor="let c of content " (click)="getContent(c) ">{{c}}
+                        <img src="assets/svgs/settings_check.svg " *ngIf="setContentTick(c) " style="right:-50px;"></li>
 
                 </ul>
             </div>
@@ -49,8 +49,8 @@
             <div class="text-box-1">
                 <h4>Language</h4>
                 <ul style=" cursor: pointer; ">
-                    <li *ngFor="let lang of language " (click)="getLanguage(lang) ">{{lang}}
-                        <img src="assets/svgs/settings_check.svg " *ngIf="setLanguageTick(lang) " style=" display: inline-block !important; ">
+                    <li [ngClass]="{'selected-text':selectedLanguage == lang}" *ngFor="let lang of language " (click)="getLanguage(lang) ">{{lang}}
+                        <img src="assets/svgs/settings_check.svg " *ngIf="setLanguageTick(lang) ">
                     </li>
                 </ul>
             </div>

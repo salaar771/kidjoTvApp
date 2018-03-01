@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   folders: any[] = [];
   bucketName: any;
   videoUrl: string;
+  time: any;
   public carouselTile: NgxCarousel;
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
@@ -33,18 +34,29 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.GetCard();
+    this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs: 2, sm: 4, md: 5, lg: 8, all: 0 },
+      grid: { xs: 1, sm: 3, md: 4, lg: 5, all: 0 },
       slide: 2,
       speed: 400,
       loop: true,
       animation: 'lazy',
       point: {
         visible: true,
-        pointStyles:`
+        pointStyles: `
         .ngxcarouselPoint {
           display: none;
       }
+      .ngxcarousel-inner {
+        height: 300px;
+        overflow: visible;
+    }
+      .ngx-tile.item {
+        width:15%;
+      }
+      .tile {
+        width: 60%;
+    }
         `
       },
       load: 2,
@@ -120,8 +132,9 @@ export class HomeComponent implements OnInit {
     }
     return url + 'folderImage' + this.bucketName + '/' + id + '.png';
   }
-  goToVideoPage(id: any) {
-    this.router.navigate(['./video', id]);
+  goToVideoPage(id: any, url: string, color: any) {
+    console.log(color);
+    this.router.navigate(['./video', id, url, color]);
   }
 
 }
