@@ -5,7 +5,7 @@
       <p>{{time}} min</p>
     </div>
   </div>
-  <a [routerLink]="['/favorites']">
+  <a [routerLink]="['/favorites']" #favorite class="favouriteFocus">
     <div class="playlist-icon-top">
       <img src="assets/svgs/navigation_favorites_top.svg">
       <h3>Favourite</h3>
@@ -13,20 +13,19 @@
   </a>
 
   <div class="main-card-container">
-    <ngx-carousel [inputs]="carouselTile">
-      <ngx-tile NgxCarouselItem *ngFor="let folder of folders">
-        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)">
+    <ngx-carousel [inputs]="carouselTile" (onMove)="onmoveFn($event)">
+      <ngx-tile NgxCarouselItem  class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index" >
+        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)" [ngClass]="{'imgActive':i==0}">
           <img class="activeImg img-thumbnail" [style.background]="folder[0].color " src={{folder[0].imgUrl}}/>
         </div>
       </ngx-tile>
-
-      <button NgxCarouselPrev class='leftRs'>&lt;</button>
-      <button NgxCarouselNext class='rightRs'>&gt;</button>
+      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
+      <button NgxCarouselNext #next class='rightRs'>&gt;</button>
 
     </ngx-carousel>
   </div>
 
-  <a [routerLink]="[ '/settings'] ">
+  <a [routerLink]="[ '/settings'] " #setting class="settingFocus">
     <div class="playlist-setting-footer ">
       <img src="assets/svgs/navigation_settings_bottom.svg ">
       <h3>Settings</h3>

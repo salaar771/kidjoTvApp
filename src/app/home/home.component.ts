@@ -1,11 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Input } from '@angular/core';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { RefreshWebService } from './../shared/services/RefreshWeb/index';
 import { Card } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
+declare var $: any;
 
+
+export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37,
+  Enter = 13,
+  Up_key = 38,
+  Down_key = 40
+}
 
 @Component({
   selector: 'app-home',
@@ -13,6 +22,12 @@ import { NgxCarousel } from 'ngx-carousel';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('setting') mySettingsBtn: ElementRef;
+  @ViewChild('favorite') myFavBtn: ElementRef;
+  @ViewChild('previous') myLeft: ElementRef;
+  @ViewChild('next') myRight: ElementRef;
+  videoImageUrl: any;
+
   deviceId: string;
   kidId: string;
   activeSubscription: boolean;
@@ -31,13 +46,58 @@ export class HomeComponent implements OnInit {
     private spinnerService: Ng4LoadingSpinnerService) {
     this.refreshWeb();
   }
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    console.log(event);
 
+    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+      console.log("right key ");
+      $.event.trigger({ type: 'keypress', which: "".charCodeAt(0) });
+      this.GoRight();
+    }
+
+    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+      console.log("left key ");
+      this.GoLeft();
+    }
+    if (event.keyCode === KEY_CODE.Up_key) {
+      console.log("Up key ");
+      this.GoUp();
+    }
+    if (event.keyCode === KEY_CODE.Down_key) {
+      console.log("Down key ");
+      this.GoDown();
+
+    }
+    if (event.keyCode === KEY_CODE.Enter) {
+      console.log("Enter key ");
+
+    }
+
+  }
+  onmoveFn(data) {
+    // console.log(data);
+  }
+  GoDown() {
+    this.mySettingsBtn.nativeElement.focus();
+    console.log("test");
+
+  }
+  GoUp() {
+    this.myFavBtn.nativeElement.focus();
+  }
+  GoLeft() {
+    this.myLeft.nativeElement.focus();
+  }
+  GoRight() {
+    this.myRight.nativeElement.focus();
+  }
   ngOnInit() {
     this.GetCard();
     this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs: 1, sm: 3, md: 4, lg: 5, all: 0 },
-      slide: 2,
+      grid: { xs: 1, sm: 3, md: 4, lg: 4, all: 0 },
+      slide: 1,
       speed: 400,
       loop: true,
       animation: 'lazy',
@@ -48,15 +108,24 @@ export class HomeComponent implements OnInit {
           display: none;
       }
       .ngxcarousel-inner {
-        height: 300px;
+        height: 350px;
         overflow: visible;
     }
       .ngx-tile.item {
-        width:15%;
+        width:80%;
       }
       .tile {
         width: 60%;
     }
+    .ngxcarousel-items {
+      top: 39px;
+      left:8%;
+  }
+  @media (min-width: 992px){
+  .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
+      width: 31% !important;
+  }
+}
         `
       },
       load: 2,
@@ -72,6 +141,8 @@ export class HomeComponent implements OnInit {
         console.log(data);
         this.ImageUrl = data.folderImageUrl;
         this.videoUrl = data.videoUrl;
+        this.videoImageUrl = data.videoImageUrl;
+        localStorage.setItem('videoImageUrl', this.videoImageUrl);
         localStorage.setItem('videoUrl', this.videoUrl)
         localStorage.setItem('folderImageUrl', this.ImageUrl);
         localStorage.setItem('X-Kidjo-DeviceId', data.deviceId);

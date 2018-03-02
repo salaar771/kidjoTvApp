@@ -154,6 +154,10 @@
 }
 .caption p{
     padding: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 13px;
+    font-weight: 500 !important;
 }
 .fav-btn{    
     position: absolute;
@@ -270,15 +274,17 @@ favBtnClick{
 }
 .activeImg{
     max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .playbtn{
     background-color: red !important;
     color: white !important;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%);
-    padding: .5em 1.5em;
+    padding: .2em 1em;
 
 }
  .leftRs {
@@ -412,3 +418,27 @@ favBtnClick{
     right: 35px;
   }
 }
+
+.disabled {
+    /* cursor: not-allowed; */
+    pointer-events: none;
+}
+.fa{
+    font-size: 55px !important;
+    color: #fff !important;
+}
+.favouriteFocus:focus .fa{
+    color: #333 !important;
+    /* background-color: red; */
+ }
+
+ .Duration{
+    position: absolute;
+    top: 55%;
+    background: rgba(0,0,0,.7);
+    padding: 0px 6px;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 2px;
+    left: 3%;
+ }

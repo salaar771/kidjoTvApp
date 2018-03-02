@@ -13,6 +13,7 @@ import { VgStreamingModule } from 'videogular2/streaming';
 
 
 
+
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { routes } from './app.routes';
@@ -48,7 +49,7 @@ import { FolderComponent } from './folder/folder.component';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    VgStreamingModule
+    VgStreamingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

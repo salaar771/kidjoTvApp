@@ -8,21 +8,16 @@
   </div>
   <div class="books">
     <img class="img-thumbnail" [style.background]='color' src={{imgUrl}}>
-    <a [routerLink]="['/']">
-    <button class="btn mybtn">Go Back</button>
+    <a [routerLink]="['/']" #home class="favouriteFocus">
+    <a class=" mybtn"><i class="fa fa-home"></i></a>
     </a>
   </div>
-  <!-- <a [routerLink]="['/favorites']">
-    <div class="playlist-icon-top">
-      <img src="assets/svgs/navigation_favorites_top.svg">
-      <h3>Favourite</h3>
-    </div>
-  </a> -->
   <div class="main-books-container">
     <ngx-carousel [inputs]="carouselTile">
       <ngx-tile NgxCarouselItem *ngFor="let vid of video">
-        <img class="activeImg img-thumbnail" src={{vid[0].imgUrl}}/>
+        <img class="activeImg" src={{vid[0].imgUrl}}/>
         <button class="btn playbtn" data-toggle="modal" data-target="#videoModdal" (click)="openNav()">Play</button>
+        <span class="Duration">{{vid[0].duration}} min</span>
         <!-- <div class="lock-overlay">
           <img class="lock-bar" src="assets/svgs/video_card_lock_bar.svg">
           <img class="lock-icon" src="assets/svgs/video_card_lock.svg">
@@ -44,131 +39,37 @@
     </ngx-carousel>
   </div>
 
+
+
+  <!-- Full screen modal to show video -->
+
+
   <div id="myNav" class="overlay">
-    <a href="javascript:void(0)"  class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
     <div class="overlay-content">
-      <vg-player>
+      <vg-player (onPlayerReady)="onPlayerReady($event)" [hidden]="!isPlaying">
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
-
         <vg-scrub-bar>
           <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
           <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
         </vg-scrub-bar>
-
         <vg-controls>
           <vg-play-pause></vg-play-pause>
           <vg-playback-button></vg-playback-button>
-
           <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
           <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
           <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-
           <vg-track-selector></vg-track-selector>
           <vg-mute></vg-mute>
           <vg-volume></vg-volume>
-
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-
-
-        <video #media [vgMedia]="media" [vgDash]="currentStream" [vgHls]="currentStream" id="singleVideo">
+        <video #media [vgMedia]="media" preload="auto" [vgDash]="currentStream" [vgHls]="currentStream" id="singleVideo">
         </video>
-
-
-
       </vg-player>
     </div>
   </div>
-  <!-- 
-  <div id="videoModdal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <vg-player>
-            <vg-overlay-play></vg-overlay-play>
-            <vg-buffering></vg-buffering>
-
-            <vg-scrub-bar>
-              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-              <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-            </vg-scrub-bar>
-
-            <vg-controls>
-              <vg-play-pause></vg-play-pause>
-              <vg-playback-button></vg-playback-button>
-
-              <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
-              <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
-              <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-
-              <vg-track-selector></vg-track-selector>
-              <vg-mute></vg-mute>
-              <vg-volume></vg-volume>
-
-              <vg-fullscreen></vg-fullscreen>
-            </vg-controls>
-
-
-            <video #media [vgMedia]="media" [vgDash]="currentStream" [vgHls]="currentStream" id="singleVideo">
-            </video>
-
-
-
-          </vg-player>
-        </div>
-      </div>
-
-    </div>
-  </div> -->
-
-
-
-  <div *ngIf="show">
-
-    <vg-player>
-      <vg-overlay-play></vg-overlay-play>
-      <vg-buffering></vg-buffering>
-
-      <vg-scrub-bar>
-        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-      </vg-scrub-bar>
-
-      <vg-controls>
-        <vg-play-pause></vg-play-pause>
-        <vg-playback-button></vg-playback-button>
-
-        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
-        <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
-        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-
-        <vg-track-selector></vg-track-selector>
-        <vg-mute></vg-mute>
-        <vg-volume></vg-volume>
-
-        <vg-fullscreen></vg-fullscreen>
-      </vg-controls>
-
-
-      <video #media [vgMedia]="media" [vgDash]="currentStream" [vgHls]="currentStream" id="singleVideo">
-      </video>
-
-
-
-    </vg-player>
-  </div>
-
 
 
 

@@ -155,3 +155,6 @@
     }
 }
 
+.favouriteFocus:focus .video-filter-top h3{
+    color: #4dbcae;
+ }

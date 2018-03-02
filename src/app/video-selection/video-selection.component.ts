@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { VideoService } from './../shared/services/videoService/index';
@@ -6,7 +6,18 @@ import { FavoriteService } from './../shared/services/favoritesService/index';
 import { AddFav } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
 import { Observable } from 'rxjs/Rx';
+import { VgAPI } from 'videogular2/core';
 import * as $ from 'jquery';
+
+
+export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37,
+  Enter = 13,
+  Up_key = 38,
+  Down_key = 40
+}
+
 
 
 @Component({
@@ -15,6 +26,9 @@ import * as $ from 'jquery';
   styleUrls: ['./video-selection.component.css'],
 })
 export class VideoSelectionComponent implements OnInit {
+  isPlaying: any;
+  api: VgAPI;
+  @ViewChild('home') myHomeBtn: ElementRef;
   kidID: string;
   idss: any;
   video: any[] = [];
@@ -36,7 +50,6 @@ export class VideoSelectionComponent implements OnInit {
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
 
   constructor(private route: ActivatedRoute,
-    public ref: ElementRef,
     private videoService: VideoService,
     public favService: FavoriteService,
     private spinnerService: Ng4LoadingSpinnerService) {
@@ -44,14 +57,14 @@ export class VideoSelectionComponent implements OnInit {
     this.imgUrl = Url;
     var Color = this.route.snapshot.params['color'];
     this.color = Color;
-    this.elem = this.ref.nativeElement;
+    // this.elem = this.ref.nativeElement;
     // var Url = this.route.params.subscribe(params => {
     //   this.imgUrl = +params['url'];
     //   console.log(this.imgUrl);
     // });
     var ids = this.route.params.subscribe(params => {
       this.idss = +params['id'];
-      console.log(this.idss);
+      // console.log(this.idss);
     });
     this.getSubCard();
     this.uri.push([this.manifestUri]);
@@ -61,15 +74,22 @@ export class VideoSelectionComponent implements OnInit {
     this.uri.push([this.manifestUri]);
 
   }
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    console.log(event);
+    if (event.keyCode === KEY_CODE.Up_key) {
+      console.log("Up key ");
+      this.myHomeBtn.nativeElement.focus();
+    }
 
-  
+  }
   ngOnInit() {
     this.time = localStorage.getItem('screenTimeLimit');
     // let timer = Observable.timer();
     // timer.subscribe(t => t);
     this.carouselTile = {
       grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },
-      slide: 2,
+      slide: 1,
       speed: 400,
       loop: true,
       animation: 'lazy',
@@ -78,7 +98,9 @@ export class VideoSelectionComponent implements OnInit {
         pointStyles: `
         .tile {
           position: relative;
-          max-width:80%;
+          max-width:59%;
+          transform: scale(1.5);
+          border-radius: 10px;
       }
       .ngxcarousel-inner {
         height: 450px;
@@ -86,10 +108,10 @@ export class VideoSelectionComponent implements OnInit {
       .ngxcarouselPoint {
         display: none;
     }
-    @media (max-width: 767px)
-    .ngxcarouselQfNTUq > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
-        width: 23.333333%;
-    }
+    .ngxcarousel-items {
+      top: 50px;
+      left: 60px;
+  }
 
         `
       },
@@ -117,7 +139,7 @@ export class VideoSelectionComponent implements OnInit {
       var temp = [];
       var url = "assets/tablet-l/read-2799818_1920.jpg";
       for (var index = 0; index < this.cards.length; index++) {
-        subCard = [{ 'id': this.cards[index].id, 'imgUrl': url, 'videourl': this.videoURL(this.cards[index].formats, this.cards[index].id), 'Title': this.cards[index].title }];
+        subCard = [{ 'id': this.cards[index].id, 'duration': this.cards[index].duration, 'imgUrl': this.VideoImageUrl(this.cards[index].id), 'videourl': this.videoURL(this.cards[index].formats, this.cards[index].id), 'Title': this.cards[index].title }];
 
         temp.push(subCard);
       }
@@ -161,11 +183,33 @@ export class VideoSelectionComponent implements OnInit {
       return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
     }
   }
+  VideoImageUrl(id) {
+    var url = localStorage.getItem('videoImageUrl');
+    // console.log(url);
+    this.innerheigth = window.innerHeight;
+    if (this.innerheigth <= 1440 && this.innerheigth >= 1080) {
+      this.bucketName = 'phone-l';
+    } else if (this.innerheigth <= 1080 && this.innerheigth >= 768) {
+      this.bucketName = 'phone-m';
+    } else if (this.innerheigth <= 360 && this.innerheigth >= 0) {
+      this.bucketName = 'phone-s';
+    } else if (this.innerheigth <= 2048 && this.innerheigth >= 1536) {
+      this.bucketName = 'tablet-l';
+    } else if (this.innerheigth <= 1536 && this.innerheigth >= 1440) {
+      this.bucketName = 'tablet-m';
+    } else if (this.innerheigth <= 768 && this.innerheigth >= 360) {
+      this.bucketName = 'tablet-s';
+    }
+    return url + this.bucketName + '/' + id + '.png';
+  }
   openNav() {
     document.getElementById("myNav").style.display = "block";
+    this.isPlaying = true;
+    this.api.play();
   }
   closeNav() {
     document.getElementById("myNav").style.display = "none";
+    this.api.pause();
   }
   addToFav(id: any) {
     let favourite = new AddFav();
@@ -181,4 +225,39 @@ export class VideoSelectionComponent implements OnInit {
         this.spinnerService.hide();
       });
   }
+  onPlayerReady(api: VgAPI) {
+    var x = 1;
+    this.api = api;
+
+    this.api.getDefaultMedia().subscriptions.ended.subscribe(
+      () => {
+        x++;
+        if (x > 2) {
+          var src = this.currentStream;
+          // this.setCurrentVideo("SampleVideo_1280x720_2mb.mp4", "video/mp4");
+
+          this.onPlayerReady(this.api);
+
+          setTimeout(function () {
+            $("#myButton").trigger("click");
+          }, 1000);
+
+
+          x = 0;
+        }
+        else {
+          this.api.play();
+        }
+      }
+    );
+
+  }
+  // setCurrentVideo(source: string, type: string) {
+  //   this.sources = new Array<Object>();
+  //   this.sources.push({
+  //     src: source,
+  //     type: type
+  //   });
+  //   this.api.getDefaultMedia().currentTime = 0;
+  // }
 }

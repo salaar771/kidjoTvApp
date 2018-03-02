@@ -1,11 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 
+
+
+export enum KEY_CODE {
+  Up_key = 38,
+}
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+  @ViewChild('home') myHomeBtn: ElementRef;
   age: any[] = [3, 4, 5, 6, 7];
   timeLimit: any[] = [5, 20, 40, 60, 90];
   content: any[] = ["Mix", "Entertainment", "Educational"];
@@ -26,6 +32,15 @@ export class SettingsComponent implements OnInit {
     this.selectedTime = localStorage.getItem('screenTimeLimit');
     this.selectedContent = localStorage.getItem('selectedContentType');
     this.selectedLanguage = localStorage.getItem('language');
+  }
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    console.log(event);
+
+    if (event.keyCode === KEY_CODE.Up_key) {
+      console.log("right key ");
+      this.myHomeBtn.nativeElement.focus();
+    }
   }
   ngOnInit() {
   }

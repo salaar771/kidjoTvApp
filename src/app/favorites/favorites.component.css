@@ -658,3 +658,7 @@
     right: 35px;
   }
 }
+
+.favouriteFocus:focus .footer-heading h3{
+    color: #4dbcae;
+ }
