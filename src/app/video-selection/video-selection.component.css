@@ -49,14 +49,16 @@
     font-size: 25px;
 }
 .books img{
-    max-width: 140px;
-    border:none !important;
+    max-width: 152px;
+    border: 9px solid #fff;
+    border-radius: 15px;
+    
     /* border-radius: 4px */
 }
 .mybtn{
     position: absolute;
-    top: 115%;
-    left: 50%;
+    top: -5%;
+    left: 550%;
     transform: translate(-50%);
 }
 .main-books-container{
@@ -83,7 +85,7 @@
 }
 .books img{
     max-width: 120px;
-    border: 4px solid red;
+    border: 4px solid #fff;
     border-radius: 4px
 }
 .books-container{
@@ -268,10 +270,11 @@ favBtnClick{
 .playlist-icon-top img{
     max-width: 200px;
 }
-.img-thumbnail{
-    border: 3px solid #fff !important;
+/* .img-thumbnail{
+    border: 10px solid #fff;
+    border-radius: 4px;
     position: relative;
-}
+} */
 .activeImg{
     max-width: 100%;
     border-top-left-radius: 10px;
@@ -290,25 +293,27 @@ favBtnClick{
  .leftRs {
     position: absolute;
     margin: auto;
-    top: -125px;
+    top: -65px;
     bottom: 0;
     width: 50px;
     height: 50px;
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
     border-radius: 999px;
-    left: 0;
+    left: -93%;
+    right: 0;
 }
 
 .rightRs {
     position: absolute;
     margin: auto;
-    top: -125px;
+    top: -60px;
     bottom: 0;
     width: 50px;
     height: 50px;
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
     border-radius: 999px;
     right: 0;
+    /* left: ; */
 }
 @media(max-width:736px){
     .side-bar-contents img{
@@ -442,3 +447,19 @@ favBtnClick{
     border-radius: 2px;
     left: 3%;
  }
+
+ .imgActive{
+    -ms-transform: scale(1.4); /* IE 9 */
+    -webkit-transform: scale(1.4); /* Safari 3-8 */
+    transform: scale(1.4); 
+}
+.imgActive:focus{
+    -ms-transform: scale(1.4); /* IE 9 */
+    -webkit-transform: scale(1.4); /* Safari 3-8 */
+    transform: scale(1.4); 
+}
+.subCard{
+    max-width: 152px !important ;
+    border: 9px solid #fff !important;
+    border-radius: 15px !important;
+}

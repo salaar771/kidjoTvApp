@@ -9,7 +9,9 @@ import { VgControlsModule } from 'videogular2/controls';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgBufferingModule } from 'videogular2/buffering';
 import { VgStreamingModule } from 'videogular2/streaming';
-
+import { HotkeyModule } from 'angular2-hotkeys';
+import 'hammerjs';
+import { WalkthroughModule } from 'ngx-walkthrough';
 
 
 
@@ -44,12 +46,14 @@ import { FolderComponent } from './folder/folder.component';
     SharedModule.forRoot(),
     RouterModule.forRoot(routes),
     Ng4LoadingSpinnerModule.forRoot(),
+    HotkeyModule.forRoot(),
     NgxCarouselModule,
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
     VgStreamingModule,
+    WalkthroughModule
   ],
   providers: [],
   bootstrap: [AppComponent]

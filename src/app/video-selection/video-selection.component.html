@@ -7,34 +7,34 @@
     </div>
   </div>
   <div class="books">
-    <img class="img-thumbnail" [style.background]='color' src={{imgUrl}}>
+    <img class="subCard img-thumbnail" [style.background]='color' src={{imgUrl}}>
     <a [routerLink]="['/']" #home class="favouriteFocus">
     <a class=" mybtn"><i class="fa fa-home"></i></a>
     </a>
   </div>
   <div class="main-books-container">
-    <ngx-carousel [inputs]="carouselTile">
-      <ngx-tile NgxCarouselItem *ngFor="let vid of video">
-        <img class="activeImg" src={{vid[0].imgUrl}}/>
-        <button class="btn playbtn" data-toggle="modal" data-target="#videoModdal" (click)="openNav()">Play</button>
-        <span class="Duration">{{vid[0].duration}} min</span>
+    <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
+      <ngx-tile NgxCarouselItem *ngFor="let vid of video;  let i = index">
+        <img class="activeImg" src={{vid[0].imgUrl}} [ngClass]="{'imgActive':i==arrayIndex}" />
+        <button class="btn playbtn" data-toggle="modal" data-target="#videoModdal" (click)="openNav()" [ngClass]="{'imgActive':i==arrayIndex}">Play</button>
+        <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span>
         <!-- <div class="lock-overlay">
           <img class="lock-bar" src="assets/svgs/video_card_lock_bar.svg">
           <img class="lock-icon" src="assets/svgs/video_card_lock.svg">
           <p>Press to unlock</p>
         </div> -->
         <div class="caption">
-          <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;">{{vid[0].Title}}</p>
+          <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].Title}}</p>
         </div>
         <div class="fav-btn" style="cursor: pointer;" (click)="addToFav(vid[0].id)">
           <button [ngClass]="{'favBtnClick':true}" type="button" value="btn" id="button-fav">
                   <img src="assets/svgs/video_card_heart.svg">
-                  <p>favourite</p>
+                  <p>Favorite</p>
               </button>
         </div>
       </ngx-tile>
-      <button NgxCarouselPrev class='leftRs'>&lt;</button>
-      <button NgxCarouselNext class='rightRs'>&gt;</button>
+      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
+      <button NgxCarouselNext #next class='rightRs'>&gt;</button>
 
     </ngx-carousel>
   </div>
@@ -45,7 +45,7 @@
 
 
   <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" #close (click)="closeNav()">&times;</a>
     <div class="overlay-content">
       <vg-player (onPlayerReady)="onPlayerReady($event)" [hidden]="!isPlaying">
         <vg-overlay-play></vg-overlay-play>

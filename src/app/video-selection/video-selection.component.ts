@@ -15,7 +15,8 @@ export enum KEY_CODE {
   LEFT_ARROW = 37,
   Enter = 13,
   Up_key = 38,
-  Down_key = 40
+  Down_key = 40,
+  escape_key = 27
 }
 
 
@@ -28,6 +29,9 @@ export enum KEY_CODE {
 export class VideoSelectionComponent implements OnInit {
   isPlaying: any;
   api: VgAPI;
+  @ViewChild('close') close: ElementRef;
+  @ViewChild('previous') myLeft: ElementRef;
+  @ViewChild('next') myRight: ElementRef;
   @ViewChild('home') myHomeBtn: ElementRef;
   kidID: string;
   idss: any;
@@ -38,6 +42,7 @@ export class VideoSelectionComponent implements OnInit {
   formate: any[] = [];
   imgUrl: any;
   color: any;
+  arrayIndex: any = 0;
   public carouselTile: NgxCarousel;
   uri: any[] = [];
   time: any;
@@ -45,6 +50,8 @@ export class VideoSelectionComponent implements OnInit {
   elem: HTMLElement;
   vgFor: string;
   target: any;
+  downCount = 0;
+  upCount = 0;
   public carouselTileItems: Array<any>;
   manifestUri: any = "https://d23sw6prl9jc74.cloudfront.net/8/NavdQMkX7J.mp4";
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
@@ -74,21 +81,100 @@ export class VideoSelectionComponent implements OnInit {
     this.uri.push([this.manifestUri]);
 
   }
+  // @HostListener('window:keyup', ['$event'])
+  // keyEvent(event: KeyboardEvent) {
+  //   console.log(event);
+  //   if (event.keyCode === KEY_CODE.Up_key) {
+  //     console.log("Up key ");
+  //     this.myHomeBtn.nativeElement.focus();
+  //   }
+
+  // }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     console.log(event);
-    if (event.keyCode === KEY_CODE.Up_key) {
-      console.log("Up key ");
-      this.myHomeBtn.nativeElement.focus();
+
+    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+      console.log("right key ");
+      this.GoRight();
     }
 
+    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+      console.log("left key ");
+      this.GoLeft();
+    }
+    if (event.keyCode === KEY_CODE.Up_key) {
+      console.log("Up key ");
+      this.GoUp();
+    }
+    if (event.keyCode === KEY_CODE.Down_key) {
+      console.log("Down key ");
+      this.GoDown();
+
+    }
+    if (event.keyCode === KEY_CODE.Enter) {
+      console.log("Enter key ");
+
+      var video = this.video[this.arrayIndex];
+      this.openNav();
+
+    }
+    if (event.keyCode === KEY_CODE.escape_key) {
+      this.close.nativeElement.focus();
+      this.closeNav();
+    }
+
+  }
+
+  GoDown() {
+
+    if (this.downCount < 2) {
+      this.downCount++;
+    }
+    if (this.downCount == 1) {
+      this.myRight.nativeElement.focus();
+      this.downCount = 0;
+    }
+
+    // if (this.downCount == 2) {
+    //   // this.mySettingsBtn.nativeElement.focus();
+    //   this.downCount = 0;
+    // }
+    console.log("test");
+
+  }
+  GoUp() {
+    if (this.upCount < 1) {
+      this.upCount++;
+    }
+    // if (this.upCount == 1) {
+    //   this.myLeft.nativeElement.focus();
+    // }
+    if (this.upCount == 1) {
+      this.myHomeBtn.nativeElement.focus();
+      this.upCount = 0;
+    }
+    // this.myFavBtn.nativeElement.focus();
+  }
+  onmoveFn($event) {
+
+    console.log($event);
+  }
+
+  GoLeft() {
+    --this.arrayIndex;
+    // this.myLeft.nativeElement.focus();
+  }
+  GoRight() {
+    console.log("test");
+    ++this.arrayIndex;
   }
   ngOnInit() {
     this.time = localStorage.getItem('screenTimeLimit');
     // let timer = Observable.timer();
     // timer.subscribe(t => t);
     this.carouselTile = {
-      grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },
+      grid: { xs: 1, sm: 2, md: 3, lg: 5, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
@@ -104,14 +190,18 @@ export class VideoSelectionComponent implements OnInit {
       }
       .ngxcarousel-inner {
         height: 450px;
+        width: 108%;
     }
       .ngxcarouselPoint {
         display: none;
     }
     .ngxcarousel-items {
-      top: 50px;
-      left: 60px;
+      top: 88px;
+      left: 8%;
   }
+  ngx-tile.item {
+    margin: 3%;
+    }
 
         `
       },

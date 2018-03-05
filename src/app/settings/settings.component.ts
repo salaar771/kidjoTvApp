@@ -1,10 +1,15 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 
 
-
 export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37,
+  Enter = 13,
   Up_key = 38,
+  Down_key = 40
 }
+
+
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -12,10 +17,15 @@ export enum KEY_CODE {
 })
 export class SettingsComponent implements OnInit {
   @ViewChild('home') myHomeBtn: ElementRef;
+  @ViewChild('box1') firstBox: ElementRef;
+  @ViewChild('box2') secondBox: ElementRef;
+  @ViewChild('box3') thirdBox: ElementRef;
+  @ViewChild('box4') forthBox: ElementRef;
+  arrayIndex: any = 0;
   age: any[] = [3, 4, 5, 6, 7];
   timeLimit: any[] = [5, 20, 40, 60, 90];
   content: any[] = ["Mix", "Entertainment", "Educational"];
-  language: any[] = ["English", "Espanol", "Francis", "Portugues"];
+  language: any[] = ["English", "Espanol", "Français", "Portugues"];
   ageValue: any;
   timeVlaue: any;
   contentValue: any;
@@ -37,10 +47,68 @@ export class SettingsComponent implements OnInit {
   keyEvent(event: KeyboardEvent) {
     console.log(event);
 
-    if (event.keyCode === KEY_CODE.Up_key) {
+    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
       console.log("right key ");
-      this.myHomeBtn.nativeElement.focus();
+      this.GoRight();
     }
+
+    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+      console.log("left key ");
+      this.GoLeft();
+    }
+    if (event.keyCode === KEY_CODE.Up_key) {
+      console.log("Up key ");
+      this.GoUp();
+    }
+    if (event.keyCode === KEY_CODE.Down_key) {
+      console.log("Down key ");
+      this.GoDown();
+
+    }
+    if (event.keyCode === KEY_CODE.Enter) {
+      console.log("Enter key ");
+
+    }
+
+  }
+
+  GoDown() {
+
+    // if (this.downCount < 2) {
+    //   this.downCount++;
+    // }
+    // if (this.downCount == 1) {
+    //   this.myRight.nativeElement.focus();
+    // }
+
+    // if (this.downCount == 2) {
+    //   this.mySettingsBtn.nativeElement.focus();
+    //   this.downCount = 0;
+    // }
+    // console.log("test");
+
+  }
+  GoUp() {
+    this.myHomeBtn.nativeElement.focus();
+    // if (this.upCount < 2) {
+    //   this.upCount++;
+    // }
+    // if (this.upCount == 1) {
+    //   this.myLeft.nativeElement.focus();
+    // }
+    // if (this.upCount == 2) {
+    //   this.myFavBtn.nativeElement.focus();
+    //   this.upCount = 0;
+    // }
+    // this.myFavBtn.nativeElement.focus();
+  }
+  GoLeft() {
+    --this.arrayIndex;
+    // this.myLeft.nativeElement.focus();
+  }
+  GoRight() {
+    console.log("test");
+    ++this.arrayIndex;
   }
   ngOnInit() {
   }

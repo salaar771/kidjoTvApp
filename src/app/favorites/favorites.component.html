@@ -10,19 +10,19 @@
     <h3>Playlist</h3>
   </div>
   <div class="main-videocard-container">
-    <ngx-carousel [inputs]="carouselTile">
-      <ngx-tile NgxCarouselItem *ngFor="let url of uri">
-        <img class="activeImg img-thumbnail" src={{url}}/>
+    <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
+      <ngx-tile NgxCarouselItem *ngFor="let vid of FavVideo; let i = index">
+        <img class="activeImg" src={{vid[0].imgUrl}} [ngClass]="{'imgActive':i==arrayIndex}" />
         <button class="btn playbtn" (click)="openNav()">Play</button>
+        <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span>
+        <!-- <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span> -->
         <!-- <div class="lock-overlay">
           <img class="lock-bar" src="assets/svgs/video_card_lock_bar.svg">
           <img class="lock-icon" src="assets/svgs/video_card_lock.svg">
           <p>Press to unlock</p>
         </div> -->
-        <div class="caption">
-          <p style="    color: white;
-          font-weight: 900;
-          background-color: red;margin-top: -2%;">Catty Jane Builds A Boat</p>
+        <div class="caption" [ngClass]="{'imgActive':i==arrayIndex}">
+          <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;">{{vid[0].Title}}</p>
         </div>
         <div class="delete-btn" (click)="deleteFav(1)">
           <button type="button" value="btn" id="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path fill="#000" fill-rule="evenodd" d="M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z"/></svg><p>delete</p>
@@ -30,8 +30,8 @@
         </div>
       </ngx-tile>
 
-      <button NgxCarouselPrev class='leftRs'>&lt;</button>
-      <button NgxCarouselNext class='rightRs'>&gt;</button>
+      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
+      <button NgxCarouselNext #next class='rightRs'>&gt;</button>
 
     </ngx-carousel>
   </div>
@@ -44,9 +44,9 @@
 
 
   <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" #close (click)="closeNav()">&times;</a>
     <div class="overlay-content">
-      <vg-player>
+      <vg-player (onPlayerReady)="onPlayerReady($event)" [hidden]="!isPlaying">
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
 

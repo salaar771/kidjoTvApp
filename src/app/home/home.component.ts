@@ -5,6 +5,7 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { RefreshWebService } from './../shared/services/RefreshWeb/index';
 import { Card } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
+import { HotkeysService, Hotkey } from "angular2-hotkeys";
 declare var $: any;
 
 
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('favorite') myFavBtn: ElementRef;
   @ViewChild('previous') myLeft: ElementRef;
   @ViewChild('next') myRight: ElementRef;
+  @ViewChild('slider') slider: ElementRef;
   videoImageUrl: any;
 
   deviceId: string;
@@ -40,11 +42,15 @@ export class HomeComponent implements OnInit {
   bucketName: any;
   videoUrl: string;
   time: any;
+  arrayIndex: any = 0;
+  downCount = 0;
+  upCount = 0;
   public carouselTile: NgxCarousel;
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.refreshWeb();
+
   }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
@@ -52,7 +58,6 @@ export class HomeComponent implements OnInit {
 
     if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
       console.log("right key ");
-      $.event.trigger({ type: 'keypress', which: "".charCodeAt(0) });
       this.GoRight();
     }
 
@@ -72,31 +77,61 @@ export class HomeComponent implements OnInit {
     if (event.keyCode === KEY_CODE.Enter) {
       console.log("Enter key ");
 
+      var folder = this.folders[this.arrayIndex];
+      this.goToVideoPage(folder[0].id, folder[0].imgUrl, folder[0].color);
+
     }
 
   }
-  onmoveFn(data) {
-    // console.log(data);
+  onmoveFn($event) {
+
+    console.log($event);
   }
+
+
   GoDown() {
-    this.mySettingsBtn.nativeElement.focus();
+
+    if (this.downCount < 2) {
+      this.downCount++;
+    }
+    if (this.downCount == 1) {
+      this.myRight.nativeElement.focus();
+    }
+
+    if (this.downCount == 2) {
+      this.mySettingsBtn.nativeElement.focus();
+      this.downCount = 0;
+    }
     console.log("test");
 
   }
   GoUp() {
-    this.myFavBtn.nativeElement.focus();
+    if (this.upCount < 2) {
+      this.upCount++;
+    }
+    if (this.upCount == 1) {
+      this.myLeft.nativeElement.focus();
+    }
+    if (this.upCount == 2) {
+      this.myFavBtn.nativeElement.focus();
+      this.upCount = 0;
+    }
+    // this.myFavBtn.nativeElement.focus();
   }
   GoLeft() {
-    this.myLeft.nativeElement.focus();
+    --this.arrayIndex;
+    // this.myLeft.nativeElement.focus();
   }
   GoRight() {
-    this.myRight.nativeElement.focus();
+    console.log("test");
+    ++this.arrayIndex;
   }
   ngOnInit() {
+
     this.GetCard();
     this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs: 1, sm: 3, md: 4, lg: 4, all: 0 },
+      grid: { xs: 1, sm: 3, md: 4, lg: 5, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
@@ -106,26 +141,28 @@ export class HomeComponent implements OnInit {
         pointStyles: `
         .ngxcarouselPoint {
           display: none;
-      }
-      .ngxcarousel-inner {
+        }
+       .ngxcarousel-inner {
         height: 350px;
-        overflow: visible;
-    }
-      .ngx-tile.item {
+        width: 108%;
+         }
+       .ngx-tile.item {
         width:80%;
-      }
-      .tile {
+       }
+        .tile {
         width: 60%;
-    }
-    .ngxcarousel-items {
+        border-radius: 15px;
+       }
+      .ngxcarousel-items {
       top: 39px;
       left:8%;
-  }
-  @media (min-width: 992px){
-  .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
-      width: 31% !important;
-  }
-}
+       }
+         @media (min-width: 992px){
+              .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
+                   width: 31% !important;
+              }
+  
+          }
         `
       },
       load: 2,

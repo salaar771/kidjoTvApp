@@ -98,23 +98,31 @@
     padding: 0;
     margin: 0;
 }
-.caption{
+/* .caption{
     padding: 1em;
     background: red;
     position: absolute;
-    bottom: -45px; 
+    bottom: -49px; 
     left: 0;
     right: 0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     color: #fff;
     font-family: bree;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 13px;
     text-align: left;
+} */
+.caption p{
+    padding: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 13px;
+    font-weight: 500 !important;
 }
 .delete-btn{    
     position: absolute;
-    top: 130%;
+    top: 155%;
     width: 100px;
     left: 50%;
     transform: translate(-50%);
@@ -301,7 +309,7 @@
     background-color: red !important;
     color: white !important;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%);
     padding: .5em 1.5em;
@@ -589,6 +597,7 @@
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
     border-radius: 999px;
     left: 0;
+    right: 95%;
 }
 
 .rightRs {
@@ -601,6 +610,7 @@
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
     border-radius: 999px;
     right: 0;
+    left: 95%;
 }
 
 
@@ -662,3 +672,31 @@
 .favouriteFocus:focus .footer-heading h3{
     color: #4dbcae;
  }
+ .Duration{
+    position: absolute;
+    top: 55%;
+    background: rgba(0,0,0,.7);
+    padding: 0px 6px;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 2px;
+    left: 3%;
+ }
+
+ .imgActive{
+    -ms-transform: scale(1.4); /* IE 9 */
+    -webkit-transform: scale(1.4); /* Safari 3-8 */
+    transform: scale(1.4); 
+}
+.imgActive:focus{
+    -ms-transform: scale(1.4); /* IE 9 */
+    -webkit-transform: scale(1.4); /* Safari 3-8 */
+    transform: scale(1.4); 
+}
+.activeImg{
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}

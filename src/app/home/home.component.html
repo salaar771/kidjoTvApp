@@ -13,10 +13,11 @@
   </a>
 
   <div class="main-card-container">
-    <ngx-carousel [inputs]="carouselTile" (onMove)="onmoveFn($event)">
-      <ngx-tile NgxCarouselItem  class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index" >
-        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)" [ngClass]="{'imgActive':i==0}">
-          <img class="activeImg img-thumbnail" [style.background]="folder[0].color " src={{folder[0].imgUrl}}/>
+    <ngx-carousel [inputs]="carouselTile" [moveToSlide]= "arrayIndex" (onMove)="onmoveFn($event)">
+      <ngx-tile NgxCarouselItem class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index">
+        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)"  #slider class="sliderFocus">
+          <img class="activeImg img-thumbnail" [style.background]="folder[0].color " [ngClass]="{'imgActive':i==arrayIndex}"
+            src={{folder[0].imgUrl}}/>
         </div>
       </ngx-tile>
       <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
