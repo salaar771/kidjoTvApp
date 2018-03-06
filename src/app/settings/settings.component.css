@@ -158,9 +158,21 @@
 .favouriteFocus:focus .video-filter-top h3{
     color: #4dbcae;
  }
- .imgActive:focus{
-     color: red;
-    -ms-transform: scale(1.4); /* IE 9 */
-    -webkit-transform: scale(1.4); /* Safari 3-8 */
-    transform: scale(1.4); 
+ .imgActive{
+    transform: scale(1.2); 
+}
+selected_item{
+    color:red;
+    text-align: left;
+    transform: scale(1.5);
+}
+.test:focus{
+    color:red;
+    transform: scale(1.5);
+}
+
+
+.selected_item{
+    background: white;
+        color: black !important;
 }

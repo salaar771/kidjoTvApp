@@ -127,7 +127,7 @@ export class FavoritesComponent implements OnInit {
   ngOnInit() {
     this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs: 2, sm: 2, md: 3, lg: 3, all: 0 },
+      grid: { xs: 2, sm: 2, md: 4, lg: 4, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
@@ -137,8 +137,8 @@ export class FavoritesComponent implements OnInit {
         pointStyles: `
         .tile {
           position: relative;
-          max-width:44%;
-          transform: scale(1.5);
+          max-width:56%;
+          transform: scale(1.2);
           border-radius: 10px;
       }
       .ngxcarousel-inner {
@@ -229,6 +229,7 @@ export class FavoritesComponent implements OnInit {
   deleteFav(id: any) {
     this.spinnerService.show();
     this.favService.RemoveFavorite(id).subscribe(data => {
+      console.log("test");
       this.spinnerService.hide();
     },
       Error => {

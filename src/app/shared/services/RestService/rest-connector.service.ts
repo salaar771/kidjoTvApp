@@ -38,7 +38,7 @@ export class RESTConnectorService {
         return headers;
     }
     private handleErrorWeb(error: any, stopBlock: boolean) {
-        console.log(error);
+        // console.log(error);
         let body = error.json();
         let err = new ResponseError();
         err.type = error.type;
@@ -51,6 +51,7 @@ export class RESTConnectorService {
         return Observable.throw(err);
     }
     private handleError(error: any, blockUiService: BlockUIService, blocking: Boolean) {
+        console.log(error);
         //let body = error.json();
         if (blocking) {
             blockUiService.stopBlock();
@@ -81,6 +82,7 @@ export class RESTConnectorService {
         var body = obj;
         const headers = this.getHeader(contentType);
         let options = new RequestOptions({ headers: headers });
+        // alert();
         return this.http.post(url, body, options)
             .map((response: Response) =>
                 this.parseResponse(response, this.blockUiService, true)
@@ -99,6 +101,7 @@ export class RESTConnectorService {
             .catch((error) => this.handleError(error, this.blockUiService, true));
     }
     private parseResponse(response: Response, blockUiService: BlockUIService, blocking: Boolean) {
+        // alert();
         if (blocking) {
             blockUiService.stopBlock();
         }

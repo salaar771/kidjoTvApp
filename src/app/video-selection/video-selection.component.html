@@ -6,11 +6,12 @@
       <p>{{time}} min</p>
     </div>
   </div>
+  <a [routerLink]="['/']" #home class="favouriteFocus">
+    <img class="mybtn" src="/assets/svgs/video_card_cross.svg">
+  </a>
   <div class="books">
     <img class="subCard img-thumbnail" [style.background]='color' src={{imgUrl}}>
-    <a [routerLink]="['/']" #home class="favouriteFocus">
-    <a class=" mybtn"><i class="fa fa-home"></i></a>
-    </a>
+
   </div>
   <div class="main-books-container">
     <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">

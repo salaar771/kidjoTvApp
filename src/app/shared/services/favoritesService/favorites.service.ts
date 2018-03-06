@@ -9,6 +9,8 @@ export class FavoriteService {
     public constructor(private restConnector: RESTConnectorService) {
     }
     public addFavrouit(values: AddFav): Observable<any> {
+        console.log(values);
+        alert();
         let url = "/kid/" + values.kidId + "/favorites/add";
         return this.restConnector.httpPostWeb(values, url);
     }

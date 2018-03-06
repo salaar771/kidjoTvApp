@@ -174,7 +174,7 @@ export class VideoSelectionComponent implements OnInit {
     // let timer = Observable.timer();
     // timer.subscribe(t => t);
     this.carouselTile = {
-      grid: { xs: 1, sm: 2, md: 3, lg: 5, all: 0 },
+      grid: { xs: 1, sm: 2, md: 5, lg: 6, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
@@ -184,8 +184,8 @@ export class VideoSelectionComponent implements OnInit {
         pointStyles: `
         .tile {
           position: relative;
-          max-width:59%;
-          transform: scale(1.5);
+          max-width:80%;
+          transform: scale(1.2);
           border-radius: 10px;
       }
       .ngxcarousel-inner {
@@ -305,14 +305,15 @@ export class VideoSelectionComponent implements OnInit {
     let favourite = new AddFav();
     favourite.videoId = id;
     favourite.kidId = localStorage.getItem('kidId');
-    this.spinnerService.show();
+    // this.spinnerService.show();
     this.favService.addFavrouit(favourite).subscribe(data => {
       console.log(data);
+      console.log("test");
       this.AddToFav = true;
-      this.spinnerService.hide();
+      // this.spinnerService.hide();
     },
       Error => {
-        this.spinnerService.hide();
+        // this.spinnerService.hide();
       });
   }
   onPlayerReady(api: VgAPI) {
