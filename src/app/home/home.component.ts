@@ -83,9 +83,9 @@ export class HomeComponent implements OnInit {
     }
 
   }
-  onmoveFn($event) {
+  onmoveFn(data) {
 
-    console.log($event);
+    console.log(data);
   }
 
 
@@ -95,11 +95,14 @@ export class HomeComponent implements OnInit {
       this.downCount++;
     }
     if (this.downCount == 1) {
+
       this.myRight.nativeElement.focus();
+      this.arrayIndex = 0;
     }
 
     if (this.downCount == 2) {
       this.mySettingsBtn.nativeElement.focus();
+      this.arrayIndex = 645734;
       this.downCount = 0;
     }
     console.log("test");
@@ -111,9 +114,11 @@ export class HomeComponent implements OnInit {
     }
     if (this.upCount == 1) {
       this.myLeft.nativeElement.focus();
+      this.arrayIndex = 0;
     }
     if (this.upCount == 2) {
       this.myFavBtn.nativeElement.focus();
+      this.arrayIndex = 23443;
       this.upCount = 0;
     }
     // this.myFavBtn.nativeElement.focus();
@@ -131,7 +136,7 @@ export class HomeComponent implements OnInit {
     this.GetCard();
     this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs:  2, sm: 3, md: 4, lg: 5, all: 0 },
+      grid: { xs: 2, sm: 3, md: 4, lg: 5, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
