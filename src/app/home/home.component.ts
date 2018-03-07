@@ -56,6 +56,8 @@ export class HomeComponent implements OnInit {
   Favcolor: any = 0;
   settingsColor: any = 0;
   walkThrough: any = false;
+  FavCountdown: any = 0;
+  settingsUpCount: any = 0;
   public carouselTile: NgxCarousel;
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
@@ -75,28 +77,22 @@ export class HomeComponent implements OnInit {
   }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    console.log(event);
 
     if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-      console.log("right key ");
       this.GoRight();
     }
 
     if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-      console.log("left key ");
       this.GoLeft();
     }
     if (event.keyCode === KEY_CODE.Up_key) {
-      console.log("Up key ");
       this.GoUp();
     }
     if (event.keyCode === KEY_CODE.Down_key) {
-      console.log("Down key ");
       this.GoDown();
 
     }
     if (event.keyCode === KEY_CODE.Enter) {
-      console.log("Enter key ");
 
       var folder = this.folders[this.arrayIndex];
       this.goToVideoPage(folder[0].id, folder[0].imgUrl, folder[0].color);
@@ -115,33 +111,55 @@ export class HomeComponent implements OnInit {
     if (this.downCount < 3) {
       this.downCount++;
     }
-    if (this.downCount == 1 && this.Favcolor == 1 && this.arrayIndex == 0) {
-      this.myLeft.nativeElement.focus();
-      this.arrayIndex = 0;
-      this.settingsColor = 0;
-      this.Favcolor = 0;
-    }
+    // on key down when very first time u enter in the home page
     if (this.downCount == 1 && this.arrayIndex == 0 && this.Favcolor == 0) {
+      console.log("test");
       this.mySettingsBtn.nativeElement.focus();
       this.settingsColor = 1;
       this.arrayIndex = 645734;
       this.downCount = 0;
     }
+    // on key down after u move slider
     if (this.downCount == 1 && this.arrayIndex == this.currentSlide && this.Favcolor == 0) {
+      console.log("test");
       this.mySettingsBtn.nativeElement.focus();
       this.settingsColor = 1;
       this.arrayIndex = 645734;
       this.downCount = 0;
+      this.settingsUpCount = 1;
     }
+    //when u enter in the settings page
     if (this.downCount == 1 && this.settingsColor == 1) {
       this.goToSettingsPage();
       this.settingsColor = 0;
     }
+    //on key down when u move from favourite button to slider first index
     if (this.downCount == 1 && this.Favcolor == 1) {
+      console.log("test");
       this.myLeft.nativeElement.focus();
+      this.arrayIndex = 0;
+      this.settingsColor = 0;
       this.Favcolor = 0;
-      this.arrayIndex = this.currentSlide;
+      this.downCount = 0;
     }
+    //on key down when u move from favourite button to slider current index
+    if (this.downCount == 1 && this.Favcolor == 1 && this.arrayIndex == this.currentSlide) {
+      console.log("test");
+      this.myLeft.nativeElement.focus();
+      this.arrayIndex = this.currentSlide;
+      this.settingsColor = 0;
+      this.Favcolor = 0;
+      this.downCount = 0;
+    }
+
+
+
+    // if (this.downCount == 1 && this.Favcolor == 1) {
+    //   console.log("test");
+    //   this.myLeft.nativeElement.focus();
+    //   this.Favcolor = 0;
+    //   this.arrayIndex = this.currentSlide;
+    // }
 
     // if (this.downCount == 3) {
     //   this.goToSettingsPage();
@@ -152,22 +170,43 @@ export class HomeComponent implements OnInit {
     if (this.upCount < 3) {
       this.upCount++;
     }
+    //onkey up focus on slider first index
     if (this.upCount == 1 && this.settingsColor == 1) {
+      console.log("test");
       this.myLeft.nativeElement.focus();
       this.arrayIndex = 0;
       this.settingsColor = 0;
+      this.upCount = 0;
 
     }
-    if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
+    //on keyup focus on slider first index
+    if (this.upCount == 1 && this.arrayIndex == 0) {
+      console.log("test");
       this.myFavBtn.nativeElement.focus();
       this.Favcolor = 1;
       this.arrayIndex = 6337484;
+      this.upCount = 0
     }
-    if (this.upCount == 2 && this.Favcolor == 1) {
+    //on keyup focus on slider current index
+    if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
+      console.log("test");
+      this.myFavBtn.nativeElement.focus();
+      this.Favcolor = 1;
+      this.arrayIndex = 6337484;
+      this.upCount = 0;
+    }
+    //on keyup from first index to focus on favourite button
+    if (this.upCount == 1 && this.Favcolor == 1) {
       this.goToFavPage();
       this.Favcolor = 0;
       this.arrayIndex = 6337484;
 
+    }
+    if (this.upCount == 1 && this.settingsUpCount == 1) {
+      this.myLeft.nativeElement.focus();
+      this.arrayIndex = this.currentSlide;
+      this.settingsColor = 0;
+      this.upCount = 0;
     }
     // if (this.upCount == 3) {
     //   console.log("test");
