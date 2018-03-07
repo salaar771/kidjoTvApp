@@ -168,7 +168,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n\n<ng4-loading-spinner> </ng4-loading-spinner>\n<!-- <walkthrough [is-round]=\"true\" [walkthrough-type]=\"'transparency'\" [focus-element-selector]=\"'#focusItem'\" [icon]=\"'single_tap'\"\n    [main-caption]=\"'Visit to this app\n    '\" [is-active]=\"true\" [use-button]=\"true\">\n    <p>this is some text</p>\n</walkthrough> -->"
+module.exports = "<router-outlet></router-outlet>\n\n<ng4-loading-spinner> </ng4-loading-spinner>\n"
 
 /***/ }),
 
@@ -343,7 +343,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.playlist-section{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.jpg');\n    background-size: cover;\n    background-position: center;\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    overflow: hidden;\n    position: relative;\n}\n\n.footer-heading{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.footer-heading img{\n    max-width: 200px;\n}\n\n.footer-heading h3{\n    position: absolute;\n    top: 50%;;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 25px;\n    font-family: bree;\n    color: #444;\n}\n\n.side-bar{\n    position: relative;\n    top: 10%;\n    width: 6%;\n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 25px;\n    width: 40px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n\n.playlist img{\n    max-width: 100px;\n}\n\n.playlist h3{\n    margin-top: -10px;\n    font-family: bree;\n}\n\n.main-videocard-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 30%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    /* margin: 0 auto; */\n    left: 53%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n[class^=\"video-card-container\"]\n{\n    margin-left: 2.5em;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n/* .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -49px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: 500;\n    font-size: 13px;\n    text-align: left;\n} */\n\n.caption p{\n    padding: 5px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 155%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 0px !important;\n    margin-bottom: 13px !important; \n}\n\n.delete-btn p{    \n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 13px !important;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n}\n\n.lock-overlay img{\n    position: absolute !important;\n    top: 0% !important;\n    left: 0 !important;\n    right: 0 !important;\n    border-top-left-radius: 5px !important;\n    border-top-right-radius: 5px !important;\n}\n\n.lock-overlay .lock-bar{\n    width: 100% !important;\n}\n\n.lock-overlay .lock-icon{\n    margin-left: 26%;\n    margin-top: 3%;\n    width: 15px;\n}\n\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 210px;\n    width: 170px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 7px;\n}\n\n.delete-btn p{\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n    \n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: bold;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 110%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: -5px;\n    margin-bottom: 9px;\n}\n\n.delete-btn p{\n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.img-thumbnail{\n    border: 3px solid #fff !important;\n    position: relative;\n}\n\n.activeImg{\n    max-width: 100%;\n}\n\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .5em 1.5em;\n\n}\n\n@media(max-width:1024px)\n{    \n    .playlist-section{\n        background-size: cover;\n        background-repeat: no-repeat;\n        height: 1320px;  \n    }\n    .playlist{\n        top: 2.5%;\n    }\n    .main-video-card container{\n        left: 50%;\n        -webkit-transform: translate(-50%);\n                transform: translate(-50%);    \n        position: relative;\n        max-width: 300px;\n        height: 263px;\n        padding: 0;\n        border-radius: 15px;\n        background: red;\n}\n    .video-card{\n        top: 2%;\n    }\n    .main-videocard-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 16%;\n        width: 20%;\n    }\n    .video-card .lock-overlay img{\n        position: absolute;\n        top: -3%;\n        left: 0;\n        right: 0;\n        -webkit-box-sizing: border-box;\n                box-sizing: border-box;\n}\n\n}\n\n@media(width:768px)\n{    \n    .playlist{\n        top: 2.5%;\n    }\n    .main-videocard-container{\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        margin-left: auto;\n        margin-right: auto;\n        left: 36%;\n        top: 14%;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n        margin-bottom: 100px;\n    } \n    .video-card-container{\n        margin-bottom:90px;\n     }\n    \n}\n\n@media(max-width:500px)\n{    \n    .main-videocard-container{\n     display: -webkit-box;\n     display: -ms-flexbox;\n     display: flex;\n     margin-left: auto;\n     margin-right: auto;\n     left: 14%;\n     top: 14%;\n     -ms-flex-wrap: wrap;\n         flex-wrap: wrap;\n     margin-bottom: 100px;\n    }\n    .video-card .lock-overlay .lock-bar{\n        position: absolute;\n        top: -3%;\n        width: 100.6%;\n        left: auto;\n    }\n\n    .video-card-container{\n        margin-bottom:90px;\n    }\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n    .side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n    .side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n}\n\n/*  =========================   Playlist Settings ===========================*/\n\n.playlist-setting{\n    background: src(\"assets/tablet-l/background_day_top.webp\");\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    position: absolute;\n    top: 30%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n\n.card-container img{\n    width: 240px;\n    padding-left: 20px;\n    position: relative;\n}\n\n.card-container .active img{\n    width: 320px;\n}\n\n.card-poster img{\n    position: absolute;\n    top: 70px;\n    left: 13%;\n    max-width: 200px;\n    background: red;\n}\n\n@media(max-width:768px)\n{\n    .playlist-setting{\n        height: 1000px;\n    }\n    .main-card-container{\n        top: 20%;\n    }\n}\n\n@media(max-width:1149px)\n{\n    .playlist-setting{\n        height: 1020px;\n    }\n    .main-card-container{\n        top: 20%;\n    }\n}\n\n@media(max-width:616px)\n{\n    .playlist-setting{\n        height: 1300px;\n    }\n    .main-card-container{\n        top: 10%;\n    }\n}\n\n.run-time-over-section{\n    width: auto;\n    min-height: 100vh;\n    background:#2e336c;\n    padding: 0 3em;\n    text-align: center;\n    background-size: cover;\n    position: relative;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n\n.sleeping-moon-image img{\n    max-width: 420px;\n    z-index: 10000;\n}\n\n.para-1{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 50px;\n    font-weight: bold;\n    font-family: bree;\n    color: #fff;\n    width: 100%;\n    \n}\n\n.para-2{\n    position: absolute;\n    bottom: 5%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 32px;\n    font-weight: bold;\n    font-family: bree;\n    color: aqua;\n    border: 6px solid aqua;\n    border-radius: 12px;\n    padding: .3em 1em;\n    width: 270px;\n}\n\n.sub-para{\n    font-style: normal;\n    font-size: 21px;\n    font-family: bree light;\n}\n\n@media(max-width:812px)\n{\n    .para-1{\n        top: 45%;\n        font-size: 32px\n    }\n    .para-2{\n        font-size: 28px;\n    }\n    .sleeping-moon-image img{\n        max-width:300px ;\n        width:100%;\n}\n}\n\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    right: 95%;\n    opacity: 0;\n}\n\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 95%;\n    opacity: 0;\n}\n\n/* modal style */\n\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.favouriteFocus:focus .footer-heading h3{\n    color: #4dbcae;\n }\n\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n    margin-left: 0px;\n    margin-bottom: 3px;\n}\n\n/* ccugfyfgh */\n\n", ""]);
+exports.push([module.i, "\n.playlist-section{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background.jpg'); \n    background-size: cover;\n    background-position: center;\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    overflow: hidden;\n    position: relative;\n}\n\n.footer-heading{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.footer-heading img{\n    max-width: 200px;\n}\n\n.footer-heading h3{\n    position: absolute;\n    top: 50%;;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 25px;\n    font-family: bree;\n    color: #444;\n}\n\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    width: 6%;\n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 25px;\n    width: 40px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n\n.playlist img{\n    max-width: 100px;\n}\n\n.playlist h3{\n    margin-top: -10px;\n    font-family: bree;\n}\n\n.main-videocard-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 50%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    left: 53%;\n    -webkit-transform: translateX(-50%) translateY(-35%);\n            transform: translateX(-50%) translateY(-35%);\n}\n\n[class^=\"video-card-container\"]\n{\n    margin-left: 2.5em;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n/* .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -49px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: 500;\n    font-size: 13px;\n    text-align: left;\n} */\n\n.caption p{\n    padding: 5px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 155%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 0px !important;\n    margin-bottom: 13px !important; \n}\n\n.delete-btn p{    \n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 13px !important;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n}\n\n.lock-overlay img{\n    position: absolute !important;\n    top: 0% !important;\n    left: 0 !important;\n    right: 0 !important;\n    border-top-left-radius: 5px !important;\n    border-top-right-radius: 5px !important;\n}\n\n.lock-overlay .lock-bar{\n    width: 100% !important;\n}\n\n.lock-overlay .lock-icon{\n    margin-left: 26%;\n    margin-top: 3%;\n    width: 15px;\n}\n\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 210px;\n    width: 170px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 7px;\n}\n\n.delete-btn p{\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n    \n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: bold;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 110%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: -5px;\n    margin-bottom: 9px;\n}\n\n.delete-btn p{\n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.img-thumbnail{\n    border: 3px solid #fff !important;\n    position: relative;\n}\n\n.activeImg{\n    max-width: 100%;\n}\n\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .5em 1.5em;\n}\n\n@media(max-width:1024px)\n{    \n    .playlist-section{\n        background-size: cover;\n        background-repeat: no-repeat;\n        height: 1320px;  \n    }\n    .playlist{\n        top: 2.5%;\n    }\n    .main-video-card container{\n        left: 50%;\n        -webkit-transform: translate(-50%);\n                transform: translate(-50%);    \n        position: relative;\n        max-width: 300px;\n        height: 263px;\n        padding: 0;\n        border-radius: 15px;\n        background: red;\n}\n    .video-card{\n        top: 2%;\n    }\n    .main-videocard-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 16%;\n        width: 20%;\n    }\n    .video-card .lock-overlay img{\n        position: absolute;\n        top: -3%;\n        left: 0;\n        right: 0;\n        -webkit-box-sizing: border-box;\n                box-sizing: border-box;\n}\n\n}\n\n@media(width:768px)\n{    \n    .playlist{\n        top: 2.5%;\n    }\n    .main-videocard-container{\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        margin-left: auto;\n        margin-right: auto;\n        left: 36%;\n        top: 14%;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n        margin-bottom: 100px;\n    } \n    .video-card-container{\n        margin-bottom:90px;\n     }\n    \n}\n\n@media(max-width:500px)\n{    \n    .main-videocard-container{\n     display: -webkit-box;\n     display: -ms-flexbox;\n     display: flex;\n     margin-left: auto;\n     margin-right: auto;\n     left: 14%;\n     top: 14%;\n     -ms-flex-wrap: wrap;\n         flex-wrap: wrap;\n     margin-bottom: 100px;\n    }\n    .video-card .lock-overlay .lock-bar{\n        position: absolute;\n        top: -3%;\n        width: 100.6%;\n        left: auto;\n    }\n\n    .video-card-container{\n        margin-bottom:90px;\n    }\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n    .side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n    .side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n}\n\n/*  =========================   Playlist Settings ===========================*/\n\n.playlist-setting{\n    background: src(\"assets/tablet-l/background_day_top.webp\");\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    position: absolute;\n    top: 30%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n\n.card-container img{\n    width: 240px;\n    padding-left: 20px;\n    position: relative;\n}\n\n.card-container .active img{\n    width: 320px;\n}\n\n.card-poster img{\n    position: absolute;\n    top: 70px;\n    left: 13%;\n    max-width: 200px;\n    background: red;\n}\n\n@media(max-width:768px)\n{\n    .playlist-setting{\n        height: 1000px;\n    }\n    .main-card-container{\n        top: 20%;\n    }\n}\n\n@media(max-width:1149px)\n{\n    .playlist-setting{\n        height: 1020px;\n    }\n    .main-card-container{\n        top: 20%;\n    }\n}\n\n@media(max-width:616px)\n{\n    .playlist-setting{\n        height: 1300px;\n    }\n    .main-card-container{\n        top: 10%;\n    }\n}\n\n.run-time-over-section{\n    width: auto;\n    min-height: 100vh;\n    background:#2e336c;\n    padding: 0 3em;\n    text-align: center;\n    background-size: cover;\n    position: relative;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n\n.sleeping-moon-image img{\n    max-width: 420px;\n    z-index: 10000;\n}\n\n.para-1{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 50px;\n    font-weight: bold;\n    font-family: bree;\n    color: #fff;\n    width: 100%;\n    \n}\n\n.para-2{\n    position: absolute;\n    bottom: 5%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 32px;\n    font-weight: bold;\n    font-family: bree;\n    color: aqua;\n    border: 6px solid aqua;\n    border-radius: 12px;\n    padding: .3em 1em;\n    width: 270px;\n}\n\n.sub-para{\n    font-style: normal;\n    font-size: 21px;\n    font-family: bree light;\n}\n\n@media(max-width:812px)\n{\n    .para-1{\n        top: 45%;\n        font-size: 32px\n    }\n    .para-2{\n        font-size: 28px;\n    }\n    .sleeping-moon-image img{\n        max-width:300px ;\n        width:100%;\n}\n}\n\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    right: 95%;\n    opacity: 0;\n}\n\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 95%;\n    opacity: 0;\n}\n\n/* modal style */\n\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n/* .favouriteFocus:focus .footer-heading h3{\n    color: #4dbcae;\n } */\n\n.favouriteFocus {\n    color: #4dbcae !important;\n    /* background-color: red; */\n }\n\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n    margin-left: 0px;\n    margin-bottom: 3px;\n}\n\n/* ccugfyfgh */\n\n", ""]);
 
 // exports
 
@@ -356,7 +356,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/favorites/favorites.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"playlist-section\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"assets/svgs/water_background.svg\">\n      <p>{{time}} min</p>\n    </div>\n  </div>\n  <div class=\"playlist\">\n    <img src=\"assets/svgs/favorites_heart.svg\">\n    <h3>Playlist</h3>\n  </div>\n  <div class=\"main-videocard-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of FavVideo; let i = index\">\n        <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n        <button class=\"btn playbtn\" (click)=\"openNav()\">Play</button>\n        <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n        <!-- <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span> -->\n        <!-- <div class=\"lock-overlay\">\n          <img class=\"lock-bar\" src=\"assets/svgs/video_card_lock_bar.svg\">\n          <img class=\"lock-icon\" src=\"assets/svgs/video_card_lock.svg\">\n          <p>Press to unlock</p>\n        </div> -->\n        <div class=\"caption\" [ngClass]=\"{'imgActive':i==arrayIndex}\">\n          <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\">{{vid[0].Title}}</p>\n        </div>\n        <div class=\"delete-btn\" (click)=\"deleteFav(vid[0].id)\">\n          <button type=\"button\" value=\"btn\" id=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path fill=\"#000\" fill-rule=\"evenodd\" d=\"M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z\"/></svg><p>delete</p>\n                          </button>\n        </div>\n      </ngx-tile>\n\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n  <a [routerLink]=\"[ '/'] \" #home class=\"favouriteFocus\">\n    <div class=\"footer-heading\">\n      <img src=\"assets/svgs/navigation_folder_bottom.svg\">\n      <h3>Videos</h3>\n    </div>\n  </a>\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n\n\n        <video #media [vgMedia]=\"media\" [vgDash]=\"currentStream\" [vgHls]=\"currentStream\" id=\"singleVideo\">\n        </video>\n\n\n\n      </vg-player>\n    </div>\n  </div>\n</section>"
+module.exports = "<section class=\"playlist-section\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"assets/svgs/water_background.svg\">\n      <p>{{time}}</p>\n    </div>\n  </div>\n  <div class=\"playlist\">\n    <img src=\"assets/svgs/favorites_heart.svg\">\n    <h3>Playlist</h3>\n  </div>\n  <div class=\"main-videocard-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of FavVideo; let i = index\">\n        <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n        <button class=\"btn playbtn\" (click)=\"openNav()\">Play</button>\n        <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n        <!-- <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span> -->\n        <!-- <div class=\"lock-overlay\">\n          <img class=\"lock-bar\" src=\"assets/svgs/video_card_lock_bar.svg\">\n          <img class=\"lock-icon\" src=\"assets/svgs/video_card_lock.svg\">\n          <p>Press to unlock</p>\n        </div> -->\n        <div class=\"caption\" [ngClass]=\"{'imgActive':i==arrayIndex}\">\n          <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\">{{vid[0].Title}}</p>\n        </div>\n        <div class=\"delete-btn\" (click)=\"deleteFav(vid[0].id)\">\n          <button type=\"button\" value=\"btn\" id=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path fill=\"#000\" fill-rule=\"evenodd\" d=\"M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z\"/></svg><p>delete</p>\n                          </button>\n        </div>\n      </ngx-tile>\n\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n  <!-- <a  (click)=\"goToHome()\" #home [ngClass]=\"{'favouriteFocus':true}\" class=\"favouriteFocus\"> -->\n  <div class=\"footer-heading favouriteFocus\" (click)=\"goToHome()\" #home>\n    <img src=\"assets/svgs/navigation_folder_bottom.svg\">\n    <h3 [ngClass]=\"{'favouriteFocus':1==color}\">Videos</h3>\n  </div>\n  <!-- </a> -->\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n\n\n        <video #media [vgMedia]=\"media\" [vgDash]=\"currentStream\" [vgHls]=\"currentStream\" id=\"singleVideo\">\n        </video>\n\n\n\n      </vg-player>\n    </div>\n  </div>\n</section>"
 
 /***/ }),
 
@@ -367,11 +367,16 @@ module.exports = "<section class=\"playlist-section\">\n  <div class=\"side-bar\
 /* unused harmony export KEY_CODE */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FavoritesComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng4_loading_spinner__ = __webpack_require__("../../../../ng4-loading-spinner/ng4-loading-spinner.umd.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng4_loading_spinner__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_favoritesService_index__ = __webpack_require__("../../../../../src/app/shared/services/favoritesService/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__ = __webpack_require__("../../../../ng4-loading-spinner/ng4-loading-spinner.umd.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_favoritesService_index__ = __webpack_require__("../../../../../src/app/shared/services/favoritesService/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_take__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/take.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -381,6 +386,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
 
 
 
@@ -395,9 +405,12 @@ var KEY_CODE;
     KEY_CODE[KEY_CODE["escape_key"] = 27] = "escape_key";
 })(KEY_CODE || (KEY_CODE = {}));
 var FavoritesComponent = /** @class */ (function () {
-    function FavoritesComponent(favService, spinnerService) {
+    function FavoritesComponent(favService, router, spinnerService) {
+        var _this = this;
         this.favService = favService;
+        this.router = router;
         this.spinnerService = spinnerService;
+        this.counter = 60 * 60;
         this.uri = [];
         this.Favorites = [];
         this.FavVideo = [];
@@ -406,6 +419,10 @@ var FavoritesComponent = /** @class */ (function () {
         this.arrayIndex = 0;
         this.currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
         this.getList();
+        var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].timer(0, 1000)
+            .map(function (x) { return _this.counter - x; })
+            .takeWhile(function (x) { return x > 0; });
+        this.countDown = timeInSecond$;
     }
     FavoritesComponent.prototype.keyEvent = function (event) {
         console.log(event);
@@ -438,11 +455,15 @@ var FavoritesComponent = /** @class */ (function () {
         }
     };
     FavoritesComponent.prototype.GoDown = function () {
-        if (this.downCount < 1) {
+        if (this.downCount < 2) {
             this.downCount++;
         }
         if (this.downCount == 1) {
             this.myHomeBtn.nativeElement.focus();
+            this.color = 1;
+        }
+        if (this.downCount == 2) {
+            this.goToHome();
             this.downCount = 0;
         }
         // if (this.downCount == 2) {
@@ -469,10 +490,16 @@ var FavoritesComponent = /** @class */ (function () {
     };
     FavoritesComponent.prototype.GoLeft = function () {
         --this.arrayIndex;
+        if (this.arrayIndex == -1) {
+            this.arrayIndex = 0;
+        }
     };
     FavoritesComponent.prototype.GoRight = function () {
         console.log("test");
         ++this.arrayIndex;
+        if (this.arrayIndex == this.FavVideo.length) {
+            this.arrayIndex = 0;
+        }
     };
     FavoritesComponent.prototype.ngOnInit = function () {
         this.time = localStorage.getItem('screenTimeLimit');
@@ -484,7 +511,7 @@ var FavoritesComponent = /** @class */ (function () {
             animation: 'lazy',
             point: {
                 visible: true,
-                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:56%;\n          transform: scale(1.2);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 500px;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 20%;\n      left: 10%;\n  }\n    "
+                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:56%;\n          transform: scale(1.3);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 500px;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 20%;\n      left: 10%;\n  }\n    "
             },
             load: 2,
             touch: true,
@@ -553,7 +580,7 @@ var FavoritesComponent = /** @class */ (function () {
                 var src = _this.currentStream;
                 _this.onPlayerReady(_this.api);
                 setTimeout(function () {
-                    __WEBPACK_IMPORTED_MODULE_3_jquery__("#myButton").trigger("click");
+                    __WEBPACK_IMPORTED_MODULE_4_jquery__("#myButton").trigger("click");
                 }, 1000);
                 x = 0;
             }
@@ -571,6 +598,9 @@ var FavoritesComponent = /** @class */ (function () {
         }, function (Error) {
             _this.spinnerService.hide();
         });
+    };
+    FavoritesComponent.prototype.goToHome = function () {
+        this.router.navigate(['./']);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('close'),
@@ -600,8 +630,9 @@ var FavoritesComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/favorites/favorites.component.html"),
             styles: [__webpack_require__("../../../../../src/app/favorites/favorites.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__shared_services_favoritesService_index__["a" /* FavoriteService */],
-            __WEBPACK_IMPORTED_MODULE_1_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__shared_services_favoritesService_index__["a" /* FavoriteService */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
     ], FavoritesComponent);
     return FavoritesComponent;
 }());
@@ -817,7 +848,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.playlist-setting{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background.jpg');\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.side-bar{\n    position: relative;\n    top: 22%;\n    z-index: 1;\n    width: 6%;\n    \n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    margin:-150px auto;\n    max-width: 90%;\n}\n\n.img-thumbnail{\n    position: relative;\n    border: 9px solid #fff !important;\n}\n\n.img-thumbnail::after{\n    content: '';\n    position: absolute !important;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0px 4px 0px #111;\n            box-shadow: 8px 0px 4px 0px #111;\n    border-radius: 10px;\n    right: 0;\n    z-index: 1;\n}\n\n@media(max-width:1366px){\n    .main-card-container{\n        margin-top: -10%;\n    }\n}\n\n@media(width:1024px)\n{\n    .main-card-container{\n        margin: -20% auto;\n        margin-left: 8%\n    }\n}\n\n@media(max-width:812px){\n    .main-card-container{\n        margin: -171px auto;\n        max-width: 100%;\n        -webkit-transform: scale(.8);\n                transform: scale(.8);\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar-contents p{\n        top :30%;\n    }\n}\n\n@media(width:414px)\n{\n    .main-card-container{\n        margin:0 auto;\n        max-width: 85%;\n        margin-left: 13%;\n        margin-top: -130px;\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 400px;\n    }\n    \n}\n\n@media (max-width:812px) {\n    \n    .playlist-icon-top img{\n        max-width: 150px !important;\n    }\n    .playlist-icon-top h3{\n        position: absolute;\n        top: 15%;\n    }\n    .playlist-setting-footer img{\n        max-width: 150px;\n        position: -webkit-sticky;\n        position: sticky;\n        -webkit-transform: translateY(20px);\n                transform: translateY(20px);\n    }\n    .imgActive{ /* IE 9 */\n        -webkit-transform: scale(1.2) !important; /* Safari 3-8 */\n        transform: scale(1.2) !important; \n    }\n}\n\n@media (max-width:412px)\n{\n    .main-card-container{\n        margin-top: 0;\n        margin: -140px auto;\n        margin-left: 14%;\n    }\n    .side-bar img{\n        height: 300px;\n    }\n}\n\n@media(width:768px){\n    .main-card-container{\n        margin-top:20%; \n    }\n}\n\n.leftRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    opacity: 0;\n}\n\n.rightRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 100% ;\n    opacity: 0;\n    /* left: -100; */\n}\n\n.activeImg{\n    cursor:pointer;\n    max-width: 226px;\n    border-radius: 15px;\n    border: 4px solid #fff;\n}\n\n/* .activeImg:hover{\n    -ms-transform: scale(1.11); \n    -webkit-transform: scale(1.11); \n    transform: scale(1.11); \n} */\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.sliderFocus:focus .activeImg{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.settingFocus:focus .playlist-setting-footer h3{\n    color: #fbb133;\n}\n\n.favouriteFocus:focus .playlist-icon-top h3{\n    color: #fc6969;\n }\n\n.selected_item{\nbackground: black;\n    color: red !important;\n }", ""]);
+exports.push([module.i, "\n.playlist-setting{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.jpg');\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    z-index: 1;\n    width: 6%;\n    \n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    max-width: 90%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n}\n\n.img-thumbnail{\n    position: relative;\n    border: 9px solid #fff !important;\n}\n\n.img-thumbnail::after{\n    content: '';\n    position: absolute !important;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0px 4px 0px #111;\n            box-shadow: 8px 0px 4px 0px #111;\n    border-radius: 10px;\n    right: 0;\n    z-index: 1;\n}\n\n@media(width:1024px)\n{\n    .main-card-container{\n        margin: -20% auto;\n        margin-left: 8%\n    }\n}\n\n@media(max-width:812px){\n    .main-card-container{\n        margin: -171px auto;\n        max-width: 100%;\n        -webkit-transform: scale(.8);\n                transform: scale(.8);\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar-contents p{\n        top :30%;\n    }\n}\n\n@media(width:414px)\n{\n    .main-card-container{\n        margin:0 auto;\n        max-width: 85%;\n        margin-left: 13%;\n        margin-top: -130px;\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 400px;\n    }\n    \n}\n\n@media (max-width:812px) {\n    \n    .playlist-icon-top img{\n        max-width: 150px !important;\n    }\n    .playlist-icon-top h3{\n        position: absolute;\n        top: 15%;\n    }\n    .playlist-setting-footer img{\n        max-width: 150px;\n        position: -webkit-sticky;\n        position: sticky;\n        -webkit-transform: translateY(20px);\n                transform: translateY(20px);\n    }\n    .imgActive{ /* IE 9 */\n        -webkit-transform: scale(1.2) !important; /* Safari 3-8 */\n        transform: scale(1.2) !important; \n    }\n}\n\n@media (max-width:412px)\n{\n    .main-card-container{\n        margin-top: 0;\n        margin: -140px auto;\n        margin-left: 14%;\n    }\n    .side-bar img{\n        height: 300px;\n    }\n}\n\n@media(width:768px){\n    .main-card-container{\n        margin-top:20%; \n    }\n}\n\n.leftRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    opacity: 0;\n}\n\n.rightRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 100% ;\n    opacity: 0;\n    /* left: -100; */\n}\n\n.activeImg{\n    cursor:pointer;\n    max-width: 226px;\n    border-radius: 15px;\n    border: 4px solid #fff;\n    position: relative;\n    /* background-image: url(\"/assets/svgs/folder_card_purple_open.svg\") !important; */\n    /* background-repeat: no-repeat !important;\n    background-size: cover !important;\n    padding: 1em !important; */\n}\n\n.activeImg::after{\n    content: '';\n    position: absolute;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0 4px 0 #111;\n            box-shadow: 8px 0 4px 0 #111;\n}\n\n/* .activeImg:hover{\n    -ms-transform: scale(1.11); \n    -webkit-transform: scale(1.11); \n    transform: scale(1.11); \n} */\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.sliderFocus:focus .activeImg{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.settingFocus{\n    color: #fbb133 !important;\n}\n\n.favouriteFocus{\n    color: #fc6969 !important;\n }\n\n.selected_item{\nbackground: black;\n    color: red !important;\n }\n\n.help{\n    position: absolute;\n    top: 10px;\n    font-size: 35px;\n    left: 2%;\n }\n\n.overlay{\n    width: 80vw;\n    height: 80vh;\n    background: #767676b8;\n    margin:0 auto;\n    z-index: 1000000;\n    position: relative;\n    border-radius: 27px;\n    position: fixed;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n\n}\n\n.overlay::after{\n    content: '';\n    display: block;\n    clear: both;\n}\n\n.close-btn{\n    position: absolute; \n    right: 2%;\n    top: 2%\n}\n\n.keyboard-img{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n}\n\n@media(max-width:812px)\n{\n    .overlay .keyboard-img img{\n        max-width: 480px;\n    }\n}\n", ""]);
 
 // exports
 
@@ -830,7 +861,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"playlist-setting\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"/assets/svgs/water_background.svg\">\n      <p>{{time}} min</p>\n    </div>\n  </div>\n  <a [routerLink]=\"['/favorites']\" #favorite class=\"favouriteFocus\">\n    <div class=\"playlist-icon-top\">\n      <img src=\"assets/svgs/navigation_favorites_top.svg\">\n      <h3>Favourite</h3>\n    </div>\n  </a>\n\n  <div class=\"main-card-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]= \"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem class=\"ngxcarouselPoint\" *ngFor=\"let folder of folders; let i = index\">\n        <div (click)=\"goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)\"  #slider class=\"sliderFocus\">\n          <img class=\"activeImg img-thumbnail\" [style.background]=\"folder[0].color \" [ngClass]=\"{'imgActive':i==arrayIndex}\"\n            src={{folder[0].imgUrl}}/>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n\n  <a [routerLink]=\"[ '/settings'] \" #setting class=\"settingFocus\">\n    <div class=\"playlist-setting-footer \">\n      <img src=\"assets/svgs/navigation_settings_bottom.svg \">\n      <h3>Settings</h3>\n    </div>\n  </a>\n</section>"
+module.exports = "<section class=\"playlist-setting\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"/assets/svgs/water_background.svg\">\n      <p>{{time}} </p>\n    </div>\n  </div>\n  <div class=\"playlist-icon-top\" (click)=\"goToFavPage()\" #favorite>\n    <img src=\"assets/svgs/navigation_favorites_top.svg\">\n    <h3 [ngClass]=\"{'favouriteFocus':1==Favcolor}\">Favourite</h3>\n  </div>\n\n  <div class=\"main-card-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem class=\"ngxcarouselPoint\" *ngFor=\"let folder of folders; let i = index\">\n        <div (click)=\"goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)\" #slider class=\"sliderFocus\">\n          <!-- <img src=\"/assets/svgs/folder_card_purple_open.svg\"> -->\n          <img class=\"activeImg img-thumbnail\" [style.background]=\"folder[0].color \" [ngClass]=\"{'imgActive':i==arrayIndex}\" src={{folder[0].imgUrl}}/>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n  <a class=\"help\" (click)=\"showWalkthrough()\"><i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i></a>\n  <div *ngIf=\"walkThrough\">\n    <div class=\"overlay\">\n      <div class=\"keyboard-img\">\n        <img src=\"/assets/svgs/keyboard.png\">\n      </div>\n      <div class=\"close-btn\" (click)=\"hideWalkthrough()\">\n        <img src=\"/assets/svgs/close.png\">\n      </div>\n    </div>\n  </div>\n\n  <div class=\"playlist-setting-footer \" (click)=\"goToSettingsPage()\" #setting>\n    <img src=\"assets/svgs/navigation_settings_bottom.svg \">\n    <h3 [ngClass]=\"{'settingFocus':1==settingsColor}\">Settings</h3>\n  </div>\n</section>"
 
 /***/ }),
 
@@ -845,6 +876,10 @@ module.exports = "<section class=\"playlist-setting\">\n  <div class=\"side-bar\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__ = __webpack_require__("../../../../ng4-loading-spinner/ng4-loading-spinner.umd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_RefreshWeb_index__ = __webpack_require__("../../../../../src/app/shared/services/RefreshWeb/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_take__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/take.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -854,6 +889,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
 
 
 
@@ -868,9 +907,11 @@ var KEY_CODE;
 })(KEY_CODE || (KEY_CODE = {}));
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(refreshweb, router, spinnerService) {
+        var _this = this;
         this.refreshweb = refreshweb;
         this.router = router;
         this.spinnerService = spinnerService;
+        this.counter = 60 * 60;
         this.obj = new Object();
         this.ids = [];
         this.cards = [];
@@ -878,68 +919,153 @@ var HomeComponent = /** @class */ (function () {
         this.arrayIndex = 0;
         this.downCount = 0;
         this.upCount = 0;
+        this.Favcolor = 0;
+        this.settingsColor = 0;
+        this.walkThrough = false;
+        this.FavCountdown = 0;
+        this.settingsUpCount = 0;
         this.refreshWeb();
+        var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].timer(0, 1000)
+            .map(function (x) { return _this.counter - x; })
+            .takeWhile(function (x) { return x > 0; });
+        this.countDown = timeInSecond$;
+        // const minsLeft$ = timeInSecond$.map(x => calcMinsFromSecondsRemaining(x));
     }
     HomeComponent.prototype.keyEvent = function (event) {
-        console.log(event);
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-            console.log("right key ");
             this.GoRight();
         }
         if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-            console.log("left key ");
             this.GoLeft();
         }
         if (event.keyCode === KEY_CODE.Up_key) {
-            console.log("Up key ");
             this.GoUp();
         }
         if (event.keyCode === KEY_CODE.Down_key) {
-            console.log("Down key ");
             this.GoDown();
         }
         if (event.keyCode === KEY_CODE.Enter) {
-            console.log("Enter key ");
             var folder = this.folders[this.arrayIndex];
             this.goToVideoPage(folder[0].id, folder[0].imgUrl, folder[0].color);
         }
     };
-    HomeComponent.prototype.onmoveFn = function ($event) {
-        console.log($event);
+    HomeComponent.prototype.onmoveFn = function (data) {
+        console.log(data);
+        this.currentSlide = data.currentSlide;
     };
     HomeComponent.prototype.GoDown = function () {
-        if (this.downCount < 2) {
+        if (this.downCount < 3) {
             this.downCount++;
         }
-        if (this.downCount == 1) {
-            this.myRight.nativeElement.focus();
-        }
-        if (this.downCount == 2) {
+        // on key down when very first time u enter in the home page
+        if (this.downCount == 1 && this.arrayIndex == 0 && this.Favcolor == 0) {
+            console.log("test");
             this.mySettingsBtn.nativeElement.focus();
+            this.settingsColor = 1;
+            this.arrayIndex = 645734;
             this.downCount = 0;
         }
-        console.log("test");
+        // on key down after u move slider
+        if (this.downCount == 1 && this.arrayIndex == this.currentSlide && this.Favcolor == 0) {
+            console.log("test");
+            this.mySettingsBtn.nativeElement.focus();
+            this.settingsColor = 1;
+            this.arrayIndex = 645734;
+            this.downCount = 0;
+            this.settingsUpCount = 1;
+        }
+        //when u enter in the settings page
+        if (this.downCount == 1 && this.settingsColor == 1) {
+            this.goToSettingsPage();
+            this.settingsColor = 0;
+        }
+        //on key down when u move from favourite button to slider first index
+        if (this.downCount == 1 && this.Favcolor == 1) {
+            console.log("test");
+            this.myLeft.nativeElement.focus();
+            this.arrayIndex = 0;
+            this.settingsColor = 0;
+            this.Favcolor = 0;
+            this.downCount = 0;
+        }
+        //on key down when u move from favourite button to slider current index
+        if (this.downCount == 1 && this.Favcolor == 1 && this.arrayIndex == this.currentSlide) {
+            console.log("test");
+            this.myLeft.nativeElement.focus();
+            this.arrayIndex = this.currentSlide;
+            this.settingsColor = 0;
+            this.Favcolor = 0;
+            this.downCount = 0;
+        }
+        // if (this.downCount == 1 && this.Favcolor == 1) {
+        //   console.log("test");
+        //   this.myLeft.nativeElement.focus();
+        //   this.Favcolor = 0;
+        //   this.arrayIndex = this.currentSlide;
+        // }
+        // if (this.downCount == 3) {
+        //   this.goToSettingsPage();
+        //   this.downCount = 0;
+        // }
     };
     HomeComponent.prototype.GoUp = function () {
-        if (this.upCount < 2) {
+        if (this.upCount < 3) {
             this.upCount++;
         }
-        if (this.upCount == 1) {
+        //onkey up focus on slider first index
+        if (this.upCount == 1 && this.settingsColor == 1) {
+            console.log("test");
             this.myLeft.nativeElement.focus();
-        }
-        if (this.upCount == 2) {
-            this.myFavBtn.nativeElement.focus();
+            this.arrayIndex = 0;
+            this.settingsColor = 0;
             this.upCount = 0;
         }
-        // this.myFavBtn.nativeElement.focus();
+        //on keyup focus on slider first index
+        if (this.upCount == 1 && this.arrayIndex == 0) {
+            console.log("test");
+            this.myFavBtn.nativeElement.focus();
+            this.Favcolor = 1;
+            this.arrayIndex = 6337484;
+            this.upCount = 0;
+        }
+        //on keyup focus on slider current index
+        if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
+            console.log("test");
+            this.myFavBtn.nativeElement.focus();
+            this.Favcolor = 1;
+            this.arrayIndex = 6337484;
+            this.upCount = 0;
+        }
+        //on keyup from first index to focus on favourite button
+        if (this.upCount == 1 && this.Favcolor == 1) {
+            this.goToFavPage();
+            this.Favcolor = 0;
+            this.arrayIndex = 6337484;
+        }
+        if (this.upCount == 1 && this.settingsUpCount == 1) {
+            this.myLeft.nativeElement.focus();
+            this.arrayIndex = this.currentSlide;
+            this.settingsColor = 0;
+            this.upCount = 0;
+        }
+        // if (this.upCount == 3) {
+        //   console.log("test");
+        //   this.goToFavPage();
+        // }
     };
     HomeComponent.prototype.GoLeft = function () {
         --this.arrayIndex;
+        if (this.arrayIndex == -1) {
+            this.arrayIndex = 0;
+        }
         // this.myLeft.nativeElement.focus();
     };
     HomeComponent.prototype.GoRight = function () {
         console.log("test");
         ++this.arrayIndex;
+        if (this.arrayIndex == this.folders.length) {
+            this.arrayIndex = 0;
+        }
     };
     HomeComponent.prototype.ngOnInit = function () {
         this.GetCard();
@@ -952,7 +1078,7 @@ var HomeComponent = /** @class */ (function () {
             animation: 'lazy',
             point: {
                 visible: true,
-                pointStyles: "\n        .ngxcarouselPoint {\n          display: none;\n        }\n       .ngxcarousel-inner {\n        height: 350px;\n        width: 108%;\n         }\n       .ngx-tile.item {\n        width:80%;\n       }\n        .tile {\n        width: 60%;\n        border-radius: 15px;\n       }\n      .ngxcarousel-items {\n      top: 39px;\n      left:8%;\n       }\n         @media (min-width: 992px){\n              .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {\n                   width: 31% !important;\n              }\n  \n          }\n        "
+                pointStyles: "\n        .ngxcarouselPoint {\n          display: none;\n        }\n       .ngxcarousel-inner {\n        height: 350px;\n        width: 108%;\n         }\n       .ngx-tile.item {\n        width:80%;\n       }\n        .tile {\n        width: 60%;\n        border-radius: 15px;\n        transform: scale(1.1);\n       }\n      .ngxcarousel-items {\n      top: 53px;\n      left:8%;\n       }\n         @media (min-width: 992px){\n              .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {\n                   width: 31% !important;\n              }\n  \n          }\n        "
             },
             load: 2,
             touch: true,
@@ -964,6 +1090,7 @@ var HomeComponent = /** @class */ (function () {
         this.deviceId = localStorage.getItem('X-Kidjo-DeviceId');
         if (!this.deviceId) {
             this.refreshweb.RefreshWeb().subscribe(function (data) {
+                _this.walkThrough = true;
                 console.log(data);
                 _this.ImageUrl = data.folderImageUrl;
                 _this.videoUrl = data.videoUrl;
@@ -1038,6 +1165,18 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.goToVideoPage = function (id, url, color) {
         console.log(color);
         this.router.navigate(['./video', id, url, color]);
+    };
+    HomeComponent.prototype.goToFavPage = function () {
+        this.router.navigate(['./favorites']);
+    };
+    HomeComponent.prototype.goToSettingsPage = function () {
+        this.router.navigate(['./settings']);
+    };
+    HomeComponent.prototype.showWalkthrough = function () {
+        this.walkThrough = true;
+    };
+    HomeComponent.prototype.hideWalkthrough = function () {
+        this.walkThrough = false;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('setting'),
@@ -1310,7 +1449,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".videos-filter-1{\n    background: radial-gradient(circle,brown 0%,steelblue 90%);\n    background-size: cover;\n    width: 100%;\n    height: 100vh;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode: overlay;\n    position: relative;\n    overflow: hidden;\n}\n.video-filter-top{\n    position:absolute;\n    top: 0;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n    position: fixed;\n}\n.video-filter-top h3{\n    position: absolute;\n    top: 24%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.video-filter-top img{\n    max-width: 200px;\n}\n.main-element-container{\n     display: -webkit-inline-box;\n     display: -ms-inline-flexbox;\n     display: inline-flex;   \n     margin-top: 200px ;\n     -webkit-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n     /* margin-left: 8%; */\n     position: absolute;\n     left: 50%;\n     -webkit-transform: translate(-50%);\n             transform: translate(-50%);\n}\n[class^=\"box\"] img{\n    max-width: 320px;\n    margin: 20px;\n    position: relative;\n}\n.box-1{\n    position: relative;\n}\n.text-box-1{\n    position: absolute;\n    top: 10%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    color: #fff;\n}\n.text-box-1 ul{\n    position: absolute;\n    width: 100%;\n    padding-top: 60px;\n    list-style: none;\n    text-align: left;\n    font-size: 20px;\n    line-height: 1.9em;\n    padding-left: 0;\n}\n.text-box-1 li{\n    text-align: center;\n}\n.last-item{\n    /* top: 174px;\n    right: -88px; */\n}\n.text-box-1  img{\n    display: inline-block !important;  \n    right: -48%;\n    max-width: 30px;\n    position: absolute;\n    margin: 5px;\n    \n}\n.text-box-1 h4{\n    font-size: 24px;\n    font-family: bree;\n    font-weight: 500;\n}\n@media(max-width:1408px)\n{\n    .videos-filter-1{\n        overflow: scroll;\n    }\n    .main-element-container{\n        -webkit-transform: none;\n                transform: none;\n        left: auto;\n\n    }\n}\n@media(max-width:360px) {\n    .main-element-container{\n        top: -3%;\n    }\n    \n}\n@media(max-width:840px){\n    .main-element-container{\n        margin-top:-5%;\n}\n}\n@media(max-width:1024px) {\n    .main-element-container{\n        margin-top: 40%;\n    }\n    \n}\n.selected-text{\n    color: #4eb3a6;\n}\n@media(max-width:1024px){\n    .main-element-container{\n        margin-top: 25%;\n    }\n    [class^=\"box\"] img{\n        max-width: 320px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 19px;\n    }\n    .text-box-1 h4{\n        font-size: 23px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n@media(max-width:812px){\n    .main-element-container{\n        margin-top: 10%;\n    }\n    [class^=\"box\"] img{\n        max-width: 170px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 14px;\n    }\n    .text-box-1 h4{\n        font-size: 16px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n.favouriteFocus:focus .video-filter-top h3{\n    color: #4dbcae;\n }\n.imgActive{\n    -webkit-transform: scale(1.2);\n            transform: scale(1.2); \n}\nselected_item{\n    color:red;\n    text-align: left;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.test:focus{\n    color:red;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.selected_item{\n    background: white;\n        color: black !important;\n}", ""]);
+exports.push([module.i, ".videos-filter-1{\n    background: radial-gradient(circle,brown 0%,steelblue 90%);\n    background-size: cover;\n    width: 100%;\n    height: 100vh;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode: overlay;\n    position: relative;\n    overflow: hidden;\n}\n.video-filter-top{\n    position:absolute;\n    top: 0;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n    position: fixed;\n}\n.video-filter-top h3{\n    position: absolute;\n    top: 24%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.video-filter-top img{\n    max-width: 200px;\n}\n.main-element-container{\n     display: -webkit-inline-box;\n     display: -ms-inline-flexbox;\n     display: inline-flex;   \n     margin-top: 200px ;\n     -webkit-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n     /* margin-left: 8%; */\n     position: absolute;\n     left: 50%;\n     -webkit-transform: translate(-50%);\n             transform: translate(-50%);\n}\n[class^=\"box\"] img{\n    max-width: 320px;\n    margin: 20px;\n    position: relative;\n}\n.box-1{\n    position: relative;\n}\n.text-box-1{\n    position: absolute;\n    top: 10%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    color: #fff;\n}\n.text-box-1 ul{\n    position: absolute;\n    width: 100%;\n    padding-top: 60px;\n    list-style: none;\n    text-align: left;\n    font-size: 20px;\n    line-height: 1.9em;\n    padding-left: 0;\n}\n.text-box-1 li{\n    text-align: center;\n}\n.last-item{\n    /* top: 174px;\n    right: -88px; */\n}\n.text-box-1  img{\n    display: inline-block !important;  \n    right: -48%;\n    max-width: 30px;\n    position: absolute;\n    margin: 5px;\n    \n}\n.text-box-1 h4{\n    font-size: 24px;\n    font-family: bree;\n    font-weight: 500;\n}\n@media(max-width:1408px)\n{\n    .videos-filter-1{\n        overflow: scroll;\n    }\n    .main-element-container{\n        -webkit-transform: none;\n                transform: none;\n        left: auto;\n\n    }\n}\n@media(max-width:360px) {\n    .main-element-container{\n        top: -3%;\n    }\n    \n}\n@media(max-width:840px){\n    .main-element-container{\n        margin-top:-5%;\n}\n}\n@media(max-width:1024px) {\n    .main-element-container{\n        margin-top: 40%;\n    }\n    \n}\n.selected-text{\n    color: #4eb3a6;\n}\n@media(max-width:1024px){\n    .main-element-container{\n        margin-top: 25%;\n    }\n    [class^=\"box\"] img{\n        max-width: 320px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 19px;\n    }\n    .text-box-1 h4{\n        font-size: 23px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n@media(max-width:812px){\n    .main-element-container{\n        margin-top: 10%;\n    }\n    [class^=\"box\"] img{\n        max-width: 170px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 14px;\n    }\n    .text-box-1 h4{\n        font-size: 16px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n.homeFocus{\n    color: #4dbcae !important;\n }\n.imgActive{\n    -webkit-transform: scale(1.2);\n            transform: scale(1.2); \n}\nselected_item{\n    color:red;\n    text-align: left;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.test:focus{\n    color:red;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.selected_item{\n    background: white;\n        color: black !important;\n}", ""]);
 
 // exports
 
@@ -1323,7 +1462,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/settings/settings.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"videos-filter-1\">\n    <a [routerLink]=\"[ '/'] \" #home class=\"favouriteFocus\">\n        <div class=\"video-filter-top\">\n            <img src=\"assets/svgs/navigation_folder_top.svg\">\n            <h3>Videos</h3>\n        </div>\n    </a>\n    <div class=\"main-element-container\">\n        <div #box1 class=\"box-1 test\" [ngClass]=\"{'imgActive':1==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n\n            <div class=\"text-box-1\">\n                <h4>Filter by age</h4>\n                <ul style=\"cursor: pointer;\">\n                    <li #fitrstList [ngClass]=\"{'selected-text':selectedAge == m,'selected_item':i == ageItemsIndex}\" style=\"text-align: center;\"\n                        *ngFor=\"let m of age; let i = index;\" (click)=\"getAge(m)\">{{m}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setAgeTick(m)\">\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box2 [ngClass]=\"{'imgActive':2==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n            <div class=\"text-box-1\">\n                <h4>Set time limit</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #secondList [ngClass]=\"{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}\" *ngFor=\"let time of timeLimit;  let i = index; \"\n                        (click)=\"getTime(time) \">{{time}} \n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setTimeTick(time) \" style=\" display: inline-block !important; \">\n                    </li>\n                    <!-- <li [ngClass]=\"{'selected_item':6 == timeItemsIndex}\" (click)=\"getTime(off) \">{{off}} <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setTimeTick(off)\">\n                    </li> -->\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box3 [ngClass]=\"{'imgActive':3==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Choose content</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #thirdtList [ngClass]=\"{'selected-text':selectedContent == c,'selected_item':i == contentItemsIndex}\" *ngFor=\"let c of content;  let i = index; \"\n                        (click)=\"getContent(c) \">{{c}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setContentTick(c) \" style=\"right:-50px;\"></li>\n\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box4 [ngClass]=\"{'imgActive':4==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Language</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #forthList [ngClass]=\"{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}\" *ngFor=\"let lang of language;  let i = index; \"\n                        (click)=\"getLanguage(lang) \">{{lang}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setLanguageTick(lang) \">\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>"
+module.exports = "<section class=\"videos-filter-1\">\n    <div class=\"video-filter-top\" (click)=\"goToHome()\" #home>\n        <img src=\"assets/svgs/navigation_folder_top.svg\">\n        <h3 [ngClass]=\"{'homeFocus':1==homeColor}\">Videos</h3>\n    </div>\n    <div class=\"main-element-container\">\n        <div #box1 class=\"box-1 test\" [ngClass]=\"{'imgActive':1==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n\n            <div class=\"text-box-1\">\n                <h4>Filter by age</h4>\n                <ul style=\"cursor: pointer;\">\n                    <li #fitrstList [ngClass]=\"{'selected-text':selectedAge == m,'selected_item':i == ageItemsIndex}\" style=\"text-align: center;\"\n                        *ngFor=\"let m of age; let i = index;\" (click)=\"getAge(m)\">{{m}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setAgeTick(m)\">\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box2 [ngClass]=\"{'imgActive':2==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n            <div class=\"text-box-1\">\n                <h4>Set time limit</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #secondList [ngClass]=\"{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}\" *ngFor=\"let time of timeLimit;  let i = index; \"\n                        (click)=\"getTime(time) \">{{time}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setTimeTick(time) \" style=\" display: inline-block !important; \">\n                    </li>\n                    <!-- <li [ngClass]=\"{'selected_item':6 == timeItemsIndex}\" (click)=\"getTime(off) \">{{off}} <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setTimeTick(off)\">\n                    </li> -->\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box3 [ngClass]=\"{'imgActive':3==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Choose content</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #thirdtList [ngClass]=\"{'selected-text':selectedContent == c,'selected_item':i == contentItemsIndex}\" *ngFor=\"let c of content;  let i = index; \"\n                        (click)=\"getContent(c) \">{{c}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setContentTick(c) \" style=\"right:-50px;\"></li>\n\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box4 [ngClass]=\"{'imgActive':4==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Language</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #forthList [ngClass]=\"{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}\" *ngFor=\"let lang of language;  let i = index; \"\n                        (click)=\"getLanguage(lang) \">{{lang}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setLanguageTick(lang) \">\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>"
 
 /***/ }),
 
@@ -1334,6 +1473,7 @@ module.exports = "<section class=\"videos-filter-1\">\n    <a [routerLink]=\"[ '
 /* unused harmony export KEY_CODE */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1344,6 +1484,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var KEY_CODE;
 (function (KEY_CODE) {
     KEY_CODE[KEY_CODE["RIGHT_ARROW"] = 39] = "RIGHT_ARROW";
@@ -1353,101 +1494,90 @@ var KEY_CODE;
     KEY_CODE[KEY_CODE["Down_key"] = 40] = "Down_key";
 })(KEY_CODE || (KEY_CODE = {}));
 var SettingsComponent = /** @class */ (function () {
-    function SettingsComponent() {
+    function SettingsComponent(router) {
+        this.router = router;
         this.arrayIndex = 1;
-        this.liIndex = 0;
         this.age = [3, 4, 5, 6, 7];
         this.timeLimit = ['5 Minutes', '20 Minutes', '40 Minutes', '60 Minutes', '90 Minutes', 'Off'];
         this.content = ["Mix", "Entertainment", "Educational"];
         this.language = ["English", "Espanol", "Français", "Portugues"];
         this.testt = [];
-        this.downCount = 0;
         this.upCount = 0;
         this.ageItemsIndex = 0;
         this.ageIndex = this.age.length;
         this.timeIndex = this.timeLimit.length;
         this.contentIndex = this.content.length;
         this.langIndex = this.language.length;
-        this.off = "Off";
         this.selectedAge = localStorage.getItem('Age');
         this.selectedTime = localStorage.getItem('screenTimeLimit');
         this.selectedContent = localStorage.getItem('selectedContentType');
         this.selectedLanguage = localStorage.getItem('language');
     }
     SettingsComponent.prototype.keyEvent = function (event) {
-        console.log(event);
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-            console.log("right key ");
             this.GoRight();
         }
         if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-            console.log("left key ");
             this.GoLeft();
         }
         if (event.keyCode === KEY_CODE.Up_key) {
-            console.log("Up key ");
             this.GoUp();
         }
         if (event.keyCode === KEY_CODE.Down_key) {
-            console.log("Down key ");
             this.GoDown();
         }
         if (event.keyCode === KEY_CODE.Enter) {
-            console.log("Enter key ");
-            if (this.arrayIndex != 0) {
-                this.myHomeBtn.nativeElement.blur();
-            }
-            if (this.arrayIndex == 1) {
-                this.getAge(this.age[this.ageItemsIndex]);
-                this.ageItemsIndex = 8;
-                // this.arrayIndex = 2;
-            }
-            if (this.arrayIndex == 2) {
-                this.getTime(this.timeLimit[this.timeItemsIndex]);
-                this.timeItemsIndex = 8;
-            }
-            if (this.arrayIndex == 3) {
-                this.getContent(this.content[this.contentItemsIndex]);
-                this.contentItemsIndex = 6;
-            }
-            if (this.arrayIndex == 4) {
-                this.getLanguage(this.language[this.langItemsIndex]);
-                this.langItemsIndex = 8;
-            }
-            this.arrayIndex = 0;
+            this.GoToEnter();
         }
+    };
+    SettingsComponent.prototype.GoToEnter = function () {
+        if (this.arrayIndex != 0) {
+            this.myHomeBtn.nativeElement.blur();
+        }
+        if (this.arrayIndex == 1) {
+            this.getAge(this.age[this.ageItemsIndex]);
+            this.ageItemsIndex = 8;
+        }
+        if (this.arrayIndex == 2) {
+            this.getTime(this.timeLimit[this.timeItemsIndex]);
+            this.timeItemsIndex = 8;
+        }
+        if (this.arrayIndex == 3) {
+            this.getContent(this.content[this.contentItemsIndex]);
+            this.contentItemsIndex = 6;
+        }
+        if (this.arrayIndex == 4) {
+            this.getLanguage(this.language[this.langItemsIndex]);
+            this.langItemsIndex = 8;
+        }
+        this.arrayIndex = 0;
     };
     SettingsComponent.prototype.GoDown = function () {
         if (this.arrayIndex == 0) {
             this.myHomeBtn.nativeElement.blur();
             this.arrayIndex = 1;
-        }
-        if (this.arrayIndex == 1) {
-            this.fitrstList.nativeElement.focus();
+            this.ageItemsIndex = -1;
+            this.homeColor = 0;
         }
         if (this.ageIndex < 6 && this.arrayIndex == 1) {
-            // this.getAge(this.age[this.itemsIndex++]);
             this.ageItemsIndex++;
             if (this.ageItemsIndex == 5) {
                 this.ageItemsIndex = 0;
             }
         }
         if (this.timeIndex < 7 && this.arrayIndex == 2) {
-            // this.getTime(this.timeLimit[this.itemsIndex++]);
             this.timeItemsIndex++;
             if (this.timeItemsIndex == 6) {
                 this.timeItemsIndex = 0;
             }
         }
         if (this.contentIndex < 4 && this.arrayIndex == 3) {
-            // this.getTime(this.timeLimit[this.itemsIndex++]);
             this.contentItemsIndex++;
             if (this.contentItemsIndex == 3) {
                 this.contentItemsIndex = 0;
             }
         }
         if (this.langIndex < 5 && this.arrayIndex == 4) {
-            // this.getTime(this.timeLimit[this.itemsIndex++]);
             this.langItemsIndex++;
             if (this.langItemsIndex == 4) {
                 this.langItemsIndex = 0;
@@ -1456,29 +1586,42 @@ var SettingsComponent = /** @class */ (function () {
     };
     SettingsComponent.prototype.GoUp = function () {
         if (this.arrayIndex != 0) {
+            // this.arrayIndex=1;
         }
         if (this.upCount < 1) {
             this.upCount++;
         }
         if (this.upCount == 1 && this.arrayIndex == 0) {
-            this.myHomeBtn.nativeElement.focus();
+            this.goToHome();
             this.upCount = 0;
         }
-        if (this.selectedAge > 3 && this.arrayIndex == 1) {
-            // this.getAge(this.age[--this.itemsIndex]);
+        if (this.ageIndex > 0 && this.arrayIndex == 1) {
             --this.ageItemsIndex;
         }
+        if (this.ageItemsIndex == -1 && this.arrayIndex == 1) {
+            this.arrayIndex = 0;
+            this.homeColor = 1;
+        }
         if (this.timeIndex > 0 && this.arrayIndex == 2) {
-            // this.getAge(this.age[--this.itemsIndex]);
             --this.timeItemsIndex;
         }
+        if (this.timeItemsIndex == -1 && this.arrayIndex == 2) {
+            this.arrayIndex = 0;
+            this.homeColor = 1;
+        }
         if (this.contentIndex > 0 && this.arrayIndex == 3) {
-            // this.getAge(this.age[--this.itemsIndex]);
             --this.contentItemsIndex;
         }
+        if (this.contentItemsIndex == -1 && this.arrayIndex == 3) {
+            this.arrayIndex = 0;
+            this.homeColor = 1;
+        }
         if (this.langIndex > 0 && this.arrayIndex == 4) {
-            // this.getAge(this.age[--this.itemsIndex]);
             --this.langItemsIndex;
+        }
+        if (this.langItemsIndex == -1 && this.arrayIndex == 4) {
+            this.arrayIndex = 0;
+            this.homeColor = 1;
         }
     };
     SettingsComponent.prototype.GoLeft = function () {
@@ -1507,6 +1650,10 @@ var SettingsComponent = /** @class */ (function () {
     };
     SettingsComponent.prototype.GoRight = function () {
         ++this.arrayIndex;
+        if (this.arrayIndex == 1) {
+            this.ageItemsIndex == 0;
+            this.homeColor = 0;
+        }
         if (this.arrayIndex == 5) {
             this.arrayIndex = 1;
             this.ageItemsIndex = 0;
@@ -1532,6 +1679,10 @@ var SettingsComponent = /** @class */ (function () {
         }
     };
     SettingsComponent.prototype.ngOnInit = function () {
+        // if (this.arrayIndex != 1 && this.ageItemsIndex != 0) {
+        //   this.arrayIndex = 1;
+        //   this.ageItemsIndex = 0;
+        // }
     };
     SettingsComponent.prototype.setAgeTick = function (val) {
         var age = localStorage.getItem('Age');
@@ -1585,46 +1736,13 @@ var SettingsComponent = /** @class */ (function () {
         localStorage.setItem('language', lang);
         this.selectedLanguage = lang;
     };
+    SettingsComponent.prototype.goToHome = function () {
+        this.router.navigate(['./']);
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('home'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
     ], SettingsComponent.prototype, "myHomeBtn", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('lost'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "LostFocus", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('box1'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "firstBox", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('box2'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "secondBox", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('box3'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "thirdBox", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('box4'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "forthBox", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fitrstList'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "fitrstList", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('secondList'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "secondList", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('thirdtList'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "thirdtList", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('forthList'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], SettingsComponent.prototype, "forthList", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('window:keyup', ['$event']),
         __metadata("design:type", Function),
@@ -1637,7 +1755,7 @@ var SettingsComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/settings/settings.component.html"),
             styles: [__webpack_require__("../../../../../src/app/settings/settings.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
     ], SettingsComponent);
     return SettingsComponent;
 }());
@@ -2146,7 +2264,7 @@ var BlockUIService = /** @class */ (function () {
     function BlockUIService() {
         //blockUIEvent: EventEmitter<any>;
         this.blockUI = false;
-        this.blockUIEvent$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* ReplaySubject */](1);
+        this.blockUIEvent$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["b" /* ReplaySubject */](1);
         this.locked = false;
         this.blockUIEvent$.next(false);
     }
@@ -2234,6 +2352,7 @@ var FavoriteService = /** @class */ (function () {
         console.log(values);
         alert();
         var url = "/kid/" + values.kidId + "/favorites/add";
+        console.log(url);
         return this.restConnector.httpPostWeb(values, url);
     };
     FavoriteService.prototype.GetFavorite = function (kidId) {
@@ -2419,7 +2538,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".books-section{\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    position: relative;\n    overflow: hidden;\n}\n.background{\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.png');\n    background-size: cover;\n    -webkit-filter: blur(40px);\n            filter: blur(40px);\n    background-repeat: no-repeat;\n    background-position: relative;\n}\n.side-bar{\n    position: relative;\n    top: 10%;\n    z-index: 1;\n    width: 6%;\n}\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n.books{\n    position: relative;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 12%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 152px;\n    border: 9px solid #fff;\n    border-radius: 15px;\n    \n    /* border-radius: 4px */\n}\n.mybtn{\n    max-width: 45px;\n    position: absolute;\n    top: 4%;\n    right: 5%;\n}\n.main-books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 30%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    /* margin: 0 auto; */\n    left: 53%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n.books{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 120px;\n    border: 4px solid #fff;\n    border-radius: 4px\n}\n.books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    position: absolute;\n    top: 31%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);    \n}\n[class^=\"books-container\"]\n{\n    margin-left: 2.5em;\n}\n.books-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n.books-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n.video{\n position: relative;\n    \n}\n.lock-overlay img{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    border-top-left-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.lock-overlay .lock-bar{\n    width: 100%;\n}\n.lock-overlay .lock-icon{\n    top: 5%;\n    left: 25%;\n    width: 15px;\n}\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n.books-card .caption{\n    padding: 0em;\n    background: red;\n    position: absolute;\n    top: 86%;\n    left: 6%;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n.caption p{\n    padding: 8px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n.fav-btn{    \n    position: absolute;\n    top: 113%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n.fav-btn img{\n    width: 15px;\n    height: 15px;\n    margin-bottom: 10%;\n    cursor: pointer;\n}\n.fav-btn p{\n    margin-right: auto;\n    margin-left:10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 12px;\n    margin-top: 5%;\n    cursor: pointer;\n}\n#button-fav{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 108px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n    cursor: pointer;\n}\n#button-fav:focus{\n    outline: none;\n}\nfavBtnClick .fav-btn p{\n    color: white;\n    background-color: red;\n}\n/* @media(max-width:1025px)\n{    \n    .books-section{\n        background-size: contain;\n        height: 1320px;  \n    }\n    .books{\n        top: 2%;\n    }\n    .main-books-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 15%;\n        width: 20%;\n    }\n} */\n/* @media(max-width:500px)\n{\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n.side-bar-contents img{\n    transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n} */\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.playlist-icon-top img{\n    max-width: 200px;\n}\n/* .img-thumbnail{\n    border: 10px solid #fff;\n    border-radius: 4px;\n    position: relative;\n} */\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n}\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .2em 1em;\n\n}\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -65px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: -93%;\n    right: 0;\n    opacity: 0;\n}\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -60px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    opacity: 0;\n    /* left: ; */\n}\n@media(max-width:736px){\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar{\n        top: 23%;\n    }\n    .side-bar-contents p{\n        top: 30%;\n    }\n    img.img-thumbnail{\n        width: 172px;\n    }\n    .main-books-container{\n        max-width: 80%;\n        height: 50%;\n    }\n    .rightRs{\n        top: -33px;\n        right: 26%;\n    }\n    .leftRs{\n        top: -33px;\n        left: 25%;\n    }\n    #video{\n        max-width: 60%;\n    }\n\n}\n@media(max-width:640px){\n    .rightRs{\n        right: 27%;\n    }\n    .leftRs{\n        left: 27%;\n    }\n}\n@media(max-width:1024px){\n.main-books-container{\n    max-width: 80%;\n    }\n    .rightRs{\n        right: 137px;\n        top: -110px;\n    }\n    .leftRs{\n        left: 138px;\n    }\n}\n/* test */\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n.disabled {\n    /* cursor: not-allowed; */\n    pointer-events: none;\n}\n.fa{\n    font-size: 55px !important;\n    color: #fff !important;\n}\n.favouriteFocus:focus .mybtn{\nbackground-color: white;\nborder-radius: 50px;\n    /* background-color: red; */\n }\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.subCard{\n    max-width: 152px !important ;\n    border: 9px solid #fff !important;\n    border-radius: 15px !important;\n}\n", ""]);
+exports.push([module.i, ".books-section{\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    position: relative;\n    overflow: hidden;\n}\n.background{\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.png');\n    background-size: cover;\n    -webkit-filter: blur(40px);\n            filter: blur(40px);\n    background-repeat: no-repeat;\n    background-position: relative;\n}\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    z-index: 1;\n    width: 6%;\n}\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n.books{\n    position: relative;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 12%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 152px;\n    border: 9px solid #fff;\n    border-radius: 15px;\n    \n    /* border-radius: 4px */\n}\n.mybtn{\n    max-width: 45px;\n    position: absolute;\n    top: 4%;\n    right: 5%;\n}\n.main-books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 50%;\n    left: 53%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    /* margin: 0 auto; */\n}\n.books{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 120px;\n    border: 4px solid #fff;\n    border-radius: 4px\n}\n.books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    position: absolute;\n    top: 31%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);    \n}\n[class^=\"books-container\"]\n{\n    margin-left: 2.5em;\n}\n.books-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n.books-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n.video{\n position: relative;\n    \n}\n.lock-overlay img{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    border-top-left-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.lock-overlay .lock-bar{\n    width: 100%;\n}\n.lock-overlay .lock-icon{\n    top: 5%;\n    left: 25%;\n    width: 15px;\n}\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n.books-card .caption{\n    padding: 0em;\n    background: red;\n    position: absolute;\n    top: 86%;\n    left: 6%;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n.caption p{\n    padding: 8px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n.fav-btn{    \n    position: absolute;\n    top: 113%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n.fav-btn img{\n    width: 15px;\n    height: 15px;\n    margin-bottom: 10%;\n    cursor: pointer;\n}\n.fav-btn p{\n    margin-right: auto;\n    margin-left:10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 12px;\n    margin-top: 5%;\n    cursor: pointer;\n}\n#button-fav{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 108px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n    cursor: pointer;\n}\n#button-fav:focus{\n    outline: none;\n}\nfavBtnClick .fav-btn p{\n    color: white;\n    background-color: red;\n}\n/* @media(max-width:1025px)\n{    \n    .books-section{\n        background-size: contain;\n        height: 1320px;  \n    }\n    .books{\n        top: 2%;\n    }\n    .main-books-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 15%;\n        width: 20%;\n    }\n} */\n/* @media(max-width:500px)\n{\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n.side-bar-contents img{\n    transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n} */\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.playlist-icon-top img{\n    max-width: 200px;\n}\n/* .img-thumbnail{\n    border: 10px solid #fff;\n    border-radius: 4px;\n    position: relative;\n} */\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n}\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .2em 1em;\n\n}\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -65px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: -93%;\n    right: 0;\n    opacity: 0;\n}\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -60px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    opacity: 0;\n    /* left: ; */\n}\n@media(max-width:736px){\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar{\n        top: 23%;\n    }\n    .side-bar-contents p{\n        top: 30%;\n    }\n    img.img-thumbnail{\n        width: 172px;\n    }\n    .main-books-container{\n        max-width: 80%;\n        height: 50%;\n    }\n    .rightRs{\n        top: -33px;\n        right: 26%;\n    }\n    .leftRs{\n        top: -33px;\n        left: 25%;\n    }\n    #video{\n        max-width: 60%;\n    }\n\n}\n@media(max-width:640px){\n    .rightRs{\n        right: 27%;\n    }\n    .leftRs{\n        left: 27%;\n    }\n}\n@media(max-width:1024px){\n.main-books-container{\n    max-width: 80%;\n    }\n    .rightRs{\n        right: 137px;\n        top: -110px;\n    }\n    .leftRs{\n        left: 138px;\n    }\n}\n/* test */\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n.disabled {\n    /* cursor: not-allowed; */\n    pointer-events: none;\n}\n.favouriteFocus{\nbackground-color: white !important ;\nborder-radius: 50px !important;\n    /* background-color: red; */\n }\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.subCard{\n    max-width: 152px !important ;\n    border: 9px solid #fff !important;\n    border-radius: 15px !important;\n}\n", ""]);
 
 // exports
 
@@ -2432,7 +2551,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/video-selection/video-selection.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"books-section\">\n  <div class=\"background\"></div>\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"/assets/svgs/water_background.svg\">\n      <p>{{time}} min</p>\n    </div>\n  </div>\n  <a [routerLink]=\"['/']\" #home class=\"favouriteFocus\">\n    <img class=\"mybtn\" src=\"/assets/svgs/video_card_cross.svg\">\n  </a>\n  <div class=\"books\">\n    <img class=\"subCard img-thumbnail\" [style.background]='color' src={{imgUrl}}>\n\n  </div>\n  <div class=\"main-books-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of video;  let i = index\">\n        <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n        <button class=\"btn playbtn\" data-toggle=\"modal\" data-target=\"#videoModdal\" (click)=\"openNav()\" [ngClass]=\"{'imgActive':i==arrayIndex}\">Play</button>\n        <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n        <!-- <div class=\"lock-overlay\">\n          <img class=\"lock-bar\" src=\"assets/svgs/video_card_lock_bar.svg\">\n          <img class=\"lock-icon\" src=\"assets/svgs/video_card_lock.svg\">\n          <p>Press to unlock</p>\n        </div> -->\n        <div class=\"caption\">\n          <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].Title}}</p>\n        </div>\n        <div class=\"fav-btn\" style=\"cursor: pointer;\" (click)=\"addToFav(vid[0].id)\">\n          <button [ngClass]=\"{'favBtnClick':true}\" type=\"button\" value=\"btn\" id=\"button-fav\">\n                  <img src=\"assets/svgs/video_card_heart.svg\">\n                  <p>Favorite</p>\n              </button>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n\n\n\n  <!-- Full screen modal to show video -->\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n        <video #media [vgMedia]=\"media\" preload=\"auto\" [vgDash]=\"currentStream\" [vgHls]=\"currentStream\" id=\"singleVideo\">\n        </video>\n      </vg-player>\n    </div>\n  </div>\n\n\n\n</section>"
+module.exports = "<section class=\"books-section\">\n  <div class=\"background\"></div>\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"/assets/svgs/water_background.svg\">\n      <p>{{time}} </p>\n    </div>\n  </div>\n  <div (click)=\"goToHome()\" #home>\n    <img [ngClass]=\"{'favouriteFocus':1==crossColor}\" class=\"mybtn\" src=\"/assets/svgs/video_card_cross.svg\">\n  </div>\n  <div class=\"books\">\n    <img class=\"subCard img-thumbnail\" [style.background]='color' src={{imgUrl}}>\n\n  </div>\n  <div class=\"main-books-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of video;  let i = index\">\n        <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n        <button class=\"btn playbtn\" data-toggle=\"modal\" data-target=\"#videoModdal\" (click)=\"openNav()\" [ngClass]=\"{'imgActive':i==arrayIndex}\">Play</button>\n        <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n        <!-- <div class=\"lock-overlay\">\n          <img class=\"lock-bar\" src=\"assets/svgs/video_card_lock_bar.svg\">\n          <img class=\"lock-icon\" src=\"assets/svgs/video_card_lock.svg\">\n          <p>Press to unlock</p>\n        </div> -->\n        <div class=\"caption\">\n          <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].Title}}</p>\n        </div>\n        <div class=\"fav-btn\" style=\"cursor: pointer;\" (click)=\"addToFav(vid[0].id)\">\n          <button [ngClass]=\"{'favBtnClick':true}\" type=\"button\" value=\"btn\" id=\"button-fav\">\n                  <img src=\"assets/svgs/video_card_heart.svg\">\n                  <p>Favorite</p>\n              </button>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n\n\n\n  <!-- Full screen modal to show video -->\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n        <video #media [vgMedia]=\"media\" preload=\"auto\" [vgDash]=\"currentStream\" [vgHls]=\"currentStream\" id=\"singleVideo\">\n        </video>\n      </vg-player>\n    </div>\n  </div>\n\n\n\n</section>"
 
 /***/ }),
 
@@ -2449,8 +2568,12 @@ module.exports = "<section class=\"books-section\">\n  <div class=\"background\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_videoService_index__ = __webpack_require__("../../../../../src/app/shared/services/videoService/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_favoritesService_index__ = __webpack_require__("../../../../../src/app/shared/services/favoritesService/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_entities_index__ = __webpack_require__("../../../../../src/app/shared/entities/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_add_operator_take__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/take.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2460,6 +2583,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
 
 
 
@@ -2477,12 +2604,14 @@ var KEY_CODE;
     KEY_CODE[KEY_CODE["escape_key"] = 27] = "escape_key";
 })(KEY_CODE || (KEY_CODE = {}));
 var VideoSelectionComponent = /** @class */ (function () {
-    function VideoSelectionComponent(route, videoService, favService, spinnerService) {
+    function VideoSelectionComponent(route, videoService, favService, router, spinnerService) {
         var _this = this;
         this.route = route;
         this.videoService = videoService;
         this.favService = favService;
+        this.router = router;
         this.spinnerService = spinnerService;
+        this.counter = 60 * 60;
         this.video = [];
         this.cards = [];
         this.formate = [];
@@ -2503,6 +2632,10 @@ var VideoSelectionComponent = /** @class */ (function () {
         // });
         var ids = this.route.params.subscribe(function (params) {
             _this.idss = +params['id'];
+            var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_6_rxjs_Rx__["a" /* Observable */].timer(0, 1000)
+                .map(function (x) { return _this.counter - x; })
+                .takeWhile(function (x) { return x > 0; });
+            _this.countDown = timeInSecond$;
             // console.log(this.idss);
         });
         this.getSubCard();
@@ -2549,42 +2682,44 @@ var VideoSelectionComponent = /** @class */ (function () {
         }
     };
     VideoSelectionComponent.prototype.GoDown = function () {
-        if (this.downCount < 2) {
+        if (this.downCount < 1) {
             this.downCount++;
         }
         if (this.downCount == 1) {
             this.myRight.nativeElement.focus();
+            this.crossColor = 0;
+            this.upCount = 0;
             this.downCount = 0;
         }
-        // if (this.downCount == 2) {
-        //   // this.mySettingsBtn.nativeElement.focus();
-        //   this.downCount = 0;
-        // }
-        console.log("test");
     };
     VideoSelectionComponent.prototype.GoUp = function () {
-        if (this.upCount < 1) {
+        if (this.upCount < 2) {
             this.upCount++;
         }
-        // if (this.upCount == 1) {
-        //   this.myLeft.nativeElement.focus();
-        // }
         if (this.upCount == 1) {
             this.myHomeBtn.nativeElement.focus();
+            this.crossColor = 1;
+        }
+        if (this.upCount == 2) {
+            this.goToHome();
             this.upCount = 0;
         }
-        // this.myFavBtn.nativeElement.focus();
     };
     VideoSelectionComponent.prototype.onmoveFn = function ($event) {
         console.log($event);
     };
     VideoSelectionComponent.prototype.GoLeft = function () {
         --this.arrayIndex;
-        // this.myLeft.nativeElement.focus();
+        if (this.arrayIndex == -1) {
+            this.arrayIndex = 0;
+        }
     };
     VideoSelectionComponent.prototype.GoRight = function () {
         console.log("test");
         ++this.arrayIndex;
+        if (this.arrayIndex == this.video.length) {
+            this.arrayIndex = 0;
+        }
     };
     VideoSelectionComponent.prototype.ngOnInit = function () {
         this.time = localStorage.getItem('screenTimeLimit');
@@ -2598,7 +2733,7 @@ var VideoSelectionComponent = /** @class */ (function () {
             animation: 'lazy',
             point: {
                 visible: true,
-                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:80%;\n          transform: scale(1.2);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 450px;\n        width: 108%;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 88px;\n      left: 8%;\n  }\n  ngx-tile.item {\n    margin: 3%;\n    }\n\n        "
+                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:80%;\n          transform: scale(1.3);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 450px;\n        width: 108%;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 88px;\n      left: 8%;\n  }\n  ngx-tile.item {\n    margin: 3%;\n    }\n\n        "
             },
             load: 2,
             touch: true,
@@ -2729,7 +2864,7 @@ var VideoSelectionComponent = /** @class */ (function () {
                 // this.setCurrentVideo("SampleVideo_1280x720_2mb.mp4", "video/mp4");
                 _this.onPlayerReady(_this.api);
                 setTimeout(function () {
-                    __WEBPACK_IMPORTED_MODULE_6_jquery__("#myButton").trigger("click");
+                    __WEBPACK_IMPORTED_MODULE_7_jquery__("#myButton").trigger("click");
                 }, 1000);
                 x = 0;
             }
@@ -2737,6 +2872,9 @@ var VideoSelectionComponent = /** @class */ (function () {
                 _this.api.play();
             }
         });
+    };
+    VideoSelectionComponent.prototype.goToHome = function () {
+        this.router.navigate(['./']);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('close'),
@@ -2769,6 +2907,7 @@ var VideoSelectionComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_3__shared_services_videoService_index__["a" /* VideoService */],
             __WEBPACK_IMPORTED_MODULE_4__shared_services_favoritesService_index__["a" /* FavoriteService */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
     ], VideoSelectionComponent);
     return VideoSelectionComponent;
