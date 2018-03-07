@@ -2,22 +2,20 @@
   <div class="side-bar">
     <div class="side-bar-contents">
       <img src="/assets/svgs/water_background.svg">
-      <p>{{time}} </p>
+      <p>{{countDown | async}} </p>
     </div>
   </div>
-  <a [routerLink]="['/favorites']" #favorite class="favouriteFocus">
-    <div class="playlist-icon-top">
-      <img src="assets/svgs/navigation_favorites_top.svg">
-      <h3>Favourite</h3>
-    </div>
-  </a>
+  <div class="playlist-icon-top" (click)="goToFavPage()" #favorite>
+    <img src="assets/svgs/navigation_favorites_top.svg">
+    <h3 [ngClass]="{'favouriteFocus':1==Favcolor}">Favourite</h3>
+  </div>
 
   <div class="main-card-container">
-    <ngx-carousel [inputs]="carouselTile" [moveToSlide]= "arrayIndex" (onMove)="onmoveFn($event)">
+    <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
       <ngx-tile NgxCarouselItem class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index">
-        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)"  #slider class="sliderFocus">
-          <img class="activeImg img-thumbnail" [style.background]="folder[0].color " [ngClass]="{'imgActive':i==arrayIndex}"
-            src={{folder[0].imgUrl}}/>
+        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)" #slider class="sliderFocus">
+          <!-- <img src="/assets/svgs/folder_card_purple_open.svg"> -->
+          <img class="activeImg img-thumbnail" [style.background]="folder[0].color " [ngClass]="{'imgActive':i==arrayIndex}" src={{folder[0].imgUrl}}/>
         </div>
       </ngx-tile>
       <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
@@ -25,11 +23,20 @@
 
     </ngx-carousel>
   </div>
-
-  <a [routerLink]="[ '/settings'] " #setting class="settingFocus">
-    <div class="playlist-setting-footer ">
-      <img src="assets/svgs/navigation_settings_bottom.svg ">
-      <h3>Settings</h3>
+  <a class="help" (click)="showWalkthrough()"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+  <div *ngIf="walkThrough">
+    <div class="overlay">
+      <div class="keyboard-img">
+        <img src="/assets/svgs/keyboard.png">
+      </div>
+      <div class="close-btn" (click)="hideWalkthrough()">
+        <img src="/assets/close.png">
+      </div>
     </div>
-  </a>
+  </div>
+
+  <div class="playlist-setting-footer " (click)="goToSettingsPage()" #setting>
+    <img src="assets/svgs/navigation_settings_bottom.svg ">
+    <h3 [ngClass]="{'settingFocus':1==settingsColor}">Settings</h3>
+  </div>
 </section>

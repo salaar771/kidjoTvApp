@@ -12,6 +12,7 @@ import { VgStreamingModule } from 'videogular2/streaming';
 import { HotkeyModule } from 'angular2-hotkeys';
 import 'hammerjs';
 import { WalkthroughModule } from 'ngx-walkthrough';
+import { SlicePipe } from '@angular/common';
 
 
 

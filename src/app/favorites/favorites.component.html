@@ -2,7 +2,7 @@
   <div class="side-bar">
     <div class="side-bar-contents">
       <img src="assets/svgs/water_background.svg">
-      <p>{{time}} </p>
+      <p>{{countDown | async}}</p>
     </div>
   </div>
   <div class="playlist">
@@ -35,12 +35,12 @@
 
     </ngx-carousel>
   </div>
-  <a [routerLink]="[ '/'] " #home class="favouriteFocus">
-    <div class="footer-heading">
-      <img src="assets/svgs/navigation_folder_bottom.svg">
-      <h3>Videos</h3>
-    </div>
-  </a>
+  <!-- <a  (click)="goToHome()" #home [ngClass]="{'favouriteFocus':true}" class="favouriteFocus"> -->
+  <div class="footer-heading favouriteFocus" (click)="goToHome()" #home>
+    <img src="assets/svgs/navigation_folder_bottom.svg">
+    <h3 [ngClass]="{'favouriteFocus':1==color}">Videos</h3>
+  </div>
+  <!-- </a> -->
 
 
   <div id="myNav" class="overlay">

@@ -1,10 +1,8 @@
 <section class="videos-filter-1">
-    <a [routerLink]="[ '/'] " #home class="favouriteFocus">
-        <div class="video-filter-top">
-            <img src="assets/svgs/navigation_folder_top.svg">
-            <h3>Videos</h3>
-        </div>
-    </a>
+    <div class="video-filter-top" (click)="goToHome()" #home>
+        <img src="assets/svgs/navigation_folder_top.svg">
+        <h3 [ngClass]="{'homeFocus':1==homeColor}">Videos</h3>
+    </div>
     <div class="main-element-container">
         <div #box1 class="box-1 test" [ngClass]="{'imgActive':1==arrayIndex}">
             <img src="assets/svgs/settings_box_background.svg">
@@ -25,7 +23,7 @@
                 <h4>Set time limit</h4>
                 <ul style=" cursor: pointer; ">
                     <li #secondList [ngClass]="{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}" *ngFor="let time of timeLimit;  let i = index; "
-                        (click)="getTime(time) ">{{time}} 
+                        (click)="getTime(time) ">{{time}}
                         <img src="assets/svgs/settings_check.svg" *ngIf="setTimeTick(time) " style=" display: inline-block !important; ">
                     </li>
                     <!-- <li [ngClass]="{'selected_item':6 == timeItemsIndex}" (click)="getTime(off) ">{{off}} <img src="assets/svgs/settings_check.svg " *ngIf="setTimeTick(off)">

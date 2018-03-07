@@ -5,8 +5,12 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { RefreshWebService } from './../shared/services/RefreshWeb/index';
 import { Card } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
-import { HotkeysService, Hotkey } from "angular2-hotkeys";
 declare var $: any;
+import { Observable } from 'rxjs/Observable'
+import 'rxjs/add/observable/timer'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/take'
+
 
 
 export enum KEY_CODE {
@@ -23,13 +27,17 @@ export enum KEY_CODE {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  countDown;
+  counter = 60 * 60;
+
+
   @ViewChild('setting') mySettingsBtn: ElementRef;
   @ViewChild('favorite') myFavBtn: ElementRef;
   @ViewChild('previous') myLeft: ElementRef;
   @ViewChild('next') myRight: ElementRef;
   @ViewChild('slider') slider: ElementRef;
   videoImageUrl: any;
-
+  currentSlide: any;
   deviceId: string;
   kidId: string;
   activeSubscription: boolean;
@@ -45,11 +53,24 @@ export class HomeComponent implements OnInit {
   arrayIndex: any = 0;
   downCount = 0;
   upCount = 0;
+  Favcolor: any = 0;
+  settingsColor: any = 0;
+  walkThrough: any = false;
   public carouselTile: NgxCarousel;
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.refreshWeb();
+
+    const timeInSecond$ = Observable.timer(0, 1000)
+      // .take(this.counter)
+      // .map(() => --this.counter);
+      .map(x => this.counter - x)
+      .takeWhile(x => x > 0);
+    this.countDown = timeInSecond$;
+
+
+    // const minsLeft$ = timeInSecond$.map(x => calcMinsFromSecondsRemaining(x));
 
   }
   @HostListener('window:keyup', ['$event'])
@@ -86,50 +107,88 @@ export class HomeComponent implements OnInit {
   onmoveFn(data) {
 
     console.log(data);
+    this.currentSlide = data.currentSlide;
   }
 
 
   GoDown() {
-
-    if (this.downCount < 2) {
+    if (this.downCount < 3) {
       this.downCount++;
     }
-    if (this.downCount == 1) {
-
-      this.myRight.nativeElement.focus();
+    if (this.downCount == 1 && this.Favcolor == 1 && this.arrayIndex == 0) {
+      this.myLeft.nativeElement.focus();
       this.arrayIndex = 0;
+      this.settingsColor = 0;
+      this.Favcolor = 0;
     }
-
-    if (this.downCount == 2) {
+    if (this.downCount == 1 && this.arrayIndex == 0 && this.Favcolor == 0) {
       this.mySettingsBtn.nativeElement.focus();
+      this.settingsColor = 1;
       this.arrayIndex = 645734;
       this.downCount = 0;
     }
-    console.log("test");
+    if (this.downCount == 1 && this.arrayIndex == this.currentSlide && this.Favcolor == 0) {
+      this.mySettingsBtn.nativeElement.focus();
+      this.settingsColor = 1;
+      this.arrayIndex = 645734;
+      this.downCount = 0;
+    }
+    if (this.downCount == 1 && this.settingsColor == 1) {
+      this.goToSettingsPage();
+      this.settingsColor = 0;
+    }
+    if (this.downCount == 1 && this.Favcolor == 1) {
+      this.myLeft.nativeElement.focus();
+      this.Favcolor = 0;
+      this.arrayIndex = this.currentSlide;
+    }
 
+    // if (this.downCount == 3) {
+    //   this.goToSettingsPage();
+    //   this.downCount = 0;
+    // }
   }
   GoUp() {
-    if (this.upCount < 2) {
+    if (this.upCount < 3) {
       this.upCount++;
     }
-    if (this.upCount == 1) {
+    if (this.upCount == 1 && this.settingsColor == 1) {
       this.myLeft.nativeElement.focus();
       this.arrayIndex = 0;
+      this.settingsColor = 0;
+
     }
-    if (this.upCount == 2) {
+    if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
       this.myFavBtn.nativeElement.focus();
-      this.arrayIndex = 23443;
-      this.upCount = 0;
+      this.Favcolor = 1;
+      this.arrayIndex = 6337484;
     }
-    // this.myFavBtn.nativeElement.focus();
+    if (this.upCount == 2 && this.Favcolor == 1) {
+      this.goToFavPage();
+      this.Favcolor = 0;
+      this.arrayIndex = 6337484;
+
+    }
+    // if (this.upCount == 3) {
+    //   console.log("test");
+
+    //   this.goToFavPage();
+
+    // }
   }
   GoLeft() {
     --this.arrayIndex;
+    if (this.arrayIndex == -1) {
+      this.arrayIndex = 0;
+    }
     // this.myLeft.nativeElement.focus();
   }
   GoRight() {
     console.log("test");
     ++this.arrayIndex;
+    if (this.arrayIndex == this.folders.length) {
+      this.arrayIndex = 0;
+    }
   }
   ngOnInit() {
 
@@ -157,9 +216,10 @@ export class HomeComponent implements OnInit {
         .tile {
         width: 60%;
         border-radius: 15px;
+        transform: scale(1.1);
        }
       .ngxcarousel-items {
-      top: 39px;
+      top: 53px;
       left:8%;
        }
          @media (min-width: 992px){
@@ -180,6 +240,7 @@ export class HomeComponent implements OnInit {
     this.deviceId = localStorage.getItem('X-Kidjo-DeviceId');
     if (!this.deviceId) {
       this.refreshweb.RefreshWeb().subscribe(data => {
+        this.walkThrough = true;
         console.log(data);
         this.ImageUrl = data.folderImageUrl;
         this.videoUrl = data.videoUrl;
@@ -248,6 +309,18 @@ export class HomeComponent implements OnInit {
   goToVideoPage(id: any, url: string, color: any) {
     console.log(color);
     this.router.navigate(['./video', id, url, color]);
+  }
+  goToFavPage() {
+    this.router.navigate(['./favorites']);
+  }
+  goToSettingsPage() {
+    this.router.navigate(['./settings']);
+  }
+  showWalkthrough() {
+    this.walkThrough = true;
+  }
+  hideWalkthrough() {
+    this.walkThrough = false;
   }
 
 }

@@ -155,8 +155,8 @@
     }
 }
 
-.favouriteFocus:focus .video-filter-top h3{
-    color: #4dbcae;
+.homeFocus{
+    color: #4dbcae !important;
  }
  .imgActive{
     transform: scale(1.2); 

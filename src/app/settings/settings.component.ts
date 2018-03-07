@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 export enum KEY_CODE {
@@ -40,7 +41,8 @@ export class SettingsComponent implements OnInit {
   timeIndex: any = this.timeLimit.length;
   contentIndex: any = this.content.length;
   langIndex: any = this.language.length;
-  constructor() {
+  homeColor: any;
+  constructor(public router: Router, ) {
     this.selectedAge = localStorage.getItem('Age');
     this.selectedTime = localStorage.getItem('screenTimeLimit');
     this.selectedContent = localStorage.getItem('selectedContentType');
@@ -96,6 +98,7 @@ export class SettingsComponent implements OnInit {
       this.myHomeBtn.nativeElement.blur();
       this.arrayIndex = 1;
       this.ageItemsIndex = -1;
+      this.homeColor = 0;
     }
     if (this.ageIndex < 6 && this.arrayIndex == 1) {
       this.ageItemsIndex++;
@@ -132,32 +135,37 @@ export class SettingsComponent implements OnInit {
       this.upCount++;
     }
     if (this.upCount == 1 && this.arrayIndex == 0) {
-      this.myHomeBtn.nativeElement.focus();
+      this.goToHome();
       this.upCount = 0;
     }
+
     if (this.ageIndex > 0 && this.arrayIndex == 1) {
       --this.ageItemsIndex;
     }
     if (this.ageItemsIndex == -1 && this.arrayIndex == 1) {
-      --this.arrayIndex;
+      this.arrayIndex = 0;
+      this.homeColor = 1;
     }
     if (this.timeIndex > 0 && this.arrayIndex == 2) {
       --this.timeItemsIndex;
     }
     if (this.timeItemsIndex == -1 && this.arrayIndex == 2) {
       this.arrayIndex = 0;
+      this.homeColor = 1;
     }
     if (this.contentIndex > 0 && this.arrayIndex == 3) {
       --this.contentItemsIndex;
     }
     if (this.contentItemsIndex == -1 && this.arrayIndex == 3) {
       this.arrayIndex = 0;
+      this.homeColor = 1;
     }
     if (this.langIndex > 0 && this.arrayIndex == 4) {
       --this.langItemsIndex;
     }
     if (this.langItemsIndex == -1 && this.arrayIndex == 4) {
       this.arrayIndex = 0;
+      this.homeColor = 1;
     }
   }
   GoLeft() {
@@ -188,6 +196,7 @@ export class SettingsComponent implements OnInit {
     ++this.arrayIndex;
     if (this.arrayIndex == 1) {
       this.ageItemsIndex == 0;
+      this.homeColor = 0;
     }
     if (this.arrayIndex == 5) {
       this.arrayIndex = 1;
@@ -268,5 +277,8 @@ export class SettingsComponent implements OnInit {
   getLanguage(lang: any) {
     localStorage.setItem('language', lang);
     this.selectedLanguage = lang;
+  }
+  goToHome() {
+    this.router.navigate(['./']);
   }
 }

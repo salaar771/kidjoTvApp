@@ -12,6 +12,7 @@ export class FavoriteService {
         console.log(values);
         alert();
         let url = "/kid/" + values.kidId + "/favorites/add";
+        console.log(url);
         return this.restConnector.httpPostWeb(values, url);
     }
     public GetFavorite(kidId: any): Observable<any> {

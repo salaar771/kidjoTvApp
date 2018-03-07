@@ -1,6 +1,6 @@
 
 .playlist-setting{
-    background-image: url('/assets/tablet-l/background.jpg');
+    background-image: url('/assets/tablet-l/background_day_bottom.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,8 @@
 
 .side-bar{
     position: relative;
-    top: 22%;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
     width: 6%;
     
@@ -78,8 +79,11 @@
     font-family: bree;
 }
 .main-card-container{
-    margin:-240px auto;
     max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 .img-thumbnail{
     position: relative;
@@ -96,11 +100,7 @@
     right: 0;
     z-index: 1;
 }
-@media(max-width:1366px){
-    .main-card-container{
-        margin-top: -10%;
-    }
-}
+
 @media(width:1024px)
 {
     .main-card-container{
@@ -207,7 +207,21 @@
     max-width: 226px;
     border-radius: 15px;
     border: 4px solid #fff;
+    position: relative;
+    /* background-image: url("/assets/svgs/folder_card_purple_open.svg") !important; */
+    /* background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding: 1em !important; */
 }
+.activeImg::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    top: 5px;
+    bottom: 5px;
+    box-shadow: 8px 0 4px 0 #111;
+}
+
 /* .activeImg:hover{
     -ms-transform: scale(1.11); 
     -webkit-transform: scale(1.11); 
@@ -229,12 +243,13 @@
     -webkit-transform: scale(1.4); /* Safari 3-8 */
     transform: scale(1.4); 
 }
-.settingFocus:focus .playlist-setting-footer h3{
-    color: #fbb133;
+
+.settingFocus{
+    color: #fbb133 !important;
 }
 
-.favouriteFocus:focus .playlist-icon-top h3{
-    color: #fc6969;
+.favouriteFocus{
+    color: #fc6969 !important;
  }
 
 
@@ -242,3 +257,47 @@
 background: black;
     color: red !important;
  }
+ .help{
+    position: absolute;
+    top: 10px;
+    font-size: 35px;
+    left: 2%;
+ }
+
+
+.overlay{
+    width: 80vw;
+    height: 80vh;
+    background: #767676b8;
+    margin:0 auto;
+    z-index: 1000000;
+    position: relative;
+    border-radius: 27px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+.overlay::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.close-btn{
+    position: absolute; 
+    right: 2%;
+    top: 2%
+}
+.keyboard-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+@media(max-width:812px)
+{
+    .overlay .keyboard-img img{
+        max-width: 480px;
+    }
+}

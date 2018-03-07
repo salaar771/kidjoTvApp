@@ -19,7 +19,8 @@
 }
 .side-bar{
     position: relative;
-    top: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
     width: 6%;
 }
@@ -67,13 +68,13 @@
     width: 100%;
     max-width: 95%;
     position: absolute;
-    top: 30%;
+    top: 50%;
+    left: 53%;
+    transform: translateX(-50%) translateY(-50%);
     justify-content: center;
     align-items: center;
     overflow: hidden;
     /* margin: 0 auto; */
-    left: 53%;
-    transform: translate(-50%);
 }
 .books{
     position: absolute;
@@ -431,13 +432,10 @@ favBtnClick .fav-btn p{
     /* cursor: not-allowed; */
     pointer-events: none;
 }
-.fa{
-    font-size: 55px !important;
-    color: #fff !important;
-}
-.favouriteFocus:focus .mybtn{
-background-color: white;
-border-radius: 50px;
+
+.favouriteFocus{
+background-color: white !important ;
+border-radius: 50px !important;
     /* background-color: red; */
  }
 

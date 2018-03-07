@@ -8,6 +8,9 @@ import { NgxCarousel } from 'ngx-carousel';
 import { Observable } from 'rxjs/Rx';
 import { VgAPI } from 'videogular2/core';
 import * as $ from 'jquery';
+import 'rxjs/add/observable/timer'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/take'
 
 
 export enum KEY_CODE {
@@ -27,6 +30,9 @@ export enum KEY_CODE {
   styleUrls: ['./video-selection.component.css'],
 })
 export class VideoSelectionComponent implements OnInit {
+  countDown;
+  counter = 60 * 60;
+
   isPlaying: any;
   api: VgAPI;
   @ViewChild('close') close: ElementRef;
@@ -52,6 +58,7 @@ export class VideoSelectionComponent implements OnInit {
   target: any;
   downCount = 0;
   upCount = 0;
+  crossColor: any;
   public carouselTileItems: Array<any>;
   manifestUri: any = "https://d23sw6prl9jc74.cloudfront.net/8/NavdQMkX7J.mp4";
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
@@ -59,6 +66,7 @@ export class VideoSelectionComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private videoService: VideoService,
     public favService: FavoriteService,
+    public router: Router,
     private spinnerService: Ng4LoadingSpinnerService) {
     var Url = this.route.snapshot.params['url'];
     this.imgUrl = Url;
@@ -71,6 +79,13 @@ export class VideoSelectionComponent implements OnInit {
     // });
     var ids = this.route.params.subscribe(params => {
       this.idss = +params['id'];
+
+      const timeInSecond$ = Observable.timer(0, 1000)
+        // .take(this.counter)
+        // .map(() => --this.counter);
+        .map(x => this.counter - x)
+        .takeWhile(x => x > 0);
+      this.countDown = timeInSecond$;
       // console.log(this.idss);
     });
     this.getSubCard();
@@ -128,33 +143,29 @@ export class VideoSelectionComponent implements OnInit {
 
   GoDown() {
 
-    if (this.downCount < 2) {
+    if (this.downCount < 1) {
       this.downCount++;
     }
     if (this.downCount == 1) {
       this.myRight.nativeElement.focus();
+      this.crossColor = 0;
+      this.upCount = 0;
       this.downCount = 0;
     }
 
-    // if (this.downCount == 2) {
-    //   // this.mySettingsBtn.nativeElement.focus();
-    //   this.downCount = 0;
-    // }
-    console.log("test");
-
   }
   GoUp() {
-    if (this.upCount < 1) {
+    if (this.upCount < 2) {
       this.upCount++;
     }
-    // if (this.upCount == 1) {
-    //   this.myLeft.nativeElement.focus();
-    // }
     if (this.upCount == 1) {
       this.myHomeBtn.nativeElement.focus();
+      this.crossColor = 1;
+    }
+    if (this.upCount == 2) {
+      this.goToHome();
       this.upCount = 0;
     }
-    // this.myFavBtn.nativeElement.focus();
   }
   onmoveFn($event) {
 
@@ -163,11 +174,16 @@ export class VideoSelectionComponent implements OnInit {
 
   GoLeft() {
     --this.arrayIndex;
-    // this.myLeft.nativeElement.focus();
+    if (this.arrayIndex == -1) {
+      this.arrayIndex = 0;
+    }
   }
   GoRight() {
     console.log("test");
     ++this.arrayIndex;
+    if (this.arrayIndex == this.video.length) {
+      this.arrayIndex = 0;
+    }
   }
   ngOnInit() {
     this.time = localStorage.getItem('screenTimeLimit');
@@ -185,7 +201,7 @@ export class VideoSelectionComponent implements OnInit {
         .tile {
           position: relative;
           max-width:80%;
-          transform: scale(1.2);
+          transform: scale(1.3);
           border-radius: 10px;
       }
       .ngxcarousel-inner {
@@ -343,12 +359,7 @@ export class VideoSelectionComponent implements OnInit {
     );
 
   }
-  // setCurrentVideo(source: string, type: string) {
-  //   this.sources = new Array<Object>();
-  //   this.sources.push({
-  //     src: source,
-  //     type: type
-  //   });
-  //   this.api.getDefaultMedia().currentTime = 0;
-  // }
+  goToHome() {
+    this.router.navigate(['./']);
+  }
 }

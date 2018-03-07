@@ -3,12 +3,12 @@
   <div class="side-bar">
     <div class="side-bar-contents">
       <img src="/assets/svgs/water_background.svg">
-      <p>{{time}} </p>
+      <p>{{countDown | async}} </p>
     </div>
   </div>
-  <a [routerLink]="['/']" #home class="favouriteFocus">
-    <img class="mybtn" src="/assets/svgs/video_card_cross.svg">
-  </a>
+  <div (click)="goToHome()" #home>
+    <img [ngClass]="{'favouriteFocus':1==crossColor}" class="mybtn" src="/assets/svgs/video_card_cross.svg">
+  </div>
   <div class="books">
     <img class="subCard img-thumbnail" [style.background]='color' src={{imgUrl}}>
 

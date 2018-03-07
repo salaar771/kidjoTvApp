@@ -1,9 +1,14 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { FavoriteService } from './../shared/services/favoritesService/index';
 import { NgxCarousel } from 'ngx-carousel';
 import { VgAPI } from 'videogular2/core';
 import * as $ from 'jquery';
+import { Observable } from 'rxjs/Observable'
+import 'rxjs/add/observable/timer'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/take'
 
 
 
@@ -23,6 +28,9 @@ export enum KEY_CODE {
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
+  countDown;
+  counter = 60 * 60;
+
   isPlaying: any;
   api: VgAPI;
   innerheigth: any;
@@ -42,8 +50,15 @@ export class FavoritesComponent implements OnInit {
   arrayIndex: any = 0;
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
   constructor(public favService: FavoriteService,
+    public router: Router,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.getList();
+    const timeInSecond$ = Observable.timer(0, 1000)
+      // .take(this.counter)
+      // .map(() => --this.counter);
+      .map(x => this.counter - x)
+      .takeWhile(x => x > 0);
+    this.countDown = timeInSecond$;
   }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
@@ -82,14 +97,18 @@ export class FavoritesComponent implements OnInit {
     }
 
   }
-
+  color: any;
   GoDown() {
 
-    if (this.downCount < 1) {
+    if (this.downCount < 2) {
       this.downCount++;
     }
     if (this.downCount == 1) {
       this.myHomeBtn.nativeElement.focus();
+      this.color = 1;
+    }
+    if (this.downCount == 2) {
+      this.goToHome();
       this.downCount = 0;
     }
 
@@ -119,10 +138,16 @@ export class FavoritesComponent implements OnInit {
   }
   GoLeft() {
     --this.arrayIndex;
+    if (this.arrayIndex == -1) {
+      this.arrayIndex = 0;
+    }
   }
   GoRight() {
     console.log("test");
     ++this.arrayIndex;
+    if (this.arrayIndex == this.FavVideo.length) {
+      this.arrayIndex = 0;
+    }
   }
   ngOnInit() {
     this.time = localStorage.getItem('screenTimeLimit');
@@ -138,7 +163,7 @@ export class FavoritesComponent implements OnInit {
         .tile {
           position: relative;
           max-width:56%;
-          transform: scale(1.2);
+          transform: scale(1.3);
           border-radius: 10px;
       }
       .ngxcarousel-inner {
@@ -236,6 +261,9 @@ export class FavoritesComponent implements OnInit {
         this.spinnerService.hide();
       });
 
+  }
+  goToHome() {
+    this.router.navigate(['./']);
   }
 
 }
