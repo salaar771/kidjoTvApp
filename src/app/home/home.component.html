@@ -1,10 +1,35 @@
 <section class="playlist-setting">
+
+
+
   <div class="side-bar">
-    <div class="side-bar-contents">
-      <img src="/assets/svgs/water_background.svg">
-      <p>{{time}} </p>
+    
+      <div class="css-jar">
+        <div class="flask-base">
+            <div class="side-bar-contents">
+          <div class="css-liquid" [style.height]="waterPxCountdown"> </div>
+          <div id="background-wrap">
+            <div class="bubble x1"></div>
+            <div class="bubble x2"></div>
+            <div class="bubble x3"></div>
+            <div class="bubble x4"></div>
+            <div class="bubble x5"></div>
+            <div class="bubble x6"></div>
+            <div class="bubble x7"></div>
+            <div class="bubble x8"></div>
+            <div class="bubble x9"></div>
+            <div class="bubble x10"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <img src="/assets/svgs/water_background.svg"> -->
+      <p>{{countDown}} </p>
     </div>
   </div>
+
+  <!-- end of animation -->
   <div class="playlist-icon-top" (click)="goToFavPage()" #favorite>
     <img src="assets/svgs/navigation_favorites_top.svg">
     <h3 [ngClass]="{'favouriteFocus':1==Favcolor}">Favourite</h3>

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Input } from '@angular/core';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { RefreshWebService } from './../shared/services/RefreshWeb/index';
+import { TimerService } from './../shared/services/TimerService';
 import { Card } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
 declare var $: any;
@@ -28,9 +29,6 @@ export enum KEY_CODE {
 })
 export class HomeComponent implements OnInit {
   countDown;
-  counter = 60 * 60;
-
-
   @ViewChild('setting') mySettingsBtn: ElementRef;
   @ViewChild('favorite') myFavBtn: ElementRef;
   @ViewChild('previous') myLeft: ElementRef;
@@ -59,22 +57,29 @@ export class HomeComponent implements OnInit {
   FavCountdown: any = 0;
   settingsUpCount: any = 0;
   public carouselTile: NgxCarousel;
+
+  waterpx:any = "100";
+  waterPxCountdown:any ="100px";
+  initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+  UnitOfTIme = 100 / this.initialTime[0];
+  
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
+    public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.refreshWeb();
+    this.timerService.getCountdownTimer().subscribe(data => {
+      console.log(data);
+      this.countDown = data;
+      
+      this.waterpx = this.waterpx - this.UnitOfTIme;
+      this.waterPxCountdown = this.waterpx +"px";
 
-    const timeInSecond$ = Observable.timer(0, 1000)
-      // .take(this.counter)
-      // .map(() => --this.counter);
-      .map(x => this.counter - x)
-      .takeWhile(x => x > 0);
-    this.countDown = timeInSecond$;
-
-
-    // const minsLeft$ = timeInSecond$.map(x => calcMinsFromSecondsRemaining(x));
+      
+    });
 
   }
+
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
 

@@ -1,1 +1,1 @@
-// export * from 'timer.services';
+export * from './timer.services';

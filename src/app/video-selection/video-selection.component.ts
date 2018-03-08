@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { VideoService } from './../shared/services/videoService/index';
 import { FavoriteService } from './../shared/services/favoritesService/index';
+import { TimerService } from './../shared/services/TimerService';
 import { AddFav } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
 import { Observable } from 'rxjs/Rx';
@@ -31,8 +32,6 @@ export enum KEY_CODE {
 })
 export class VideoSelectionComponent implements OnInit {
   countDown;
-  counter = 60 * 60;
-
   isPlaying: any;
   api: VgAPI;
   @ViewChild('close') close: ElementRef;
@@ -63,32 +62,35 @@ export class VideoSelectionComponent implements OnInit {
   manifestUri: any = "https://d23sw6prl9jc74.cloudfront.net/8/NavdQMkX7J.mp4";
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
 
+  waterpx: any = "100";
+  waterPxCountdown: any = "100px";
+  initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+  UnitOfTIme = 100 / this.initialTime[0];
+
+
   constructor(private route: ActivatedRoute,
     private videoService: VideoService,
     public favService: FavoriteService,
+    public timerService: TimerService,
     public router: Router,
     private spinnerService: Ng4LoadingSpinnerService) {
     var Url = this.route.snapshot.params['url'];
     this.imgUrl = Url;
     var Color = this.route.snapshot.params['color'];
     this.color = Color;
-    // this.elem = this.ref.nativeElement;
-    // var Url = this.route.params.subscribe(params => {
-    //   this.imgUrl = +params['url'];
-    //   console.log(this.imgUrl);
-    // });
     var ids = this.route.params.subscribe(params => {
       this.idss = +params['id'];
-
-      const timeInSecond$ = Observable.timer(0, 1000)
-        // .take(this.counter)
-        // .map(() => --this.counter);
-        .map(x => this.counter - x)
-        .takeWhile(x => x > 0);
-      this.countDown = timeInSecond$;
-      // console.log(this.idss);
     });
     this.getSubCard();
+    this.timerService.getCountdownTimer().subscribe(data => {
+      console.log(data);
+      this.countDown = data;
+
+      this.waterpx = this.waterpx - this.UnitOfTIme;
+      this.waterPxCountdown = this.waterpx + "px";
+
+
+    });
     this.uri.push([this.manifestUri]);
     this.uri.push([this.manifestUri]);
     this.uri.push([this.manifestUri]);

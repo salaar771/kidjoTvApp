@@ -1,5 +1,6 @@
 //0
 export * from './BlockUi/index';
+export * from './TimerService/index';
 
 //1
 export * from './RestService/index';

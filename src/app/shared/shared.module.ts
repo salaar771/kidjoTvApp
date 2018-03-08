@@ -6,6 +6,7 @@ import { RESTConnectorService } from './services/RestService/index';
 import { RefreshWebService } from './services/RefreshWeb/index';
 import { VideoService } from './services/videoService/index';
 import { FavoriteService } from './services/favoritesService/index';
+import { TimerService } from './services/TimerService/index';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ export class SharedModule {
                 RESTConnectorService,
                 RefreshWebService,
                 VideoService,
-                FavoriteService
+                FavoriteService,
+                TimerService
             ]
         };
     }

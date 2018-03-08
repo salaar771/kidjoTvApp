@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular
 import { Router } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { FavoriteService } from './../shared/services/favoritesService/index';
+import { TimerService } from './../shared/services/TimerService';
 import { NgxCarousel } from 'ngx-carousel';
 import { VgAPI } from 'videogular2/core';
 import * as $ from 'jquery';
@@ -29,8 +30,6 @@ export enum KEY_CODE {
 })
 export class FavoritesComponent implements OnInit {
   countDown;
-  counter = 60 * 60;
-
   isPlaying: any;
   api: VgAPI;
   innerheigth: any;
@@ -49,16 +48,25 @@ export class FavoritesComponent implements OnInit {
   upCount = 0;
   arrayIndex: any = 0;
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
+  waterpx: any = "100";
+  waterPxCountdown: any = "100px";
+  initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+  UnitOfTIme = 100 / this.initialTime[0];
   constructor(public favService: FavoriteService,
     public router: Router,
+    public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.getList();
-    const timeInSecond$ = Observable.timer(0, 1000)
-      // .take(this.counter)
-      // .map(() => --this.counter);
-      .map(x => this.counter - x)
-      .takeWhile(x => x > 0);
-    this.countDown = timeInSecond$;
+    this.timerService.getCountdownTimer().subscribe(data => {
+      console.log(data);
+      this.countDown = data;
+
+      this.waterpx = this.waterpx - this.UnitOfTIme;
+      this.waterPxCountdown = this.waterpx + "px";
+
+
+    });
+
   }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
