@@ -57,6 +57,7 @@ export class VideoSelectionComponent implements OnInit {
   waterPxCountdown: any = "100px";
   initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
   UnitOfTIme = 100 / this.initialTime[0];
+  timeInSeconds: any;
   constructor(private route: ActivatedRoute,
     private videoService: VideoService,
     public favService: FavoriteService,
@@ -73,6 +74,7 @@ export class VideoSelectionComponent implements OnInit {
     this.getSubCard();
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
+      this.timeInSeconds = this.countDown * 60 + 's';
       this.waterpx = this.waterpx - this.UnitOfTIme;
       this.waterPxCountdown = this.waterpx + "px";
     });

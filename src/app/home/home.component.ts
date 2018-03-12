@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
   waterPxCountdown: any = "100px";
   initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
   UnitOfTIme = 100 / this.initialTime[0];
-
+  timeInSeconds: any;
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
     public timerService: TimerService,
@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     this.refreshWeb();
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
+      this.timeInSeconds = this.countDown * 60 + 's';
       this.waterpx = this.waterpx - this.UnitOfTIme;
       this.waterPxCountdown = this.waterpx + "px";
     });

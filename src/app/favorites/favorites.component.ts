@@ -51,6 +51,8 @@ export class FavoritesComponent implements OnInit {
   waterPxCountdown: any = "100px";
   initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
   UnitOfTIme = 100 / this.initialTime[0];
+  timeInSeconds: any;
+  
   constructor(public favService: FavoriteService,
     public router: Router,
     public timerService: TimerService,
@@ -58,6 +60,7 @@ export class FavoritesComponent implements OnInit {
     this.getList();
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
+      this.timeInSeconds = this.countDown * 60 + 's';
       this.waterpx = this.waterpx - this.UnitOfTIme;
       this.waterPxCountdown = this.waterpx + "px";
     });
