@@ -50,6 +50,7 @@ export class VideoSelectionComponent implements OnInit {
   downCount = 0;
   upCount = 0;
   crossColor: any;
+  currentSlide: any;
   currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
   success: any = false;
   beforeFavCall: any = true;
@@ -112,6 +113,7 @@ export class VideoSelectionComponent implements OnInit {
     if (this.downCount == 1) {
       this.myRight.nativeElement.focus();
       this.crossColor = 0;
+      this.arrayIndex = 0;
       this.upCount = 0;
       this.downCount = 0;
     }
@@ -130,9 +132,8 @@ export class VideoSelectionComponent implements OnInit {
       this.upCount = 0;
     }
   }
-  onmoveFn($event) {
-
-    console.log($event);
+  onmoveFn(data) {
+    this.currentSlide = data.currentSlide + 1;
   }
 
   GoLeft() {

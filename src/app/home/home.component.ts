@@ -313,7 +313,6 @@ export class HomeComponent implements OnInit {
     return url + 'folderImage' + this.bucketName + '/' + id + '.png';
   }
   goToVideoPage(id: any, url: string, color: any) {
-    console.log(color);
     this.router.navigate(['./video', id, url, color]);
   }
   goToFavPage() {

@@ -100,6 +100,8 @@ export class FavoritesComponent implements OnInit {
     if (this.downCount == 1) {
       this.myHomeBtn.nativeElement.focus();
       this.color = 1;
+      this.arrayIndex = 76764532734;
+      // this.downCount = 0;
     }
     if (this.downCount == 2) {
       this.goToHome();
@@ -112,12 +114,13 @@ export class FavoritesComponent implements OnInit {
     }
     if (this.upCount == 1) {
       this.myRight.nativeElement.focus();
+      this.arrayIndex = 0;
+      this.color = 0;
       this.upCount = 0;
+      this.downCount = 0;
     }
   }
   onmoveFn($event) {
-
-    console.log($event);
   }
   GoLeft() {
     --this.arrayIndex;
