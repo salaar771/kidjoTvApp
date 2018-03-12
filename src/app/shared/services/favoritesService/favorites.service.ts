@@ -19,10 +19,10 @@ export class FavoriteService {
         let url = "/kid/" + kidId + "/favorites/getList";
         return this.restConnector.httpGetWeb(url, this.contentType);
     }
-    public RemoveFavorite(videoId: any): Observable<any> {
-        var kidId = localStorage.getItem("kidId");
+    public RemoveFavorite(values: any): Observable<any> {
+        var kidId = values.kidId;
         let url = "/kid/" + kidId + "/favorites/remove";
-        return this.restConnector.httpPostWeb(videoId, url);
+        return this.restConnector.httpPostWeb(values, url);
     }
     public SetLanguage(id: any): Observable<any> {
         let url = "/language/set";

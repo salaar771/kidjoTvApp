@@ -1,5 +1,4 @@
-<section class="playlist-section">
-  <div class="side-bar">
+<div class="side-bar">
     <div class="side-bar-contents">
       <!-- <img src="assets/svgs/water_background.svg"> -->
       <div id="banner">
@@ -34,42 +33,36 @@
       </div> -->
     </div>
   </div>
+
   <div class="playlist">
     <img src="assets/svgs/favorites_heart.svg">
     <h3>Playlist</h3>
   </div>
+
+
   <div class="main-videocard-container">
     <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
       <ngx-tile NgxCarouselItem *ngFor="let vid of FavVideo; let i = index">
-        <img class="activeImg" src={{vid[0].imgUrl}} [ngClass]="{'imgActive':i==arrayIndex}" />
-        <button class="btn playbtn" (click)="openNav()">Play</button>
-        <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span>
-        <!-- <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span> -->
-        <!-- <div class="lock-overlay">
-          <img class="lock-bar" src="assets/svgs/video_card_lock_bar.svg">
-          <img class="lock-icon" src="assets/svgs/video_card_lock.svg">
-          <p>Press to unlock</p>
-        </div> -->
-        <div class="caption" [ngClass]="{'imgActive':i==arrayIndex}">
-          <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;">{{vid[0].Title}}</p>
+        <div (click)="openNav()">
+          <img class="activeImg" src={{vid[0].imgUrl}} [ngClass]="{'imgActive':i==arrayIndex}" />
+          <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span>
+          <div class="caption" [ngClass]="{'imgActive':i==arrayIndex}">
+            <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;">{{vid[0].Title}}</p>
+          </div>
         </div>
         <div class="delete-btn" (click)="deleteFav(vid[0].id)">
           <button type="button" value="btn" id="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path fill="#000" fill-rule="evenodd" d="M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z"/></svg><p>delete</p>
-                          </button>
+           </button>
         </div>
       </ngx-tile>
-
       <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
       <button NgxCarouselNext #next class='rightRs'>&gt;</button>
-
     </ngx-carousel>
   </div>
-  <!-- <a  (click)="goToHome()" #home [ngClass]="{'favouriteFocus':true}" class="favouriteFocus"> -->
   <div class="footer-heading favouriteFocus" (click)="goToHome()" #home>
     <img src="assets/svgs/navigation_folder_bottom.svg">
     <h3 [ngClass]="{'favouriteFocus':1==color}">Videos</h3>
   </div>
-  <!-- </a> -->
 
 
   <div id="myNav" class="overlay">
@@ -78,35 +71,24 @@
       <vg-player (onPlayerReady)="onPlayerReady($event)" [hidden]="!isPlaying">
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
-
         <vg-scrub-bar>
           <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
           <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
         </vg-scrub-bar>
-
         <vg-controls>
           <vg-play-pause></vg-play-pause>
           <vg-playback-button></vg-playback-button>
-
           <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
           <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
           <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-
           <vg-track-selector></vg-track-selector>
           <vg-mute></vg-mute>
           <vg-volume></vg-volume>
-
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-
-
-        <video #media [vgMedia]="media" [vgDash]="currentStream" [vgHls]="currentStream" id="singleVideo">
+        <video #media [vgMedia]="media" preload="auto" id="singleVideo">
+          <source *ngFor="let vid of FavVideo" src="{{currentStream}}" type="video/mp4">
         </video>
-
-
-
       </vg-player>
     </div>
   </div>

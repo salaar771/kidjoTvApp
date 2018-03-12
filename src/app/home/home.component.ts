@@ -42,7 +42,6 @@ export class HomeComponent implements OnInit {
   obj = new Object();
   public innerheigth: any;
   ImageUrl: string;
-  ids: any[] = [];
   cards: any[] = [];
   folders: any[] = [];
   bucketName: any;
@@ -54,31 +53,25 @@ export class HomeComponent implements OnInit {
   Favcolor: any = 0;
   settingsColor: any = 0;
   walkThrough: any = false;
-  FavCountdown: any = 0;
   settingsUpCount: any = 0;
   public carouselTile: NgxCarousel;
+  FavIndex: any = 0;
 
-  waterpx:any = "100";
-  waterPxCountdown:any ="100px";
+  waterpx: any = "100";
+  waterPxCountdown: any = "100px";
   initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
   UnitOfTIme = 100 / this.initialTime[0];
-  
+
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
     public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.refreshWeb();
     this.timerService.getCountdownTimer().subscribe(data => {
-      
-      console.log(data);
       this.countDown = data;
-      
       this.waterpx = this.waterpx - this.UnitOfTIme;
-      this.waterPxCountdown = this.waterpx +"px";
-
-      
+      this.waterPxCountdown = this.waterpx + "px";
     });
-
   }
 
   @HostListener('window:keyup', ['$event'])
@@ -107,19 +100,14 @@ export class HomeComponent implements OnInit {
 
   }
   onmoveFn(data) {
-
-    console.log(data);
     this.currentSlide = data.currentSlide;
   }
-
-
   GoDown() {
     if (this.downCount < 3) {
       this.downCount++;
     }
     // on key down when very first time u enter in the home page
     if (this.downCount == 1 && this.arrayIndex == 0 && this.Favcolor == 0) {
-      console.log("test");
       this.mySettingsBtn.nativeElement.focus();
       this.settingsColor = 1;
       this.arrayIndex = 645734;
@@ -127,7 +115,6 @@ export class HomeComponent implements OnInit {
     }
     // on key down after u move slider
     if (this.downCount == 1 && this.arrayIndex == this.currentSlide && this.Favcolor == 0) {
-      console.log("test");
       this.mySettingsBtn.nativeElement.focus();
       this.settingsColor = 1;
       this.arrayIndex = 645734;
@@ -141,7 +128,6 @@ export class HomeComponent implements OnInit {
     }
     //on key down when u move from favourite button to slider first index
     if (this.downCount == 1 && this.Favcolor == 1) {
-      console.log("test");
       this.myLeft.nativeElement.focus();
       this.arrayIndex = 0;
       this.settingsColor = 0;
@@ -149,28 +135,13 @@ export class HomeComponent implements OnInit {
       this.downCount = 0;
     }
     //on key down when u move from favourite button to slider current index
-    if (this.downCount == 1 && this.Favcolor == 1 && this.arrayIndex == this.currentSlide) {
-      console.log("test");
+    if (this.downCount == 1 && this.Favcolor == 1 && this.FavIndex == 1) {
       this.myLeft.nativeElement.focus();
       this.arrayIndex = this.currentSlide;
       this.settingsColor = 0;
       this.Favcolor = 0;
       this.downCount = 0;
     }
-
-
-
-    // if (this.downCount == 1 && this.Favcolor == 1) {
-    //   console.log("test");
-    //   this.myLeft.nativeElement.focus();
-    //   this.Favcolor = 0;
-    //   this.arrayIndex = this.currentSlide;
-    // }
-
-    // if (this.downCount == 3) {
-    //   this.goToSettingsPage();
-    //   this.downCount = 0;
-    // }
   }
   GoUp() {
     if (this.upCount < 3) {
@@ -178,26 +149,24 @@ export class HomeComponent implements OnInit {
     }
     //onkey up focus on slider first index
     if (this.upCount == 1 && this.settingsColor == 1) {
-      console.log("test");
       this.myLeft.nativeElement.focus();
       this.arrayIndex = 0;
       this.settingsColor = 0;
       this.upCount = 0;
 
     }
-    //on keyup focus on slider first index
+    //on keyup focus on Favourite button
     if (this.upCount == 1 && this.arrayIndex == 0) {
-      console.log("test");
       this.myFavBtn.nativeElement.focus();
       this.Favcolor = 1;
       this.arrayIndex = 6337484;
       this.upCount = 0
     }
-    //on keyup focus on slider current index
+    //on keyup focus on Favourite button
     if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
-      console.log("test");
       this.myFavBtn.nativeElement.focus();
       this.Favcolor = 1;
+      this.FavIndex = 1;
       this.arrayIndex = 6337484;
       this.upCount = 0;
     }
@@ -214,22 +183,14 @@ export class HomeComponent implements OnInit {
       this.settingsColor = 0;
       this.upCount = 0;
     }
-    // if (this.upCount == 3) {
-    //   console.log("test");
-
-    //   this.goToFavPage();
-
-    // }
   }
   GoLeft() {
     --this.arrayIndex;
     if (this.arrayIndex == -1) {
       this.arrayIndex = 0;
     }
-    // this.myLeft.nativeElement.focus();
   }
   GoRight() {
-    console.log("test");
     ++this.arrayIndex;
     if (this.arrayIndex == this.folders.length) {
       this.arrayIndex = 0;
@@ -240,7 +201,7 @@ export class HomeComponent implements OnInit {
     this.GetCard();
     this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs: 2, sm: 3, md: 4, lg: 5, all: 0 },
+      grid: { xs: 3, sm: 3, md: 4, lg: 5, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
@@ -252,7 +213,7 @@ export class HomeComponent implements OnInit {
           display: none;
         }
        .ngxcarousel-inner {
-        height: 350px;
+        height: 360px;
         width: 108%;
          }
        .ngx-tile.item {
@@ -260,8 +221,8 @@ export class HomeComponent implements OnInit {
        }
         .tile {
         width: 60%;
-        border-radius: 15px;
-        transform: scale(1.1);
+        border-radius: 18px;
+        transform: scale(1);
        }
       .ngxcarousel-items {
       top: 53px;
@@ -286,7 +247,6 @@ export class HomeComponent implements OnInit {
     if (!this.deviceId) {
       this.refreshweb.RefreshWeb().subscribe(data => {
         this.walkThrough = true;
-        console.log(data);
         this.ImageUrl = data.folderImageUrl;
         this.videoUrl = data.videoUrl;
         this.videoImageUrl = data.videoImageUrl;
@@ -314,14 +274,15 @@ export class HomeComponent implements OnInit {
       this.cards = data.cards;
       var tempData = [];
       var test = [];
-      var color: any[] = ['red', 'yellow', 'blue', 'green', 'orange', 'purple'];
+      var color: any[] = ['red', 'yellow', 'blue', 'green', 'orange', 'prple'];
+      var backgroundImages: any[] = ['/assets/svgs/red-img.svg', '/assets/svgs/yellow-img.svg', '/assets/svgs/blue-img.svg', '/assets/svgs/green-img.svg', '/assets/svgs/orange-img.svg', '/assets/svgs/purple-img.svg'];
       var counter = 0;
       for (var index = 0; index < this.cards.length; index++) {
-        if (counter == 5) {
+        if (counter == 6) {
           counter = 0;
         }
         if (this.cards[index].id) {
-          test = [{ 'id': this.cards[index].id, 'color': color[counter], 'imgUrl': this.folderImage(this.cards[index].id) }]
+          test = [{ 'id': this.cards[index].id, 'back-color': color[counter], 'color': backgroundImages[counter], 'imgUrl': this.folderImage(this.cards[index].id) }]
           tempData.push(test);
           // increment counter
           counter++;
@@ -352,7 +313,6 @@ export class HomeComponent implements OnInit {
     return url + 'folderImage' + this.bucketName + '/' + id + '.png';
   }
   goToVideoPage(id: any, url: string, color: any) {
-    console.log(color);
     this.router.navigate(['./video', id, url, color]);
   }
   goToFavPage() {

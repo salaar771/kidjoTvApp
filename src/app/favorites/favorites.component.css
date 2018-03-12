@@ -29,6 +29,12 @@
     font-family: bree;
     color: #444;
 }
+@media(max-width:812px)
+{
+    .footer-heading{
+        height: 67px;
+    }
+}
 .side-bar{
     position: relative;
     top: 50%;
@@ -70,6 +76,7 @@
     font-family: bree;
 }
 .main-videocard-container{
+    cursor: pointer;
     display: flex;
     width: 100%;
     max-width: 95%;
@@ -322,8 +329,7 @@
 {    
     .playlist-section{
         background-size: cover;
-        background-repeat: no-repeat;
-        height: 1320px;  
+        background-repeat: no-repeat;  
     }
     .playlist{
         top: 2.5%;
@@ -341,15 +347,6 @@
     .video-card{
         top: 2%;
     }
-    .main-videocard-container{
-        display:grid;
-        grid-gap: 70px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 40%;
-        top: 16%;
-        width: 20%;
-    }
     .video-card .lock-overlay img{
         position: absolute;
         top: -3%;
@@ -359,26 +356,27 @@
 }
 
 }
-@media(width:768px)
+@media(max-width:812px)
 {    
     .playlist{
-        top: 2.5%;
+        top: -4%;
+        left: 50%;
+        transform: scale(.6) translateX(-50%);
     }
     .main-videocard-container{
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        left: 36%;
-        top: 14%;
+        left: 9%;
+        top: 60%;
         flex-wrap: wrap;
-        margin-bottom: 100px;
+        transform:scale(.89) translateY(-50%);
+        width: 116%;
+        max-width: none;
     } 
-    .video-card-container{
-        margin-bottom:90px;
-     }
     
 }
-@media(max-width:500px)
+/* @media(max-width:500px)
 {    
     .main-videocard-container{
      display: flex;
@@ -420,7 +418,7 @@
     font-weight: 500;
     font-family: bree;
     }
-}
+} */
 
 /*  =========================   Playlist Settings ===========================*/
 
@@ -501,34 +499,7 @@
     max-width: 200px;
     background: red;
 }
-@media(max-width:768px)
-{
-    .playlist-setting{
-        height: 1000px;
-    }
-    .main-card-container{
-        top: 20%;
-    }
-}
-@media(max-width:1149px)
-{
-    .playlist-setting{
-        height: 1020px;
-    }
-    .main-card-container{
-        top: 20%;
-    }
-}
 
-@media(max-width:616px)
-{
-    .playlist-setting{
-        height: 1300px;
-    }
-    .main-card-container{
-        top: 10%;
-    }
-}
 
 .run-time-over-section{
     width: auto;

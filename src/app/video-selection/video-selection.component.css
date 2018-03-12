@@ -51,11 +51,11 @@
     font-size: 25px;
 }
 .books img{
-    max-width: 152px;
-    border: 9px solid #fff;
-    border-radius: 15px;
-    
-    /* border-radius: 4px */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    box-shadow: inset -1px 0px 0px 7px #fff, inset 5px -2px 0 3px #fff;
+    border-radius: 17px;
 }
 .mybtn{
     max-width: 45px;
@@ -87,8 +87,6 @@
 }
 .books img{
     max-width: 120px;
-    border: 4px solid #fff;
-    border-radius: 4px
 }
 .books-container{
     display: flex;
@@ -174,7 +172,7 @@
 .fav-btn img{
     width: 15px;
     height: 15px;
-    margin-bottom: 10%;
+    margin-bottom: 11%;
     cursor: pointer;
 }
 .fav-btn p{
@@ -204,6 +202,23 @@
 favBtnClick .fav-btn p{
     color: white;
     background-color: red;
+}
+
+@media(max-width:812px)
+{
+    .main-books-container{
+        top: 74%;
+        left: 70%;
+        width: 116%;
+        max-width: none;
+    }
+    .books{
+        transform: scale(.6) translate(-50%);
+        top: -20px;
+    }
+    .activeImg{
+        width: 249px !important;
+    }
 }
 /* @media(max-width:1025px)
 {    
@@ -281,6 +296,7 @@ favBtnClick .fav-btn p{
     max-width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 247px;
 }
 .playbtn{
     background-color: red !important;
@@ -333,10 +349,6 @@ favBtnClick .fav-btn p{
     img.img-thumbnail{
         width: 172px;
     }
-    .main-books-container{
-        max-width: 80%;
-        height: 50%;
-    }
     .rightRs{
         top: -33px;
         right: 26%;
@@ -360,9 +372,6 @@ favBtnClick .fav-btn p{
 }
 
 @media(max-width:1024px){
-.main-books-container{
-    max-width: 80%;
-    }
     .rightRs{
         right: 137px;
         top: -110px;
@@ -461,6 +470,9 @@ border-radius: 50px !important;
     transform: scale(1.4); 
 }
 .subCard{
+    box-shadow: inset 0 0 0 7px #fff,
+    inset 7px 0 0 7px #fff;
+    border-radius: 20px;
     max-width: 152px !important ;
     border: 9px solid #fff !important;
     border-radius: 15px !important;
@@ -481,6 +493,7 @@ border-radius: 50px !important;
     text-align: center;
     transform: scale(2.5) translateY(-50%);
     overflow: hidden;
+   
   }
   .css-jar .flask-base {
     margin: auto;

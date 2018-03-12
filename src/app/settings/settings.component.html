@@ -26,8 +26,6 @@
                         (click)="getTime(time) ">{{time}}
                         <img src="assets/svgs/settings_check.svg" *ngIf="setTimeTick(time) " style=" display: inline-block !important; ">
                     </li>
-                    <!-- <li [ngClass]="{'selected_item':6 == timeItemsIndex}" (click)="getTime(off) ">{{off}} <img src="assets/svgs/settings_check.svg " *ngIf="setTimeTick(off)">
-                    </li> -->
                 </ul>
             </div>
         </div>
@@ -52,7 +50,7 @@
                 <ul style=" cursor: pointer; ">
                     <li #forthList [ngClass]="{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}" *ngFor="let lang of language;  let i = index; "
                         (click)="getLanguage(lang) ">{{lang}}
-                        <img src="assets/svgs/settings_check.svg " *ngIf="setLanguageTick(lang) ">
+                        <img src="assets/svgs/settings_check.svg " *ngIf="setLanguageTick(lang) " class="last-check">
                     </li>
                 </ul>
             </div>

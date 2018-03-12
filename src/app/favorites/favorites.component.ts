@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { FavoriteService } from './../shared/services/favoritesService/index';
 import { TimerService } from './../shared/services/TimerService';
+import { RemoveFav } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
 import { VgAPI } from 'videogular2/core';
 import * as $ from 'jquery';
@@ -29,19 +30,17 @@ export enum KEY_CODE {
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
-  countDown;
+  countDown: any;
   isPlaying: any;
   api: VgAPI;
   innerheigth: any;
   bucketName: any;
   @ViewChild('close') close: ElementRef;
-  @ViewChild('previous') myLeft: ElementRef;
   @ViewChild('next') myRight: ElementRef;
   @ViewChild('home') myHomeBtn: ElementRef;
   public carouselTile: NgxCarousel;
-  uri: any[] = [];
-  public carouselTileItems: Array<any>;
   time: any;
+  color: any;
   Favorites: any[] = [];
   FavVideo: any[] = [];
   downCount = 0;
@@ -58,46 +57,34 @@ export class FavoritesComponent implements OnInit {
     private spinnerService: Ng4LoadingSpinnerService) {
     this.getList();
     this.timerService.getCountdownTimer().subscribe(data => {
-      console.log(data);
       this.countDown = data;
-
       this.waterpx = this.waterpx - this.UnitOfTIme;
       this.waterPxCountdown = this.waterpx + "px";
-
-
     });
-
   }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    console.log(event);
 
     if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-      console.log("right key ");
       this.GoRight();
     }
 
     if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-      console.log("left key ");
       this.GoLeft();
     }
     if (event.keyCode === KEY_CODE.Up_key) {
-      console.log("Up key ");
       this.GoUp();
     }
     if (event.keyCode === KEY_CODE.Down_key) {
-      console.log("Down key ");
       this.GoDown();
 
     }
     if (event.keyCode === KEY_CODE.Enter) {
-      console.log("Enter key ");
 
       var video = this.FavVideo[this.arrayIndex];
       if (video) {
         this.openNav();
       }
-
     }
     if (event.keyCode === KEY_CODE.escape_key) {
       this.close.nativeElement.focus();
@@ -105,27 +92,21 @@ export class FavoritesComponent implements OnInit {
     }
 
   }
-  color: any;
-  GoDown() {
 
+  GoDown() {
     if (this.downCount < 2) {
       this.downCount++;
     }
     if (this.downCount == 1) {
       this.myHomeBtn.nativeElement.focus();
       this.color = 1;
+      this.arrayIndex = 76764532734;
+      // this.downCount = 0;
     }
     if (this.downCount == 2) {
       this.goToHome();
       this.downCount = 0;
     }
-
-    // if (this.downCount == 2) {
-    //   // this.mySettingsBtn.nativeElement.focus();
-    //   this.downCount = 0;
-    // }
-    console.log("test");
-
   }
   GoUp() {
     if (this.upCount < 1) {
@@ -133,16 +114,13 @@ export class FavoritesComponent implements OnInit {
     }
     if (this.upCount == 1) {
       this.myRight.nativeElement.focus();
+      this.arrayIndex = 0;
+      this.color = 0;
       this.upCount = 0;
+      this.downCount = 0;
     }
-    // if (this.upCount == 2) {
-    //   this.myLeft.nativeElement.focus();
-    //   this.upCount = 0;
-    // }
   }
   onmoveFn($event) {
-
-    console.log($event);
   }
   GoLeft() {
     --this.arrayIndex;
@@ -151,7 +129,6 @@ export class FavoritesComponent implements OnInit {
     }
   }
   GoRight() {
-    console.log("test");
     ++this.arrayIndex;
     if (this.arrayIndex == this.FavVideo.length) {
       this.arrayIndex = 0;
@@ -160,7 +137,7 @@ export class FavoritesComponent implements OnInit {
   ngOnInit() {
     this.time = localStorage.getItem('screenTimeLimit');
     this.carouselTile = {
-      grid: { xs: 2, sm: 2, md: 4, lg: 4, all: 0 },
+      grid: { xs: 3, sm: 3, md: 4, lg: 4, all: 0 },
       slide: 1,
       speed: 400,
       loop: true,
@@ -171,7 +148,7 @@ export class FavoritesComponent implements OnInit {
         .tile {
           position: relative;
           max-width:56%;
-          transform: scale(1.3);
+          transform: scale(1.43);
           border-radius: 10px;
       }
       .ngxcarousel-inner {
@@ -192,7 +169,6 @@ export class FavoritesComponent implements OnInit {
     }
   }
   openNav() {
-    console.log("test");
     document.getElementById("myNav").style.display = "block";
     this.isPlaying = true;
     this.api.play();
@@ -206,7 +182,6 @@ export class FavoritesComponent implements OnInit {
     this.spinnerService.show();
     this.favService.GetFavorite(kidId).subscribe(data => {
       this.spinnerService.hide();
-      console.log(data);
       this.Favorites = data.favorites;
       var subCard = [];
       var temp = [];
@@ -215,10 +190,40 @@ export class FavoritesComponent implements OnInit {
         temp.push(subCard);
       }
       this.FavVideo = temp;
+      console.log(this.FavVideo);
     },
       Error => {
         this.spinnerService.hide();
       });
+  }
+  videoURL(FormateId: any[], id: any) {
+    var url = localStorage.getItem('videoUrl');
+    this.innerheigth = window.innerHeight;
+    if (this.innerheigth >= 720) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 3);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth >= 480) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 6);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth <= 360) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 7);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth <= 240) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 8);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    }
   }
   VideoImageUrl(id) {
     var url = localStorage.getItem('videoImageUrl');
@@ -246,7 +251,6 @@ export class FavoritesComponent implements OnInit {
       () => {
         x++;
         if (x > 2) {
-          var src = this.currentStream;
           this.onPlayerReady(this.api);
           setTimeout(function () {
             $("#myButton").trigger("click");
@@ -260,9 +264,14 @@ export class FavoritesComponent implements OnInit {
     );
   }
   deleteFav(id: any) {
+    let remove = new RemoveFav();
+    remove.kidId = localStorage.getItem("kidId");
+    remove.videoId = id;
+    // var kidId = localStorage.getItem("kidId");
     this.spinnerService.show();
-    this.favService.RemoveFavorite(id).subscribe(data => {
+    this.favService.RemoveFavorite(remove).subscribe(data => {
       console.log("test");
+      this.FavVideo[0].pop(id);
       this.spinnerService.hide();
     },
       Error => {

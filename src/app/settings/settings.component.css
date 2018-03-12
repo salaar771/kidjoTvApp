@@ -151,7 +151,16 @@
     }
     .text-box-1  img{
         max-width: 23px;
-        right: -30%;
+        right: -30% !important;
+    }
+    .video-filter-top img{
+        max-width: 140px;
+    }
+    .video-filter-top h3{
+        top: 6%;
+    }
+    .last-check{
+        left: 100%;
     }
 }
 

@@ -111,9 +111,11 @@
 
 @media(max-width:812px){
     .main-card-container{
-        margin:-170px -271px;
+        margin:-180px -430px;
         /* max-width: 100%; */
-        transform: scale(.8);
+        transform: scale(.6);
+        width: 140%;
+        max-width: none;
     }
     .side-bar-contents img{
         width: 60px;
@@ -222,26 +224,40 @@
     box-shadow: 8px 0 4px 0 #111;
 }
 
+.background-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: .8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.8em;
+}
+
 /* .activeImg:hover{
     -ms-transform: scale(1.11); 
     -webkit-transform: scale(1.11); 
     transform: scale(1.11); 
 } */
 .imgActive{
-    -ms-transform: scale(1.4); /* IE 9 */
-    -webkit-transform: scale(1.4); /* Safari 3-8 */
-    transform: scale(1.4); 
+    box-shadow: inset 0 0 0 7px #fff,
+                inset 7px 0 0 7px #fff;
+    border-radius: 20px;
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3); 
 }
 .imgActive:focus{
-    -ms-transform: scale(1.4); /* IE 9 */
-    -webkit-transform: scale(1.4); /* Safari 3-8 */
-    transform: scale(1.4); 
+    box-shadow: inset 0 0 0 7px #fff;
+    border-radius: 20px;
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3); 
 }
 
 .sliderFocus:focus .activeImg{
-    -ms-transform: scale(1.4); /* IE 9 */
-    -webkit-transform: scale(1.4); /* Safari 3-8 */
-    transform: scale(1.4); 
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3); 
 }
 
 .settingFocus{

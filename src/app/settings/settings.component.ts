@@ -128,7 +128,6 @@ export class SettingsComponent implements OnInit {
   }
   GoUp() {
     if (this.arrayIndex != 0) {
-      // this.arrayIndex=1;
 
     }
     if (this.upCount < 1) {
@@ -223,10 +222,6 @@ export class SettingsComponent implements OnInit {
     }
   }
   ngOnInit() {
-    // if (this.arrayIndex != 1 && this.ageItemsIndex != 0) {
-    //   this.arrayIndex = 1;
-    //   this.ageItemsIndex = 0;
-    // }
   }
   setAgeTick(val: any) {
     let age = localStorage.getItem('Age');
