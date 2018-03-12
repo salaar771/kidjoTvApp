@@ -144,7 +144,7 @@ export class VideoSelectionComponent implements OnInit {
   }
   GoRight() {
     ++this.arrayIndex;
-    if (this.arrayIndex == this.video.length) {
+    if (this.arrayIndex == this.video.length - 2) {
       this.arrayIndex = 0;
     }
   }
