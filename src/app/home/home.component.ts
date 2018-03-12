@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     private spinnerService: Ng4LoadingSpinnerService) {
     this.refreshWeb();
     this.timerService.getCountdownTimer().subscribe(data => {
+      
       console.log(data);
       this.countDown = data;
       
