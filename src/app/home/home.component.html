@@ -1,12 +1,8 @@
 <section class="playlist-setting">
-
-
-
   <div class="side-bar">
-    
-      <div class="css-jar">
-        <div class="flask-base">
-            <div class="side-bar-contents">
+    <div class="css-jar">
+      <div class="flask-base">
+        <div class="side-bar-contents">
           <div class="css-liquid" [style.height]="waterPxCountdown"> </div>
           <div id="background-wrap">
             <div class="bubble x1"></div>
@@ -22,9 +18,6 @@
           </div>
         </div>
       </div>
-
-
-      <!-- <img src="/assets/svgs/water_background.svg"> -->
       <p>{{countDown}} </p>
     </div>
   </div>
@@ -39,8 +32,8 @@
     <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
       <ngx-tile NgxCarouselItem class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index">
         <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)" #slider class="sliderFocus">
-          <!-- <img src="/assets/svgs/folder_card_purple_open.svg"> -->
-          <img class="activeImg img-thumbnail" [style.background]="folder[0].color " [ngClass]="{'imgActive':i==arrayIndex}" src={{folder[0].imgUrl}}/>
+          <img class="background-img" [style.background-image]="'url('+folder[0].color+')'" [ngClass]="{'imgActive':i==arrayIndex}"
+            src={{folder[0].imgUrl}}/>
         </div>
       </ngx-tile>
       <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
@@ -48,6 +41,7 @@
 
     </ngx-carousel>
   </div>
+
   <a class="help" (click)="showWalkthrough()"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
   <div *ngIf="walkThrough">
     <div class="overlay">

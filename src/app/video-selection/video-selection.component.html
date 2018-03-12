@@ -2,8 +2,6 @@
   <div class="background"></div>
   <div class="side-bar">
     <div class="side-bar-contents">
-      <!-- <img src="/assets/svgs/water_background.svg"> -->
-
       <div class="css-jar">
         <div class="flask-base">
           <div class="side-bar-contents">
@@ -26,31 +24,33 @@
       </div>
     </div>
   </div>
+
   <div (click)="goToHome()" #home>
     <img [ngClass]="{'favouriteFocus':1==crossColor}" class="mybtn" src="/assets/svgs/video_card_cross.svg">
   </div>
-  <div class="books">
-    <img class="subCard img-thumbnail" [style.background]='color' src={{imgUrl}}>
 
+  <div class="books">
+    <img [style.background-image]="'url('+color+')'" src={{imgUrl}}>
   </div>
+
   <div class="main-books-container">
     <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
       <ngx-tile NgxCarouselItem *ngFor="let vid of video;  let i = index">
-        <img class="activeImg" src={{vid[0].imgUrl}} [ngClass]="{'imgActive':i==arrayIndex}" />
-        <button class="btn playbtn" data-toggle="modal" data-target="#videoModdal" (click)="openNav()" [ngClass]="{'imgActive':i==arrayIndex}">Play</button>
-        <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span>
-        <!-- <div class="lock-overlay">
-          <img class="lock-bar" src="assets/svgs/video_card_lock_bar.svg">
-          <img class="lock-icon" src="assets/svgs/video_card_lock.svg">
-          <p>Press to unlock</p>
-        </div> -->
-        <div class="caption">
-          <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].Title}}</p>
+        <div style=" cursor: pointer;" data-toggle="modal" data-target="#videoModdal" (click)="openNav()">
+          <img class="activeImg" src={{vid[0].imgUrl}} [ngClass]="{'imgActive':i==arrayIndex}" />
+          <span class="Duration" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].duration}} min</span>
+          <div class="caption">
+            <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].Title}}</p>
+          </div>
         </div>
         <div class="fav-btn" style="cursor: pointer;" (click)="addToFav(vid[0].id)">
-          <button [ngClass]="{'favBtnClick':true}" type="button" value="btn" id="button-fav">
-                  <img src="assets/svgs/video_card_heart.svg">
+          <button type="button" value="btn" id="button-fav" *ngIf="beforeFavCall">
+                  <img src="assets/svgs/like.svg">
                   <p>Favorite</p>
+              </button>
+          <button type="button" value="btn" id="button-fav" *ngIf="success">
+                  <img src="assets/svgs/error.svg">
+                  <p>Delete</p>
               </button>
         </div>
       </ngx-tile>
