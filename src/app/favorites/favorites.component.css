@@ -1072,3 +1072,49 @@
 	width: 30px;
 }
 
+/*Custom water animation*/
+
+#banner {
+    border-radius: 0%;
+    width: 50px;
+    height: 300px;
+    /*background: #F0FFFF;*/
+    overflow: hidden;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #04ACFF;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+#banner .fill {
+    animation-name: fillAction;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.2, .2, .2, .2);
+    animation-duration: 540s;
+    animation-fill-mode: forwards;
+}
+#banner #waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.8s;
+    width:300px;
+    height: 300px;
+    fill: #04ACFF;
+}
+@keyframes fillAction {
+    0% {
+        transform: translate(0, -1px);
+    }
+    100% {
+        transform: translate(0, 300px);
+    }
+}
+@keyframes waveAction {
+    0% {
+        transform: translate(-150px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
