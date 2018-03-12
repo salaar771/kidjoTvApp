@@ -75,7 +75,8 @@
           <vg-volume></vg-volume>
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-        <video #media [vgMedia]="media" [vgDash]="currentStream" [vgHls]="currentStream" id="singleVideo">
+        <video #media [vgMedia]="media" preload="auto" id="singleVideo">
+          <source *ngFor="let vid of FavVideo" src="{{currentStream}}" type="video/mp4">
         </video>
       </vg-player>
     </div>

@@ -51,7 +51,6 @@ export class VideoSelectionComponent implements OnInit {
   upCount = 0;
   crossColor: any;
   currentSlide: any;
-  currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
   success: any = false;
   beforeFavCall: any = true;
   waterpx: any = "100";
@@ -203,6 +202,7 @@ export class VideoSelectionComponent implements OnInit {
     this.videoService.GetSubCard(this.idss).subscribe(data => {
       this.spinnerService.hide();
       this.cards = data.subcards;
+      console.log(this.cards);
       var subCard = [];
       var temp = [];
       for (var index = 0; index < this.cards.length; index++) {
@@ -211,6 +211,7 @@ export class VideoSelectionComponent implements OnInit {
         temp.push(subCard);
       }
       this.video = temp;
+      console.log(this.video);
     },
       Error => {
         this.spinnerService.hide();
@@ -218,33 +219,31 @@ export class VideoSelectionComponent implements OnInit {
   }
   videoURL(FormateId: any[], id: any) {
     var url = localStorage.getItem('videoUrl');
-    var formate = [1, 2, 3, 4, 5, 6, 7, 8];
     this.innerheigth = window.innerHeight;
-    if (this.innerheigth <= 720 && this.innerheigth >= 480) {
-      if (FormateId[0].id == formate || FormateId[0].id == formate || FormateId[0].id == formate) {
-        var ID = FormateId[0].id;
-        console.log(ID);
-      }
+    if (this.innerheigth >= 720) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 3);
+      var ID = formateArray[0].id;
       this.bucketName = '.mp4';
-      return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
-    } else if (this.innerheigth <= 480 && this.innerheigth >= 360) {
-      if (FormateId[0].id == 4 || FormateId[0].id == 5 || FormateId[0].id == 6) {
-        var ID = FormateId[0].id;
-      }
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth >= 480) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 6);
+      var ID = formateArray[0].id;
       this.bucketName = '.mp4';
-      return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
-    } else if (this.innerheigth <= 360 && this.innerheigth >= 240) {
-      if (FormateId[0].id == 7) {
-        var ID = FormateId[0].id;
-      }
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth <= 360) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 7);
+      var ID = formateArray[0].id;
       this.bucketName = '.mp4';
-      return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
-    } else if (this.innerheigth <= 240 && this.innerheigth >= 0) {
-      if (FormateId[0].id == 8) {
-        var ID = FormateId[0].id;
-      }
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth <= 240) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 8);
+      var ID = formateArray[0].id;
       this.bucketName = '.mp4';
-      return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
     }
   }
   VideoImageUrl(id) {
@@ -273,6 +272,9 @@ export class VideoSelectionComponent implements OnInit {
   closeNav() {
     document.getElementById("myNav").style.display = "none";
     this.api.pause();
+    // this.api.videogularElement("");
+    // var videoElement = document.getElementById('media');
+    // videoElement.removeAttribute('src');
   }
   addToFav(id: any) {
     let favourite = new AddFav();
@@ -290,12 +292,11 @@ export class VideoSelectionComponent implements OnInit {
   onPlayerReady(api: VgAPI) {
     var x = 1;
     this.api = api;
-
     this.api.getDefaultMedia().subscriptions.ended.subscribe(
       () => {
         x++;
         if (x > 2) {
-          var src = this.currentStream;
+          this.setCurrentVideo(this.video[0].videourl);
           this.onPlayerReady(this.api);
           setTimeout(function () {
             $("#myButton").trigger("click");
@@ -308,6 +309,18 @@ export class VideoSelectionComponent implements OnInit {
       }
     );
 
+  }
+  sources: any;
+  setCurrentVideo(source: string) {
+    this.sources = new Array<Object>();
+    for (var i = 0; i <= this.video.length; i++) {
+      this.sources.push({
+        src: this.video[i].videourl,
+        type: "video/mp4"
+      });
+    }
+    this.api.getDefaultMedia().currentTime = 0;
+    this.api.play();
   }
   goToHome() {
     this.router.navigate(['./']);

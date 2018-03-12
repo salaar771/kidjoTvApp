@@ -190,10 +190,40 @@ export class FavoritesComponent implements OnInit {
         temp.push(subCard);
       }
       this.FavVideo = temp;
+      console.log(this.FavVideo);
     },
       Error => {
         this.spinnerService.hide();
       });
+  }
+  videoURL(FormateId: any[], id: any) {
+    var url = localStorage.getItem('videoUrl');
+    this.innerheigth = window.innerHeight;
+    if (this.innerheigth >= 720) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 3);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth >= 480) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 6);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth <= 360) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 7);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    } else if (this.innerheigth <= 240) {
+      var formateArray: any[] = FormateId.filter(x => x.id == 8);
+      var ID = formateArray[0].id;
+      this.bucketName = '.mp4';
+      var VideoUrl = url + ID + '/' + id + this.bucketName;
+      return VideoUrl;
+    }
   }
   VideoImageUrl(id) {
     var url = localStorage.getItem('videoImageUrl');
@@ -221,7 +251,6 @@ export class FavoritesComponent implements OnInit {
       () => {
         x++;
         if (x > 2) {
-          var src = this.currentStream;
           this.onPlayerReady(this.api);
           setTimeout(function () {
             $("#myButton").trigger("click");
