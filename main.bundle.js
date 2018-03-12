@@ -343,7 +343,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.playlist-section{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background.jpg'); \n    background-size: cover;\n    background-position: center;\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    overflow: hidden;\n    position: relative;\n}\n\n.footer-heading{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.footer-heading img{\n    max-width: 200px;\n}\n\n.footer-heading h3{\n    position: absolute;\n    top: 50%;;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 25px;\n    font-family: bree;\n    color: #444;\n}\n\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    width: 6%;\n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 25px;\n    width: 40px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n\n.playlist img{\n    max-width: 100px;\n}\n\n.playlist h3{\n    margin-top: -10px;\n    font-family: bree;\n}\n\n.main-videocard-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 50%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    left: 53%;\n    -webkit-transform: translateX(-50%) translateY(-35%);\n            transform: translateX(-50%) translateY(-35%);\n}\n\n[class^=\"video-card-container\"]\n{\n    margin-left: 2.5em;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n/* .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -49px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: 500;\n    font-size: 13px;\n    text-align: left;\n} */\n\n.caption p{\n    padding: 5px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 155%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 0px !important;\n    margin-bottom: 13px !important; \n}\n\n.delete-btn p{    \n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 13px !important;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n}\n\n.lock-overlay img{\n    position: absolute !important;\n    top: 0% !important;\n    left: 0 !important;\n    right: 0 !important;\n    border-top-left-radius: 5px !important;\n    border-top-right-radius: 5px !important;\n}\n\n.lock-overlay .lock-bar{\n    width: 100% !important;\n}\n\n.lock-overlay .lock-icon{\n    margin-left: 26%;\n    margin-top: 3%;\n    width: 15px;\n}\n\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 210px;\n    width: 170px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 7px;\n}\n\n.delete-btn p{\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n    \n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: bold;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 110%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: -5px;\n    margin-bottom: 9px;\n}\n\n.delete-btn p{\n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.img-thumbnail{\n    border: 3px solid #fff !important;\n    position: relative;\n}\n\n.activeImg{\n    max-width: 100%;\n}\n\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .5em 1.5em;\n}\n\n@media(max-width:1024px)\n{    \n    .playlist-section{\n        background-size: cover;\n        background-repeat: no-repeat;\n        height: 1320px;  \n    }\n    .playlist{\n        top: 2.5%;\n    }\n    .main-video-card container{\n        left: 50%;\n        -webkit-transform: translate(-50%);\n                transform: translate(-50%);    \n        position: relative;\n        max-width: 300px;\n        height: 263px;\n        padding: 0;\n        border-radius: 15px;\n        background: red;\n}\n    .video-card{\n        top: 2%;\n    }\n    .main-videocard-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 16%;\n        width: 20%;\n    }\n    .video-card .lock-overlay img{\n        position: absolute;\n        top: -3%;\n        left: 0;\n        right: 0;\n        -webkit-box-sizing: border-box;\n                box-sizing: border-box;\n}\n\n}\n\n@media(width:768px)\n{    \n    .playlist{\n        top: 2.5%;\n    }\n    .main-videocard-container{\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        margin-left: auto;\n        margin-right: auto;\n        left: 36%;\n        top: 14%;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n        margin-bottom: 100px;\n    } \n    .video-card-container{\n        margin-bottom:90px;\n     }\n    \n}\n\n@media(max-width:500px)\n{    \n    .main-videocard-container{\n     display: -webkit-box;\n     display: -ms-flexbox;\n     display: flex;\n     margin-left: auto;\n     margin-right: auto;\n     left: 14%;\n     top: 14%;\n     -ms-flex-wrap: wrap;\n         flex-wrap: wrap;\n     margin-bottom: 100px;\n    }\n    .video-card .lock-overlay .lock-bar{\n        position: absolute;\n        top: -3%;\n        width: 100.6%;\n        left: auto;\n    }\n\n    .video-card-container{\n        margin-bottom:90px;\n    }\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n    .side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n    .side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n}\n\n/*  =========================   Playlist Settings ===========================*/\n\n.playlist-setting{\n    background: src(\"assets/tablet-l/background_day_top.webp\");\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    position: absolute;\n    top: 30%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n\n.card-container img{\n    width: 240px;\n    padding-left: 20px;\n    position: relative;\n}\n\n.card-container .active img{\n    width: 320px;\n}\n\n.card-poster img{\n    position: absolute;\n    top: 70px;\n    left: 13%;\n    max-width: 200px;\n    background: red;\n}\n\n@media(max-width:768px)\n{\n    .playlist-setting{\n        height: 1000px;\n    }\n    .main-card-container{\n        top: 20%;\n    }\n}\n\n@media(max-width:1149px)\n{\n    .playlist-setting{\n        height: 1020px;\n    }\n    .main-card-container{\n        top: 20%;\n    }\n}\n\n@media(max-width:616px)\n{\n    .playlist-setting{\n        height: 1300px;\n    }\n    .main-card-container{\n        top: 10%;\n    }\n}\n\n.run-time-over-section{\n    width: auto;\n    min-height: 100vh;\n    background:#2e336c;\n    padding: 0 3em;\n    text-align: center;\n    background-size: cover;\n    position: relative;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n\n.sleeping-moon-image img{\n    max-width: 420px;\n    z-index: 10000;\n}\n\n.para-1{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 50px;\n    font-weight: bold;\n    font-family: bree;\n    color: #fff;\n    width: 100%;\n    \n}\n\n.para-2{\n    position: absolute;\n    bottom: 5%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 32px;\n    font-weight: bold;\n    font-family: bree;\n    color: aqua;\n    border: 6px solid aqua;\n    border-radius: 12px;\n    padding: .3em 1em;\n    width: 270px;\n}\n\n.sub-para{\n    font-style: normal;\n    font-size: 21px;\n    font-family: bree light;\n}\n\n@media(max-width:812px)\n{\n    .para-1{\n        top: 45%;\n        font-size: 32px\n    }\n    .para-2{\n        font-size: 28px;\n    }\n    .sleeping-moon-image img{\n        max-width:300px ;\n        width:100%;\n}\n}\n\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    right: 95%;\n    opacity: 0;\n}\n\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 95%;\n    opacity: 0;\n}\n\n/* modal style */\n\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n/* .favouriteFocus:focus .footer-heading h3{\n    color: #4dbcae;\n } */\n\n.favouriteFocus {\n    color: #4dbcae !important;\n    /* background-color: red; */\n }\n\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n    margin-left: 0px;\n    margin-bottom: 3px;\n}\n\n/* ccugfyfgh */\n\n", ""]);
+exports.push([module.i, "\n.playlist-section{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background.jpg'); \n    background-size: cover;\n    background-position: center;\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    overflow: hidden;\n    position: relative;\n}\n\n.footer-heading{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.footer-heading img{\n    max-width: 200px;\n}\n\n.footer-heading h3{\n    position: absolute;\n    top: 50%;;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 25px;\n    font-family: bree;\n    color: #444;\n}\n\n@media(max-width:812px)\n{\n    .footer-heading{\n        height: 67px;\n    }\n}\n\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    width: 6%;\n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 25px;\n    width: 40px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    z-index: 10000;\n}\n\n.playlist{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n\n.playlist img{\n    max-width: 100px;\n}\n\n.playlist h3{\n    margin-top: -10px;\n    font-family: bree;\n}\n\n.main-videocard-container{\n    cursor: pointer;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 50%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    left: 53%;\n    -webkit-transform: translateX(-50%) translateY(-35%);\n            transform: translateX(-50%) translateY(-35%);\n}\n\n[class^=\"video-card-container\"]\n{\n    margin-left: 2.5em;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n/* .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -49px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: 500;\n    font-size: 13px;\n    text-align: left;\n} */\n\n.caption p{\n    padding: 5px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 155%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 0px !important;\n    margin-bottom: 13px !important; \n}\n\n.delete-btn p{    \n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 13px !important;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n}\n\n.lock-overlay img{\n    position: absolute !important;\n    top: 0% !important;\n    left: 0 !important;\n    right: 0 !important;\n    border-top-left-radius: 5px !important;\n    border-top-right-radius: 5px !important;\n}\n\n.lock-overlay .lock-bar{\n    width: 100% !important;\n}\n\n.lock-overlay .lock-icon{\n    margin-left: 26%;\n    margin-top: 3%;\n    width: 15px;\n}\n\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 210px;\n    width: 170px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: 7px;\n}\n\n.delete-btn p{\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.video-card-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    background: red;\n    \n}\n\n.video-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n\n.video-card .caption{\n    padding: 1em;\n    background: red;\n    position: absolute;\n    bottom: -45px; \n    left: 0;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    font-weight: bold;\n    text-align: left;\n}\n\n.delete-btn{    \n    position: absolute;\n    top: 110%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n\n.delete-btn svg{\n    width: 15px;\n    height: 15px;\n    margin-right: auto;\n    margin-left: -5px;\n    margin-bottom: 9px;\n}\n\n.delete-btn p{\n    margin-top: 2%;\n    margin-right: auto;\n    margin-left: 10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n}\n\n#button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n}\n\n#button:focus{\n    outline: none;\n}\n\n.img-thumbnail{\n    border: 3px solid #fff !important;\n    position: relative;\n}\n\n.activeImg{\n    max-width: 100%;\n}\n\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .5em 1.5em;\n}\n\n@media(max-width:1024px)\n{    \n    .playlist-section{\n        background-size: cover;\n        background-repeat: no-repeat;  \n    }\n    .playlist{\n        top: 2.5%;\n    }\n    .main-video-card container{\n        left: 50%;\n        -webkit-transform: translate(-50%);\n                transform: translate(-50%);    \n        position: relative;\n        max-width: 300px;\n        height: 263px;\n        padding: 0;\n        border-radius: 15px;\n        background: red;\n}\n    .video-card{\n        top: 2%;\n    }\n    .video-card .lock-overlay img{\n        position: absolute;\n        top: -3%;\n        left: 0;\n        right: 0;\n        -webkit-box-sizing: border-box;\n                box-sizing: border-box;\n}\n\n}\n\n@media(max-width:812px)\n{    \n    .playlist{\n        top: -4%;\n        left: 50%;\n        -webkit-transform: scale(.6) translateX(-50%);\n                transform: scale(.6) translateX(-50%);\n    }\n    .main-videocard-container{\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        margin-left: auto;\n        margin-right: auto;\n        left: 9%;\n        top: 60%;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n        -webkit-transform:scale(.89) translateY(-50%);\n                transform:scale(.89) translateY(-50%);\n        width: 116%;\n        max-width: none;\n    } \n    \n}\n\n/* @media(max-width:500px)\n{    \n    .main-videocard-container{\n     display: flex;\n     margin-left: auto;\n     margin-right: auto;\n     left: 14%;\n     top: 14%;\n     flex-wrap: wrap;\n     margin-bottom: 100px;\n    }\n    .video-card .lock-overlay .lock-bar{\n        position: absolute;\n        top: -3%;\n        width: 100.6%;\n        left: auto;\n    }\n\n    .video-card-container{\n        margin-bottom:90px;\n    }\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n    .side-bar-contents img{\n    transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n    .side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n} */\n\n/*  =========================   Playlist Settings ===========================*/\n\n.playlist-setting{\n    background: src(\"assets/tablet-l/background_day_top.webp\");\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    position: absolute;\n    top: 30%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n\n.card-container img{\n    width: 240px;\n    padding-left: 20px;\n    position: relative;\n}\n\n.card-container .active img{\n    width: 320px;\n}\n\n.card-poster img{\n    position: absolute;\n    top: 70px;\n    left: 13%;\n    max-width: 200px;\n    background: red;\n}\n\n.run-time-over-section{\n    width: auto;\n    min-height: 100vh;\n    background:#2e336c;\n    padding: 0 3em;\n    text-align: center;\n    background-size: cover;\n    position: relative;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n\n.sleeping-moon-image img{\n    max-width: 420px;\n    z-index: 10000;\n}\n\n.para-1{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 50px;\n    font-weight: bold;\n    font-family: bree;\n    color: #fff;\n    width: 100%;\n    \n}\n\n.para-2{\n    position: absolute;\n    bottom: 5%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 32px;\n    font-weight: bold;\n    font-family: bree;\n    color: aqua;\n    border: 6px solid aqua;\n    border-radius: 12px;\n    padding: .3em 1em;\n    width: 270px;\n}\n\n.sub-para{\n    font-style: normal;\n    font-size: 21px;\n    font-family: bree light;\n}\n\n@media(max-width:812px)\n{\n    .para-1{\n        top: 45%;\n        font-size: 32px\n    }\n    .para-2{\n        font-size: 28px;\n    }\n    .sleeping-moon-image img{\n        max-width:300px ;\n        width:100%;\n}\n}\n\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    right: 95%;\n    opacity: 0;\n}\n\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -125px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 95%;\n    opacity: 0;\n}\n\n/* modal style */\n\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n/* .favouriteFocus:focus .footer-heading h3{\n    color: #4dbcae;\n } */\n\n.favouriteFocus {\n    color: #4dbcae !important;\n    /* background-color: red; */\n }\n\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n    margin-left: 0px;\n    margin-bottom: 3px;\n}\n\n/* water animation */\n\n/* flask */\n\n.css-jar {\n    position: relative;\n    width: 195px;\n    margin: 0px -56px;\n    margin-top: 50%;\n    text-align: center;\n    -webkit-transform: scale(2.5) translateY(-50%);\n            transform: scale(2.5) translateY(-50%);\n    overflow: hidden;\n  }\n\n.css-jar .flask-base {\n    margin: auto;\n    width: 33px;\n    height: 97px;\n    border-top-right-radius: 6px;\n    border-bottom-right-radius: 6px;\n    /* border-radius: 50%;\n    -o-border-radius: 50%;\n    -ms-border-radius: 50%;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%; */\n    overflow: hidden;\n    position: relative;\n    z-index: 5;\n    background: radial-gradient(circle at 50% 55%, rgba(240, 245, 255, 0.67), rgba(240, 245, 255, 0.73) 40%, rgba(225, 238, 255, 0.68) 60%, rgba(43, 130, 255, 0.19));  }\n\n.css-jar .css-liquid {\n    height: 100% ;\n    background-color: rgba(53, 238, 251, 0.58);\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n  }\n\n.css-jar .css-wave {\n    width: 58px;\n    height: 19px;\n    position: absolute;\n    background-color: rgb(53,238,251);\n    left: 0;\n    top: 9px;\n    animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -o-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -ms-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -webkit-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -moz-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    border-radius: 50%;\n    -o-border-radius: 50%;\n    -ms-border-radius: 50%;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n  }\n\n.css-jar .css-wave + .css-wave {\n    left: auto;\n    right: 0;\n  }\n\n.css-jar .flask-base .css-bubble {\n    left: 15px;\n    top: 49px;\n    animation: css-bounce 2.65s linear 0s infinite alternate;\n    -o-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -ms-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -webkit-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -moz-animation: css-bounce 2.65s linear 0s infinite alternate;\n  }\n\n.css-jar .flask-base .css-bubble + .css-bubble {\n    left: 73px;\n    top: 39px;\n    animation-duration: 3.45s;\n    -o-animation-duration: 3.45s;\n    -ms-animation-duration: 3.45s;\n    -webkit-animation-duration: 3.45s;\n    -moz-animation-duration: 3.45s;\n  }\n\n@-webkit-keyframes css-wave {\n    from {\n    -webkit-transform: translateX(97px);\n            transform: translateX(97px);\n    }\n    to {\n    -webkit-transform: translateX(-97px);\n            transform: translateX(-97px);\n    }\n   }\n\n@keyframes css-wave {\n    from {\n    -webkit-transform: translateX(97px);\n            transform: translateX(97px);\n    }\n    to {\n    -webkit-transform: translateX(-97px);\n            transform: translateX(-97px);\n    }\n   }\n\n@-webkit-keyframes css-bounce {\n    0% {\n    -webkit-transform: translate(5px, 15px);\n            transform: translate(5px, 15px);\n    }\n    50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n    }\n    100% {\n    -webkit-transform: translate(-5px, -36px);\n            transform: translate(-5px, -36px);\n    opacity: 1;\n    }\n   }\n\n@keyframes css-bounce {\n    0% {\n    -webkit-transform: translate(5px, 15px);\n            transform: translate(5px, 15px);\n    }\n    50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n    }\n    100% {\n    -webkit-transform: translate(-5px, -36px);\n            transform: translate(-5px, -36px);\n    opacity: 1;\n    }\n   }\n\n@-webkit-keyframes css-buble {\n    0% {\n    -webkit-transform: translate(3px, 10px);\n            transform: translate(3px, 10px);\n    }\n    25% {\n    -webkit-transform: translate(0, 0px);\n            transform: translate(0, 0px);\n    }\n    50% {\n    -webkit-transform: translate(-3px, -24px);\n            transform: translate(-3px, -24px);\n    }\n    75% {\n    -webkit-transform: translate(0, -49px);\n            transform: translate(0, -49px);\n    opacity: 1;\n    }\n    100% {\n    -webkit-transform: translate(3px, -97px);\n            transform: translate(3px, -97px);\n    opacity: 0;\n    }\n   }\n\n@keyframes css-buble {\n    0% {\n    -webkit-transform: translate(3px, 10px);\n            transform: translate(3px, 10px);\n    }\n    25% {\n    -webkit-transform: translate(0, 0px);\n            transform: translate(0, 0px);\n    }\n    50% {\n    -webkit-transform: translate(-3px, -24px);\n            transform: translate(-3px, -24px);\n    }\n    75% {\n    -webkit-transform: translate(0, -49px);\n            transform: translate(0, -49px);\n    opacity: 1;\n    }\n    100% {\n    -webkit-transform: translate(3px, -97px);\n            transform: translate(3px, -97px);\n    opacity: 0;\n    }\n   }\n\n/* bubbles */\n\n#background-wrap {\n    bottom: 0;\n\tleft: 0;\n\tposition: fixed;\n\tright: 0;\n\ttop: 0;\n}\n\n/* KEYFRAMES */\n\n@-webkit-keyframes animateBubble {\n    0% {\n        margin-top: 1000px;\n    }\n    100% {\n        margin-top: -100%;\n    }\n}\n\n@keyframes animateBubble {\n    0% {\n        margin-top: 1000px;\n    }\n    100% {\n        margin-top: -100%;\n    }\n}\n\n@-webkit-keyframes sideWays { \n    0% { \n        margin-left:0px;\n    }\n    100% { \n        margin-left:50px;\n    }\n}\n\n@keyframes sideWays { \n    0% { \n        margin-left:0px;\n    }\n    100% { \n        margin-left:50px;\n    }\n}\n\n/* ANIMATIONS */\n\n.x1 {\n    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 0%;\n    top: 5%;\n\t\n\t-webkit-transform: scale(0.6);\n\ttransform: scale(0.6);\n}\n\n.x2 {\n    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 0;\n\t\n\t-webkit-transform: scale(0.4);\n\ttransform: scale(0.4);\n}\n\n.x3 {\n    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 1%;\n    top: 0%;\n\t\n\t-webkit-transform: scale(0.7);\n\ttransform: scale(0.7);\n}\n\n.x4 {\n    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\tanimation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 0;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n\n.x5 {\n    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 8%;\n\t\n\t-webkit-transform: scale(0.5);\n\ttransform: scale(0.5);\n}\n\n.x6 {\n    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 30%;\n    top: 0;\n\n\t-webkit-transform: scale(0.8);\n\ttransform: scale(0.8);\n}\n\n.x7 {\n    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 25%;\n    top: 10%;\n\t\n\t-webkit-transform: scale(0.4);\n\ttransform: scale(0.4);\n}\n\n.x8 {\n    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\tanimation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\t\n\tleft: 30%;\n    top: 10%;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n\n.x9 {\n    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 25%;\n    top: 50%;\n\t\n\t-webkit-transform: scale(0.6);\n\ttransform: scale(0.6);\n}\n\n.x10 {\n    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 30%;\n    top: 80%;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n\n/* OBJECTS */\n\n.bubble {\n\tborder-radius: 50%;\n\t\n    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);\n\tbox-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);\n\t\n    height: 20px;\n\tposition: absolute;\n\twidth: 20px;\n}\n\n.bubble:after { /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 12+ */ /* IE10+ */\n    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */\n\tborder-radius: 50%;\n\t\n    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);\n\tbox-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);\n\t\n\tcontent: \"\";\n    height: 30px;\n\tleft: 10px;\n\tposition: absolute;\n\twidth: 30px;\n}\n\n/*Custom water animation*/\n\n/* \n#banner {\n    border-radius: 0%;\n    width: 50px;\n    height: 300px;\n    overflow: hidden;\n    border-top-right-radius: 25px;\n    border-bottom-right-radius: 25px;\n    border: 1px solid #04ACFF;\n    backface-visibility: hidden;\n    transform: translate3d(0, 0, 0);\n}\n#banner .fill {\n    animation-name: fillAction;\n    animation-iteration-count: 1;\n    animation-timing-function: cubic-bezier(.2, .2, .2, .2);\n    animation-duration: 540s;\n    animation-fill-mode: forwards;\n}\n#banner #waveShape {\n    animation-name: waveAction;\n    animation-iteration-count: infinite;\n    animation-timing-function: linear;\n    animation-duration: 0.8s;\n    width:300px;\n    height: 300px;\n    fill: #04ACFF;\n}\n@keyframes fillAction {\n    0% {\n        transform: translate(0, -1px);\n    }\n    100% {\n        transform: translate(0, 300px);\n    }\n}\n@keyframes waveAction {\n    0% {\n        transform: translate(-150px, 0);\n    }\n    100% {\n        transform: translate(0, 0);\n    }\n} */\n", ""]);
 
 // exports
 
@@ -356,7 +356,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/favorites/favorites.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"playlist-section\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"assets/svgs/water_background.svg\">\n      <p>{{time}}</p>\n    </div>\n  </div>\n  <div class=\"playlist\">\n    <img src=\"assets/svgs/favorites_heart.svg\">\n    <h3>Playlist</h3>\n  </div>\n  <div class=\"main-videocard-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of FavVideo; let i = index\">\n        <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n        <button class=\"btn playbtn\" (click)=\"openNav()\">Play</button>\n        <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n        <!-- <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span> -->\n        <!-- <div class=\"lock-overlay\">\n          <img class=\"lock-bar\" src=\"assets/svgs/video_card_lock_bar.svg\">\n          <img class=\"lock-icon\" src=\"assets/svgs/video_card_lock.svg\">\n          <p>Press to unlock</p>\n        </div> -->\n        <div class=\"caption\" [ngClass]=\"{'imgActive':i==arrayIndex}\">\n          <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\">{{vid[0].Title}}</p>\n        </div>\n        <div class=\"delete-btn\" (click)=\"deleteFav(vid[0].id)\">\n          <button type=\"button\" value=\"btn\" id=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path fill=\"#000\" fill-rule=\"evenodd\" d=\"M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z\"/></svg><p>delete</p>\n                          </button>\n        </div>\n      </ngx-tile>\n\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n  <!-- <a  (click)=\"goToHome()\" #home [ngClass]=\"{'favouriteFocus':true}\" class=\"favouriteFocus\"> -->\n  <div class=\"footer-heading favouriteFocus\" (click)=\"goToHome()\" #home>\n    <img src=\"assets/svgs/navigation_folder_bottom.svg\">\n    <h3 [ngClass]=\"{'favouriteFocus':1==color}\">Videos</h3>\n  </div>\n  <!-- </a> -->\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n\n\n        <video #media [vgMedia]=\"media\" [vgDash]=\"currentStream\" [vgHls]=\"currentStream\" id=\"singleVideo\">\n        </video>\n\n\n\n      </vg-player>\n    </div>\n  </div>\n</section>"
+module.exports = "<section class=\"playlist-section\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <!-- <img src=\"assets/svgs/water_background.svg\"> -->\n      <div id=\"banner\">\n        <div class=\"fill\" [ngStyle]=\"{ 'animation-duration': timeInSeconds  }\">\n          <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"300px\"\n            height=\"300px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\">\n            <path fill=\"#04ACFF\" id=\"waveShape\" d=\"M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4\n  c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9\n  c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z\" />\n          </svg>\n        </div>\n        <p>{{countDown}} min</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"playlist\">\n    <img src=\"assets/svgs/favorites_heart.svg\">\n    <h3>Playlist</h3>\n  </div>\n\n\n  <div class=\"main-videocard-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of FavVideo; let i = index\">\n        <div (click)=\"openNav()\">\n          <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n          <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n          <div class=\"caption\" [ngClass]=\"{'imgActive':i==arrayIndex}\">\n            <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\">{{vid[0].Title}}</p>\n          </div>\n        </div>\n        <div class=\"delete-btn\" (click)=\"deleteFav(vid[0].id)\">\n          <button type=\"button\" value=\"btn\" id=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 25 25\"><path fill=\"#000\" fill-rule=\"evenodd\" d=\"M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z\"/></svg><p>delete</p>\n           </button>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n    </ngx-carousel>\n  </div>\n  <div class=\"footer-heading favouriteFocus\" (click)=\"goToHome()\" #home>\n    <img src=\"assets/svgs/navigation_folder_bottom.svg\">\n    <h3 [ngClass]=\"{'favouriteFocus':1==color}\">Videos</h3>\n  </div>\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n        <video #media [vgMedia]=\"media\" preload=\"auto\" id=\"singleVideo\">\n          <source *ngFor=\"let vid of FavVideo\" src=\"{{currentStream}}\" type=\"video/mp4\">\n        </video>\n      </vg-player>\n    </div>\n  </div>\n</section>"
 
 /***/ }),
 
@@ -371,12 +371,13 @@ module.exports = "<section class=\"playlist-section\">\n  <div class=\"side-bar\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__ = __webpack_require__("../../../../ng4-loading-spinner/ng4-loading-spinner.umd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_favoritesService_index__ = __webpack_require__("../../../../../src/app/shared/services/favoritesService/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_take__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/take.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_TimerService__ = __webpack_require__("../../../../../src/app/shared/services/TimerService/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_entities_index__ = __webpack_require__("../../../../../src/app/shared/entities/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_take__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/take.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -386,6 +387,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -405,45 +407,44 @@ var KEY_CODE;
     KEY_CODE[KEY_CODE["escape_key"] = 27] = "escape_key";
 })(KEY_CODE || (KEY_CODE = {}));
 var FavoritesComponent = /** @class */ (function () {
-    function FavoritesComponent(favService, router, spinnerService) {
+    function FavoritesComponent(favService, router, timerService, spinnerService) {
         var _this = this;
         this.favService = favService;
         this.router = router;
+        this.timerService = timerService;
         this.spinnerService = spinnerService;
-        this.counter = 60 * 60;
-        this.uri = [];
         this.Favorites = [];
         this.FavVideo = [];
         this.downCount = 0;
         this.upCount = 0;
         this.arrayIndex = 0;
         this.currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
+        this.waterpx = "100";
+        this.waterPxCountdown = "100px";
+        this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+        this.UnitOfTIme = 100 / this.initialTime[0];
         this.getList();
-        var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].timer(0, 1000)
-            .map(function (x) { return _this.counter - x; })
-            .takeWhile(function (x) { return x > 0; });
-        this.countDown = timeInSecond$;
+        this.timerService.getCountdownTimer().subscribe(function (data) {
+            _this.countDown = data;
+            _this.timeInSeconds = _this.countDown * 60 + 's';
+            _this.waterpx = _this.waterpx - _this.UnitOfTIme;
+            _this.waterPxCountdown = _this.waterpx + "px";
+        });
     }
     FavoritesComponent.prototype.keyEvent = function (event) {
-        console.log(event);
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-            console.log("right key ");
             this.GoRight();
         }
         if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-            console.log("left key ");
             this.GoLeft();
         }
         if (event.keyCode === KEY_CODE.Up_key) {
-            console.log("Up key ");
             this.GoUp();
         }
         if (event.keyCode === KEY_CODE.Down_key) {
-            console.log("Down key ");
             this.GoDown();
         }
         if (event.keyCode === KEY_CODE.Enter) {
-            console.log("Enter key ");
             var video = this.FavVideo[this.arrayIndex];
             if (video) {
                 this.openNav();
@@ -461,16 +462,13 @@ var FavoritesComponent = /** @class */ (function () {
         if (this.downCount == 1) {
             this.myHomeBtn.nativeElement.focus();
             this.color = 1;
+            this.arrayIndex = 76764532734;
+            // this.downCount = 0;
         }
         if (this.downCount == 2) {
             this.goToHome();
             this.downCount = 0;
         }
-        // if (this.downCount == 2) {
-        //   // this.mySettingsBtn.nativeElement.focus();
-        //   this.downCount = 0;
-        // }
-        console.log("test");
     };
     FavoritesComponent.prototype.GoUp = function () {
         if (this.upCount < 1) {
@@ -478,15 +476,13 @@ var FavoritesComponent = /** @class */ (function () {
         }
         if (this.upCount == 1) {
             this.myRight.nativeElement.focus();
+            this.arrayIndex = 0;
+            this.color = 0;
             this.upCount = 0;
+            this.downCount = 0;
         }
-        // if (this.upCount == 2) {
-        //   this.myLeft.nativeElement.focus();
-        //   this.upCount = 0;
-        // }
     };
     FavoritesComponent.prototype.onmoveFn = function ($event) {
-        console.log($event);
     };
     FavoritesComponent.prototype.GoLeft = function () {
         --this.arrayIndex;
@@ -495,7 +491,6 @@ var FavoritesComponent = /** @class */ (function () {
         }
     };
     FavoritesComponent.prototype.GoRight = function () {
-        console.log("test");
         ++this.arrayIndex;
         if (this.arrayIndex == this.FavVideo.length) {
             this.arrayIndex = 0;
@@ -504,14 +499,14 @@ var FavoritesComponent = /** @class */ (function () {
     FavoritesComponent.prototype.ngOnInit = function () {
         this.time = localStorage.getItem('screenTimeLimit');
         this.carouselTile = {
-            grid: { xs: 2, sm: 2, md: 4, lg: 4, all: 0 },
+            grid: { xs: 3, sm: 3, md: 4, lg: 4, all: 0 },
             slide: 1,
             speed: 400,
             loop: true,
             animation: 'lazy',
             point: {
                 visible: true,
-                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:56%;\n          transform: scale(1.3);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 500px;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 20%;\n      left: 10%;\n  }\n    "
+                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:56%;\n          transform: scale(1.43);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 500px;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 20%;\n      left: 10%;\n  }\n    "
             },
             load: 2,
             touch: true,
@@ -519,7 +514,6 @@ var FavoritesComponent = /** @class */ (function () {
         };
     };
     FavoritesComponent.prototype.openNav = function () {
-        console.log("test");
         document.getElementById("myNav").style.display = "block";
         this.isPlaying = true;
         this.api.play();
@@ -534,7 +528,6 @@ var FavoritesComponent = /** @class */ (function () {
         this.spinnerService.show();
         this.favService.GetFavorite(kidId).subscribe(function (data) {
             _this.spinnerService.hide();
-            console.log(data);
             _this.Favorites = data.favorites;
             var subCard = [];
             var temp = [];
@@ -543,9 +536,42 @@ var FavoritesComponent = /** @class */ (function () {
                 temp.push(subCard);
             }
             _this.FavVideo = temp;
+            console.log(_this.FavVideo);
         }, function (Error) {
             _this.spinnerService.hide();
         });
+    };
+    FavoritesComponent.prototype.videoURL = function (FormateId, id) {
+        var url = localStorage.getItem('videoUrl');
+        this.innerheigth = window.innerHeight;
+        if (this.innerheigth >= 720) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 3; });
+            var ID = formateArray[0].id;
+            this.bucketName = '.mp4';
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
+        }
+        else if (this.innerheigth >= 480) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 6; });
+            var ID = formateArray[0].id;
+            this.bucketName = '.mp4';
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
+        }
+        else if (this.innerheigth <= 360) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 7; });
+            var ID = formateArray[0].id;
+            this.bucketName = '.mp4';
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
+        }
+        else if (this.innerheigth <= 240) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 8; });
+            var ID = formateArray[0].id;
+            this.bucketName = '.mp4';
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
+        }
     };
     FavoritesComponent.prototype.VideoImageUrl = function (id) {
         var url = localStorage.getItem('videoImageUrl');
@@ -577,10 +603,9 @@ var FavoritesComponent = /** @class */ (function () {
         this.api.getDefaultMedia().subscriptions.ended.subscribe(function () {
             x++;
             if (x > 2) {
-                var src = _this.currentStream;
                 _this.onPlayerReady(_this.api);
                 setTimeout(function () {
-                    __WEBPACK_IMPORTED_MODULE_4_jquery__("#myButton").trigger("click");
+                    __WEBPACK_IMPORTED_MODULE_6_jquery__("#myButton").trigger("click");
                 }, 1000);
                 x = 0;
             }
@@ -591,9 +616,14 @@ var FavoritesComponent = /** @class */ (function () {
     };
     FavoritesComponent.prototype.deleteFav = function (id) {
         var _this = this;
+        var remove = new __WEBPACK_IMPORTED_MODULE_5__shared_entities_index__["c" /* RemoveFav */]();
+        remove.kidId = localStorage.getItem("kidId");
+        remove.videoId = id;
+        // var kidId = localStorage.getItem("kidId");
         this.spinnerService.show();
-        this.favService.RemoveFavorite(id).subscribe(function (data) {
+        this.favService.RemoveFavorite(remove).subscribe(function (data) {
             console.log("test");
+            _this.FavVideo[0].pop(id);
             _this.spinnerService.hide();
         }, function (Error) {
             _this.spinnerService.hide();
@@ -606,10 +636,6 @@ var FavoritesComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('close'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
     ], FavoritesComponent.prototype, "close", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('previous'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], FavoritesComponent.prototype, "myLeft", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('next'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
@@ -632,6 +658,7 @@ var FavoritesComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__shared_services_favoritesService_index__["a" /* FavoriteService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4__shared_services_TimerService__["a" /* TimerService */],
             __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
     ], FavoritesComponent);
     return FavoritesComponent;
@@ -848,7 +875,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.playlist-setting{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.jpg');\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    z-index: 1;\n    width: 6%;\n    \n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    max-width: 90%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n}\n\n.img-thumbnail{\n    position: relative;\n    border: 9px solid #fff !important;\n}\n\n.img-thumbnail::after{\n    content: '';\n    position: absolute !important;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0px 4px 0px #111;\n            box-shadow: 8px 0px 4px 0px #111;\n    border-radius: 10px;\n    right: 0;\n    z-index: 1;\n}\n\n@media(width:1024px)\n{\n    .main-card-container{\n        margin: -20% auto;\n        margin-left: 8%\n    }\n}\n\n@media(max-width:812px){\n    .main-card-container{\n        margin: -171px auto;\n        max-width: 100%;\n        -webkit-transform: scale(.8);\n                transform: scale(.8);\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar-contents p{\n        top :30%;\n    }\n}\n\n@media(width:414px)\n{\n    .main-card-container{\n        margin:0 auto;\n        max-width: 85%;\n        margin-left: 13%;\n        margin-top: -130px;\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 400px;\n    }\n    \n}\n\n@media (max-width:812px) {\n    \n    .playlist-icon-top img{\n        max-width: 150px !important;\n    }\n    .playlist-icon-top h3{\n        position: absolute;\n        top: 15%;\n    }\n    .playlist-setting-footer img{\n        max-width: 150px;\n        position: -webkit-sticky;\n        position: sticky;\n        -webkit-transform: translateY(20px);\n                transform: translateY(20px);\n    }\n    .imgActive{ /* IE 9 */\n        -webkit-transform: scale(1.2) !important; /* Safari 3-8 */\n        transform: scale(1.2) !important; \n    }\n}\n\n@media (max-width:412px)\n{\n    .main-card-container{\n        margin-top: 0;\n        margin: -140px auto;\n        margin-left: 14%;\n    }\n    .side-bar img{\n        height: 300px;\n    }\n}\n\n@media(width:768px){\n    .main-card-container{\n        margin-top:20%; \n    }\n}\n\n.leftRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    opacity: 0;\n}\n\n.rightRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 100% ;\n    opacity: 0;\n    /* left: -100; */\n}\n\n.activeImg{\n    cursor:pointer;\n    max-width: 226px;\n    border-radius: 15px;\n    border: 4px solid #fff;\n    position: relative;\n    /* background-image: url(\"/assets/svgs/folder_card_purple_open.svg\") !important; */\n    /* background-repeat: no-repeat !important;\n    background-size: cover !important;\n    padding: 1em !important; */\n}\n\n.activeImg::after{\n    content: '';\n    position: absolute;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0 4px 0 #111;\n            box-shadow: 8px 0 4px 0 #111;\n}\n\n/* .activeImg:hover{\n    -ms-transform: scale(1.11); \n    -webkit-transform: scale(1.11); \n    transform: scale(1.11); \n} */\n\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.sliderFocus:focus .activeImg{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n\n.settingFocus{\n    color: #fbb133 !important;\n}\n\n.favouriteFocus{\n    color: #fc6969 !important;\n }\n\n.selected_item{\nbackground: black;\n    color: red !important;\n }\n\n.help{\n    position: absolute;\n    top: 10px;\n    font-size: 35px;\n    left: 2%;\n }\n\n.overlay{\n    width: 80vw;\n    height: 80vh;\n    background: #767676b8;\n    margin:0 auto;\n    z-index: 1000000;\n    position: relative;\n    border-radius: 27px;\n    position: fixed;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n\n}\n\n.overlay::after{\n    content: '';\n    display: block;\n    clear: both;\n}\n\n.close-btn{\n    position: absolute; \n    right: 2%;\n    top: 2%\n}\n\n.keyboard-img{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n}\n\n@media(max-width:812px)\n{\n    .overlay .keyboard-img img{\n        max-width: 480px;\n    }\n}\n", ""]);
+exports.push([module.i, "\n.playlist-setting{\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.jpg');\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    width: auto;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode:overlay;\n}\n\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    z-index: 1;\n    width: 6%;\n    \n}\n\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.playlist-icon-top img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer{\n    position: absolute;\n    bottom: 0%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n}\n\n.playlist-setting-footer img{\n    max-width: 200px;\n}\n\n.playlist-setting-footer h3{\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    -webkit-transform: translate(42%);\n            transform: translate(42%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n\n.main-card-container{\n    max-width: 90%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n}\n\n.img-thumbnail{\n    position: relative;\n    border: 9px solid #fff !important;\n}\n\n.img-thumbnail::after{\n    content: '';\n    position: absolute !important;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0px 4px 0px #111;\n            box-shadow: 8px 0px 4px 0px #111;\n    border-radius: 10px;\n    right: 0;\n    z-index: 1;\n}\n\n@media(width:1024px)\n{\n    .main-card-container{\n        margin: -20% auto;\n        margin-left: 8%\n    }\n}\n\n@media(max-width:812px){\n    .main-card-container{\n        margin:-180px -430px;\n        /* max-width: 100%; */\n        -webkit-transform: scale(.6);\n                transform: scale(.6);\n        width: 140%;\n        max-width: none;\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar-contents p{\n        top :30%;\n    }\n}\n\n@media(width:414px)\n{\n    .main-card-container{\n        margin:0 auto;\n        max-width: 85%;\n        margin-left: 13%;\n        margin-top: -130px;\n    }\n    .side-bar-contents img{\n        width: 60px;\n        height: 400px;\n    }\n    \n}\n\n@media (max-width:812px) {\n    \n    .playlist-icon-top img{\n        max-width: 150px !important;\n    }\n    .playlist-icon-top h3{\n        position: absolute;\n        top: 15%;\n    }\n    .playlist-setting-footer img{\n        max-width: 150px;\n        position: -webkit-sticky;\n        position: sticky;\n        -webkit-transform: translateY(20px);\n                transform: translateY(20px);\n    }\n    .imgActive{ /* IE 9 */\n        -webkit-transform: scale(1.2) !important; /* Safari 3-8 */\n        transform: scale(1.2) !important; \n    }\n}\n\n@media (max-width:412px)\n{\n    .main-card-container{\n        margin-top: 0;\n        margin: -140px auto;\n        margin-left: 14%;\n    }\n    .side-bar img{\n        height: 300px;\n    }\n}\n\n@media(width:768px){\n    .main-card-container{\n        margin-top:20%; \n    }\n}\n\n.leftRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: 0;\n    opacity: 0;\n}\n\n.rightRs {\n    /* display: none !important; */\n    position: absolute;\n    margin: auto;\n    top: 0;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    left: 100% ;\n    opacity: 0;\n    /* left: -100; */\n}\n\n.activeImg{\n    cursor:pointer;\n    max-width: 226px;\n    border-radius: 15px;\n    border: 4px solid #fff;\n    position: relative;\n    /* background-image: url(\"/assets/svgs/folder_card_purple_open.svg\") !important; */\n    /* background-repeat: no-repeat !important;\n    background-size: cover !important;\n    padding: 1em !important; */\n}\n\n.activeImg::after{\n    content: '';\n    position: absolute;\n    width: 20px;\n    top: 5px;\n    bottom: 5px;\n    -webkit-box-shadow: 8px 0 4px 0 #111;\n            box-shadow: 8px 0 4px 0 #111;\n}\n\n.background-img{\n    background-size: cover;\n    background-repeat: no-repeat;\n    padding-top: .8em;\n    padding-left: 1em;\n    padding-right: 1em;\n    padding-bottom: 0.8em;\n}\n\n/* .activeImg:hover{\n    -ms-transform: scale(1.11); \n    -webkit-transform: scale(1.11); \n    transform: scale(1.11); \n} */\n\n.imgActive{\n    -webkit-box-shadow: inset 0 0 0 7px #fff,\n                inset 7px 0 0 7px #fff;\n            box-shadow: inset 0 0 0 7px #fff,\n                inset 7px 0 0 7px #fff;\n    border-radius: 20px; /* IE 9 */\n    -webkit-transform: scale(1.3); /* Safari 3-8 */\n    transform: scale(1.3); \n}\n\n.imgActive:focus{\n    -webkit-box-shadow: inset 0 0 0 7px #fff;\n            box-shadow: inset 0 0 0 7px #fff;\n    border-radius: 20px; /* IE 9 */\n    -webkit-transform: scale(1.3); /* Safari 3-8 */\n    transform: scale(1.3); \n}\n\n.sliderFocus:focus .activeImg{ /* IE 9 */\n    -webkit-transform: scale(1.3); /* Safari 3-8 */\n    transform: scale(1.3); \n}\n\n.settingFocus{\n    color: #fbb133 !important;\n}\n\n.favouriteFocus{\n    color: #fc6969 !important;\n }\n\n.selected_item{\nbackground: black;\n    color: red !important;\n }\n\n.help{\n    position: absolute;\n    top: 10px;\n    font-size: 35px;\n    left: 2%;\n }\n\n.overlay{\n    width: 80vw;\n    height: 80vh;\n    background: #767676b8;\n    margin:0 auto;\n    z-index: 1000000;\n    position: relative;\n    border-radius: 27px;\n    position: fixed;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n\n}\n\n.overlay::after{\n    content: '';\n    display: block;\n    clear: both;\n}\n\n.close-btn{\n    position: absolute; \n    right: 2%;\n    top: 2%\n}\n\n.keyboard-img{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n}\n\n@media(max-width:812px)\n{\n    .overlay .keyboard-img img{\n        max-width: 480px;\n    }\n}\n\n/* water animation */\n\n/* flask */\n\n.css-jar {\n    position: relative;\n    width: 195px;\n    margin: 0px -56px;\n    margin-top: 50%;\n    text-align: center;\n    -webkit-transform: scale(2.5) translateY(-50%);\n            transform: scale(2.5) translateY(-50%);\n    overflow: hidden;\n  }\n\n.css-jar .flask-base {\n    margin: auto;\n    width: 33px;\n    height: 97px;\n    border-top-right-radius: 6px;\n    border-bottom-right-radius: 6px;\n    /* border-radius: 50%;\n    -o-border-radius: 50%;\n    -ms-border-radius: 50%;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%; */\n    overflow: hidden;\n    position: relative;\n    z-index: 5;\n    background: radial-gradient(circle at 50% 55%, rgba(240, 245, 255, 0.67), rgba(240, 245, 255, 0.73) 40%, rgba(225, 238, 255, 0.68) 60%, rgba(43, 130, 255, 0.19));  }\n\n.css-jar .css-liquid {\n    height: 100% ;\n    background-color: rgba(53, 238, 251, 0.58);\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n  }\n\n.css-jar .css-wave {\n    width: 58px;\n    height: 19px;\n    position: absolute;\n    background-color: rgb(53,238,251);\n    left: 0;\n    top: 9px;\n    animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -o-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -ms-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -webkit-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -moz-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    border-radius: 50%;\n    -o-border-radius: 50%;\n    -ms-border-radius: 50%;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n  }\n\n.css-jar .css-wave + .css-wave {\n    left: auto;\n    right: 0;\n  }\n\n.css-jar .flask-base .css-bubble {\n    left: 15px;\n    top: 49px;\n    animation: css-bounce 2.65s linear 0s infinite alternate;\n    -o-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -ms-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -webkit-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -moz-animation: css-bounce 2.65s linear 0s infinite alternate;\n  }\n\n.css-jar .flask-base .css-bubble + .css-bubble {\n    left: 73px;\n    top: 39px;\n    animation-duration: 3.45s;\n    -o-animation-duration: 3.45s;\n    -ms-animation-duration: 3.45s;\n    -webkit-animation-duration: 3.45s;\n    -moz-animation-duration: 3.45s;\n  }\n\n@-webkit-keyframes css-wave {\n    from {\n    -webkit-transform: translateX(97px);\n            transform: translateX(97px);\n    }\n    to {\n    -webkit-transform: translateX(-97px);\n            transform: translateX(-97px);\n    }\n   }\n\n@keyframes css-wave {\n    from {\n    -webkit-transform: translateX(97px);\n            transform: translateX(97px);\n    }\n    to {\n    -webkit-transform: translateX(-97px);\n            transform: translateX(-97px);\n    }\n   }\n\n@-webkit-keyframes css-bounce {\n    0% {\n    -webkit-transform: translate(5px, 15px);\n            transform: translate(5px, 15px);\n    }\n    50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n    }\n    100% {\n    -webkit-transform: translate(-5px, -36px);\n            transform: translate(-5px, -36px);\n    opacity: 1;\n    }\n   }\n\n@keyframes css-bounce {\n    0% {\n    -webkit-transform: translate(5px, 15px);\n            transform: translate(5px, 15px);\n    }\n    50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n    }\n    100% {\n    -webkit-transform: translate(-5px, -36px);\n            transform: translate(-5px, -36px);\n    opacity: 1;\n    }\n   }\n\n@-webkit-keyframes css-buble {\n    0% {\n    -webkit-transform: translate(3px, 10px);\n            transform: translate(3px, 10px);\n    }\n    25% {\n    -webkit-transform: translate(0, 0px);\n            transform: translate(0, 0px);\n    }\n    50% {\n    -webkit-transform: translate(-3px, -24px);\n            transform: translate(-3px, -24px);\n    }\n    75% {\n    -webkit-transform: translate(0, -49px);\n            transform: translate(0, -49px);\n    opacity: 1;\n    }\n    100% {\n    -webkit-transform: translate(3px, -97px);\n            transform: translate(3px, -97px);\n    opacity: 0;\n    }\n   }\n\n@keyframes css-buble {\n    0% {\n    -webkit-transform: translate(3px, 10px);\n            transform: translate(3px, 10px);\n    }\n    25% {\n    -webkit-transform: translate(0, 0px);\n            transform: translate(0, 0px);\n    }\n    50% {\n    -webkit-transform: translate(-3px, -24px);\n            transform: translate(-3px, -24px);\n    }\n    75% {\n    -webkit-transform: translate(0, -49px);\n            transform: translate(0, -49px);\n    opacity: 1;\n    }\n    100% {\n    -webkit-transform: translate(3px, -97px);\n            transform: translate(3px, -97px);\n    opacity: 0;\n    }\n   }\n\n/* bubbles */\n\n#background-wrap {\n    bottom: 0;\n\tleft: 0;\n\tposition: fixed;\n\tright: 0;\n\ttop: 0;\n}\n\n/* KEYFRAMES */\n\n@-webkit-keyframes animateBubble {\n    0% {\n        margin-top: 1000px;\n    }\n    100% {\n        margin-top: -100%;\n    }\n}\n\n@keyframes animateBubble {\n    0% {\n        margin-top: 1000px;\n    }\n    100% {\n        margin-top: -100%;\n    }\n}\n\n@-webkit-keyframes sideWays { \n    0% { \n        margin-left:0px;\n    }\n    100% { \n        margin-left:50px;\n    }\n}\n\n@keyframes sideWays { \n    0% { \n        margin-left:0px;\n    }\n    100% { \n        margin-left:50px;\n    }\n}\n\n/* ANIMATIONS */\n\n.x1 {\n    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 0%;\n    top: 5%;\n\t\n\t-webkit-transform: scale(0.6);\n\ttransform: scale(0.6);\n}\n\n.x2 {\n    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 0;\n\t\n\t-webkit-transform: scale(0.4);\n\ttransform: scale(0.4);\n}\n\n.x3 {\n    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 1%;\n    top: 0%;\n\t\n\t-webkit-transform: scale(0.7);\n\ttransform: scale(0.7);\n}\n\n.x4 {\n    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\tanimation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 0;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n\n.x5 {\n    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 8%;\n\t\n\t-webkit-transform: scale(0.5);\n\ttransform: scale(0.5);\n}\n\n.x6 {\n    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 30%;\n    top: 0;\n\n\t-webkit-transform: scale(0.8);\n\ttransform: scale(0.8);\n}\n\n.x7 {\n    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 25%;\n    top: 10%;\n\t\n\t-webkit-transform: scale(0.4);\n\ttransform: scale(0.4);\n}\n\n.x8 {\n    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\tanimation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\t\n\tleft: 30%;\n    top: 10%;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n\n.x9 {\n    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 25%;\n    top: 50%;\n\t\n\t-webkit-transform: scale(0.6);\n\ttransform: scale(0.6);\n}\n\n.x10 {\n    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 30%;\n    top: 80%;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n\n/* OBJECTS */\n\n.bubble {\n\tborder-radius: 50%;\n\t\n    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);\n\tbox-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);\n\t\n    height: 20px;\n\tposition: absolute;\n\twidth: 20px;\n}\n\n.bubble:after { /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 12+ */ /* IE10+ */\n    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */\n\tborder-radius: 50%;\n\t\n    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);\n\tbox-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);\n\t\n\tcontent: \"\";\n    height: 30px;\n\tleft: 10px;\n\tposition: absolute;\n\twidth: 30px;\n}\n\n\n\n", ""]);
 
 // exports
 
@@ -861,7 +888,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"playlist-setting\">\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"/assets/svgs/water_background.svg\">\n      <p>{{time}} </p>\n    </div>\n  </div>\n  <div class=\"playlist-icon-top\" (click)=\"goToFavPage()\" #favorite>\n    <img src=\"assets/svgs/navigation_favorites_top.svg\">\n    <h3 [ngClass]=\"{'favouriteFocus':1==Favcolor}\">Favourite</h3>\n  </div>\n\n  <div class=\"main-card-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem class=\"ngxcarouselPoint\" *ngFor=\"let folder of folders; let i = index\">\n        <div (click)=\"goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)\" #slider class=\"sliderFocus\">\n          <!-- <img src=\"/assets/svgs/folder_card_purple_open.svg\"> -->\n          <img class=\"activeImg img-thumbnail\" [style.background]=\"folder[0].color \" [ngClass]=\"{'imgActive':i==arrayIndex}\" src={{folder[0].imgUrl}}/>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n  <a class=\"help\" (click)=\"showWalkthrough()\"><i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i></a>\n  <div *ngIf=\"walkThrough\">\n    <div class=\"overlay\">\n      <div class=\"keyboard-img\">\n        <img src=\"/assets/svgs/keyboard.png\">\n      </div>\n      <div class=\"close-btn\" (click)=\"hideWalkthrough()\">\n        <img src=\"/assets/svgs/close.png\">\n      </div>\n    </div>\n  </div>\n\n  <div class=\"playlist-setting-footer \" (click)=\"goToSettingsPage()\" #setting>\n    <img src=\"assets/svgs/navigation_settings_bottom.svg \">\n    <h3 [ngClass]=\"{'settingFocus':1==settingsColor}\">Settings</h3>\n  </div>\n</section>"
+module.exports = "<section class=\"playlist-setting\">\n  <div class=\"side-bar\">\n    <div id=\"banner\">\n      <div class=\"fill\" [ngStyle]=\"{ 'animation-duration': timeInSeconds  }\">\n        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"300px\"\n          height=\"300px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\">\n          <path fill=\"#04ACFF\" id=\"waveShape\" d=\"M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4\nc-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9\nc-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z\" />\n        </svg>\n      </div>\n      <p>{{countDown}} min</p>\n    </div>\n  </div>\n\n  <!-- end of animation -->\n  <div class=\"playlist-icon-top\" (click)=\"goToFavPage()\" #favorite>\n    <img src=\"assets/svgs/navigation_favorites_top.svg\">\n    <h3 [ngClass]=\"{'favouriteFocus':1==Favcolor}\">Favourite</h3>\n  </div>\n\n  <div class=\"main-card-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem class=\"ngxcarouselPoint\" *ngFor=\"let folder of folders; let i = index\">\n        <div (click)=\"goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)\" #slider class=\"sliderFocus\">\n          <img class=\"background-img\" [style.background-image]=\"'url('+folder[0].color+')'\" [ngClass]=\"{'imgActive':i==arrayIndex}\"\n            src={{folder[0].imgUrl}}/>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n\n  <a class=\"help\" (click)=\"showWalkthrough()\"><i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i></a>\n  <div *ngIf=\"walkThrough\">\n    <div class=\"overlay\">\n      <div class=\"keyboard-img\">\n        <img src=\"/assets/svgs/keyboard.png\">\n      </div>\n      <div class=\"close-btn\" (click)=\"hideWalkthrough()\">\n        <img src=\"/assets/svgs/close.png\">\n      </div>\n    </div>\n  </div>\n\n  <div class=\"playlist-setting-footer \" (click)=\"goToSettingsPage()\" #setting>\n    <img src=\"assets/svgs/navigation_settings_bottom.svg \">\n    <h3 [ngClass]=\"{'settingFocus':1==settingsColor}\">Settings</h3>\n  </div>\n</section>"
 
 /***/ }),
 
@@ -876,7 +903,7 @@ module.exports = "<section class=\"playlist-setting\">\n  <div class=\"side-bar\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__ = __webpack_require__("../../../../ng4-loading-spinner/ng4-loading-spinner.umd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_RefreshWeb_index__ = __webpack_require__("../../../../../src/app/shared/services/RefreshWeb/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_TimerService__ = __webpack_require__("../../../../../src/app/shared/services/TimerService/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_take__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/take.js");
@@ -906,14 +933,13 @@ var KEY_CODE;
     KEY_CODE[KEY_CODE["Down_key"] = 40] = "Down_key";
 })(KEY_CODE || (KEY_CODE = {}));
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(refreshweb, router, spinnerService) {
+    function HomeComponent(refreshweb, router, timerService, spinnerService) {
         var _this = this;
         this.refreshweb = refreshweb;
         this.router = router;
+        this.timerService = timerService;
         this.spinnerService = spinnerService;
-        this.counter = 60 * 60;
         this.obj = new Object();
-        this.ids = [];
         this.cards = [];
         this.folders = [];
         this.arrayIndex = 0;
@@ -922,14 +948,19 @@ var HomeComponent = /** @class */ (function () {
         this.Favcolor = 0;
         this.settingsColor = 0;
         this.walkThrough = false;
-        this.FavCountdown = 0;
         this.settingsUpCount = 0;
+        this.FavIndex = 0;
+        this.waterpx = "100";
+        this.waterPxCountdown = "100px";
+        this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+        this.UnitOfTIme = 100 / this.initialTime[0];
         this.refreshWeb();
-        var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].timer(0, 1000)
-            .map(function (x) { return _this.counter - x; })
-            .takeWhile(function (x) { return x > 0; });
-        this.countDown = timeInSecond$;
-        // const minsLeft$ = timeInSecond$.map(x => calcMinsFromSecondsRemaining(x));
+        this.timerService.getCountdownTimer().subscribe(function (data) {
+            _this.countDown = data;
+            _this.timeInSeconds = _this.countDown * 60 + 's';
+            _this.waterpx = _this.waterpx - _this.UnitOfTIme;
+            _this.waterPxCountdown = _this.waterpx + "px";
+        });
     }
     HomeComponent.prototype.keyEvent = function (event) {
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
@@ -950,7 +981,6 @@ var HomeComponent = /** @class */ (function () {
         }
     };
     HomeComponent.prototype.onmoveFn = function (data) {
-        console.log(data);
         this.currentSlide = data.currentSlide;
     };
     HomeComponent.prototype.GoDown = function () {
@@ -959,7 +989,6 @@ var HomeComponent = /** @class */ (function () {
         }
         // on key down when very first time u enter in the home page
         if (this.downCount == 1 && this.arrayIndex == 0 && this.Favcolor == 0) {
-            console.log("test");
             this.mySettingsBtn.nativeElement.focus();
             this.settingsColor = 1;
             this.arrayIndex = 645734;
@@ -967,7 +996,6 @@ var HomeComponent = /** @class */ (function () {
         }
         // on key down after u move slider
         if (this.downCount == 1 && this.arrayIndex == this.currentSlide && this.Favcolor == 0) {
-            console.log("test");
             this.mySettingsBtn.nativeElement.focus();
             this.settingsColor = 1;
             this.arrayIndex = 645734;
@@ -981,7 +1009,6 @@ var HomeComponent = /** @class */ (function () {
         }
         //on key down when u move from favourite button to slider first index
         if (this.downCount == 1 && this.Favcolor == 1) {
-            console.log("test");
             this.myLeft.nativeElement.focus();
             this.arrayIndex = 0;
             this.settingsColor = 0;
@@ -989,24 +1016,13 @@ var HomeComponent = /** @class */ (function () {
             this.downCount = 0;
         }
         //on key down when u move from favourite button to slider current index
-        if (this.downCount == 1 && this.Favcolor == 1 && this.arrayIndex == this.currentSlide) {
-            console.log("test");
+        if (this.downCount == 1 && this.Favcolor == 1 && this.FavIndex == 1) {
             this.myLeft.nativeElement.focus();
             this.arrayIndex = this.currentSlide;
             this.settingsColor = 0;
             this.Favcolor = 0;
             this.downCount = 0;
         }
-        // if (this.downCount == 1 && this.Favcolor == 1) {
-        //   console.log("test");
-        //   this.myLeft.nativeElement.focus();
-        //   this.Favcolor = 0;
-        //   this.arrayIndex = this.currentSlide;
-        // }
-        // if (this.downCount == 3) {
-        //   this.goToSettingsPage();
-        //   this.downCount = 0;
-        // }
     };
     HomeComponent.prototype.GoUp = function () {
         if (this.upCount < 3) {
@@ -1014,25 +1030,23 @@ var HomeComponent = /** @class */ (function () {
         }
         //onkey up focus on slider first index
         if (this.upCount == 1 && this.settingsColor == 1) {
-            console.log("test");
             this.myLeft.nativeElement.focus();
             this.arrayIndex = 0;
             this.settingsColor = 0;
             this.upCount = 0;
         }
-        //on keyup focus on slider first index
+        //on keyup focus on Favourite button
         if (this.upCount == 1 && this.arrayIndex == 0) {
-            console.log("test");
             this.myFavBtn.nativeElement.focus();
             this.Favcolor = 1;
             this.arrayIndex = 6337484;
             this.upCount = 0;
         }
-        //on keyup focus on slider current index
+        //on keyup focus on Favourite button
         if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
-            console.log("test");
             this.myFavBtn.nativeElement.focus();
             this.Favcolor = 1;
+            this.FavIndex = 1;
             this.arrayIndex = 6337484;
             this.upCount = 0;
         }
@@ -1048,20 +1062,14 @@ var HomeComponent = /** @class */ (function () {
             this.settingsColor = 0;
             this.upCount = 0;
         }
-        // if (this.upCount == 3) {
-        //   console.log("test");
-        //   this.goToFavPage();
-        // }
     };
     HomeComponent.prototype.GoLeft = function () {
         --this.arrayIndex;
         if (this.arrayIndex == -1) {
             this.arrayIndex = 0;
         }
-        // this.myLeft.nativeElement.focus();
     };
     HomeComponent.prototype.GoRight = function () {
-        console.log("test");
         ++this.arrayIndex;
         if (this.arrayIndex == this.folders.length) {
             this.arrayIndex = 0;
@@ -1071,14 +1079,14 @@ var HomeComponent = /** @class */ (function () {
         this.GetCard();
         this.time = localStorage.getItem('screenTimeLimit');
         this.carouselTile = {
-            grid: { xs: 2, sm: 3, md: 4, lg: 5, all: 0 },
+            grid: { xs: 3, sm: 3, md: 4, lg: 5, all: 0 },
             slide: 1,
             speed: 400,
             loop: true,
             animation: 'lazy',
             point: {
                 visible: true,
-                pointStyles: "\n        .ngxcarouselPoint {\n          display: none;\n        }\n       .ngxcarousel-inner {\n        height: 350px;\n        width: 108%;\n         }\n       .ngx-tile.item {\n        width:80%;\n       }\n        .tile {\n        width: 60%;\n        border-radius: 15px;\n        transform: scale(1.1);\n       }\n      .ngxcarousel-items {\n      top: 53px;\n      left:8%;\n       }\n         @media (min-width: 992px){\n              .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {\n                   width: 31% !important;\n              }\n  \n          }\n        "
+                pointStyles: "\n        .ngxcarouselPoint {\n          display: none;\n        }\n       .ngxcarousel-inner {\n        height: 360px;\n        width: 108%;\n         }\n       .ngx-tile.item {\n        width:80%;\n       }\n        .tile {\n        width: 60%;\n        border-radius: 18px;\n        transform: scale(1);\n       }\n      .ngxcarousel-items {\n      top: 53px;\n      left:8%;\n       }\n         @media (min-width: 992px){\n              .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {\n                   width: 31% !important;\n              }\n  \n          }\n        "
             },
             load: 2,
             touch: true,
@@ -1091,7 +1099,6 @@ var HomeComponent = /** @class */ (function () {
         if (!this.deviceId) {
             this.refreshweb.RefreshWeb().subscribe(function (data) {
                 _this.walkThrough = true;
-                console.log(data);
                 _this.ImageUrl = data.folderImageUrl;
                 _this.videoUrl = data.videoUrl;
                 _this.videoImageUrl = data.videoImageUrl;
@@ -1121,14 +1128,15 @@ var HomeComponent = /** @class */ (function () {
             _this.cards = data.cards;
             var tempData = [];
             var test = [];
-            var color = ['red', 'yellow', 'blue', 'green', 'orange', 'purple'];
+            var color = ['red', 'yellow', 'blue', 'green', 'orange', 'prple'];
+            var backgroundImages = ['/assets/svgs/red-img.svg', '/assets/svgs/yellow-img.svg', '/assets/svgs/blue-img.svg', '/assets/svgs/green-img.svg', '/assets/svgs/orange-img.svg', '/assets/svgs/purple-img.svg'];
             var counter = 0;
             for (var index = 0; index < _this.cards.length; index++) {
-                if (counter == 5) {
+                if (counter == 6) {
                     counter = 0;
                 }
                 if (_this.cards[index].id) {
-                    test = [{ 'id': _this.cards[index].id, 'color': color[counter], 'imgUrl': _this.folderImage(_this.cards[index].id) }];
+                    test = [{ 'id': _this.cards[index].id, 'back-color': color[counter], 'color': backgroundImages[counter], 'imgUrl': _this.folderImage(_this.cards[index].id) }];
                     tempData.push(test);
                     // increment counter
                     counter++;
@@ -1163,7 +1171,6 @@ var HomeComponent = /** @class */ (function () {
         return url + 'folderImage' + this.bucketName + '/' + id + '.png';
     };
     HomeComponent.prototype.goToVideoPage = function (id, url, color) {
-        console.log(color);
         this.router.navigate(['./video', id, url, color]);
     };
     HomeComponent.prototype.goToFavPage = function () {
@@ -1212,6 +1219,7 @@ var HomeComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__shared_services_RefreshWeb_index__["a" /* RefreshWebService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4__shared_services_TimerService__["a" /* TimerService */],
             __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
     ], HomeComponent);
     return HomeComponent;
@@ -1449,7 +1457,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".videos-filter-1{\n    background: radial-gradient(circle,brown 0%,steelblue 90%);\n    background-size: cover;\n    width: 100%;\n    height: 100vh;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode: overlay;\n    position: relative;\n    overflow: hidden;\n}\n.video-filter-top{\n    position:absolute;\n    top: 0;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n    position: fixed;\n}\n.video-filter-top h3{\n    position: absolute;\n    top: 24%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.video-filter-top img{\n    max-width: 200px;\n}\n.main-element-container{\n     display: -webkit-inline-box;\n     display: -ms-inline-flexbox;\n     display: inline-flex;   \n     margin-top: 200px ;\n     -webkit-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n     /* margin-left: 8%; */\n     position: absolute;\n     left: 50%;\n     -webkit-transform: translate(-50%);\n             transform: translate(-50%);\n}\n[class^=\"box\"] img{\n    max-width: 320px;\n    margin: 20px;\n    position: relative;\n}\n.box-1{\n    position: relative;\n}\n.text-box-1{\n    position: absolute;\n    top: 10%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    color: #fff;\n}\n.text-box-1 ul{\n    position: absolute;\n    width: 100%;\n    padding-top: 60px;\n    list-style: none;\n    text-align: left;\n    font-size: 20px;\n    line-height: 1.9em;\n    padding-left: 0;\n}\n.text-box-1 li{\n    text-align: center;\n}\n.last-item{\n    /* top: 174px;\n    right: -88px; */\n}\n.text-box-1  img{\n    display: inline-block !important;  \n    right: -48%;\n    max-width: 30px;\n    position: absolute;\n    margin: 5px;\n    \n}\n.text-box-1 h4{\n    font-size: 24px;\n    font-family: bree;\n    font-weight: 500;\n}\n@media(max-width:1408px)\n{\n    .videos-filter-1{\n        overflow: scroll;\n    }\n    .main-element-container{\n        -webkit-transform: none;\n                transform: none;\n        left: auto;\n\n    }\n}\n@media(max-width:360px) {\n    .main-element-container{\n        top: -3%;\n    }\n    \n}\n@media(max-width:840px){\n    .main-element-container{\n        margin-top:-5%;\n}\n}\n@media(max-width:1024px) {\n    .main-element-container{\n        margin-top: 40%;\n    }\n    \n}\n.selected-text{\n    color: #4eb3a6;\n}\n@media(max-width:1024px){\n    .main-element-container{\n        margin-top: 25%;\n    }\n    [class^=\"box\"] img{\n        max-width: 320px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 19px;\n    }\n    .text-box-1 h4{\n        font-size: 23px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n@media(max-width:812px){\n    .main-element-container{\n        margin-top: 10%;\n    }\n    [class^=\"box\"] img{\n        max-width: 170px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 14px;\n    }\n    .text-box-1 h4{\n        font-size: 16px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n.homeFocus{\n    color: #4dbcae !important;\n }\n.imgActive{\n    -webkit-transform: scale(1.2);\n            transform: scale(1.2); \n}\nselected_item{\n    color:red;\n    text-align: left;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.test:focus{\n    color:red;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.selected_item{\n    background: white;\n        color: black !important;\n}", ""]);
+exports.push([module.i, ".videos-filter-1{\n    background: radial-gradient(circle,brown 0%,steelblue 90%);\n    background-size: cover;\n    width: 100%;\n    height: 100vh;\n    background-color: rgba(0,0,0,.2);\n    background-blend-mode: overlay;\n    position: relative;\n    overflow: hidden;\n}\n.video-filter-top{\n    position:absolute;\n    top: 0;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    height: 80px;\n    position: fixed;\n}\n.video-filter-top h3{\n    position: absolute;\n    top: 24%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.video-filter-top img{\n    max-width: 200px;\n}\n.main-element-container{\n     display: -webkit-inline-box;\n     display: -ms-inline-flexbox;\n     display: inline-flex;   \n     margin-top: 200px ;\n     -webkit-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n     /* margin-left: 8%; */\n     position: absolute;\n     left: 50%;\n     -webkit-transform: translate(-50%);\n             transform: translate(-50%);\n}\n[class^=\"box\"] img{\n    max-width: 320px;\n    margin: 20px;\n    position: relative;\n}\n.box-1{\n    position: relative;\n}\n.text-box-1{\n    position: absolute;\n    top: 10%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    color: #fff;\n}\n.text-box-1 ul{\n    position: absolute;\n    width: 100%;\n    padding-top: 60px;\n    list-style: none;\n    text-align: left;\n    font-size: 20px;\n    line-height: 1.9em;\n    padding-left: 0;\n}\n.text-box-1 li{\n    text-align: center;\n}\n.last-item{\n    /* top: 174px;\n    right: -88px; */\n}\n.text-box-1  img{\n    display: inline-block !important;  \n    right: -48%;\n    max-width: 30px;\n    position: absolute;\n    margin: 5px;\n    \n}\n.text-box-1 h4{\n    font-size: 24px;\n    font-family: bree;\n    font-weight: 500;\n}\n@media(max-width:1408px)\n{\n    .videos-filter-1{\n        overflow: scroll;\n    }\n    .main-element-container{\n        -webkit-transform: none;\n                transform: none;\n        left: auto;\n\n    }\n}\n@media(max-width:360px) {\n    .main-element-container{\n        top: -3%;\n    }\n    \n}\n@media(max-width:840px){\n    .main-element-container{\n        margin-top:-5%;\n}\n}\n@media(max-width:1024px) {\n    .main-element-container{\n        margin-top: 40%;\n    }\n    \n}\n.selected-text{\n    color: #4eb3a6;\n}\n@media(max-width:1024px){\n    .main-element-container{\n        margin-top: 25%;\n    }\n    [class^=\"box\"] img{\n        max-width: 320px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 19px;\n    }\n    .text-box-1 h4{\n        font-size: 23px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30%;\n    }\n}\n@media(max-width:812px){\n    .main-element-container{\n        margin-top: 10%;\n    }\n    [class^=\"box\"] img{\n        max-width: 170px;\n    }\n    .text-box-1 ul{\n        padding-top: 0;\n        font-size: 14px;\n    }\n    .text-box-1 h4{\n        font-size: 16px;\n        padding-top: 15px;\n    }\n    .text-box-1  img{\n        max-width: 23px;\n        right: -30% !important;\n    }\n    .video-filter-top img{\n        max-width: 140px;\n    }\n    .video-filter-top h3{\n        top: 6%;\n    }\n    .last-check{\n        left: 100%;\n    }\n}\n.homeFocus{\n    color: #4dbcae !important;\n }\n.imgActive{\n    -webkit-transform: scale(1.2);\n            transform: scale(1.2); \n}\nselected_item{\n    color:red;\n    text-align: left;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.test:focus{\n    color:red;\n    -webkit-transform: scale(1.5);\n            transform: scale(1.5);\n}\n.selected_item{\n    background: white;\n        color: black !important;\n}", ""]);
 
 // exports
 
@@ -1462,7 +1470,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/settings/settings.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"videos-filter-1\">\n    <div class=\"video-filter-top\" (click)=\"goToHome()\" #home>\n        <img src=\"assets/svgs/navigation_folder_top.svg\">\n        <h3 [ngClass]=\"{'homeFocus':1==homeColor}\">Videos</h3>\n    </div>\n    <div class=\"main-element-container\">\n        <div #box1 class=\"box-1 test\" [ngClass]=\"{'imgActive':1==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n\n            <div class=\"text-box-1\">\n                <h4>Filter by age</h4>\n                <ul style=\"cursor: pointer;\">\n                    <li #fitrstList [ngClass]=\"{'selected-text':selectedAge == m,'selected_item':i == ageItemsIndex}\" style=\"text-align: center;\"\n                        *ngFor=\"let m of age; let i = index;\" (click)=\"getAge(m)\">{{m}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setAgeTick(m)\">\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box2 [ngClass]=\"{'imgActive':2==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n            <div class=\"text-box-1\">\n                <h4>Set time limit</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #secondList [ngClass]=\"{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}\" *ngFor=\"let time of timeLimit;  let i = index; \"\n                        (click)=\"getTime(time) \">{{time}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setTimeTick(time) \" style=\" display: inline-block !important; \">\n                    </li>\n                    <!-- <li [ngClass]=\"{'selected_item':6 == timeItemsIndex}\" (click)=\"getTime(off) \">{{off}} <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setTimeTick(off)\">\n                    </li> -->\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box3 [ngClass]=\"{'imgActive':3==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Choose content</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #thirdtList [ngClass]=\"{'selected-text':selectedContent == c,'selected_item':i == contentItemsIndex}\" *ngFor=\"let c of content;  let i = index; \"\n                        (click)=\"getContent(c) \">{{c}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setContentTick(c) \" style=\"right:-50px;\"></li>\n\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box4 [ngClass]=\"{'imgActive':4==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Language</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #forthList [ngClass]=\"{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}\" *ngFor=\"let lang of language;  let i = index; \"\n                        (click)=\"getLanguage(lang) \">{{lang}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setLanguageTick(lang) \">\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>"
+module.exports = "<section class=\"videos-filter-1\">\n    <div class=\"video-filter-top\" (click)=\"goToHome()\" #home>\n        <img src=\"assets/svgs/navigation_folder_top.svg\">\n        <h3 [ngClass]=\"{'homeFocus':1==homeColor}\">Videos</h3>\n    </div>\n    <div class=\"main-element-container\">\n        <div #box1 class=\"box-1 test\" [ngClass]=\"{'imgActive':1==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n\n            <div class=\"text-box-1\">\n                <h4>Filter by age</h4>\n                <ul style=\"cursor: pointer;\">\n                    <li #fitrstList [ngClass]=\"{'selected-text':selectedAge == m,'selected_item':i == ageItemsIndex}\" style=\"text-align: center;\"\n                        *ngFor=\"let m of age; let i = index;\" (click)=\"getAge(m)\">{{m}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setAgeTick(m)\">\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box2 [ngClass]=\"{'imgActive':2==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg\">\n            <div class=\"text-box-1\">\n                <h4>Set time limit</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #secondList [ngClass]=\"{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}\" *ngFor=\"let time of timeLimit;  let i = index; \"\n                        (click)=\"getTime(time) \">{{time}}\n                        <img src=\"assets/svgs/settings_check.svg\" *ngIf=\"setTimeTick(time) \" style=\" display: inline-block !important; \">\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box3 [ngClass]=\"{'imgActive':3==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Choose content</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #thirdtList [ngClass]=\"{'selected-text':selectedContent == c,'selected_item':i == contentItemsIndex}\" *ngFor=\"let c of content;  let i = index; \"\n                        (click)=\"getContent(c) \">{{c}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setContentTick(c) \" style=\"right:-50px;\"></li>\n\n                </ul>\n            </div>\n        </div>\n        <div class=\"box-1\" #box4 [ngClass]=\"{'imgActive':4==arrayIndex}\">\n            <img src=\"assets/svgs/settings_box_background.svg \">\n\n            <div class=\"text-box-1\">\n                <h4>Language</h4>\n                <ul style=\" cursor: pointer; \">\n                    <li #forthList [ngClass]=\"{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}\" *ngFor=\"let lang of language;  let i = index; \"\n                        (click)=\"getLanguage(lang) \">{{lang}}\n                        <img src=\"assets/svgs/settings_check.svg \" *ngIf=\"setLanguageTick(lang) \" class=\"last-check\">\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>"
 
 /***/ }),
 
@@ -1586,7 +1594,6 @@ var SettingsComponent = /** @class */ (function () {
     };
     SettingsComponent.prototype.GoUp = function () {
         if (this.arrayIndex != 0) {
-            // this.arrayIndex=1;
         }
         if (this.upCount < 1) {
             this.upCount++;
@@ -1679,10 +1686,6 @@ var SettingsComponent = /** @class */ (function () {
         }
     };
     SettingsComponent.prototype.ngOnInit = function () {
-        // if (this.arrayIndex != 1 && this.ageItemsIndex != 0) {
-        //   this.arrayIndex = 1;
-        //   this.ageItemsIndex = 0;
-        // }
     };
     SettingsComponent.prototype.setAgeTick = function (val) {
         var age = localStorage.getItem('Age');
@@ -1821,10 +1824,17 @@ var SettingsRoutes = [
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddFav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RemoveFav; });
 var AddFav = /** @class */ (function () {
     function AddFav() {
     }
     return AddFav;
+}());
+
+var RemoveFav = /** @class */ (function () {
+    function RemoveFav() {
+    }
+    return RemoveFav;
 }());
 
 
@@ -1912,7 +1922,7 @@ var Formate = /** @class */ (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ResponseError__ = __webpack_require__("../../../../../src/app/shared/entities/ResponseError.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__ResponseError__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__ResponseError__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__kid__ = __webpack_require__("../../../../../src/app/shared/entities/kid.ts");
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user__ = __webpack_require__("../../../../../src/app/shared/entities/user.ts");
@@ -1925,6 +1935,7 @@ var Formate = /** @class */ (function () {
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Addfav__ = __webpack_require__("../../../../../src/app/shared/entities/Addfav.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_6__Addfav__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__Addfav__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__RefreshWeb__ = __webpack_require__("../../../../../src/app/shared/entities/RefreshWeb.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__RefreshWeb__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__video__ = __webpack_require__("../../../../../src/app/shared/entities/video.ts");
@@ -2156,7 +2167,7 @@ var RESTConnectorService = /** @class */ (function () {
     RESTConnectorService.prototype.handleErrorWeb = function (error, stopBlock) {
         // console.log(error);
         var body = error.json();
-        var err = new __WEBPACK_IMPORTED_MODULE_4__entities_index__["c" /* ResponseError */]();
+        var err = new __WEBPACK_IMPORTED_MODULE_4__entities_index__["d" /* ResponseError */]();
         err.type = error.type;
         err.status = error.status;
         err.statusText = error.statusText;
@@ -2238,6 +2249,71 @@ var RESTConnectorService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/shared/services/TimerService/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__timer_services__ = __webpack_require__("../../../../../src/app/shared/services/TimerService/timer.services.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__timer_services__["a"]; });
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/services/TimerService/timer.services.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimerService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TimerService = /** @class */ (function () {
+    function TimerService() {
+        this.off = "Off";
+    }
+    TimerService.prototype.getCountdownTimer = function () {
+        var _this = this;
+        this.timer = localStorage.getItem('screenTimeLimit');
+        if (this.timer == this.off) {
+            this.timer == 0;
+            this.numbers = this.timer.match(/\d+/g).map(Number);
+            this.counter = this.numbers * 60;
+            var timeInSecond$_1 = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].timer(0, 1000)
+                .map(function (x) { return _this.counter - x; })
+                .takeWhile(function (x) { return x > 0; });
+            this.countDown = timeInSecond$_1;
+            return this.countDown;
+        }
+        this.numbers = this.timer.match(/\d+/g).map(Number);
+        this.counter = this.numbers;
+        var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].timer(0, 60000)
+            .map(function (x) { return _this.counter - x; })
+            .takeWhile(function (x) { return x > 0; });
+        this.countDown = timeInSecond$;
+        return this.countDown;
+    };
+    TimerService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], TimerService);
+    return TimerService;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/shared/services/blockui/BlockUi.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2264,7 +2340,7 @@ var BlockUIService = /** @class */ (function () {
     function BlockUIService() {
         //blockUIEvent: EventEmitter<any>;
         this.blockUI = false;
-        this.blockUIEvent$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["b" /* ReplaySubject */](1);
+        this.blockUIEvent$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* ReplaySubject */](1);
         this.locked = false;
         this.blockUIEvent$.next(false);
     }
@@ -2359,10 +2435,10 @@ var FavoriteService = /** @class */ (function () {
         var url = "/kid/" + kidId + "/favorites/getList";
         return this.restConnector.httpGetWeb(url, this.contentType);
     };
-    FavoriteService.prototype.RemoveFavorite = function (videoId) {
-        var kidId = localStorage.getItem("kidId");
+    FavoriteService.prototype.RemoveFavorite = function (values) {
+        var kidId = values.kidId;
         var url = "/kid/" + kidId + "/favorites/remove";
-        return this.restConnector.httpPostWeb(videoId, url);
+        return this.restConnector.httpPostWeb(values, url);
     };
     FavoriteService.prototype.SetLanguage = function (id) {
         var url = "/language/set";
@@ -2468,12 +2544,14 @@ var VideoService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_RefreshWeb_index__ = __webpack_require__("../../../../../src/app/shared/services/RefreshWeb/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_videoService_index__ = __webpack_require__("../../../../../src/app/shared/services/videoService/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_favoritesService_index__ = __webpack_require__("../../../../../src/app/shared/services/favoritesService/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_TimerService_index__ = __webpack_require__("../../../../../src/app/shared/services/TimerService/index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -2493,7 +2571,8 @@ var SharedModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__services_RestService_index__["a" /* RESTConnectorService */],
                 __WEBPACK_IMPORTED_MODULE_4__services_RefreshWeb_index__["a" /* RefreshWebService */],
                 __WEBPACK_IMPORTED_MODULE_5__services_videoService_index__["a" /* VideoService */],
-                __WEBPACK_IMPORTED_MODULE_6__services_favoritesService_index__["a" /* FavoriteService */]
+                __WEBPACK_IMPORTED_MODULE_6__services_favoritesService_index__["a" /* FavoriteService */],
+                __WEBPACK_IMPORTED_MODULE_7__services_TimerService_index__["a" /* TimerService */]
             ]
         };
     };
@@ -2538,7 +2617,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".books-section{\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    position: relative;\n    overflow: hidden;\n}\n.background{\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.png');\n    background-size: cover;\n    -webkit-filter: blur(40px);\n            filter: blur(40px);\n    background-repeat: no-repeat;\n    background-position: relative;\n}\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    z-index: 1;\n    width: 6%;\n}\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n.books{\n    position: relative;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 12%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 152px;\n    border: 9px solid #fff;\n    border-radius: 15px;\n    \n    /* border-radius: 4px */\n}\n.mybtn{\n    max-width: 45px;\n    position: absolute;\n    top: 4%;\n    right: 5%;\n}\n.main-books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 50%;\n    left: 53%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    /* margin: 0 auto; */\n}\n.books{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 120px;\n    border: 4px solid #fff;\n    border-radius: 4px\n}\n.books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    position: absolute;\n    top: 31%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);    \n}\n[class^=\"books-container\"]\n{\n    margin-left: 2.5em;\n}\n.books-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n.books-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n.video{\n position: relative;\n    \n}\n.lock-overlay img{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    border-top-left-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.lock-overlay .lock-bar{\n    width: 100%;\n}\n.lock-overlay .lock-icon{\n    top: 5%;\n    left: 25%;\n    width: 15px;\n}\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n.books-card .caption{\n    padding: 0em;\n    background: red;\n    position: absolute;\n    top: 86%;\n    left: 6%;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n.caption p{\n    padding: 8px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n.fav-btn{    \n    position: absolute;\n    top: 113%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n.fav-btn img{\n    width: 15px;\n    height: 15px;\n    margin-bottom: 10%;\n    cursor: pointer;\n}\n.fav-btn p{\n    margin-right: auto;\n    margin-left:10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 12px;\n    margin-top: 5%;\n    cursor: pointer;\n}\n#button-fav{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 108px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n    cursor: pointer;\n}\n#button-fav:focus{\n    outline: none;\n}\nfavBtnClick .fav-btn p{\n    color: white;\n    background-color: red;\n}\n/* @media(max-width:1025px)\n{    \n    .books-section{\n        background-size: contain;\n        height: 1320px;  \n    }\n    .books{\n        top: 2%;\n    }\n    .main-books-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 15%;\n        width: 20%;\n    }\n} */\n/* @media(max-width:500px)\n{\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n.side-bar-contents img{\n    transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n} */\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.playlist-icon-top img{\n    max-width: 200px;\n}\n/* .img-thumbnail{\n    border: 10px solid #fff;\n    border-radius: 4px;\n    position: relative;\n} */\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n}\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .2em 1em;\n\n}\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -65px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: -93%;\n    right: 0;\n    opacity: 0;\n}\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -60px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    opacity: 0;\n    /* left: ; */\n}\n@media(max-width:736px){\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar{\n        top: 23%;\n    }\n    .side-bar-contents p{\n        top: 30%;\n    }\n    img.img-thumbnail{\n        width: 172px;\n    }\n    .main-books-container{\n        max-width: 80%;\n        height: 50%;\n    }\n    .rightRs{\n        top: -33px;\n        right: 26%;\n    }\n    .leftRs{\n        top: -33px;\n        left: 25%;\n    }\n    #video{\n        max-width: 60%;\n    }\n\n}\n@media(max-width:640px){\n    .rightRs{\n        right: 27%;\n    }\n    .leftRs{\n        left: 27%;\n    }\n}\n@media(max-width:1024px){\n.main-books-container{\n    max-width: 80%;\n    }\n    .rightRs{\n        right: 137px;\n        top: -110px;\n    }\n    .leftRs{\n        left: 138px;\n    }\n}\n/* test */\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n.disabled {\n    /* cursor: not-allowed; */\n    pointer-events: none;\n}\n.favouriteFocus{\nbackground-color: white !important ;\nborder-radius: 50px !important;\n    /* background-color: red; */\n }\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.subCard{\n    max-width: 152px !important ;\n    border: 9px solid #fff !important;\n    border-radius: 15px !important;\n}\n", ""]);
+exports.push([module.i, ".books-section{\n    height: 100vh;\n    background-color:lightsteelblue;\n    background-blend-mode: multiply;\n    position: relative;\n    overflow: hidden;\n}\n.background{\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-image: url('https://salaar771.github.io/kidjoTvApp/assets/tablet-l/background_day_bottom.png');\n    background-size: cover;\n    -webkit-filter: blur(40px);\n            filter: blur(40px);\n    background-repeat: no-repeat;\n    background-position: relative;\n}\n.side-bar{\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    z-index: 1;\n    width: 6%;\n}\n.side-bar-contents img{\n    -webkit-transform: translate(-12%);\n            transform: translate(-12%);\n    width: 80px;\n    height: 500px;\n    border-radius: 15px;\n}\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 15%;\n    font-size: 25px;\n    width: 20px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n}\n.books{\n    position: relative;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 12%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    background-repeat: no-repeat;\n    background-size: cover;\n    padding: 10px;\n    -webkit-box-shadow: inset -1px 0px 0px 7px #fff, inset 5px -2px 0 3px #fff;\n            box-shadow: inset -1px 0px 0px 7px #fff, inset 5px -2px 0 3px #fff;\n    border-radius: 17px;\n}\n.mybtn{\n    max-width: 45px;\n    position: absolute;\n    top: 4%;\n    right: 5%;\n}\n.main-books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 100%;\n    max-width: 95%;\n    position: absolute;\n    top: 50%;\n    left: 53%;\n    -webkit-transform: translateX(-50%) translateY(-50%);\n            transform: translateX(-50%) translateY(-50%);\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    overflow: hidden;\n    /* margin: 0 auto; */\n}\n.books{\n    position: absolute;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    text-align: center;\n    top: 5%;\n    color: #fff;\n    font-size: 25px;\n}\n.books img{\n    max-width: 120px;\n}\n.books-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    position: absolute;\n    top: 31%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);    \n}\n[class^=\"books-container\"]\n{\n    margin-left: 2.5em;\n}\n.books-container{\n    position: relative;\n    max-width: 300px;\n    height: 264px;\n    padding: 0;\n    border-radius: 15px;\n    background: red;\n}\n.books-card{\n    position: relative;\n    max-width: 300px;\n    padding: 0;\n    margin: 0;\n}\n.video{\n position: relative;\n    \n}\n.lock-overlay img{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    border-top-left-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.lock-overlay .lock-bar{\n    width: 100%;\n}\n.lock-overlay .lock-icon{\n    top: 5%;\n    left: 25%;\n    width: 15px;\n}\n.lock-overlay p{\n    position: absolute;\n    top: 5%;\n    right: 25%;\n    color: #fff;\n    font-family: bree;\n    font-size: 14px;\n}\n.books-card .caption{\n    padding: 0em;\n    background: red;\n    position: absolute;\n    top: 86%;\n    left: 6%;\n    right: 0;\n    border-bottom-left-radius: 15px;\n    border-bottom-right-radius: 15px;\n    color: #fff;\n    font-family: bree;\n    text-align: left;\n}\n.caption p{\n    padding: 8px;\n    border-bottom-left-radius: 10px;\n    border-bottom-right-radius: 10px;\n    font-size: 13px;\n    font-weight: 500 !important;\n}\n.fav-btn{    \n    position: absolute;\n    top: 113%;\n    width: 100px;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    cursor: pointer;\n}\n.fav-btn img{\n    width: 15px;\n    height: 15px;\n    margin-bottom: 11%;\n    cursor: pointer;\n}\n.fav-btn p{\n    margin-right: auto;\n    margin-left:10px;\n    text-transform: uppercase;\n    font-family: bree;\n    font-weight: bold;\n    font-size: 12px;\n    margin-top: 5%;\n    cursor: pointer;\n}\n#button-fav{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 108px;\n    height: 32px;\n    border-radius: 10px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    background: #fff;\n    -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n            filter: drop-shadow(0 2px 2px rgba(0,0,0,.6));\n    cursor: pointer;\n}\n#button-fav:focus{\n    outline: none;\n}\nfavBtnClick .fav-btn p{\n    color: white;\n    background-color: red;\n}\n@media(max-width:812px)\n{\n    .main-books-container{\n        top: 74%;\n        left: 70%;\n        width: 116%;\n        max-width: none;\n    }\n    .books{\n        -webkit-transform: scale(.6) translate(-50%);\n                transform: scale(.6) translate(-50%);\n        top: -20px;\n    }\n    .activeImg{\n        width: 249px !important;\n    }\n}\n/* @media(max-width:1025px)\n{    \n    .books-section{\n        background-size: contain;\n        height: 1320px;  \n    }\n    .books{\n        top: 2%;\n    }\n    .main-books-container{\n        display:grid;\n        grid-gap: 70px;\n        margin-left: auto;\n        margin-right: auto;\n        left: 40%;\n        top: 15%;\n        width: 20%;\n    }\n} */\n/* @media(max-width:500px)\n{\n    .side-bar{\n    position: relative;\n    top: 10%;\n    }\n.side-bar-contents img{\n    transform: translate(-12%);\n    width: 45px;\n    height: 500px;\n    border-radius: 15px;\n    }\n.side-bar-contents p{\n    position: absolute;\n    top: 50%;\n    left: 1%;\n    font-size: 20px;\n    width: 30px;\n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: bree;\n    }\n} */\n.playlist-icon-top{\n    position: absolute;\n    top: 0%;\n    right: 50%;\n    -webkit-transform: translate(50%);\n            transform: translate(50%);\n    background-size: cover;\n    background-position: center;\n    text-align: center;\n    height: 80px;\n}\n.playlist-icon-top h3{\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    font-size: 23px;\n    color: #444;\n    font-family: bree;\n}\n.playlist-icon-top img{\n    max-width: 200px;\n}\n/* .img-thumbnail{\n    border: 10px solid #fff;\n    border-radius: 4px;\n    position: relative;\n} */\n.activeImg{\n    max-width: 100%;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n    width: 247px;\n}\n.playbtn{\n    background-color: red !important;\n    color: white !important;\n    position: absolute;\n    top: 30%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: .2em 1em;\n\n}\n.leftRs {\n    position: absolute;\n    margin: auto;\n    top: -65px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    left: -93%;\n    right: 0;\n    opacity: 0;\n}\n.rightRs {\n    position: absolute;\n    margin: auto;\n    top: -60px;\n    bottom: 0;\n    width: 50px;\n    height: 50px;\n    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n            box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);\n    border-radius: 999px;\n    right: 0;\n    opacity: 0;\n    /* left: ; */\n}\n@media(max-width:736px){\n    .side-bar-contents img{\n        width: 60px;\n        height: 212px;\n    }\n    .side-bar{\n        top: 23%;\n    }\n    .side-bar-contents p{\n        top: 30%;\n    }\n    img.img-thumbnail{\n        width: 172px;\n    }\n    .rightRs{\n        top: -33px;\n        right: 26%;\n    }\n    .leftRs{\n        top: -33px;\n        left: 25%;\n    }\n    #video{\n        max-width: 60%;\n    }\n\n}\n@media(max-width:640px){\n    .rightRs{\n        right: 27%;\n    }\n    .leftRs{\n        left: 27%;\n    }\n}\n@media(max-width:1024px){\n    .rightRs{\n        right: 137px;\n        top: -110px;\n    }\n    .leftRs{\n        left: 138px;\n    }\n}\n/* test */\n.overlay {\n    height: 100%;\n    width: 100%;\n    display: none;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n}\n.overlay-content {\n    position: relative;\n    width: 100vw !important;\n    height: 100vh !important;\n    text-align: center;\n    z-index: -1;\n}\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n    z-index: 1;\n}\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n.disabled {\n    /* cursor: not-allowed; */\n    pointer-events: none;\n}\n.favouriteFocus{\nbackground-color: white !important ;\nborder-radius: 50px !important;\n    /* background-color: red; */\n }\n.Duration{\n    position: absolute;\n    top: 55%;\n    background: rgba(0,0,0,.7);\n    padding: 0px 6px;\n    color: #fff;\n    font-size: 10px;\n    border-radius: 2px;\n    left: 3%;\n }\n.imgActive{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.imgActive:focus{ /* IE 9 */\n    -webkit-transform: scale(1.4); /* Safari 3-8 */\n    transform: scale(1.4); \n}\n.subCard{\n    -webkit-box-shadow: inset 0 0 0 7px #fff,\n    inset 7px 0 0 7px #fff;\n            box-shadow: inset 0 0 0 7px #fff,\n    inset 7px 0 0 7px #fff;\n    border-radius: 20px;\n    max-width: 152px !important ;\n    border: 9px solid #fff !important;\n    border-radius: 15px !important;\n}\n/* water animation */\n/* flask */\n.css-jar {\n    position: relative;\n    width: 195px;\n    margin: 0px -56px;\n    margin-top: 50%;\n    text-align: center;\n    -webkit-transform: scale(2.5) translateY(-50%);\n            transform: scale(2.5) translateY(-50%);\n    overflow: hidden;\n   \n  }\n.css-jar .flask-base {\n    margin: auto;\n    width: 33px;\n    height: 97px;\n    border-top-right-radius: 6px;\n    border-bottom-right-radius: 6px;\n    /* border-radius: 50%;\n    -o-border-radius: 50%;\n    -ms-border-radius: 50%;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%; */\n    overflow: hidden;\n    position: relative;\n    z-index: 5;\n    background: radial-gradient(circle at 50% 55%, rgba(240, 245, 255, 0.67), rgba(240, 245, 255, 0.73) 40%, rgba(225, 238, 255, 0.68) 60%, rgba(43, 130, 255, 0.19));  }\n.css-jar .css-liquid {\n    height: 100% ;\n    background-color: rgba(53, 238, 251, 0.58);\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n  }\n.css-jar .css-wave {\n    width: 58px;\n    height: 19px;\n    position: absolute;\n    background-color: rgb(53,238,251);\n    left: 0;\n    top: 9px;\n    animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -o-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -ms-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -webkit-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    -moz-animation: css-wave 1.15s linear 1.15s infinite alternate;\n    border-radius: 50%;\n    -o-border-radius: 50%;\n    -ms-border-radius: 50%;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n  }\n.css-jar .css-wave + .css-wave {\n    left: auto;\n    right: 0;\n  }\n.css-jar .flask-base .css-bubble {\n    left: 15px;\n    top: 49px;\n    animation: css-bounce 2.65s linear 0s infinite alternate;\n    -o-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -ms-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -webkit-animation: css-bounce 2.65s linear 0s infinite alternate;\n    -moz-animation: css-bounce 2.65s linear 0s infinite alternate;\n  }\n.css-jar .flask-base .css-bubble + .css-bubble {\n    left: 73px;\n    top: 39px;\n    animation-duration: 3.45s;\n    -o-animation-duration: 3.45s;\n    -ms-animation-duration: 3.45s;\n    -webkit-animation-duration: 3.45s;\n    -moz-animation-duration: 3.45s;\n  }\n@-webkit-keyframes css-wave {\n    from {\n    -webkit-transform: translateX(97px);\n            transform: translateX(97px);\n    }\n    to {\n    -webkit-transform: translateX(-97px);\n            transform: translateX(-97px);\n    }\n   }\n@keyframes css-wave {\n    from {\n    -webkit-transform: translateX(97px);\n            transform: translateX(97px);\n    }\n    to {\n    -webkit-transform: translateX(-97px);\n            transform: translateX(-97px);\n    }\n   }\n@-webkit-keyframes css-bounce {\n    0% {\n    -webkit-transform: translate(5px, 15px);\n            transform: translate(5px, 15px);\n    }\n    50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n    }\n    100% {\n    -webkit-transform: translate(-5px, -36px);\n            transform: translate(-5px, -36px);\n    opacity: 1;\n    }\n   }\n@keyframes css-bounce {\n    0% {\n    -webkit-transform: translate(5px, 15px);\n            transform: translate(5px, 15px);\n    }\n    50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n    }\n    100% {\n    -webkit-transform: translate(-5px, -36px);\n            transform: translate(-5px, -36px);\n    opacity: 1;\n    }\n   }\n@-webkit-keyframes css-buble {\n    0% {\n    -webkit-transform: translate(3px, 10px);\n            transform: translate(3px, 10px);\n    }\n    25% {\n    -webkit-transform: translate(0, 0px);\n            transform: translate(0, 0px);\n    }\n    50% {\n    -webkit-transform: translate(-3px, -24px);\n            transform: translate(-3px, -24px);\n    }\n    75% {\n    -webkit-transform: translate(0, -49px);\n            transform: translate(0, -49px);\n    opacity: 1;\n    }\n    100% {\n    -webkit-transform: translate(3px, -97px);\n            transform: translate(3px, -97px);\n    opacity: 0;\n    }\n   }\n@keyframes css-buble {\n    0% {\n    -webkit-transform: translate(3px, 10px);\n            transform: translate(3px, 10px);\n    }\n    25% {\n    -webkit-transform: translate(0, 0px);\n            transform: translate(0, 0px);\n    }\n    50% {\n    -webkit-transform: translate(-3px, -24px);\n            transform: translate(-3px, -24px);\n    }\n    75% {\n    -webkit-transform: translate(0, -49px);\n            transform: translate(0, -49px);\n    opacity: 1;\n    }\n    100% {\n    -webkit-transform: translate(3px, -97px);\n            transform: translate(3px, -97px);\n    opacity: 0;\n    }\n   }\n/* bubbles */\n#background-wrap {\n    bottom: 0;\n\tleft: 0;\n\tposition: fixed;\n\tright: 0;\n\ttop: 0;\n}\n/* KEYFRAMES */\n@-webkit-keyframes animateBubble {\n    0% {\n        margin-top: 1000px;\n    }\n    100% {\n        margin-top: -100%;\n    }\n}\n@keyframes animateBubble {\n    0% {\n        margin-top: 1000px;\n    }\n    100% {\n        margin-top: -100%;\n    }\n}\n@-webkit-keyframes sideWays { \n    0% { \n        margin-left:0px;\n    }\n    100% { \n        margin-left:50px;\n    }\n}\n@keyframes sideWays { \n    0% { \n        margin-left:0px;\n    }\n    100% { \n        margin-left:50px;\n    }\n}\n/* ANIMATIONS */\n.x1 {\n    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 0%;\n    top: 5%;\n\t\n\t-webkit-transform: scale(0.6);\n\ttransform: scale(0.6);\n}\n.x2 {\n    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 0;\n\t\n\t-webkit-transform: scale(0.4);\n\ttransform: scale(0.4);\n}\n.x3 {\n    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 1%;\n    top: 0%;\n\t\n\t-webkit-transform: scale(0.7);\n\ttransform: scale(0.7);\n}\n.x4 {\n    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\tanimation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 0;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n.x5 {\n    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 10%;\n    top: 8%;\n\t\n\t-webkit-transform: scale(0.5);\n\ttransform: scale(0.5);\n}\n.x6 {\n    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 30%;\n    top: 0;\n\n\t-webkit-transform: scale(0.8);\n\ttransform: scale(0.8);\n}\n.x7 {\n    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 25%;\n    top: 10%;\n\t\n\t-webkit-transform: scale(0.4);\n\ttransform: scale(0.4);\n}\n.x8 {\n    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\tanimation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;\n\t\n\tleft: 30%;\n    top: 10%;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n.x9 {\n    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\tanimation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;\n\t\n    left: 25%;\n    top: 50%;\n\t\n\t-webkit-transform: scale(0.6);\n\ttransform: scale(0.6);\n}\n.x10 {\n    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\tanimation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;\n\t\n    left: 30%;\n    top: 80%;\n\t\n\t-webkit-transform: scale(0.3);\n\ttransform: scale(0.3);\n}\n/* OBJECTS */\n.bubble {\n\tborder-radius: 50%;\n\t\n    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);\n\tbox-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);\n\t\n    height: 20px;\n\tposition: absolute;\n\twidth: 20px;\n}\n.bubble:after { /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 12+ */ /* IE10+ */\n    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */\n\tborder-radius: 50%;\n\t\n    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);\n\tbox-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);\n\t\n\tcontent: \"\";\n    height: 30px;\n\tleft: 10px;\n\tposition: absolute;\n\twidth: 30px;\n}\n\n\n\n", ""]);
 
 // exports
 
@@ -2551,7 +2630,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/video-selection/video-selection.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"books-section\">\n  <div class=\"background\"></div>\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <img src=\"/assets/svgs/water_background.svg\">\n      <p>{{time}} </p>\n    </div>\n  </div>\n  <div (click)=\"goToHome()\" #home>\n    <img [ngClass]=\"{'favouriteFocus':1==crossColor}\" class=\"mybtn\" src=\"/assets/svgs/video_card_cross.svg\">\n  </div>\n  <div class=\"books\">\n    <img class=\"subCard img-thumbnail\" [style.background]='color' src={{imgUrl}}>\n\n  </div>\n  <div class=\"main-books-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of video;  let i = index\">\n        <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n        <button class=\"btn playbtn\" data-toggle=\"modal\" data-target=\"#videoModdal\" (click)=\"openNav()\" [ngClass]=\"{'imgActive':i==arrayIndex}\">Play</button>\n        <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n        <!-- <div class=\"lock-overlay\">\n          <img class=\"lock-bar\" src=\"assets/svgs/video_card_lock_bar.svg\">\n          <img class=\"lock-icon\" src=\"assets/svgs/video_card_lock.svg\">\n          <p>Press to unlock</p>\n        </div> -->\n        <div class=\"caption\">\n          <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].Title}}</p>\n        </div>\n        <div class=\"fav-btn\" style=\"cursor: pointer;\" (click)=\"addToFav(vid[0].id)\">\n          <button [ngClass]=\"{'favBtnClick':true}\" type=\"button\" value=\"btn\" id=\"button-fav\">\n                  <img src=\"assets/svgs/video_card_heart.svg\">\n                  <p>Favorite</p>\n              </button>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n\n\n\n  <!-- Full screen modal to show video -->\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n        <vg-scrub-bar>\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n          <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n        <video #media [vgMedia]=\"media\" preload=\"auto\" [vgDash]=\"currentStream\" [vgHls]=\"currentStream\" id=\"singleVideo\">\n        </video>\n      </vg-player>\n    </div>\n  </div>\n\n\n\n</section>"
+module.exports = "<section class=\"books-section\">\n  <div class=\"background\"></div>\n  <div class=\"side-bar\">\n    <div class=\"side-bar-contents\">\n      <div id=\"banner\">\n        <div class=\"fill\" [ngStyle]=\"{ 'animation-duration': timeInSeconds  }\">\n          <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"300px\"\n            height=\"300px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\">\n            <path fill=\"#04ACFF\" id=\"waveShape\" d=\"M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4\n  c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9\n  c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z\" />\n          </svg>\n        </div>\n        <p>{{countDown}} min</p>\n      </div>\n    </div>\n  </div>\n\n  <div (click)=\"goToHome()\" #home>\n    <img [ngClass]=\"{'favouriteFocus':1==crossColor}\" class=\"mybtn\" src=\"/assets/svgs/video_card_cross.svg\">\n  </div>\n\n  <div class=\"books\">\n    <img [style.background-image]=\"'url('+color+')'\" src={{imgUrl}}>\n  </div>\n\n  <div class=\"main-books-container\">\n    <ngx-carousel [inputs]=\"carouselTile\" [moveToSlide]=\"arrayIndex\" (onMove)=\"onmoveFn($event)\">\n      <ngx-tile NgxCarouselItem *ngFor=\"let vid of video;  let i = index\">\n        <div style=\" cursor: pointer;\" data-toggle=\"modal\" data-target=\"#videoModdal\" (click)=\"openNav()\">\n          <img class=\"activeImg\" src={{vid[0].imgUrl}} [ngClass]=\"{'imgActive':i==arrayIndex}\" />\n          <span class=\"Duration\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].duration}} min</span>\n          <div class=\"caption\">\n            <p style=\"     color: white; font-weight: 900; background-color: red;margin-top: -2%;\" [ngClass]=\"{'imgActive':i==arrayIndex}\">{{vid[0].Title}}</p>\n          </div>\n        </div>\n        <div class=\"fav-btn\" style=\"cursor: pointer;\" (click)=\"addToFav(vid[0].id)\">\n          <button type=\"button\" value=\"btn\" id=\"button-fav\" *ngIf=\"beforeFavCall\">\n                  <img src=\"assets/svgs/like.svg\">\n                  <p>Favorite</p>\n              </button>\n          <button type=\"button\" value=\"btn\" id=\"button-fav\" *ngIf=\"success\">\n                  <img src=\"assets/svgs/error.svg\">\n                  <p>Delete</p>\n              </button>\n        </div>\n      </ngx-tile>\n      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>\n      <button NgxCarouselNext #next class='rightRs'>&gt;</button>\n\n    </ngx-carousel>\n  </div>\n\n\n\n  <!-- Full screen modal to show video -->\n\n\n  <div id=\"myNav\" class=\"overlay\">\n    <a href=\"javascript:void(0)\" class=\"closebtn\" #close (click)=\"closeNav()\">&times;</a>\n    <div class=\"overlay-content\">\n      <vg-player (onPlayerReady)=\"onPlayerReady($event)\" [hidden]=\"!isPlaying\">\n        <vg-overlay-play [vgFor]=\"singleVideo\"></vg-overlay-play>\n        <vg-buffering></vg-buffering>\n        <vg-scrub-bar [vgFor]=\"singleVideo\">\n          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-controls>\n          <vg-play-pause></vg-play-pause>\n          <vg-playback-button></vg-playback-button>\n          <vg-time-display [vgFor]=\"singleVideo\" vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-scrub-bar style=\"pointer-events: none;\"></vg-scrub-bar>\n          <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n          <vg-track-selector></vg-track-selector>\n          <vg-mute></vg-mute>\n          <vg-volume></vg-volume>\n          <vg-fullscreen></vg-fullscreen>\n        </vg-controls>\n        <video #media [vgMedia]=\"media\" preload=\"auto\" id=\"singleVideo\">\n          <source #src *ngFor=\"let vid of video\" src={{vid[0].videourl}} type=\"video/mp4\">\n\n        </video>\n      </vg-player>\n    </div>\n  </div>\n\n\n\n</section>"
 
 /***/ }),
 
@@ -2567,8 +2646,8 @@ module.exports = "<section class=\"books-section\">\n  <div class=\"background\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_videoService_index__ = __webpack_require__("../../../../../src/app/shared/services/videoService/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_favoritesService_index__ = __webpack_require__("../../../../../src/app/shared/services/favoritesService/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_entities_index__ = __webpack_require__("../../../../../src/app/shared/entities/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_TimerService__ = __webpack_require__("../../../../../src/app/shared/services/TimerService/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_entities_index__ = __webpack_require__("../../../../../src/app/shared/entities/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_timer__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/timer.js");
@@ -2604,75 +2683,54 @@ var KEY_CODE;
     KEY_CODE[KEY_CODE["escape_key"] = 27] = "escape_key";
 })(KEY_CODE || (KEY_CODE = {}));
 var VideoSelectionComponent = /** @class */ (function () {
-    function VideoSelectionComponent(route, videoService, favService, router, spinnerService) {
+    function VideoSelectionComponent(route, videoService, favService, timerService, router, spinnerService) {
         var _this = this;
         this.route = route;
         this.videoService = videoService;
         this.favService = favService;
+        this.timerService = timerService;
         this.router = router;
         this.spinnerService = spinnerService;
-        this.counter = 60 * 60;
         this.video = [];
         this.cards = [];
-        this.formate = [];
         this.arrayIndex = 0;
-        this.uri = [];
         this.downCount = 0;
         this.upCount = 0;
-        this.manifestUri = "https://d23sw6prl9jc74.cloudfront.net/8/NavdQMkX7J.mp4";
-        this.currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
+        this.success = false;
+        this.beforeFavCall = true;
+        this.waterpx = "100";
+        this.waterPxCountdown = "100px";
+        this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+        this.UnitOfTIme = 100 / this.initialTime[0];
         var Url = this.route.snapshot.params['url'];
         this.imgUrl = Url;
         var Color = this.route.snapshot.params['color'];
         this.color = Color;
-        // this.elem = this.ref.nativeElement;
-        // var Url = this.route.params.subscribe(params => {
-        //   this.imgUrl = +params['url'];
-        //   console.log(this.imgUrl);
-        // });
         var ids = this.route.params.subscribe(function (params) {
             _this.idss = +params['id'];
-            var timeInSecond$ = __WEBPACK_IMPORTED_MODULE_6_rxjs_Rx__["a" /* Observable */].timer(0, 1000)
-                .map(function (x) { return _this.counter - x; })
-                .takeWhile(function (x) { return x > 0; });
-            _this.countDown = timeInSecond$;
-            // console.log(this.idss);
         });
         this.getSubCard();
-        this.uri.push([this.manifestUri]);
-        this.uri.push([this.manifestUri]);
-        this.uri.push([this.manifestUri]);
-        this.uri.push([this.manifestUri]);
-        this.uri.push([this.manifestUri]);
+        this.timerService.getCountdownTimer().subscribe(function (data) {
+            _this.countDown = data;
+            _this.timeInSeconds = _this.countDown * 60 + 's';
+            _this.waterpx = _this.waterpx - _this.UnitOfTIme;
+            _this.waterPxCountdown = _this.waterpx + "px";
+        });
     }
-    // @HostListener('window:keyup', ['$event'])
-    // keyEvent(event: KeyboardEvent) {
-    //   console.log(event);
-    //   if (event.keyCode === KEY_CODE.Up_key) {
-    //     console.log("Up key ");
-    //     this.myHomeBtn.nativeElement.focus();
-    //   }
-    // }
     VideoSelectionComponent.prototype.keyEvent = function (event) {
-        console.log(event);
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-            console.log("right key ");
             this.GoRight();
         }
         if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-            console.log("left key ");
             this.GoLeft();
         }
         if (event.keyCode === KEY_CODE.Up_key) {
-            console.log("Up key ");
             this.GoUp();
         }
         if (event.keyCode === KEY_CODE.Down_key) {
-            console.log("Down key ");
             this.GoDown();
         }
         if (event.keyCode === KEY_CODE.Enter) {
-            console.log("Enter key ");
             var video = this.video[this.arrayIndex];
             this.openNav();
         }
@@ -2688,6 +2746,7 @@ var VideoSelectionComponent = /** @class */ (function () {
         if (this.downCount == 1) {
             this.myRight.nativeElement.focus();
             this.crossColor = 0;
+            this.arrayIndex = 0;
             this.upCount = 0;
             this.downCount = 0;
         }
@@ -2705,8 +2764,8 @@ var VideoSelectionComponent = /** @class */ (function () {
             this.upCount = 0;
         }
     };
-    VideoSelectionComponent.prototype.onmoveFn = function ($event) {
-        console.log($event);
+    VideoSelectionComponent.prototype.onmoveFn = function (data) {
+        this.currentSlide = data.currentSlide + 1;
     };
     VideoSelectionComponent.prototype.GoLeft = function () {
         --this.arrayIndex;
@@ -2715,50 +2774,37 @@ var VideoSelectionComponent = /** @class */ (function () {
         }
     };
     VideoSelectionComponent.prototype.GoRight = function () {
-        console.log("test");
         ++this.arrayIndex;
-        if (this.arrayIndex == this.video.length) {
+        if (this.arrayIndex == this.video.length - 2) {
             this.arrayIndex = 0;
         }
     };
     VideoSelectionComponent.prototype.ngOnInit = function () {
         this.time = localStorage.getItem('screenTimeLimit');
-        // let timer = Observable.timer();
-        // timer.subscribe(t => t);
         this.carouselTile = {
-            grid: { xs: 1, sm: 2, md: 5, lg: 6, all: 0 },
+            grid: { xs: 3, sm: 3, md: 4, lg: 5, all: 0 },
             slide: 1,
             speed: 400,
             loop: true,
             animation: 'lazy',
             point: {
                 visible: true,
-                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:80%;\n          transform: scale(1.3);\n          border-radius: 10px;\n      }\n      .ngxcarousel-inner {\n        height: 450px;\n        width: 108%;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 88px;\n      left: 8%;\n  }\n  ngx-tile.item {\n    margin: 3%;\n    }\n\n        "
+                pointStyles: "\n        .tile {\n          position: relative;\n          max-width:80%;\n          transform: scale(1.3);\n          border-radius: 10px;\n      }\n      \n      .ngxcarousel-inner {\n        height: 450px;\n        width: 108%;\n    }\n      .ngxcarouselPoint {\n        display: none;\n    }\n    .ngxcarousel-items {\n      top: 88px;\n      left: 8%;\n  }\n  ngx-tile.item {\n    margin: 3%;\n    }\n    @media(max-width:812px){\n      .tile{\n        transform: scale(.9);\n        max-width:78%;\n      }\n      ngx-tile.item{\n        margin:-2% !important;\n      }\n    }\n\n\n        "
             },
             load: 2,
             touch: true,
             easing: 'ease'
         };
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
-        this.uri.push(this.manifestUri);
     };
     VideoSelectionComponent.prototype.getSubCard = function () {
         var _this = this;
         this.spinnerService.show();
         this.videoService.GetSubCard(this.idss).subscribe(function (data) {
             _this.spinnerService.hide();
-            console.log(data);
             _this.cards = data.subcards;
+            console.log(_this.cards);
             var subCard = [];
             var temp = [];
-            var url = "assets/tablet-l/read-2799818_1920.jpg";
             for (var index = 0; index < _this.cards.length; index++) {
                 subCard = [{ 'id': _this.cards[index].id, 'duration': _this.cards[index].duration, 'imgUrl': _this.VideoImageUrl(_this.cards[index].id), 'videourl': _this.videoURL(_this.cards[index].formats, _this.cards[index].id), 'Title': _this.cards[index].title }];
                 temp.push(subCard);
@@ -2771,43 +2817,38 @@ var VideoSelectionComponent = /** @class */ (function () {
     };
     VideoSelectionComponent.prototype.videoURL = function (FormateId, id) {
         var url = localStorage.getItem('videoUrl');
-        // console.log(FormateId, id);
-        // this.size = this.formate[index].id;
-        var formate = [1, 2, 3, 4, 5, 6, 7, 8];
         this.innerheigth = window.innerHeight;
-        if (this.innerheigth <= 720 && this.innerheigth >= 480) {
-            if (FormateId[0].id == formate || FormateId[0].id == formate || FormateId[0].id == formate) {
-                var ID = FormateId[0].id;
-                console.log(ID);
-            }
+        if (this.innerheigth >= 720) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 3; });
+            var ID = formateArray[0].id;
             this.bucketName = '.mp4';
-            return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
         }
-        else if (this.innerheigth <= 480 && this.innerheigth >= 360) {
-            if (FormateId[0].id == 4 || FormateId[0].id == 5 || FormateId[0].id == 6) {
-                var ID = FormateId[0].id;
-            }
+        else if (this.innerheigth >= 480) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 6; });
+            var ID = formateArray[0].id;
             this.bucketName = '.mp4';
-            return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
         }
-        else if (this.innerheigth <= 360 && this.innerheigth >= 240) {
-            if (FormateId[0].id == 7) {
-                var ID = FormateId[0].id;
-            }
+        else if (this.innerheigth <= 360) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 7; });
+            var ID = formateArray[0].id;
             this.bucketName = '.mp4';
-            return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
         }
-        else if (this.innerheigth <= 240 && this.innerheigth >= 0) {
-            if (FormateId[0].id == 8) {
-                var ID = FormateId[0].id;
-            }
+        else if (this.innerheigth <= 240) {
+            var formateArray = FormateId.filter(function (x) { return x.id == 8; });
+            var ID = formateArray[0].id;
             this.bucketName = '.mp4';
-            return url + '/' + ID + '/' + id + '/' + id + this.bucketName;
+            var VideoUrl = url + ID + '/' + id + this.bucketName;
+            return VideoUrl;
         }
     };
     VideoSelectionComponent.prototype.VideoImageUrl = function (id) {
         var url = localStorage.getItem('videoImageUrl');
-        // console.log(url);
         this.innerheigth = window.innerHeight;
         if (this.innerheigth <= 1440 && this.innerheigth >= 1080) {
             this.bucketName = 'phone-l';
@@ -2837,20 +2878,21 @@ var VideoSelectionComponent = /** @class */ (function () {
     VideoSelectionComponent.prototype.closeNav = function () {
         document.getElementById("myNav").style.display = "none";
         this.api.pause();
+        // this.api.videogularElement("");
+        // var videoElement = document.getElementById('media');
+        // videoElement.removeAttribute('src');
     };
     VideoSelectionComponent.prototype.addToFav = function (id) {
         var _this = this;
-        var favourite = new __WEBPACK_IMPORTED_MODULE_5__shared_entities_index__["a" /* AddFav */]();
+        var favourite = new __WEBPACK_IMPORTED_MODULE_6__shared_entities_index__["a" /* AddFav */]();
         favourite.videoId = id;
         favourite.kidId = localStorage.getItem('kidId');
-        // this.spinnerService.show();
         this.favService.addFavrouit(favourite).subscribe(function (data) {
             console.log(data);
             console.log("test");
-            _this.AddToFav = true;
-            // this.spinnerService.hide();
+            _this.success = true;
+            _this.beforeFavCall = false;
         }, function (Error) {
-            // this.spinnerService.hide();
         });
     };
     VideoSelectionComponent.prototype.onPlayerReady = function (api) {
@@ -2860,8 +2902,7 @@ var VideoSelectionComponent = /** @class */ (function () {
         this.api.getDefaultMedia().subscriptions.ended.subscribe(function () {
             x++;
             if (x > 2) {
-                var src = _this.currentStream;
-                // this.setCurrentVideo("SampleVideo_1280x720_2mb.mp4", "video/mp4");
+                _this.setCurrentVideo(_this.video[0].videourl);
                 _this.onPlayerReady(_this.api);
                 setTimeout(function () {
                     __WEBPACK_IMPORTED_MODULE_7_jquery__("#myButton").trigger("click");
@@ -2873,6 +2914,17 @@ var VideoSelectionComponent = /** @class */ (function () {
             }
         });
     };
+    VideoSelectionComponent.prototype.setCurrentVideo = function (source) {
+        this.sources = new Array();
+        for (var i = 0; i <= this.video.length; i++) {
+            this.sources.push({
+                src: this.video[i].videourl,
+                type: "video/mp4"
+            });
+        }
+        this.api.getDefaultMedia().currentTime = 0;
+        this.api.play();
+    };
     VideoSelectionComponent.prototype.goToHome = function () {
         this.router.navigate(['./']);
     };
@@ -2880,10 +2932,6 @@ var VideoSelectionComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('close'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
     ], VideoSelectionComponent.prototype, "close", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('previous'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], VideoSelectionComponent.prototype, "myLeft", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('next'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
@@ -2907,6 +2955,7 @@ var VideoSelectionComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_3__shared_services_videoService_index__["a" /* VideoService */],
             __WEBPACK_IMPORTED_MODULE_4__shared_services_favoritesService_index__["a" /* FavoriteService */],
+            __WEBPACK_IMPORTED_MODULE_5__shared_services_TimerService__["a" /* TimerService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
     ], VideoSelectionComponent);
