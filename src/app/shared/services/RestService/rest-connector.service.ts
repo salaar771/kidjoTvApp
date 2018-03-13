@@ -51,8 +51,6 @@ export class RESTConnectorService {
         return Observable.throw(err);
     }
     private handleError(error: any, blockUiService: BlockUIService, blocking: Boolean) {
-        console.log(error);
-        //let body = error.json();
         if (blocking) {
             blockUiService.stopBlock();
         }

@@ -203,6 +203,7 @@ export class FavoritesComponent implements OnInit {
         videoTemp.push(favVideoArr);
       }
       this.FavVideo = temp;
+      console.log(this.FavVideo);
       this.FavVideoArray = videoTemp;
       console.log(this.FavVideoArray);
     },
@@ -283,17 +284,25 @@ export class FavoritesComponent implements OnInit {
     this.api.getDefaultMedia().currentTime = 0;
   }
   deleteFav(id: any) {
+    console.log(id);
     let remove = new RemoveFav();
     remove.kidId = localStorage.getItem("kidId");
     remove.videoId = id;
-    // var kidId = localStorage.getItem("kidId");
     this.spinnerService.show();
+    let index = this.FavVideo.findIndex(a => a[0].id == id);
+    console.log(this.FavVideo);
+    console.log(index);
+    if (index > -1) {
+      console.log(index);
+      this.FavVideo.splice(index, 1);
+    }
     this.favService.RemoveFavorite(remove).subscribe(data => {
       console.log("test");
-      this.FavVideo[0].pop(id);
+
       this.spinnerService.hide();
     },
       Error => {
+
         this.spinnerService.hide();
       });
 

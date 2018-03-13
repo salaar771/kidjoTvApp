@@ -224,7 +224,9 @@ export class VideoSelectionComponent implements OnInit {
         arrayTemp.push(subCardArray);
       }
       this.video = temp;
+      this.FavouritesArray = this.video;
       this.videoArray = arrayTemp;
+
       console.log(this.videoArray);
       this.videoItem = this.videoArray[this.videoIndex];
       console.log(this.videoItem);
@@ -306,18 +308,28 @@ export class VideoSelectionComponent implements OnInit {
     this.videoIndex++;
     this.nextVideo();
   }
+  FavouritesArray: any;
   addToFav(id: any) {
     let favourite = new AddFav();
     favourite.videoId = id;
     favourite.kidId = +localStorage.getItem('kidId');
+    this.spinnerService.show();
     this.favService.addFavrouit(favourite).subscribe(data => {
       console.log(data);
       console.log("test");
       this.success = true;
       this.beforeFavCall = false;
+      this.spinnerService.hide();
     },
       Error => {
+        console.log("test");
+
+        this.spinnerService.hide();
       });
+  }
+  IsFavourite(id: any) {
+    // let data = this.vid
+    return true;
   }
   onPlayerReady(api: VgAPI) {
     this.api = api;
