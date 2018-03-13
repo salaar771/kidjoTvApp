@@ -13,6 +13,12 @@
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
 }
+@media(max-width:812px){
+    #banner{
+        height: 165px;
+    }
+}
+
 #banner .fill {
     animation-name: fillAction;
     animation-iteration-count: 1;
@@ -28,6 +34,11 @@
     width:300px;
     height: 300px;
     fill: #04ACFF;
+}
+@media (max-width:812px) {
+    .banner{
+        height: 165px;
+    }
 }
 @keyframes fillAction {
     0% {
@@ -45,4 +56,5 @@
         transform: translate(0, 0);
     }
 }
+
 

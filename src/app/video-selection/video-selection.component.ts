@@ -32,7 +32,11 @@ export enum KEY_CODE {
 })
 export class VideoSelectionComponent implements OnInit {
   countDown;
-  isPlaying: any;
+  isPlaying: any = false;
+  videoIndex = 0;
+  videoItem: any;
+  videoArray: any[] = [];
+  sources: Array<Object>;
   api: VgAPI;
   @ViewChild('close') close: ElementRef;
   @ViewChild('next') myRight: ElementRef;
@@ -139,14 +143,21 @@ export class VideoSelectionComponent implements OnInit {
 
   GoLeft() {
     --this.arrayIndex;
+    --this.videoIndex;
+    this.nextVideo();
     if (this.arrayIndex == -1) {
       this.arrayIndex = 0;
+      this.videoIndex = 0;
+      this.nextVideo();
     }
   }
   GoRight() {
     ++this.arrayIndex;
+    ++this.videoIndex;
+    this.nextVideo();
     if (this.arrayIndex == this.video.length - 2) {
       this.arrayIndex = 0;
+      this.videoIndex = 0;
     }
   }
   ngOnInit() {
@@ -190,8 +201,6 @@ export class VideoSelectionComponent implements OnInit {
         margin:-2% !important;
       }
     }
-
-
         `
       },
       load: 2,
@@ -204,48 +213,65 @@ export class VideoSelectionComponent implements OnInit {
     this.videoService.GetSubCard(this.idss).subscribe(data => {
       this.spinnerService.hide();
       this.cards = data.subcards;
-      console.log(this.cards);
       var subCard = [];
+      var subCardArray = [];
       var temp = [];
+      var arrayTemp = [];
       for (var index = 0; index < this.cards.length; index++) {
-        subCard = [{ 'id': this.cards[index].id, 'duration': this.cards[index].duration, 'imgUrl': this.VideoImageUrl(this.cards[index].id), 'videourl': this.videoURL(this.cards[index].formats, this.cards[index].id), 'Title': this.cards[index].title }];
-
+        subCard = [{ 'id': this.cards[index].id, 'duration': this.cards[index].duration, 'imgUrl': this.VideoImageUrl(this.cards[index].id), 'Title': this.cards[index].title }];
+        subCardArray = [this.videoURL(this.cards[index].formats, this.cards[index].id)];
         temp.push(subCard);
+        arrayTemp.push(subCardArray);
       }
       this.video = temp;
-      console.log(this.video);
+      this.videoArray = arrayTemp;
+      console.log(this.videoArray);
+      this.videoItem = this.videoArray[this.videoIndex];
+      console.log(this.videoItem);
     },
       Error => {
         this.spinnerService.hide();
       });
   }
-  videoURL(FormateId: any[], id: any) {
+  videoURL(FormateIds: any[], id: any) {
     var url = localStorage.getItem('videoUrl');
     this.innerheigth = window.innerHeight;
     if (this.innerheigth >= 720) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 3);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 3);
+      var index = FormateIds.findIndex(a => a.id == 3);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     } else if (this.innerheigth >= 480) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 6);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 6);
+      var index = FormateIds.findIndex(a => a.id == 6);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     } else if (this.innerheigth <= 360) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 7);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 7);
+      var index = FormateIds.findIndex(a => a.id == 7);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     } else if (this.innerheigth <= 240) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 8);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 8);
+      var index = FormateIds.findIndex(a => a.id == 8);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     }
   }
   VideoImageUrl(id) {
@@ -267,6 +293,7 @@ export class VideoSelectionComponent implements OnInit {
     return url + this.bucketName + '/' + id + '.png';
   }
   openNav() {
+
     document.getElementById("myNav").style.display = "block";
     this.isPlaying = true;
     this.api.play();
@@ -274,14 +301,15 @@ export class VideoSelectionComponent implements OnInit {
   closeNav() {
     document.getElementById("myNav").style.display = "none";
     this.api.pause();
-    // this.api.videogularElement("");
-    // var videoElement = document.getElementById('media');
-    // videoElement.removeAttribute('src');
+    this.videoItem = "";
+    this.api.getDefaultMedia().subscriptions.ended.subscribe();
+    this.videoIndex++;
+    this.nextVideo();
   }
   addToFav(id: any) {
     let favourite = new AddFav();
     favourite.videoId = id;
-    favourite.kidId = localStorage.getItem('kidId');
+    favourite.kidId = +localStorage.getItem('kidId');
     this.favService.addFavrouit(favourite).subscribe(data => {
       console.log(data);
       console.log("test");
@@ -292,37 +320,17 @@ export class VideoSelectionComponent implements OnInit {
       });
   }
   onPlayerReady(api: VgAPI) {
-    var x = 1;
     this.api = api;
-    this.api.getDefaultMedia().subscriptions.ended.subscribe(
-      () => {
-        x++;
-        if (x > 2) {
-          this.setCurrentVideo(this.video[0].videourl);
-          this.onPlayerReady(this.api);
-          setTimeout(function () {
-            $("#myButton").trigger("click");
-          }, 1000);
-          x = 0;
-        }
-        else {
-          this.api.play();
-        }
-      }
-    );
-
+    this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe();
+    this.api.getDefaultMedia().subscriptions.ended.subscribe();
   }
-  sources: any;
-  setCurrentVideo(source: string) {
-    this.sources = new Array<Object>();
-    for (var i = 0; i <= this.video.length; i++) {
-      this.sources.push({
-        src: this.video[i].videourl,
-        type: "video/mp4"
-      });
+  nextVideo() {
+    if (this.videoIndex === this.videoArray.length) {
+      this.videoIndex = 0;
     }
+    this.videoItem = this.videoArray[this.videoIndex];
+    console.log(this.videoItem);
     this.api.getDefaultMedia().currentTime = 0;
-    this.api.play();
   }
   goToHome() {
     this.router.navigate(['./']);

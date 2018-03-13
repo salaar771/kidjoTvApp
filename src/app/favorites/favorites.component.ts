@@ -31,7 +31,10 @@ export enum KEY_CODE {
 })
 export class FavoritesComponent implements OnInit {
   countDown: any;
-  isPlaying: any;
+  isPlaying: any = false;
+  FavVideoArray: any;
+  videoIndex = 0;
+  videoItem: any;
   api: VgAPI;
   innerheigth: any;
   bucketName: any;
@@ -46,13 +49,12 @@ export class FavoritesComponent implements OnInit {
   downCount = 0;
   upCount = 0;
   arrayIndex: any = 0;
-  currentStream = "https://d23sw6prl9jc74.cloudfront.net/6/NavdQMkX7J.mp4";
   waterpx: any = "100";
   waterPxCountdown: any = "100px";
   initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
   UnitOfTIme = 100 / this.initialTime[0];
   timeInSeconds: any;
-  
+
   constructor(public favService: FavoriteService,
     public router: Router,
     public timerService: TimerService,
@@ -179,6 +181,10 @@ export class FavoritesComponent implements OnInit {
   closeNav() {
     document.getElementById("myNav").style.display = "none";
     this.api.pause();
+    this.videoItem = "";
+    this.api.getDefaultMedia().subscriptions.ended.subscribe();
+    this.videoIndex++;
+    this.nextVideo();
   }
   getList() {
     var kidId = localStorage.getItem('kidId');
@@ -187,45 +193,62 @@ export class FavoritesComponent implements OnInit {
       this.spinnerService.hide();
       this.Favorites = data.favorites;
       var subCard = [];
+      var videoTemp = [];
+      var favVideoArr = [];
       var temp = [];
       for (var index = 0; index < this.Favorites.length; index++) {
         subCard = [{ 'id': this.Favorites[index].id, 'duration': this.Favorites[index].duration, 'imgUrl': this.VideoImageUrl(this.Favorites[index].id), 'Title': this.Favorites[index].title }];
+        favVideoArr = [this.videoURL(this.Favorites[index].formats, this.Favorites[index].id)];
         temp.push(subCard);
+        videoTemp.push(favVideoArr);
       }
       this.FavVideo = temp;
-      console.log(this.FavVideo);
+      this.FavVideoArray = videoTemp;
+      console.log(this.FavVideoArray);
     },
       Error => {
         this.spinnerService.hide();
       });
   }
-  videoURL(FormateId: any[], id: any) {
+  videoURL(FormateIds: any[], id: any) {
     var url = localStorage.getItem('videoUrl');
     this.innerheigth = window.innerHeight;
     if (this.innerheigth >= 720) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 3);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 3);
+      var index = FormateIds.findIndex(a => a.id == 3);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     } else if (this.innerheigth >= 480) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 6);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 6);
+      var index = FormateIds.findIndex(a => a.id == 6);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     } else if (this.innerheigth <= 360) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 7);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 7);
+      var index = FormateIds.findIndex(a => a.id == 7);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     } else if (this.innerheigth <= 240) {
-      var formateArray: any[] = FormateId.filter(x => x.id == 8);
-      var ID = formateArray[0].id;
-      this.bucketName = '.mp4';
-      var VideoUrl = url + ID + '/' + id + this.bucketName;
-      return VideoUrl;
+      var formateArray = FormateIds.filter(x => x.id == 8);
+      var index = FormateIds.findIndex(a => a.id == 8);
+      if (index > -1) {
+        var ID = FormateIds[index].id;
+        this.bucketName = '.mp4';
+        var VideoUrl = url + ID + '/' + id + this.bucketName;
+        return VideoUrl;
+      }
     }
   }
   VideoImageUrl(id) {
@@ -247,24 +270,17 @@ export class FavoritesComponent implements OnInit {
     return url + this.bucketName + '/' + id + '.png';
   }
   onPlayerReady(api: VgAPI) {
-    var x = 1;
     this.api = api;
-
-    this.api.getDefaultMedia().subscriptions.ended.subscribe(
-      () => {
-        x++;
-        if (x > 2) {
-          this.onPlayerReady(this.api);
-          setTimeout(function () {
-            $("#myButton").trigger("click");
-          }, 1000);
-          x = 0;
-        }
-        else {
-          this.api.play();
-        }
-      }
-    );
+    this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe();
+    this.api.getDefaultMedia().subscriptions.ended.subscribe(this.nextVideo.bind(this));
+  }
+  nextVideo() {
+    if (this.videoIndex === this.FavVideoArray.length) {
+      this.videoIndex = 0;
+    }
+    this.videoItem = this.FavVideoArray[this.videoIndex];
+    console.log(this.videoItem);
+    this.api.getDefaultMedia().currentTime = 0;
   }
   deleteFav(id: any) {
     let remove = new RemoveFav();

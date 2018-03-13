@@ -69,7 +69,7 @@
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
         <video #media [vgMedia]="media" preload="auto" id="singleVideo">
-          <source *ngFor="let vid of FavVideo" src="{{currentStream}}" type="video/mp4">
+          <source *ngFor="let vid of FavVideoArray" [src]="vid" type="video/mp4">
         </video>
       </vg-player>
     </div>

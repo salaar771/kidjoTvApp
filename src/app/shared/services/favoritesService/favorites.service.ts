@@ -10,7 +10,6 @@ export class FavoriteService {
     }
     public addFavrouit(values: AddFav): Observable<any> {
         console.log(values);
-        alert();
         let url = "/kid/" + values.kidId + "/favorites/add";
         console.log(url);
         return this.restConnector.httpPostWeb(values, url);

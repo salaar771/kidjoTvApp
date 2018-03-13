@@ -1,6 +1,6 @@
 export class AddFav {
-    kidId: string;
-    videoId: string;
+    kidId: number;
+    videoId: any;
 }
 export class RemoveFav {
     kidId: string;

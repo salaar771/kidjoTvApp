@@ -80,6 +80,7 @@ export class RESTConnectorService {
         url = this.Url + url;
         this.blockUiService.startBlock();
         var body = obj;
+        console.log(body);
         const headers = this.getHeader(contentType);
         let options = new RequestOptions({ headers: headers });
         // alert();
