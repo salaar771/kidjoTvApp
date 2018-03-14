@@ -1,6 +1,7 @@
 <section class="books-section">
   <div class="background"></div>
   <div class="side-bar">
+      <p>{{countDown}}<br> min</p>
     <!-- <div class="side-bar-contents"> -->
     <div id="banner">
       <div class="fill" [ngStyle]="{ 'animation-duration': timeInSeconds  }">
@@ -11,7 +12,7 @@
   c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
         </svg>
       </div>
-      <p>{{countDown}} min</p>
+   
     </div>
     <!-- </div> -->
   </div>
@@ -35,16 +36,14 @@
             <p style="     color: white; font-weight: 900; background-color: red;margin-top: -2%;" [ngClass]="{'imgActive':i==arrayIndex}">{{vid[0].Title}}</p>
           </div>
         </div>
-        <div class="fav-btn" style="cursor: pointer;" (click)="addToFav(vid[0].id)">
-          <button type="button" value="btn" id="button-fav" *ngIf="beforeFavCall">
+        <button class="fav-btn" style="cursor: pointer;" (click)="addToFav(vid[0].id)" type="button" value="btn" id="button-fav">
                   <img src="assets/svgs/like.svg">
                   <p>Favorite</p>
-              </button>
-          <button type="button" value="btn" id="button-fav" *ngIf="success">
-                  <img src="assets/svgs/error.svg">
-                  <p>Delete</p>
-              </button>
-        </div>
+        </button>
+        <button class="fav-btn" style="cursor: pointer;" *ngIf="IsFavourite(vid[0].id)"  type="button" value="btn" id="button-fav">
+            <img src="assets/svgs/error.svg">
+            <p>Delete</p>
+        </button >
       </ngx-tile>
       <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
       <button NgxCarouselNext #next class='rightRs'>&gt;</button>

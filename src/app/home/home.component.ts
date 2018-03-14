@@ -220,6 +220,15 @@ export class HomeComponent implements OnInit {
        .ngx-tile.item {
         width:80%;
        }
+       ngx-tile.item {
+        margin-left: 30px;
+      }
+       @media(max-width:812px)
+       {
+        ngx-tile.item {
+          margin-left:0px;
+        }
+       }
         .tile {
         width: 60%;
         border-radius: 18px;

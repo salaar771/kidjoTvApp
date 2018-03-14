@@ -31,6 +31,8 @@ export enum KEY_CODE {
   styleUrls: ['./video-selection.component.css'],
 })
 export class VideoSelectionComponent implements OnInit {
+  FavouriteBtnSrc: any = "assets/svgs/like.svg";
+  FavouriteBtnText: any = "Favorite";
   countDown;
   isPlaying: any = false;
   videoIndex = 0;
@@ -192,14 +194,30 @@ export class VideoSelectionComponent implements OnInit {
   ngx-tile.item {
     margin: 3%;
     }
+    @media(max-width:991px)
+    {
+      .tile{
+        max-width:72%;
+      }
+      
+    }
+    @media(min-width: 813px) and (min-width: 534px){
+      .tile{
+        max-width:66%;
+      }
+    }
     @media(max-width:812px){
       .tile{
-        transform: scale(.9);
-        max-width:78%;
+        transform: scale(.8);
+        max-width:72%;
       }
       ngx-tile.item{
         margin:-2% !important;
+        margin-left:-4px !important;
       }
+      .ngxcarousel-items {
+        left: 17%;
+    }
     }
         `
       },
@@ -224,7 +242,8 @@ export class VideoSelectionComponent implements OnInit {
         arrayTemp.push(subCardArray);
       }
       this.video = temp;
-      this.FavouritesArray = this.video;
+      console.log(this.video);
+      // this.FavouritesArray = this.video;
       this.videoArray = arrayTemp;
 
       console.log(this.videoArray);
@@ -308,12 +327,16 @@ export class VideoSelectionComponent implements OnInit {
     this.videoIndex++;
     this.nextVideo();
   }
-  FavouritesArray: any;
+  FavouritesArray: any[] = [];
   addToFav(id: any) {
     let favourite = new AddFav();
     favourite.videoId = id;
     favourite.kidId = +localStorage.getItem('kidId');
     this.spinnerService.show();
+    var index = this.video.findIndex(a => a[0].id == id);
+    console.log(index);
+
+    this.FavouritesArray.push(id);
     this.favService.addFavrouit(favourite).subscribe(data => {
       console.log(data);
       console.log("test");
@@ -329,7 +352,14 @@ export class VideoSelectionComponent implements OnInit {
   }
   IsFavourite(id: any) {
     // let data = this.vid
-    return true;
+    var index = this.FavouritesArray.findIndex(a => a == id);
+    if (index > -1) {
+      return true;
+
+    }
+    else {
+      return false;
+    }
   }
   onPlayerReady(api: VgAPI) {
     this.api = api;

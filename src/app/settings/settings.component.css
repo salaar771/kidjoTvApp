@@ -164,6 +164,28 @@
     }
 }
 
+@media(min-width:812px) and (max-width:1535px)
+{   
+    .main-element-container{
+        margin-top: 8%;
+    }
+    [class^="box"] img{
+        max-width: 220px;
+    }
+    .text-box-1 ul{
+        padding-top: 0;
+        font-size: 14px;
+    }
+    .text-box-1 h4{
+        font-size: 16px;
+        padding-top: 15px;
+    }
+    .text-box-1  img{
+        max-width: 23px;
+        right: -30% !important;
+    }
+}
+
 .homeFocus{
     color: #4dbcae !important;
  }

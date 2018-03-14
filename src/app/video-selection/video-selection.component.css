@@ -30,16 +30,18 @@
     height: 500px;
     border-radius: 15px;
 }
-.side-bar-contents p{
+.side-bar p{
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 5%;
     font-size: 25px;
+    transform: translateY(-50%);
     width: 20px;
     text-align: center;
     color: #fff;
     font-weight: 500;
     font-family: bree;
+    z-index: 2;
 }
 .books{
     position: relative;
@@ -336,16 +338,7 @@ favBtnClick .fav-btn p{
     /* left: ; */
 }
 @media(max-width:736px){
-    .side-bar-contents img{
-        width: 60px;
-        height: 212px;
-    }
-    .side-bar{
-        top: 23%;
-    }
-    .side-bar-contents p{
-        top: 30%;
-    }
+   
     img.img-thumbnail{
         width: 172px;
     }
@@ -477,5 +470,84 @@ border-radius: 50px !important;
     border: 9px solid #fff !important;
     border-radius: 15px !important;
 }
+
+
+/* water animation */
+
+/* You can add global styles to this file, and also import other style files */
+
+
+#banner {
+    border-radius: 0%;
+    width: 50px;
+    height: 495px;
+    /*background: #F0FFFF;*/
+    overflow: hidden;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #04ACFF;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+@media(max-width:812px){
+    #banner{
+        height: 275px;
+        /* margin-top:250% !important; 
+        transform: translateY(-50%); */
+    }
+}
+@media(max-width:1530px) and (max-height:535px){
+    #banner{
+        height: 280px !important;
+    }
+}
+@media(min-width: 813px) and (min-width: 534px) and (max-width:1000px){
+    .main-books-container{
+        top: 50px;
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+        left: 0;
+        max-width: 111%;
+        width: 111%;
+    }
+}
+#banner .fill {
+    animation-name: fillAction;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.2, .2, .2, .2);
+    animation-duration: 540s;
+    animation-fill-mode: forwards;
+}
+.fill svg{
+    transform: scale(2.4);
+}
+#banner #waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.8s;
+    width:300px;
+    height: 495px;
+    fill: #04ACFF;
+}
+@keyframes fillAction {
+    0% {
+        transform: translate(0, -1px);
+    }
+    100% {
+        transform: translate(0, 300px);
+    }
+}
+@keyframes waveAction {
+    0% {
+        transform: translate(-150px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
 
 

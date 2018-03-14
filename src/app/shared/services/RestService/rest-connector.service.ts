@@ -84,6 +84,7 @@ export class RESTConnectorService {
         // alert();
         return this.http.post(url, body, options)
             .map((response: Response) =>
+
                 this.parseResponse(response, this.blockUiService, true)
             )
             .catch((error) => this.handleError(error, this.blockUiService, true));
@@ -105,6 +106,7 @@ export class RESTConnectorService {
             blockUiService.stopBlock();
         }
         let body = response.json();
+        console.log(body);
         return body;
     }
 }
