@@ -311,6 +311,9 @@ background: black;
     }
    
 }
+ngx-carousel{
+    width: 100%;
+}
 
 
 /* water animation */
