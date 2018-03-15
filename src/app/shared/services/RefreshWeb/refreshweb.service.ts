@@ -20,6 +20,7 @@ export class RefreshWebService {
         let refreshweb = new Refresh();
         refreshweb.Date = this.date;
         let url = "/device/refreshWeb";
+        
         return this.restConnector.httpPostWeb(refreshweb, url);
     }
     public GetCard(values: any): Observable<any> {
