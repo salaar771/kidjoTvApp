@@ -213,7 +213,7 @@ export class HomeComponent implements OnInit {
   }
   GoRight() {
     ++this.arrayIndex;
-    if (this.arrayIndex == this.folders.length) {
+    if (this.arrayIndex == this.folders.length - 1) {
       this.arrayIndex = 0;
     }
   }
