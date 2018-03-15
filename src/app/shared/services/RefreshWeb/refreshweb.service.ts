@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Headers, RequestOptions } from '@angular/http';
 import { RESTConnectorService } from './../RestService/index';
-import { Refresh, Card } from './../../entities/index';
+import { Refresh, Card,User } from './../../entities/index';
 
 
 

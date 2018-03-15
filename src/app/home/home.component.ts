@@ -5,6 +5,7 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { RefreshWebService } from './../shared/services/RefreshWeb/index';
 import { TimerService } from './../shared/services/TimerService';
 import { Card } from './../shared/entities/index';
+import { User} from './../shared/entities/user';
 import { NgxCarousel } from 'ngx-carousel';
 declare var $: any;
 import { Observable } from 'rxjs/Observable'
@@ -52,27 +53,46 @@ export class HomeComponent implements OnInit {
   upCount = 0;
   Favcolor: any = 0;
   settingsColor: any = 0;
-  walkThrough: any = false;
+  // walkThrough: any = false;
   settingsUpCount: any = 0;
   public carouselTile: NgxCarousel;
   FavIndex: any = 0;
 
   waterpx: any = "100";
   waterPxCountdown: any = "100px";
-  initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
-  UnitOfTIme = 100 / this.initialTime[0];
+  initialTime:any = 0;
+  
+  UnitOfTIme = 0;
   timeInSeconds: any;
+
   constructor(public refreshweb: RefreshWebService,
     public router: Router,
     public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
+    // console.log('starting');
+    if (localStorage.getItem('screenTimeLimit') !== null) {
+      // code...
+      this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+      this.UnitOfTIme = 100 / this.initialTime[0];
+    }else{
+      localStorage.setItem('screenTimeLimit', '1');
+      this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
+      this.UnitOfTIme = 100 / this.initialTime;
+    }
+    
+    // console.log("initial time");
+    // console.log(this.initialTime);
+    
     this.refreshWeb();
+    console.log("lkjklsjlkjlkjklsdjkljklj");
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
       this.timeInSeconds = this.countDown * 60 + 's';
-      this.waterpx = this.waterpx - this.UnitOfTIme;
-      this.waterPxCountdown = this.waterpx + "px";
+      // this.waterpx = this.waterpx - this.UnitOfTIme;
+      // this.waterPxCountdown = this.waterpx + "px";
     });
+    console.log("lkjkljaaaaaaajjjjjjjjjssssssss");
+
   }
 
   @HostListener('window:keyup', ['$event'])
@@ -198,9 +218,13 @@ export class HomeComponent implements OnInit {
     }
   }
   ngOnInit() {
-
+    console.log('eeeeeeeeeeee');
     this.GetCard();
-    this.time = localStorage.getItem('screenTimeLimit');
+    
+    if(localStorage.getItem('screenTimeLimit') !== null){
+      this.time = localStorage.getItem('screenTimeLimit');
+    }
+    
     this.carouselTile = {
       grid: { xs: 3, sm: 3, md: 4, lg: 5, all: 0 },
       slide: 1,
@@ -242,7 +266,7 @@ export class HomeComponent implements OnInit {
               .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
                    width: 31% !important;
               }
-  
+
           }
         `
       },
@@ -253,10 +277,14 @@ export class HomeComponent implements OnInit {
 
   }
   refreshWeb() {
+
     this.deviceId = localStorage.getItem('X-Kidjo-DeviceId');
+    // console.log("id do not exist" + this.deviceId);
     if (!this.deviceId) {
+
       this.refreshweb.RefreshWeb().subscribe(data => {
-        this.walkThrough = true;
+        console.log(data);
+        // this.walkThrough = true;
         this.ImageUrl = data.folderImageUrl;
         this.videoUrl = data.videoUrl;
         this.videoImageUrl = data.videoImageUrl;
@@ -266,14 +294,15 @@ export class HomeComponent implements OnInit {
         localStorage.setItem('X-Kidjo-DeviceId', data.deviceId);
         this.kidId = data.kids[0].id;
         localStorage.setItem('kidId', this.kidId);
-        this.activeSubscription = data.User[0].activeSubscription;
-      })
+        // this.activeSubscription = data.User[0].activeSubscription;
+      });
+      if (this.activeSubscription == true) {
+        localStorage.setItem('premiumActive', 'true');
+      } else {
+        localStorage.setItem('premiumActive', 'false');
+      }
     }
-    if (this.activeSubscription == true) {
-      localStorage.setItem('premiumActive', 'true');
-    } else {
-      localStorage.setItem('premiumActive', 'false');
-    }
+    
   }
   GetCard() {
     this.obj = localStorage.getItem('kidId');
@@ -285,7 +314,7 @@ export class HomeComponent implements OnInit {
       var tempData = [];
       var test = [];
       var color: any[] = ['red', 'yellow', 'blue', 'green', 'orange', 'prple'];
-      var backgroundImages: any[] = ['/assets/svgs/red-img.svg', '/assets/svgs/yellow-img.svg', '/assets/svgs/blue-img.svg', '/assets/svgs/green-img.svg', '/assets/svgs/orange-img.svg', '/assets/svgs/purple-img.svg'];
+      var backgroundImages: any[] = ['assets/svgs/red-img.svg', 'assets/svgs/yellow-img.svg', 'assets/svgs/blue-img.svg', 'assets/svgs/green-img.svg', 'assets/svgs/orange-img.svg', 'assets/svgs/purple-img.svg'];
       var counter = 0;
       for (var index = 0; index < this.cards.length; index++) {
         if (counter == 6) {
@@ -300,9 +329,9 @@ export class HomeComponent implements OnInit {
       }
       this.folders = tempData;
     },
-      Error => {
-        this.spinnerService.hide();
-      });
+    Error => {
+      this.spinnerService.hide();
+    });
   }
   folderImage(id) {
     var url = localStorage.getItem('folderImageUrl');
@@ -331,11 +360,11 @@ export class HomeComponent implements OnInit {
   goToSettingsPage() {
     this.router.navigate(['./settings']);
   }
-  showWalkthrough() {
-    this.walkThrough = true;
-  }
-  hideWalkthrough() {
-    this.walkThrough = false;
-  }
+  // showWalkthrough() {
+  //   this.walkThrough = true;
+  // }
+  // hideWalkthrough() {
+  //   this.walkThrough = false;
+  // }
 
 }

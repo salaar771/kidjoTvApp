@@ -423,7 +423,7 @@
 /*  =========================   Playlist Settings ===========================*/
 
 .playlist-setting{
-    background: src("assets/tablet-l/background_day_top.webp");
+    background: src("/assets/tablet-l/background_day_top.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

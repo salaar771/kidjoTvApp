@@ -368,10 +368,10 @@ background: black;
 }
 @keyframes fillAction {
     0% {
-        transform: translate(0, -1px);
+        transform: translate(0, 0);
     }
     100% {
-        transform: translate(0, 300px);
+        transform: translate(0, 800px);
     }
 }
 @keyframes waveAction {

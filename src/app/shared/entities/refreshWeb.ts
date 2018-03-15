@@ -1,4 +1,4 @@
-import { user } from './user';
+import { User } from './user';
 import { kid } from './kid';
 import { language } from './language';
 export class Refresh {
@@ -7,7 +7,7 @@ export class Refresh {
     videoUrl: string;
     videoImageUrl: string;
     folderImageUrl: string;
-    User: user[];
+    User: User[];
     kids: kid[];
     lang: language[];
 

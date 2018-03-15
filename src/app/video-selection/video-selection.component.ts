@@ -242,7 +242,9 @@ export class VideoSelectionComponent implements OnInit {
         arrayTemp.push(subCardArray);
       }
       this.video = temp;
+      console.log("testing urls");
       console.log(this.video);
+      console.log("testing urls failed");
       // this.FavouritesArray = this.video;
       this.videoArray = arrayTemp;
 
@@ -311,6 +313,7 @@ export class VideoSelectionComponent implements OnInit {
     } else if (this.innerheigth <= 768 && this.innerheigth >= 360) {
       this.bucketName = 'tablet-s';
     }
+    console.log(url);
     return url + this.bucketName + '/' + id + '.png';
   }
   openNav() {
