@@ -4,7 +4,7 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { VideoService } from './../shared/services/videoService/index';
 import { FavoriteService } from './../shared/services/favoritesService/index';
 import { TimerService } from './../shared/services/TimerService';
-import { AddFav } from './../shared/entities/index';
+import { AddFav, RemoveFav } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
 import { Observable } from 'rxjs/Rx';
 import { VgAPI } from 'videogular2/core';
@@ -40,6 +40,9 @@ export class VideoSelectionComponent implements OnInit {
   videoArray: any[] = [];
   sources: Array<Object>;
   api: VgAPI;
+  @ViewChild('video') openVideo: ElementRef;
+  @ViewChild('deletebtn') deleteButton: ElementRef;
+  @ViewChild('favbtn') FavouriteButton: ElementRef;
   @ViewChild('close') close: ElementRef;
   @ViewChild('next') myRight: ElementRef;
   @ViewChild('home') myHomeBtn: ElementRef;
@@ -53,8 +56,10 @@ export class VideoSelectionComponent implements OnInit {
   arrayIndex: any = 0;
   public carouselTile: NgxCarousel;
   time: any;
+  FavouritesArray: any[] = [];
   downCount = 0;
   upCount = 0;
+  btnIndex: any;
   crossColor: any;
   currentSlide: any;
   success: any = false;
@@ -101,8 +106,7 @@ export class VideoSelectionComponent implements OnInit {
 
     }
     if (event.keyCode === KEY_CODE.Enter) {
-      var video = this.video[this.arrayIndex];
-      this.openNav();
+
 
     }
     if (event.keyCode === KEY_CODE.escape_key) {
@@ -111,30 +115,84 @@ export class VideoSelectionComponent implements OnInit {
     }
 
   }
-
   GoDown() {
-
     if (this.downCount < 1) {
       this.downCount++;
     }
-    if (this.downCount == 1) {
+    //runs when we move from cross button to slider
+    if (this.downCount == 1 && this.upCount == 1) {
+      console.log("test");
       this.myRight.nativeElement.focus();
+      // this.openVideo.nativeElement.focus();
       this.crossColor = 0;
       this.arrayIndex = 0;
       this.upCount = 0;
-      this.downCount = 0;
     }
 
+    //runs when we move from slider's first index to Favourite button 
+    if (this.downCount == 1) {
+      console.log("test");
+      this.FavouriteButton.nativeElement.focus();
+      // this.deleteButton.nativeElement.blur();
+      this.btnIndex = this.arrayIndex;
+      console.log(this.btnIndex);
+      this.arrayIndex = 74578;
+      this.downCount = 0;
+    }
+    if (this.downCount == 1 && this.upCount == 1) {
+      console.log("test");
+      this.FavouriteButton.nativeElement.blur();
+      this.deleteButton.nativeElement.focus();
+      // this.btnIndex = this.arrayIndex;
+      this.arrayIndex = 74578;
+      this.downCount = 0;
+    }
+    // if (this.downCount == 1 && this.arrayIndex == this.currentSlide) {
+    //   console.log("test");
+    //   this.arrayIndex = 74578;
+    //   this.FavouriteButtonColor = 1;
+    //   this.downCount = 0;
+    // }
+
   }
+
   GoUp() {
     if (this.upCount < 2) {
       this.upCount++;
     }
+    //runs when we move from slider to cross button
     if (this.upCount == 1) {
       this.myHomeBtn.nativeElement.focus();
       this.crossColor = 1;
+      // this.btnIndex = 6433567;
+      this.arrayIndex = 354635423;
     }
-    if (this.upCount == 2) {
+    //runs when we move from Favourite button to slider's first index
+    if (this.upCount == 1 && this.btnIndex == 0) {
+      console.log("test");
+      this.FavouriteButton.nativeElement.blur();
+      this.arrayIndex = 0;
+      this.btnIndex = -1;
+      this.crossColor = 0;
+      this.upCount = 0;
+    }
+    //runs when we move from slider first index to cross button 
+    if (this.upCount == 1 && this.btnIndex == -1) {
+      console.log("test");
+      this.FavouriteButton.nativeElement.blur();
+      this.myHomeBtn.nativeElement.focus();
+      this.crossColor = 1;
+      this.arrayIndex = 67834689;
+    }
+    //runs when we move from Favourite button to slider's current index
+    // if (this.upCount == 1 && this.btnIndex == this.currentSlide) {
+    //   console.log("test");
+    //   this.arrayIndex = this.currentSlide;
+    //   this.btnIndex = -1;
+    //   this.crossColor = 0;
+    //   this.upCount = 0;
+    // }
+    if (this.upCount == 2 && this.crossColor == 1) {
       this.goToHome();
       this.upCount = 0;
     }
@@ -145,7 +203,10 @@ export class VideoSelectionComponent implements OnInit {
 
   GoLeft() {
     --this.arrayIndex;
+    this.openVideo.nativeElement.focus();
+
     --this.videoIndex;
+    this.FavouriteButton.nativeElement.blur();
     this.nextVideo();
     if (this.arrayIndex == -1) {
       this.arrayIndex = 0;
@@ -155,9 +216,12 @@ export class VideoSelectionComponent implements OnInit {
   }
   GoRight() {
     ++this.arrayIndex;
+    this.openVideo.nativeElement.focus();
+
     ++this.videoIndex;
+    this.FavouriteButton.nativeElement.blur();
     this.nextVideo();
-    if (this.arrayIndex == this.video.length - 2) {
+    if (this.arrayIndex == this.video.length - 3) {
       this.arrayIndex = 0;
       this.videoIndex = 0;
     }
@@ -330,8 +394,9 @@ export class VideoSelectionComponent implements OnInit {
     this.videoIndex++;
     this.nextVideo();
   }
-  FavouritesArray: any[] = [];
+
   addToFav(id: any) {
+    console.log(id);
     let favourite = new AddFav();
     favourite.videoId = id;
     favourite.kidId = +localStorage.getItem('kidId');
@@ -348,7 +413,24 @@ export class VideoSelectionComponent implements OnInit {
       this.spinnerService.hide();
     },
       Error => {
-        console.log("test");
+        this.spinnerService.hide();
+      });
+  }
+  unFavourite(id: any) {
+    console.log("test");
+    var index = this.FavouritesArray.findIndex(a => a == id);
+    if (index > -1) {
+      this.FavouritesArray.splice(index, 1);
+    }
+    let remove = new RemoveFav();
+    remove.kidId = localStorage.getItem("kidId");
+    remove.videoId = id;
+    this.spinnerService.show();
+    this.favService.RemoveFavorite(remove).subscribe(data => {
+
+      this.spinnerService.hide();
+    },
+      Error => {
 
         this.spinnerService.hide();
       });

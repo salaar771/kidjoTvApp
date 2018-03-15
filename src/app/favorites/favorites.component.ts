@@ -38,6 +38,7 @@ export class FavoritesComponent implements OnInit {
   api: VgAPI;
   innerheigth: any;
   bucketName: any;
+  @ViewChild('delete') deleteButton: ElementRef;
   @ViewChild('close') close: ElementRef;
   @ViewChild('next') myRight: ElementRef;
   @ViewChild('home') myHomeBtn: ElementRef;
@@ -97,18 +98,24 @@ export class FavoritesComponent implements OnInit {
     }
 
   }
-
+  btnIndex: any;
   GoDown() {
-    if (this.downCount < 2) {
+    if (this.downCount < 3) {
       this.downCount++;
     }
     if (this.downCount == 1) {
+      this.deleteButton.nativeElement.focus();
+      this.btnIndex = this.arrayIndex;
+      this.arrayIndex = 76764532734;
+    }
+    if (this.downCount == 2) {
       this.myHomeBtn.nativeElement.focus();
       this.color = 1;
+      this.btnIndex = -1;
       this.arrayIndex = 76764532734;
       // this.downCount = 0;
     }
-    if (this.downCount == 2) {
+    if (this.downCount == 3) {
       this.goToHome();
       this.downCount = 0;
     }
@@ -161,6 +168,9 @@ export class FavoritesComponent implements OnInit {
     }
       .ngxcarouselPoint {
         display: none;
+    }
+    ngx-carousel.ngxcarouselBqQEaX{
+      width:100% !important;
     }
     .ngxcarousel-items {
       top: 20%;
