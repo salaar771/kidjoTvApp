@@ -84,7 +84,7 @@
     max-width: 90%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translateX(-50%) translateY(-50%);
 }
 .img-thumbnail{
@@ -324,7 +324,7 @@ ngx-carousel{
 
 #banner {
     border-radius: 0%;
-    width: 50px;
+    width: 58px;
     height: 495px;
     /*background: #F0FFFF;*/
     overflow: hidden;
