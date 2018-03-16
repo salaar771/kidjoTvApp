@@ -71,7 +71,7 @@
     max-width: 95%;
     position: absolute;
     top: 50%;
-    left: 53%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
     justify-content: center;
     align-items: center;
@@ -83,12 +83,12 @@
     left: 50%;
     transform: translate(-50%);
     text-align: center;
-    top: 5%;
+    top: 11%;
     color: #fff;
     font-size: 25px;
 }
 .books img{
-    max-width: 120px;
+    max-width: 192px;
 }
 .books-container{
     display: flex;
@@ -181,7 +181,7 @@
 .fav-btn img{
     width: 15px;
     height: 15px;
-    margin-bottom: 11%;
+    margin-bottom: 40%;
     cursor: pointer;
 }
 .fav-btn p{
@@ -191,7 +191,7 @@
     font-family: bree;
     font-weight: bold;
     font-size: 12px;
-    margin-top: 5%;
+    margin-top: 15%;
     cursor: pointer;
 }
 #button-fav{
@@ -450,7 +450,7 @@ border-radius: 50px !important;
 
  .Duration{
     position: absolute;
-    top: 55%;
+    top: 70%;
     background: rgba(0,0,0,.7);
     padding: 0px 6px;
     color: #fff;
