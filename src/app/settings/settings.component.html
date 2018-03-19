@@ -4,56 +4,69 @@
         <h3 [ngClass]="{'homeFocus':1==homeColor}">Videos</h3>
     </div>
     <div class="main-element-container">
-        <div #box1 class="box-1 test" [ngClass]="{'imgActive':1==arrayIndex}">
-            <img src="assets/svgs/settings_box_background.svg">
+        <ngx-carousel [inputs]="carouselTile" [moveToSlide]="boxIndex" (onMove)="onmoveFn($event)">
+            <ngx-tile NgxCarouselItem class="ngxcarouselPoint">
+                <div #box1 class="box-1 test" [ngClass]="{'imgActive':1==arrayIndex}">
+                    <img src="assets/svgs/settings_box_background.svg">
 
-            <div class="text-box-1">
-                <h4>Filter by age</h4>
-                <ul style="cursor: pointer;">
-                    <li #fitrstList [ngClass]="{'selected-text':selectedAge == m,'selected_item':i == ageItemsIndex}" style="text-align: center;"
-                        *ngFor="let m of age; let i = index;" (click)="getAge(m)">{{m}}
-                        <img src="assets/svgs/settings_check.svg" *ngIf="setAgeTick(m)">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="box-1" #box2 [ngClass]="{'imgActive':2==arrayIndex}">
-            <img src="assets/svgs/settings_box_background.svg">
-            <div class="text-box-1">
-                <h4>Set time limit</h4>
-                <ul style=" cursor: pointer; ">
-                    <li #secondList [ngClass]="{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}" *ngFor="let time of timeLimit;  let i = index; "
-                        (click)="getTime(time) ">{{time}}
-                        <img src="assets/svgs/settings_check.svg" *ngIf="setTimeTick(time) " style=" display: inline-block !important; ">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="box-1" #box3 [ngClass]="{'imgActive':3==arrayIndex}">
-            <img src="assets/svgs/settings_box_background.svg ">
+                    <div class="text-box-1">
+                        <h4>Filter by age</h4>
+                        <ul style="cursor: pointer;">
+                            <li #fitrstList [ngClass]="{'selected-text':selectedAge == m,'selected_item':i == ageItemsIndex}" style="text-align: center;"
+                                *ngFor="let m of age; let i = index;" (click)="getAge(m)">{{m}}
+                                <img src="assets/svgs/settings_check.svg" *ngIf="setAgeTick(m)">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ngx-tile>
+            <ngx-tile NgxCarouselItem class="ngxcarouselPoint">
+                <div class="box-1" #box2 [ngClass]="{'imgActive':2==arrayIndex}">
+                    <img src="assets/svgs/settings_box_background.svg">
+                    <div class="text-box-1">
+                        <h4>Set time limit</h4>
+                        <ul style=" cursor: pointer; ">
+                            <li #secondList [ngClass]="{'selected-text':selectedTime == time,'selected_item':i == timeItemsIndex}" *ngFor="let time of timeLimit;  let i = index; "
+                                (click)="getTime(time) ">{{time}}
+                                <img src="assets/svgs/settings_check.svg" *ngIf="setTimeTick(time) " style=" display: inline-block !important; ">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ngx-tile>
+            <ngx-tile NgxCarouselItem class="ngxcarouselPoint">
+                <div class="box-1" #box3 [ngClass]="{'imgActive':3==arrayIndex}">
+                    <img src="assets/svgs/settings_box_background.svg ">
 
-            <div class="text-box-1">
-                <h4>Choose content</h4>
-                <ul style=" cursor: pointer; ">
-                    <li #thirdtList [ngClass]="{'selected-text':selectedContent == c,'selected_item':i == contentItemsIndex}" *ngFor="let c of content;  let i = index; "
-                        (click)="getContent(c) ">{{c}}
-                        <img src="assets/svgs/settings_check.svg " *ngIf="setContentTick(c) " style="right:-50px;"></li>
+                    <div class="text-box-1">
+                        <h4>Choose content</h4>
+                        <ul style=" cursor: pointer; ">
+                            <li #thirdtList [ngClass]="{'selected-text':selectedContent == c,'selected_item':i == contentItemsIndex}" *ngFor="let c of content;  let i = index; "
+                                (click)="getContent(c) ">{{c}}
+                                <img src="assets/svgs/settings_check.svg " *ngIf="setContentTick(c) " style="right:-50px;"></li>
 
-                </ul>
-            </div>
-        </div>
-        <div class="box-1" #box4 [ngClass]="{'imgActive':4==arrayIndex}">
-            <img src="assets/svgs/settings_box_background.svg ">
+                        </ul>
+                    </div>
+                </div>
+            </ngx-tile>
+            <ngx-tile NgxCarouselItem class="ngxcarouselPoint">
+                <div class="box-1" #box4 [ngClass]="{'imgActive':4==arrayIndex}">
+                    <img src="assets/svgs/settings_box_background.svg ">
 
-            <div class="text-box-1">
-                <h4>Language</h4>
-                <ul style=" cursor: pointer; ">
-                    <li #forthList [ngClass]="{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}" *ngFor="let lang of language;  let i = index; "
-                        (click)="getLanguage(lang) ">{{lang}}
-                        <img src="assets/svgs/settings_check.svg " *ngIf="setLanguageTick(lang) " class="last-check">
-                    </li>
-                </ul>
-            </div>
-        </div>
+                    <div class="text-box-1">
+                        <h4>Language</h4>
+                        <ul style=" cursor: pointer; ">
+                            <li #forthList [ngClass]="{'selected-text':selectedLanguage == lang,'selected_item':i == langItemsIndex}" *ngFor="let lang of language;  let i = index; "
+                                (click)="getLanguage(lang) ">{{lang}}
+                                <img src="assets/svgs/settings_check.svg " *ngIf="setLanguageTick(lang) " class="last-check">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ngx-tile>
+            <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
+            <button NgxCarouselNext #next class='rightRs'>&gt;</button>
+
+        </ngx-carousel>
     </div>
 </section>

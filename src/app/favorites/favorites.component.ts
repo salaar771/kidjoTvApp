@@ -63,6 +63,7 @@ export class FavoritesComponent implements OnInit {
     this.getList();
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
+      console.log(this.countDown);
       this.timeInSeconds = this.countDown * 60 + 's';
       this.waterpx = this.waterpx - this.UnitOfTIme;
       this.waterPxCountdown = this.waterpx + "px";
@@ -175,6 +176,11 @@ export class FavoritesComponent implements OnInit {
     .ngxcarousel-items {
       top: 20%;
       left: 10%;
+  }
+  @media(max-width:812px){
+    .tile {
+      transform: scale(1.2);
+    }
   }
     `
       },

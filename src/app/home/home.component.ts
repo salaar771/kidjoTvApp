@@ -5,14 +5,14 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { RefreshWebService } from './../shared/services/RefreshWeb/index';
 import { TimerService } from './../shared/services/TimerService';
 import { Card } from './../shared/entities/index';
-import { User} from './../shared/entities/user';
+import { User } from './../shared/entities/user';
 import { NgxCarousel } from 'ngx-carousel';
 declare var $: any;
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/timer';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
-import {transition,trigger,query,style,animate,group,animateChild } from '@angular/animations';
+import { transition, trigger, query, style, animate, group, animateChild } from '@angular/animations';
 
 
 
@@ -69,8 +69,8 @@ export class HomeComponent implements OnInit {
   deviceId: string;
   kidId: string;
   activeSubscription: boolean;
-  favSection : boolean;
-  cardSection : boolean = true;
+  favSection: boolean;
+  cardSection: boolean = true;
   settingSection: boolean;
   obj = new Object();
   public innerheigth: any;
@@ -93,26 +93,26 @@ export class HomeComponent implements OnInit {
 
   waterpx: any = "100";
   waterPxCountdown: any = "100px";
-  initialTime:any = 0;
-  
+  initialTime: any = 0;
+
   UnitOfTIme = 0;
   timeInSeconds: any;
 
   constructor(public refreshweb: RefreshWebService,
-    
+
     public router: Router,
     public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
-    
+
     if (localStorage.getItem('screenTimeLimit') !== null) {
       this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
       this.UnitOfTIme = 100 / this.initialTime[0];
-    }else{
+    } else {
       localStorage.setItem('screenTimeLimit', '1');
       this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
       this.UnitOfTIme = 100 / this.initialTime;
     }
-    
+
     this.refreshWeb();
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
@@ -183,7 +183,7 @@ export class HomeComponent implements OnInit {
     }
 
     if (this.cardSection) {
-      
+
       this.cardSection = false;
       this.settingSection = false;
       this.favSection = true;
@@ -216,17 +216,17 @@ export class HomeComponent implements OnInit {
     this.cardSection = true;
     this.favSection = false;
     this.settingSection = false;
-    if (this.arrayIndex == this.folders.length - 1) {
+    if (this.arrayIndex == this.folders.length) {
       this.arrayIndex = 0;
     }
   }
   ngOnInit() {
 
     this.GetCard();
-    if(localStorage.getItem('screenTimeLimit') !== null){
+    if (localStorage.getItem('screenTimeLimit') !== null) {
       this.time = localStorage.getItem('screenTimeLimit');
     }
-    
+
     this.carouselTile = {
       grid: { xs: 3, sm: 3, md: 4, lg: 5, all: 0 },
       slide: 1,
@@ -242,6 +242,12 @@ export class HomeComponent implements OnInit {
         .ngxcarousel-inner {
           height: 360px;
           width: 108%;
+        }
+        @media(max-width:1024px){
+          .ngxcarousel-inner {
+            left:2%;
+          }
+
         }
         .ngx-tile.item {
           width:80%;
@@ -308,7 +314,7 @@ export class HomeComponent implements OnInit {
         localStorage.setItem('premiumActive', 'false');
       }
     }
-    
+
   }
   GetCard() {
     this.obj = localStorage.getItem('kidId');
@@ -335,9 +341,9 @@ export class HomeComponent implements OnInit {
       }
       this.folders = tempData;
     },
-    Error => {
-      this.spinnerService.hide();
-    });
+      Error => {
+        this.spinnerService.hide();
+      });
   }
   folderImage(id) {
     var url = localStorage.getItem('folderImageUrl');

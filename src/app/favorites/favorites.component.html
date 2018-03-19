@@ -1,20 +1,20 @@
 <section class="playlist-section">
   <div class="side-bar">
-    <div class="side-bar-contents">
-      <!-- <img src="assets/svgs/water_background.svg"> -->
-      <div id="banner">
-        <div class="fill" [ngStyle]="{ 'animation-duration': timeInSeconds  }">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
-            height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-            <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-  c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-  c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-          </svg>
-        </div>
-        <p>{{countDown}} min</p>
+    <p>{{countDown}}<br> min</p>
+
+    <div id="banner">
+      <div class="fill" [ngStyle]="{ 'animation-duration': timeInSeconds  }">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+          height="300px" viewBox="0 0 100 100" enable-background="new 0 0 300 495" xml:space="preserve">
+
+          <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+        </svg>
       </div>
     </div>
   </div>
+
 
   <div class="playlist">
     <img src="assets/svgs/favorites_heart.svg">
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="delete-btn" (click)="deleteFav(vid[0].id)">
-          <button type="button" [ngClass]="{'btnActive':i==btnIndex}" #delete value="btn" id="button">
+          <button class="btn" type="button" [ngClass]="{'btnActive':i==btnIndex}" #delete value="btn" id="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path fill="#000" fill-rule="evenodd" d="M15.9078 12.3744l3.7228-3.7227c.3826-.3827.3848-1.0175-.0054-1.4077l-2.1204-2.1204c-.393-.393-1.0205-.3927-1.4077-.0055l-3.7227 3.723-3.7228-3.723c-.3826-.3825-1.0175-.3847-1.4077.0056L5.1234 7.244c-.393.393-.3926 1.0204-.0054 1.4077l3.7228 3.7227-3.7228 3.7228c-.3826.3827-.3848 1.0175.0054 1.4077l2.1204 2.1203c.393.393 1.0205.3927 1.4077.0054l3.7228-3.7227 3.7228 3.7227c.3827.3827 1.0176.3848 1.4078-.0054l2.1204-2.1204c.393-.393.3926-1.0206.0054-1.4078l-3.7228-3.7228zM0 12.493C-.004 5.5893 5.5894-.004 12.493 0 19.3964.004 24.996 5.6035 25 12.507c.004 6.9036-5.5894 12.497-12.493 12.493C5.6036 24.996.004 19.3965 0 12.493z"/></svg><p>delete</p>
            </button>
         </div>

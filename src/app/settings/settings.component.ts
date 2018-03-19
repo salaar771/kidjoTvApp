@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxCarousel } from 'ngx-carousel';
 
 
 export enum KEY_CODE {
@@ -18,7 +19,10 @@ export enum KEY_CODE {
 })
 export class SettingsComponent implements OnInit {
   @ViewChild('home') myHomeBtn: ElementRef;
+  @ViewChild('previous') myLeft: ElementRef;
+  @ViewChild('next') myRight: ElementRef;
   arrayIndex: any = 1;
+  public carouselTile: NgxCarousel;
   age: any[] = [3, 4, 5, 6, 7];
   timeLimit: any[] = ['5 Minutes', '20 Minutes', '40 Minutes', '60 Minutes', '90 Minutes', 'Off'];
   content: any[] = ["Mix", "Entertainment", "Educational"];
@@ -167,8 +171,13 @@ export class SettingsComponent implements OnInit {
       this.homeColor = 1;
     }
   }
+  boxIndex: any = 0;
   GoLeft() {
+    --this.boxIndex;
     --this.arrayIndex;
+    if (this.boxIndex == 0) {
+      this.boxIndex = 1;
+    }
     if (this.arrayIndex == 0) {
       this.arrayIndex = 1;
     }
@@ -192,7 +201,11 @@ export class SettingsComponent implements OnInit {
     }
   }
   GoRight() {
+    ++this.boxIndex;
     ++this.arrayIndex;
+    if (this.boxIndex == 4) {
+      this.boxIndex = 0;
+    }
     if (this.arrayIndex == 1) {
       this.ageItemsIndex == 0;
       this.homeColor = 0;
@@ -221,7 +234,102 @@ export class SettingsComponent implements OnInit {
       this.contentItemsIndex = 5;
     }
   }
+  onmoveFn(data) {
+  }
   ngOnInit() {
+    this.carouselTile = {
+      grid: { xs: 2, sm: 2, md: 3, lg: 3, all: 0 },
+      slide: 1,
+      speed: 400,
+      loop: true,
+      animation: 'lazy',
+      point: {
+        visible: true,
+        pointStyles: `
+        .ngxcarouselPoint {
+          display: none;
+        }
+        .ngxcarousel-inner {
+          height: 600px;
+          width: 123%;
+          left: -12%;
+        }
+        @media(max-width:1024px){
+          .ngxcarousel-inner {
+            left:2%;
+          }
+
+        }
+        
+        .ngx-tile.item {
+          width:80%;
+        }
+        ngx-tile.item {
+          margin-left: -10px;
+        }
+        @media(max-width:812px)
+        {
+          ngx-tile.item {
+            margin-left:0px;
+
+          }
+          .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item{
+            width : 27% !important;
+          }
+          .ngxcarousel-items{
+            top:0 !important;
+          }
+          .ngxcarousel-inner{
+            height:290px !important;
+            width: 88%;
+            margin-left: -2%;
+          }
+        }
+        .tile {
+          width: 60%;
+          border-radius: 18px;
+          transform: scale(1);
+          box-shadow:none !important;
+        }
+     
+        @media(min-width:813px) and (max-width:991px){
+          .tile{
+            width:40%;
+          }
+          .ngxcarousel-inner{
+            height: 380px !important;
+            width: 111%;
+            margin-left: 1%;
+          }
+          ngx-tile.item {
+            margin-right: -25%;
+          }
+        }
+        .ngxcarousel-items {
+          top: 53px;
+          left:6%;
+        }
+        @media(max-width:812px){
+          .tile{
+            width:79%;
+          }
+          .ngxcarousel-items {
+            left:21%;
+          }
+        }
+
+        @media (min-width: 992px){
+          .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
+            width: 27% !important;
+          }
+
+        }
+        `
+      },
+      load: 2,
+      touch: true,
+      easing: 'ease'
+    }
   }
   setAgeTick(val: any) {
     let age = localStorage.getItem('Age');
