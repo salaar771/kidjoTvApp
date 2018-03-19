@@ -24,38 +24,44 @@ export enum KEY_CODE {
   Down_key = 40
 }
 
+export const fadeAnimation =
+
+    trigger('fadeAnimation', [
+
+        transition( '* => *', [
+
+            query(':enter', 
+                [
+                    style({ opacity: 0 })
+                ], 
+                { optional: true }
+            ),
+
+            query(':leave', 
+                [
+                    style({ opacity: 1 }),
+                    animate('0.2s', style({ opacity: 0 }))
+                ], 
+                { optional: true }
+            ),
+
+            query(':enter', 
+                [
+                    style({ opacity: 0 }),
+                    animate('0.2s', style({ opacity: 1 }))
+                ], 
+                { optional: true }
+            )
+
+        ])
+
+    ]);
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('animRoutes', [
-      transition('* <=> *', [
-        group([
-          query(
-            ':enter',
-            [
-              style({
-                opacity: 0,
-                transform: 'translateY(9rem) rotate(-10deg)'
-              }),
-              animate(
-                '0.35s cubic-bezier(0, 1.8, 1, 1.8)',
-                style({ opacity: 1, transform: 'translateY(0) rotate(0)' })
-              ),
-              animateChild()
-            ],
-            { optional: true }
-          ),
-          query(
-            ':leave',
-            [animate('0.35s', style({ opacity: 0 })), animateChild()],
-            { optional: true }
-          )
-        ])
-      ])
-    ])
-  ]
+  animations: [fadeAnimation]
 })
 export class HomeComponent implements OnInit {
   countDown;
@@ -276,7 +282,7 @@ export class HomeComponent implements OnInit {
         }
         `
       },
-      load: 2,
+      load: 1,
       touch: true,
       easing: 'ease'
     }
@@ -365,6 +371,10 @@ export class HomeComponent implements OnInit {
   }
   goToSettingsPage() {
     this.router.navigate(['./settings']);
+  }
+
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
   }
   // showWalkthrough() {
   //   this.walkThrough = true;

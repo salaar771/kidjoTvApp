@@ -1,3 +1,5 @@
+<main [@fadeAnimation]="getRouterOutletState(o)">
+  <router-outlet #o="outlet">
 <section class="playlist-setting" >
   
   <div class="side-bar">
@@ -13,6 +15,13 @@ c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-
 c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
         </svg>
       </div>
+      <div id="bubbles">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+</div>
     </div>
   </div>
 
@@ -54,3 +63,5 @@ c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
   </div>
   
 </section>
+</router-outlet>
+</main>
