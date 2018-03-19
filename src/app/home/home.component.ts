@@ -8,10 +8,11 @@ import { Card } from './../shared/entities/index';
 import { User} from './../shared/entities/user';
 import { NgxCarousel } from 'ngx-carousel';
 declare var $: any;
-import { Observable } from 'rxjs/Observable'
-import 'rxjs/add/observable/timer'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/take'
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/timer';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
+import {transition,trigger,query,style,animate,group,animateChild } from '@angular/animations';
 
 
 
@@ -27,6 +28,34 @@ export enum KEY_CODE {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('animRoutes', [
+      transition('* <=> *', [
+        group([
+          query(
+            ':enter',
+            [
+              style({
+                opacity: 0,
+                transform: 'translateY(9rem) rotate(-10deg)'
+              }),
+              animate(
+                '0.35s cubic-bezier(0, 1.8, 1, 1.8)',
+                style({ opacity: 1, transform: 'translateY(0) rotate(0)' })
+              ),
+              animateChild()
+            ],
+            { optional: true }
+          ),
+          query(
+            ':leave',
+            [animate('0.35s', style({ opacity: 0 })), animateChild()],
+            { optional: true }
+          )
+        ])
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
   countDown;
@@ -40,6 +69,9 @@ export class HomeComponent implements OnInit {
   deviceId: string;
   kidId: string;
   activeSubscription: boolean;
+  favSection : boolean;
+  cardSection : boolean = true;
+  settingSection: boolean;
   obj = new Object();
   public innerheigth: any;
   ImageUrl: string;
@@ -49,6 +81,7 @@ export class HomeComponent implements OnInit {
   videoUrl: string;
   time: any;
   arrayIndex: any = 0;
+  currentCardIndex: any = 0;
   downCount = 0;
   upCount = 0;
   Favcolor: any = 0;
@@ -66,12 +99,12 @@ export class HomeComponent implements OnInit {
   timeInSeconds: any;
 
   constructor(public refreshweb: RefreshWebService,
+    
     public router: Router,
     public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
-    // console.log('starting');
+    
     if (localStorage.getItem('screenTimeLimit') !== null) {
-      // code...
       this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
       this.UnitOfTIme = 100 / this.initialTime[0];
     }else{
@@ -80,18 +113,13 @@ export class HomeComponent implements OnInit {
       this.UnitOfTIme = 100 / this.initialTime;
     }
     
-    // console.log("initial time");
-    // console.log(this.initialTime);
-    
     this.refreshWeb();
-    console.log("lkjklsjlkjlkjklsdjkljklj");
     this.timerService.getCountdownTimer().subscribe(data => {
       this.countDown = data;
       this.timeInSeconds = this.countDown * 60 + 's';
       // this.waterpx = this.waterpx - this.UnitOfTIme;
       // this.waterPxCountdown = this.waterpx + "px";
     });
-    console.log("lkjkljaaaaaaajjjjjjjjjssssssss");
 
   }
 
@@ -121,107 +149,80 @@ export class HomeComponent implements OnInit {
 
   }
   onmoveFn(data) {
+    // console.log(data);
     this.currentSlide = data.currentSlide;
   }
   GoDown() {
-    if (this.downCount < 3) {
-      this.downCount++;
-    }
-    // on key down when very first time u enter in the home page
-    if (this.downCount == 1 && this.arrayIndex == 0 && this.Favcolor == 0) {
-      this.mySettingsBtn.nativeElement.focus();
-      this.settingsColor = 1;
-      this.arrayIndex = 645734;
-      this.downCount = 0;
-    }
-    // on key down after u move slider
-    if (this.downCount == 1 && this.arrayIndex == this.currentSlide && this.Favcolor == 0) {
-      this.mySettingsBtn.nativeElement.focus();
-      this.settingsColor = 1;
-      this.arrayIndex = 645734;
-      this.downCount = 0;
-      this.settingsUpCount = 1;
-    }
-    //when u enter in the settings page
-    if (this.downCount == 1 && this.settingsColor == 1) {
+
+    if (this.settingSection) {
       this.goToSettingsPage();
-      this.settingsColor = 0;
     }
-    //on key down when u move from favourite button to slider first index
-    if (this.downCount == 1 && this.Favcolor == 1) {
-      this.myLeft.nativeElement.focus();
-      this.arrayIndex = 0;
-      this.settingsColor = 0;
-      this.Favcolor = 0;
-      this.downCount = 0;
+
+    if (this.cardSection) {
+      this.cardSection = false;
+      this.favSection = false;
+      this.settingSection = true;
+      this.currentCardIndex = this.arrayIndex;
+      this.arrayIndex = 100;
+      this.settingsColor = 1;
+      this.mySettingsBtn.nativeElement.focus();
     }
-    //on key down when u move from favourite button to slider current index
-    if (this.downCount == 1 && this.Favcolor == 1 && this.FavIndex == 1) {
+    if (this.favSection) {
+      this.favSection = false;
+      this.settingSection = false;
+      this.cardSection = true;
+      this.arrayIndex = this.currentCardIndex;
       this.myLeft.nativeElement.focus();
-      this.arrayIndex = this.currentSlide;
-      this.settingsColor = 0;
       this.Favcolor = 0;
-      this.downCount = 0;
     }
   }
   GoUp() {
-    if (this.upCount < 3) {
-      this.upCount++;
-    }
-    //onkey up focus on slider first index
-    if (this.upCount == 1 && this.settingsColor == 1) {
-      this.myLeft.nativeElement.focus();
-      this.arrayIndex = 0;
-      this.settingsColor = 0;
-      this.upCount = 0;
 
-    }
-    //on keyup focus on Favourite button
-    if (this.upCount == 1 && this.arrayIndex == 0) {
-      this.myFavBtn.nativeElement.focus();
-      this.Favcolor = 1;
-      this.arrayIndex = 6337484;
-      this.upCount = 0
-    }
-    //on keyup focus on Favourite button
-    if (this.upCount == 1 && this.arrayIndex == this.currentSlide) {
-      this.myFavBtn.nativeElement.focus();
-      this.Favcolor = 1;
-      this.FavIndex = 1;
-      this.arrayIndex = 6337484;
-      this.upCount = 0;
-    }
-    //on keyup from first index to focus on favourite button
-    if (this.upCount == 1 && this.Favcolor == 1) {
+    if (this.favSection) {
       this.goToFavPage();
-      this.Favcolor = 0;
-      this.arrayIndex = 6337484;
-
     }
-    if (this.upCount == 1 && this.settingsUpCount == 1) {
-      this.myLeft.nativeElement.focus();
-      this.arrayIndex = this.currentSlide;
+
+    if (this.cardSection) {
+      
+      this.cardSection = false;
+      this.settingSection = false;
+      this.favSection = true;
+      this.currentCardIndex = this.arrayIndex;
+      this.arrayIndex = 100;
+      this.myFavBtn.nativeElement.focus();
+      this.Favcolor = 1;
+    }
+    if (this.settingSection) {
+      this.settingSection = false;
+      this.favSection = false;
+      this.cardSection = true;
       this.settingsColor = 0;
-      this.upCount = 0;
+      this.arrayIndex = this.currentCardIndex;
+      this.myLeft.nativeElement.focus();
     }
   }
   GoLeft() {
     --this.arrayIndex;
+    this.cardSection = true;
+    this.favSection = false;
+    this.settingSection = false;
     if (this.arrayIndex == -1) {
       this.arrayIndex = 0;
     }
   }
   GoRight() {
-    console.log(this.arrayIndex);
+
     ++this.arrayIndex;
+    this.cardSection = true;
+    this.favSection = false;
+    this.settingSection = false;
     if (this.arrayIndex == this.folders.length - 1) {
       this.arrayIndex = 0;
     }
   }
   ngOnInit() {
-    console.log('eeeeeeeeeeee');
+
     this.GetCard();
-    
     if(localStorage.getItem('screenTimeLimit') !== null){
       this.time = localStorage.getItem('screenTimeLimit');
     }
@@ -238,37 +239,41 @@ export class HomeComponent implements OnInit {
         .ngxcarouselPoint {
           display: none;
         }
-       .ngxcarousel-inner {
-        height: 360px;
-        width: 108%;
-         }
-       .ngx-tile.item {
-        width:80%;
-       }
-       ngx-tile.item {
-        margin-left: 30px;
-      }
-       @media(max-width:812px)
-       {
-        ngx-tile.item {
-          margin-left:0px;
+        .ngxcarousel-inner {
+          height: 360px;
+          width: 108%;
         }
-       }
-        .tile {
-        width: 60%;
-        border-radius: 18px;
-        transform: scale(1);
-       }
-      .ngxcarousel-items {
-      top: 53px;
-      left:8%;
-       }
-         @media (min-width: 992px){
-              .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
-                   width: 31% !important;
-              }
-
+        .ngx-tile.item {
+          width:80%;
+        }
+        ngx-tile.item {
+          margin-left: 30px;
+        }
+        @media(max-width:812px)
+        {
+          ngx-tile.item {
+            margin-left:0px;
           }
+          .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item{
+            width : 27% !important;
+          }
+          
+        }
+        .tile {
+          width: 60%;
+          border-radius: 18px;
+          transform: scale(1);
+        }
+        .ngxcarousel-items {
+          top: 53px;
+          left:1%;
+        }
+        @media (min-width: 992px){
+          .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
+            width: 27% !important;
+          }
+
+        }
         `
       },
       load: 2,

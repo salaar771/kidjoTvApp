@@ -23,7 +23,7 @@
     transform: translate(-50%);
     font-size: 23px;
     color: #444;
-    font-family: bree;
+    font-family: "Bree Font";
 }
 .video-filter-top img{
     max-width: 200px;
@@ -64,6 +64,7 @@
 }
 .text-box-1 li{
     text-align: center;
+    font-family: "Bree Font"; 
 }
 .last-item{
     /* top: 174px;
@@ -79,7 +80,7 @@
 }
 .text-box-1 h4{
     font-size: 24px;
-    font-family: bree;
+    font-family: "Bree Font";
     font-weight: 500;
 }
 

@@ -56,7 +56,7 @@
     transform: translate(-50%);
     font-size: 23px;
     color: #444;
-    font-family: bree;
+    font-family: "Bree Font";
 }
 .playlist-icon-top img{
     max-width: 200px;
@@ -78,7 +78,7 @@
     transform: translate(42%);
     font-size: 23px;
     color: #444;
-    font-family: bree;
+    font-family: "Bree Font";
 }
 .main-card-container{
     max-width: 90%;
@@ -124,7 +124,8 @@
     }
     .playlist-icon-top h3{
         position: absolute;
-        top: 15%;
+        top: 22% !important ;
+        font-size: 18px !important;
     }
     .playlist-setting-footer img{
         max-width: 150px;
@@ -135,6 +136,10 @@
         -ms-transform: scale(1.2) !important; /* IE 9 */
         -webkit-transform: scale(1.2) !important; /* Safari 3-8 */
         transform: scale(1.2) !important; 
+    }
+    .playlist-setting-footer h3{
+        font-size: 18px !important;
+        top: 60% !important;
     }
 }
 
@@ -324,12 +329,12 @@ ngx-carousel{
 
 #banner {
     border-radius: 0%;
-    width: 58px;
+    width: 47px;
     height: 495px;
     /*background: #F0FFFF;*/
     overflow: hidden;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     border: 1px solid #04ACFF;
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
@@ -359,9 +364,9 @@ ngx-carousel{
     animation-name: waveAction;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 0.8s;
+    animation-duration: 1s;
     width:300px;
-    height: 495px;
+    height: 450px;
     fill: #04ACFF;
 }
 @media (max-width:812px) {
@@ -369,14 +374,14 @@ ngx-carousel{
         height: 165px;
     }
 }
-@keyframes fillAction {
+/*@keyframes fillAction {
     0% {
         transform: translate(0, 0);
     }
     100% {
         transform: translate(0, 800px);
     }
-}
+}*/
 @keyframes waveAction {
     0% {
         transform: translate(-150px, 0);
@@ -385,6 +390,23 @@ ngx-carousel{
         transform: translate(0, 0);
     }
 }
+/* Responsive styles */
 
+@media only screen and (min-width : 1800px) {
+.imgActive[_ngcontent-c2] {
+    /*-webkit-transform: scale(1.5) !important;
+    transform: scale(1.5) !important;*/
+}
+}
+
+/**** Galaxy Phone landscape ****/
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+
+}
 
 
