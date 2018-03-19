@@ -229,6 +229,10 @@ favBtnClick .fav-btn p{
         width: 249px !important;
     }
 }
+span.imgActive{
+        top: 62% !important;
+        left: -13% !important;
+    }
 /* @media(max-width:1025px)
 {    
     .books-section{
