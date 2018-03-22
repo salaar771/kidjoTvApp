@@ -65,6 +65,7 @@ export class FavoritesComponent implements OnInit {
     this.getList();
     if (localStorage.getItem('screenTimeLimit')) {
       this.timerService.getCountdownTimer().subscribe(data => {
+        console.log(data);
         this.countDown = data + "min";
         if (localStorage.getItem('screenTimeLimit') == "Off") {
           this.countDown = "Off";

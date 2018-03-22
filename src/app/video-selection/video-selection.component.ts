@@ -89,6 +89,7 @@ export class VideoSelectionComponent implements OnInit {
   }
   Time() {
     this.timerService.getCountdownTimer().subscribe(data => {
+      console.log(data);
       this.countDown = data + "min";
       if (localStorage.getItem('screenTimeLimit') == "Off") {
         this.countDown = "Off";
