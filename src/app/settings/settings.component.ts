@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxCarousel } from 'ngx-carousel';
+import { FavoriteService } from './../shared/services/favoritesService/index';
 
 
 export enum KEY_CODE {
@@ -46,7 +47,9 @@ export class SettingsComponent implements OnInit {
   contentIndex: any = this.content.length;
   langIndex: any = this.language.length;
   homeColor: any;
-  constructor(public router: Router, ) {
+  ageGate: any = false;
+  constructor(public router: Router,
+    public FavService: FavoriteService) {
     this.selectedAge = localStorage.getItem('Age');
     this.selectedTime = localStorage.getItem('screenTimeLimit');
     this.selectedContent = localStorage.getItem('selectedContentType');
@@ -74,6 +77,9 @@ export class SettingsComponent implements OnInit {
 
       this.GoToEnter();
     }
+    // if (event.keyCode && localStorage.getItem('timeleft') == "") {
+    //   this.ageGate = false;
+    // }
   }
   GoToEnter() {
     if (this.arrayIndex != 0) {
@@ -82,18 +88,22 @@ export class SettingsComponent implements OnInit {
     if (this.arrayIndex == 1) {
       this.getAge(this.age[this.ageItemsIndex]);
       this.ageItemsIndex = 8;
+      this.homeColor = 1;
     }
     if (this.arrayIndex == 2) {
       this.getTime(this.timeLimit[this.timeItemsIndex]);
       this.timeItemsIndex = 8;
+      this.homeColor = 1;
     }
     if (this.arrayIndex == 3) {
       this.getContent(this.content[this.contentItemsIndex]);
       this.contentItemsIndex = 6;
+      this.homeColor = 1;
     }
     if (this.arrayIndex == 4) {
       this.getLanguage(this.language[this.langItemsIndex]);
       this.langItemsIndex = 8;
+      this.homeColor = 1;
     }
     this.arrayIndex = 0;
   }
@@ -370,6 +380,8 @@ export class SettingsComponent implements OnInit {
     this.selectedAge = age;
   }
   getTime(time: any) {
+    this.ageGate = true;
+    localStorage.setItem('timeleft', "");
     localStorage.setItem('screenTimeLimit', time);
     this.selectedTime = time;
   }
@@ -378,8 +390,23 @@ export class SettingsComponent implements OnInit {
     this.selectedContent = content;
   }
   getLanguage(lang: any) {
+    if (lang == "English") {
+      var Id = 1;
+    }
+    if (lang == "Espanol") {
+      var Id = 27;
+    }
+    if (lang == "Français") {
+      var Id = 34;
+    }
+    if (lang == "Portugues") {
+      var Id = 89;
+    }
     localStorage.setItem('language', lang);
     this.selectedLanguage = lang;
+    this.FavService.SetLanguage(Id).subscribe(data => {
+      console.log(data);
+    });
   }
   goToHome() {
     this.router.navigate(['./']);

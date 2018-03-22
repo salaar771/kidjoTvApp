@@ -24,7 +24,9 @@ export class FavoriteService {
         return this.restConnector.httpPostWeb(values, url);
     }
     public SetLanguage(id: any): Observable<any> {
+        let obj = new Object();
+        obj['languageId'] = id;
         let url = "/language/set";
-        return this.restConnector.httpPostWeb(id, url);
+        return this.restConnector.httpPostWeb(obj, url);
     }
 }

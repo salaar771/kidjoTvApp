@@ -8,30 +8,54 @@ export class TimerService {
     countDown;
     counter: any;
     numbers: any;
-    timer: any;
+    timer: any = localStorage.getItem('screenTimeLimit');
     off: string = "Off";
+    leftTime: any = localStorage.getItem('timeleft');
     public constructor() {
     }
     getCountdownTimer() {
-        this.timer = localStorage.getItem('screenTimeLimit');
-        if (this.timer == this.off) {
-            this.timer == 0;
+        if (this.leftTime == "" ) {
             this.numbers = this.timer.match(/\d+/g).map(Number);
-            this.counter = this.numbers * 60;
-            const timeInSecond$ = Observable.timer(0, 1000)
+            this.counter = this.numbers;
+            const timeInSecond$ = Observable.timer(0, 60000)
                 .map(x => this.counter - x)
                 .takeWhile(x => x > 0);
             this.countDown = timeInSecond$;
             return this.countDown;
         }
-        this.numbers = this.timer.match(/\d+/g).map(Number);
-        this.counter = this.numbers;
-        const timeInSecond$ = Observable.timer(0, 60000)
-            .map(x => this.counter - x)
-            .takeWhile(x => x > 0);
-        this.countDown = timeInSecond$;
-        return this.countDown;
+        if (localStorage.getItem('screenTimeLimit') == "Off") {
+            this.numbers = 1;
+            this.counter = this.numbers;
+            const timeInSecond$ = Observable.timer(0, 60000)
+                .map(x => this.counter - x)
+                .takeWhile(x => x > 0);
+            this.countDown = timeInSecond$;
+            return this.countDown;
+
+        }
+        if (this.leftTime != 1) {
+            console.log("test");
+            this.timer = localStorage.getItem('timeleft');
+            this.numbers = this.timer.match(/\d+/g).map(Number);
+            this.counter = this.numbers;
+            const timeInSecond$ = Observable.timer(0, 60000)
+                .map(x => this.counter - x)
+                .takeWhile(x => x > 0);
+            this.countDown = timeInSecond$;
+            return this.countDown;
+
+        } else {
+            this.numbers = this.timer.match(/\d+/g).map(Number);
+            this.counter = this.numbers;
+            const timeInSecond$ = Observable.timer(0, 60000)
+                .map(x => this.counter - x)
+                .takeWhile(x => x > 0);
+            this.countDown = timeInSecond$;
+            return this.countDown;
+        }
+
+
     }
-  
+
 }
 

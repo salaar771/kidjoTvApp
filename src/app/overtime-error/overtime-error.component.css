@@ -1,8 +1,10 @@
 .run-time-over-section{
     width: auto;
-    min-height: 100vh;
+    min-height: 101vh;
     background:#2e336c;
     padding: 0 3em;
+    margin-top: -28%;
+    z-index: 2;
     text-align: center;
     background-size: cover;
     position: relative;

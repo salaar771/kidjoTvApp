@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular
 import { Router } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { FavoriteService } from './../shared/services/favoritesService/index';
+import { VideoService } from './../shared/services/videoService/index';
 import { TimerService } from './../shared/services/TimerService';
 import { RemoveFav } from './../shared/entities/index';
 import { NgxCarousel } from 'ngx-carousel';
@@ -38,6 +39,8 @@ export class FavoritesComponent implements OnInit {
   api: VgAPI;
   innerheigth: any;
   bucketName: any;
+  @ViewChild('video') openVideo: ElementRef;
+  @ViewChild('overtime') OverTimeError: ElementRef;
   @ViewChild('delete') deleteButton: ElementRef;
   @ViewChild('close') close: ElementRef;
   @ViewChild('next') myRight: ElementRef;
@@ -50,24 +53,32 @@ export class FavoritesComponent implements OnInit {
   downCount = 0;
   upCount = 0;
   arrayIndex: any = 0;
-  waterpx: any = "100";
-  waterPxCountdown: any = "100px";
-  initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
-  UnitOfTIme = 100 / this.initialTime[0];
   timeInSeconds: any;
-
+  remainingTime: any = 0;
+  timeInMinut: any;
+  overTime: any = false;
   constructor(public favService: FavoriteService,
     public router: Router,
+    private videoService: VideoService,
     public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.getList();
-    this.timerService.getCountdownTimer().subscribe(data => {
-      this.countDown = data;
-      console.log(this.countDown);
-      this.timeInSeconds = this.countDown * 60 + 's';
-      this.waterpx = this.waterpx - this.UnitOfTIme;
-      this.waterPxCountdown = this.waterpx + "px";
-    });
+    if (localStorage.getItem('screenTimeLimit')) {
+      this.timerService.getCountdownTimer().subscribe(data => {
+        this.countDown = data + "min";
+        if (localStorage.getItem('screenTimeLimit') == "Off") {
+          this.countDown = "Off";
+        }
+        if (data == 1) {
+          this.overTime = true;
+          this.api.pause();
+          this.api.getDefaultMedia().subscriptions.ended.subscribe();
+          this.api.currentTime = 0;
+        }
+        console.log(this.countDown);
+        this.timeInSeconds = this.countDown * 60 + 's';
+      });
+    }
   }
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
@@ -88,14 +99,17 @@ export class FavoritesComponent implements OnInit {
     }
     if (event.keyCode === KEY_CODE.Enter) {
 
-      var video = this.FavVideo[this.arrayIndex];
-      if (video) {
-        this.openNav();
-      }
+      // var video = this.FavVideo[this.arrayIndex];
+      // if (video) {
+      //   this.openNav();
+      // }
     }
     if (event.keyCode === KEY_CODE.escape_key) {
       this.close.nativeElement.focus();
       this.closeNav();
+    }
+    if (event.keyCode && this.overTime == true) {
+      this.gotoSettings();
     }
 
   }
@@ -111,10 +125,10 @@ export class FavoritesComponent implements OnInit {
     }
     if (this.downCount == 2) {
       this.myHomeBtn.nativeElement.focus();
+      this.deleteButton.nativeElement.blur();
       this.color = 1;
       this.btnIndex = -1;
       this.arrayIndex = 76764532734;
-      // this.downCount = 0;
     }
     if (this.downCount == 3) {
       this.goToHome();
@@ -126,7 +140,8 @@ export class FavoritesComponent implements OnInit {
       this.upCount++;
     }
     if (this.upCount == 1) {
-      this.myRight.nativeElement.focus();
+      this.deleteButton.nativeElement.blur();
+      this.btnIndex = -1;
       this.arrayIndex = 0;
       this.color = 0;
       this.upCount = 0;
@@ -163,6 +178,7 @@ export class FavoritesComponent implements OnInit {
           max-width:56%;
           transform: scale(1.43);
           border-radius: 10px;
+          box-shadow: none !important;
       }
       .ngxcarousel-inner {
         height: 500px;
@@ -189,18 +205,37 @@ export class FavoritesComponent implements OnInit {
       easing: 'ease'
     }
   }
-  openNav() {
+  sourceUrl: any;
+  openNav(url: any, videoId: any) {
+    localStorage.setItem('videoId', videoId);
+    this.videoService.startVideo(videoId).subscribe(data => {
+      console.log(data);
+    });
+    this.sourceUrl = url;
     document.getElementById("myNav").style.display = "block";
     this.isPlaying = true;
-    this.api.play();
+    this.sourceUrl.api.play();
   }
   closeNav() {
+    let timeLeft = localStorage.getItem('timeleft').match(/\d+/g).map(Number);
+    console.log(timeLeft[0]);
+    this.remainingTime = timeLeft[0] * 60 - this.api.currentTime;
+    this.timeInMinut = Math.round(this.remainingTime / 60);
+    console.log(this.timeInMinut);
+    localStorage.setItem('timeleft', this.timeInMinut + "" + "Minutes");
+    let obj = new Object();
+    obj['videoId'] = localStorage.getItem('videoId');
+    obj['kidId'] = localStorage.getItem('kidId');
+    obj['endedAtSeconds'] = this.remainingTime;
+    console.log(obj);
+    this.videoService.EndVideo(obj).subscribe(data => {
+      console.log(data);
+    });
     document.getElementById("myNav").style.display = "none";
     this.api.pause();
-    this.videoItem = "";
+    this.sourceUrl = "";
     this.api.getDefaultMedia().subscriptions.ended.subscribe();
-    this.videoIndex++;
-    this.nextVideo();
+    this.api.currentTime = 0;
   }
   getList() {
     var kidId = localStorage.getItem('kidId');
@@ -209,19 +244,13 @@ export class FavoritesComponent implements OnInit {
       this.spinnerService.hide();
       this.Favorites = data.favorites;
       var subCard = [];
-      var videoTemp = [];
-      var favVideoArr = [];
       var temp = [];
       for (var index = 0; index < this.Favorites.length; index++) {
-        subCard = [{ 'id': this.Favorites[index].id, 'duration': this.Favorites[index].duration, 'imgUrl': this.VideoImageUrl(this.Favorites[index].id), 'Title': this.Favorites[index].title }];
-        favVideoArr = [this.videoURL(this.Favorites[index].formats, this.Favorites[index].id)];
+        subCard = [{ 'id': this.Favorites[index].id, 'videourl': this.videoURL(this.Favorites[index].formats, this.Favorites[index].id), 'duration': this.Favorites[index].duration, 'imgUrl': this.VideoImageUrl(this.Favorites[index].id), 'Title': this.Favorites[index].title }];
         temp.push(subCard);
-        videoTemp.push(favVideoArr);
       }
       this.FavVideo = temp;
       console.log(this.FavVideo);
-      this.FavVideoArray = videoTemp;
-      console.log(this.FavVideoArray);
     },
       Error => {
         this.spinnerService.hide();
@@ -289,15 +318,7 @@ export class FavoritesComponent implements OnInit {
   onPlayerReady(api: VgAPI) {
     this.api = api;
     this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe();
-    this.api.getDefaultMedia().subscriptions.ended.subscribe(this.nextVideo.bind(this));
-  }
-  nextVideo() {
-    if (this.videoIndex === this.FavVideoArray.length) {
-      this.videoIndex = 0;
-    }
-    this.videoItem = this.FavVideoArray[this.videoIndex];
-    console.log(this.videoItem);
-    this.api.getDefaultMedia().currentTime = 0;
+    this.api.getDefaultMedia().subscriptions.ended.subscribe();
   }
   deleteFav(id: any) {
     console.log(id);
@@ -325,6 +346,9 @@ export class FavoritesComponent implements OnInit {
   }
   goToHome() {
     this.router.navigate(['./']);
+  }
+  gotoSettings() {
+    this.router.navigate(['./settings']);
   }
 
 }

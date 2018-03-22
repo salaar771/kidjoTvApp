@@ -1,4 +1,9 @@
 <section class="videos-filter-1">
+
+    <div *ngIf="ageGate">
+        <app-age-gate></app-age-gate>
+    </div>
+
     <div class="video-filter-top" (click)="goToHome()" #home>
         <img src="assets/svgs/navigation_folder_top.svg">
         <h3 [ngClass]="{'homeFocus':1==homeColor}">Videos</h3>

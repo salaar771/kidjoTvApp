@@ -143,18 +143,8 @@
     font-family: bree;
     font-size: 14px;
 }
-.books-card .caption{
-    padding: 0em;
-    background: red;
-    position: absolute;
-    top: 86%;
-    left: 6%;
-    right: 0;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    color: #fff;
-    font-family: bree;
-    text-align: left;
+.caption{
+
 }
 .caption p{
     padding: 8px;
@@ -163,6 +153,9 @@
     font-size: 10px;
     font-weight: 500 !important;
     font-family: "Bree Font";
+    color: white;
+    background-color: red;
+    margin-top: -2%;
 }
 .fav-btn{    
     position: absolute;
@@ -335,8 +328,8 @@ border-radius: 50px !important;
     -webkit-transform: scale(1.4); /* Safari 3-8 */
     transform: scale(1.4); 
 }
-.imgActive.caption p{
-    font-size: 10px;
+ img:focus{
+    border: 2px solid blue;
 }
 .subCard{
     box-shadow: inset 0 0 0 7px #fff,

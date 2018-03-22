@@ -59,6 +59,7 @@ export enum KEY_CODE {
 })
 export class HomeComponent implements OnInit {
   countDown;
+  @ViewChild('overtime') OverTimeError: ElementRef;
   @ViewChild('setting') mySettingsBtn: ElementRef;
   @ViewChild('favorite') myFavBtn: ElementRef;
   @ViewChild('previous') myLeft: ElementRef;
@@ -86,40 +87,34 @@ export class HomeComponent implements OnInit {
   upCount = 0;
   Favcolor: any = 0;
   settingsColor: any = 0;
-  // walkThrough: any = false;
   settingsUpCount: any = 0;
   public carouselTile: NgxCarousel;
   FavIndex: any = 0;
 
-  waterpx: any = "100";
-  waterPxCountdown: any = "100px";
-  initialTime: any = 0;
-
-  UnitOfTIme = 0;
   timeInSeconds: any;
-
+  overTime: any = false;
   constructor(public refreshweb: RefreshWebService,
 
     public router: Router,
     public timerService: TimerService,
     private spinnerService: Ng4LoadingSpinnerService) {
-
-    if (localStorage.getItem('screenTimeLimit') !== null) {
-      this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
-      this.UnitOfTIme = 100 / this.initialTime[0];
-    } else {
-      localStorage.setItem('screenTimeLimit', '1');
-      this.initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
-      this.UnitOfTIme = 100 / this.initialTime;
-    }
-
     this.refreshWeb();
-    this.timerService.getCountdownTimer().subscribe(data => {
-      this.countDown = data;
-      this.timeInSeconds = this.countDown * 60 + 's';
-      // this.waterpx = this.waterpx - this.UnitOfTIme;
-      // this.waterPxCountdown = this.waterpx + "px";
-    });
+    if (localStorage.getItem('screenTimeLimit')) {
+      this.timerService.getCountdownTimer().subscribe(data => {
+        console.log(data);
+        localStorage.setItem('timeleft', data);
+        this.countDown = data + "" + "min";
+        console.log(this.countDown);
+        if (localStorage.getItem('screenTimeLimit') == "Off") {
+          this.countDown = "Off";
+        }
+        if (data == 1) {
+          console.log("test");
+          this.overTime = true;
+        }
+        this.timeInSeconds = this.countDown * 60 + 's';
+      });
+    }
 
   }
 
@@ -145,6 +140,10 @@ export class HomeComponent implements OnInit {
       var folder = this.folders[this.arrayIndex];
       this.goToVideoPage(folder[0].id, folder[0].imgUrl, folder[0].color);
 
+    }
+    if (event.keyCode && this.overTime == true) {
+      this.OverTimeError.nativeElement.focus()
+      this.goToSettingsPage();
     }
 
   }
@@ -255,6 +254,10 @@ export class HomeComponent implements OnInit {
         ngx-tile.item {
           margin-left: 30px;
         }
+        .ngxcarousel-items {
+          top: 53px;
+          left:4%;
+        }
         @media(max-width:812px)
         {
           ngx-tile.item {
@@ -263,17 +266,18 @@ export class HomeComponent implements OnInit {
           .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item{
             width : 27% !important;
           }
+          .ngxcarousel-items {
+            left:10%;
+          }
           
         }
         .tile {
           width: 60%;
           border-radius: 18px;
           transform: scale(1);
+          box-shadow: none !important;
         }
-        .ngxcarousel-items {
-          top: 53px;
-          left:1%;
-        }
+      
         @media (min-width: 992px){
           .ngxcarouselxUMiWG > .ngxcarousel > .ngxcarousel-inner > .ngxcarousel-items > .item {
             width: 27% !important;
@@ -317,10 +321,8 @@ export class HomeComponent implements OnInit {
 
   }
   GetCard() {
-    this.obj = localStorage.getItem('kidId');
-    this.obj = localStorage.getItem('premiumActive');
     this.spinnerService.show();
-    this.refreshweb.GetCard(this.obj).subscribe(data => {
+    this.refreshweb.GetCard().subscribe(data => {
       this.spinnerService.hide();
       this.cards = data.cards;
       var tempData = [];
@@ -372,11 +374,7 @@ export class HomeComponent implements OnInit {
   goToSettingsPage() {
     this.router.navigate(['./settings']);
   }
-  // showWalkthrough() {
-  //   this.walkThrough = true;
+  // gotoAge() {
+  //   this.router.navigate(['./age']);
   // }
-  // hideWalkthrough() {
-  //   this.walkThrough = false;
-  // }
-
 }

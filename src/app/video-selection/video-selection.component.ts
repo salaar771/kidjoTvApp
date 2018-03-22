@@ -40,6 +40,7 @@ export class VideoSelectionComponent implements OnInit {
   videoArray: any[] = [];
   sources: Array<Object>;
   api: VgAPI;
+  @ViewChild('overtime') OverTimeError: ElementRef;
   @ViewChild('video') openVideo: ElementRef;
   @ViewChild('deletebtn') deleteButton: ElementRef;
   @ViewChild('favbtn') FavouriteButton: ElementRef;
@@ -64,11 +65,10 @@ export class VideoSelectionComponent implements OnInit {
   currentSlide: any;
   success: any = false;
   beforeFavCall: any = true;
-  waterpx: any = "100";
-  waterPxCountdown: any = "100px";
-  initialTime = localStorage.getItem('screenTimeLimit').match(/\d+/g).map(Number);
-  UnitOfTIme = 100 / this.initialTime[0];
+  remainingTime: any = 0;
+  timeInMinut: any;
   timeInSeconds: any;
+  overTime: any = false;
   constructor(private route: ActivatedRoute,
     private videoService: VideoService,
     public favService: FavoriteService,
@@ -83,12 +83,26 @@ export class VideoSelectionComponent implements OnInit {
       this.idss = +params['id'];
     });
     this.getSubCard();
+    if (localStorage.getItem('screenTimeLimit')) {
+      this.Time();
+    }
+  }
+  Time() {
     this.timerService.getCountdownTimer().subscribe(data => {
-      this.countDown = data;
+      this.countDown = data + "min";
+      if (localStorage.getItem('screenTimeLimit') == "Off") {
+        this.countDown = "Off";
+      }
+      // this.countDown = this.countDown - this.timeInMinut;
+      if (data == 1) {
+        this.overTime = true;
+        this.api.pause();
+        this.api.getDefaultMedia().subscriptions.ended.subscribe();
+        this.api.currentTime = 0;
+      }
       console.log(this.countDown);
       this.timeInSeconds = this.countDown * 60 + 's';
-      this.waterpx = this.waterpx - this.UnitOfTIme;
-      this.waterPxCountdown = this.waterpx + "px";
+
     });
   }
   @HostListener('window:keyup', ['$event'])
@@ -107,12 +121,13 @@ export class VideoSelectionComponent implements OnInit {
 
     }
     if (event.keyCode === KEY_CODE.Enter) {
-
-
     }
     if (event.keyCode === KEY_CODE.escape_key) {
       this.close.nativeElement.focus();
       this.closeNav();
+    }
+    if (event.keyCode && this.overTime == true) {
+      this.goToSettingsPage();
     }
 
   }
@@ -205,26 +220,17 @@ export class VideoSelectionComponent implements OnInit {
   GoLeft() {
     --this.arrayIndex;
     this.openVideo.nativeElement.focus();
-
-    --this.videoIndex;
     this.FavouriteButton.nativeElement.blur();
-    this.nextVideo();
     if (this.arrayIndex == -1) {
       this.arrayIndex = 0;
-      this.videoIndex = 0;
-      this.nextVideo();
     }
   }
   GoRight() {
     ++this.arrayIndex;
     this.openVideo.nativeElement.focus();
-
-    ++this.videoIndex;
     this.FavouriteButton.nativeElement.blur();
-    this.nextVideo();
     if (this.arrayIndex == this.video.length - 3) {
       this.arrayIndex = 0;
-      this.videoIndex = 0;
     }
   }
   ngOnInit() {
@@ -243,6 +249,7 @@ export class VideoSelectionComponent implements OnInit {
           max-width:80%;
           transform: scale(1.3);
           border-radius: 10px;
+          box-shadow:none !important;
       }
       
       .ngxcarousel-inner {
@@ -297,25 +304,14 @@ export class VideoSelectionComponent implements OnInit {
       this.spinnerService.hide();
       this.cards = data.subcards;
       var subCard = [];
-      var subCardArray = [];
       var temp = [];
-      var arrayTemp = [];
       for (var index = 0; index < this.cards.length; index++) {
-        subCard = [{ 'id': this.cards[index].id, 'duration': this.cards[index].duration, 'imgUrl': this.VideoImageUrl(this.cards[index].id), 'Title': this.cards[index].title }];
-        subCardArray = [this.videoURL(this.cards[index].formats, this.cards[index].id)];
+        subCard = [{ 'id': this.cards[index].id, 'videourl': this.videoURL(this.cards[index].formats, this.cards[index].id), 'duration': this.cards[index].duration, 'imgUrl': this.VideoImageUrl(this.cards[index].id), 'Title': this.cards[index].title }];
+
         temp.push(subCard);
-        arrayTemp.push(subCardArray);
       }
       this.video = temp;
-      console.log("testing urls");
       console.log(this.video);
-      console.log("testing urls failed");
-      // this.FavouritesArray = this.video;
-      this.videoArray = arrayTemp;
-
-      console.log(this.videoArray);
-      this.videoItem = this.videoArray[this.videoIndex];
-      console.log(this.videoItem);
     },
       Error => {
         this.spinnerService.hide();
@@ -378,22 +374,38 @@ export class VideoSelectionComponent implements OnInit {
     } else if (this.innerheigth <= 768 && this.innerheigth >= 360) {
       this.bucketName = 'tablet-s';
     }
-    console.log(url);
     return url + this.bucketName + '/' + id + '.png';
   }
-  openNav() {
-
+  sourceUrl: any;
+  openNav(url: any, videoId: any) {
+    localStorage.setItem('videoId', videoId);
+    this.videoService.startVideo(videoId).subscribe(data => {
+      console.log(data);
+    });
+    this.sourceUrl = url;
     document.getElementById("myNav").style.display = "block";
     this.isPlaying = true;
-    this.api.play();
   }
   closeNav() {
+    let timeLeft = localStorage.getItem('timeleft').match(/\d+/g).map(Number);
+    console.log(timeLeft[0]);
+    this.remainingTime = timeLeft[0] * 60 - this.api.currentTime;
+    this.timeInMinut = Math.round(this.remainingTime / 60);
+    console.log(this.timeInMinut);
+    localStorage.setItem('timeleft', this.timeInMinut + "" + "Minutes");
+    let obj = new Object();
+    obj['videoId'] = localStorage.getItem('videoId');
+    obj['kidId'] = localStorage.getItem('kidId');
+    obj['endedAtSeconds'] = this.remainingTime;
+    console.log(obj);
+    this.videoService.EndVideo(obj).subscribe(data => {
+      console.log(data);
+    });
     document.getElementById("myNav").style.display = "none";
     this.api.pause();
-    this.videoItem = "";
+    this.sourceUrl = "";
     this.api.getDefaultMedia().subscriptions.ended.subscribe();
-    this.videoIndex++;
-    this.nextVideo();
+    this.api.currentTime = 0;
   }
 
   addToFav(id: any) {
@@ -448,19 +460,15 @@ export class VideoSelectionComponent implements OnInit {
     }
   }
   onPlayerReady(api: VgAPI) {
+    console.log("test");
     this.api = api;
     this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe();
     this.api.getDefaultMedia().subscriptions.ended.subscribe();
   }
-  nextVideo() {
-    if (this.videoIndex === this.videoArray.length) {
-      this.videoIndex = 0;
-    }
-    this.videoItem = this.videoArray[this.videoIndex];
-    console.log(this.videoItem);
-    this.api.getDefaultMedia().currentTime = 0;
-  }
   goToHome() {
     this.router.navigate(['./']);
+  }
+  goToSettingsPage() {
+    this.router.navigate(['./settings']);
   }
 }

@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 import { Headers, RequestOptions } from "@angular/http";
+import { URLSearchParams } from '@angular/http'
 import { BlockUIService } from "../blockui/index";
 import { ResponseError, Refresh } from "../../entities/index";
 import * as shajs from 'sha.js';
@@ -78,7 +79,6 @@ export class RESTConnectorService {
         url = this.Url + url;
         this.blockUiService.startBlock();
         var body = obj;
-        console.log(body);
         const headers = this.getHeader(contentType);
         let options = new RequestOptions({ headers: headers });
         // alert();
@@ -91,9 +91,25 @@ export class RESTConnectorService {
     }
     httpGetWeb(url: string, contentType: string) {
         url = this.Url + url;
+        console.log(url);
         this.blockUiService.startBlock();
+        let params: URLSearchParams = new URLSearchParams();
+        params.set('kidId', localStorage.getItem('kidId'));
         const headers = this.getHeader(contentType);
         let options = new RequestOptions({ headers: headers });
+        options.search = params;
+        return this.http.get(url, options)
+            .map((response: Response) =>
+                this.parseResponse(response, this.blockUiService, true)
+            )
+            .catch((error) => this.handleError(error, this.blockUiService, true));
+    }
+    httpGetWithParameter(url: string, obj: any, contentType: string) {
+        url = this.Url + url;
+        console.log(url);
+        this.blockUiService.startBlock();
+        const headers = this.getHeader(contentType);
+        let options = new RequestOptions({ headers: headers, search: obj });
         return this.http.get(url, options)
             .map((response: Response) =>
                 this.parseResponse(response, this.blockUiService, true)
@@ -101,7 +117,7 @@ export class RESTConnectorService {
             .catch((error) => this.handleError(error, this.blockUiService, true));
     }
     private parseResponse(response: Response, blockUiService: BlockUIService, blocking: Boolean) {
-        // alert();
+        console.log(response);
         if (blocking) {
             blockUiService.stopBlock();
         }

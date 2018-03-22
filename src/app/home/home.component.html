@@ -1,13 +1,13 @@
-<section class="playlist-setting" >
-  
+<section class="playlist-setting">
+  <!-- <a (click)="gotoAge()">Age</a> -->
   <div class="side-bar">
-      <p>{{countDown}}<br> min</p>
-      
+    <p>{{countDown}}</p>
+
     <div id="banner">
       <div class="fill" [ngStyle]="{ 'animation-duration': timeInSeconds  }">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
           height="300px" viewBox="0 0 100 100" enable-background="new 0 0 300 495" xml:space="preserve">
-          
+
           <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
 c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
 c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
@@ -36,21 +36,15 @@ c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
     </ngx-carousel>
   </div>
 
-  <!-- <a class="help" (click)="showWalkthrough()"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
-  <div *ngIf="walkThrough">
-    <div class="overlay">
-      <div class="keyboard-img">
-        <img src="/assets/svgs/keyboard.png">
-      </div>
-      <div class="close-btn" (click)="hideWalkthrough()">
-        <img src="/assets/svgs/close.png">
-      </div>
+  <a #overtime (click)="goToSettingsPage()">
+    <div *ngIf="overTime">
+      <app-overtime-error></app-overtime-error>
     </div>
-  </div> -->
+  </a>
 
   <div class="playlist-setting-footer " (click)="goToSettingsPage()" #setting>
     <img src="assets/svgs/navigation_settings_bottom.svg ">
     <h3 [ngClass]="{'settingFocus':1==settingsColor}">Settings</h3>
   </div>
-  
+
 </section>
