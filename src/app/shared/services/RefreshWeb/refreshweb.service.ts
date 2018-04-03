@@ -35,7 +35,6 @@ export class RefreshWebService {
         obj['premiumActive'] = localStorage.getItem('premiumActive');
         obj['limit'] = localStorage.getItem('screenTimeLimit');
         this.contentType = "application/json";
-        console.log(obj);
         let url = "/cards/getList";
         return this.restConnector.httpGetWithParameter(url, obj, this.contentType);
     }

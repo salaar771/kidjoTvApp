@@ -15,7 +15,6 @@ export class TimerService {
     }
     getCountdownTimer() {
         if (this.leftTime == "" && this.timer == "Off") {
-            console.log("test");
             this.numbers = 2;
             this.counter = this.numbers;
             const timeInSecond$ = Observable.timer(0, 60000)
@@ -25,7 +24,6 @@ export class TimerService {
             return this.countDown;
         }
         if (this.leftTime == "") {
-            console.log("test");
             this.timer = localStorage.getItem('screenTimeLimit');
             this.numbers = this.timer.match(/\d+/g).map(Number);
             this.counter = this.numbers;
@@ -37,7 +35,6 @@ export class TimerService {
         }
         if (localStorage.getItem('screenTimeLimit') == "Off") {
             localStorage.setItem('timeleft', "");
-            console.log("test");
             this.numbers = 2;
             this.counter = this.numbers;
             const timeInSecond$ = Observable.timer(0, 60000)
@@ -48,7 +45,6 @@ export class TimerService {
 
         }
         if (this.leftTime != 1 && this.leftTime == "") {
-            console.log("test");
             this.timer = localStorage.getItem('timeleft');
             this.numbers = this.timer.match(/\d+/g).map(Number);
             this.counter = this.numbers;

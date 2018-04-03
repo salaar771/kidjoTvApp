@@ -1,5 +1,6 @@
+
 .playlist-section{
-    background-image: url('/assets/tablet-l/background.jpg'); 
+    /* background-image: url('/assets/tablet-l/background.jpg');  */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -39,12 +40,13 @@
     top: 50%;
     left: 1%;
     font-size: 25px;
-    width: 40px;
+    width: 45px;
     text-align: center;
     color: #fff;
     font-weight: 500;
     font-family: "Bree Font";
-    z-index: 10000;
+    word-break: break-all;
+    z-index:2;
 }
 .playlist{
     position: absolute;

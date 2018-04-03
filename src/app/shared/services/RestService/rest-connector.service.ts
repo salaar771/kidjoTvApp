@@ -59,7 +59,6 @@ export class RESTConnectorService {
     }
     private parseResponseWeb(response: Response) {
         if (response.text.length == 0) {
-            console.log("Lenght is zero");
             return;
         }
         let body
@@ -69,7 +68,6 @@ export class RESTConnectorService {
         catch (e) {
             this.blockUiService.stopBlock();
             //return Observable.throw(e);
-            console.log(response);
         }
         this.blockUiService.stopBlock();
         return body;
@@ -91,7 +89,6 @@ export class RESTConnectorService {
     }
     httpGetWeb(url: string, contentType: string) {
         url = this.Url + url;
-        console.log(url);
         this.blockUiService.startBlock();
         let params: URLSearchParams = new URLSearchParams();
         params.set('kidId', localStorage.getItem('kidId'));
@@ -106,7 +103,6 @@ export class RESTConnectorService {
     }
     httpGetWithParameter(url: string, obj: any, contentType: string) {
         url = this.Url + url;
-        console.log(url);
         this.blockUiService.startBlock();
         const headers = this.getHeader(contentType);
         let options = new RequestOptions({ headers: headers, search: obj });
@@ -117,12 +113,10 @@ export class RESTConnectorService {
             .catch((error) => this.handleError(error, this.blockUiService, true));
     }
     private parseResponse(response: Response, blockUiService: BlockUIService, blocking: Boolean) {
-        console.log(response);
         if (blocking) {
             blockUiService.stopBlock();
         }
         let body = response.json();
-        console.log(body);
         return body;
     }
 }

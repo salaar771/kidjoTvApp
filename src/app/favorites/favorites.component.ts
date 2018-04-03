@@ -12,6 +12,7 @@ import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/observable/timer'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/take'
+import { routerTransition } from './../animations/index';
 
 
 
@@ -28,9 +29,12 @@ export enum KEY_CODE {
 @Component({
   selector: 'app-favorites',
   templateUrl: './favorites.component.html',
-  styleUrls: ['./favorites.component.css']
+  styleUrls: ['./favorites.component.css'],
+  animations: [routerTransition()],
+  host: { '[@routerTransition]': '' }
 })
 export class FavoritesComponent implements OnInit {
+  backgroundImgSrc: any;
   countDown: any;
   isPlaying: any = false;
   FavVideoArray: any;
@@ -65,7 +69,6 @@ export class FavoritesComponent implements OnInit {
     this.getList();
     if (localStorage.getItem('screenTimeLimit')) {
       this.timerService.getCountdownTimer().subscribe(data => {
-        console.log(data);
         this.countDown = data + "min";
         if (localStorage.getItem('screenTimeLimit') == "Off") {
           this.countDown = "Off";
@@ -76,7 +79,6 @@ export class FavoritesComponent implements OnInit {
           this.api.getDefaultMedia().subscriptions.ended.subscribe();
           this.api.currentTime = 0;
         }
-        console.log(this.countDown);
         this.timeInSeconds = this.countDown * 60 + 's';
       });
     }
@@ -205,12 +207,25 @@ export class FavoritesComponent implements OnInit {
       touch: true,
       easing: 'ease'
     }
+    this.innerheigth = window.innerHeight;
+    if (this.innerheigth <= 1440 && this.innerheigth >= 1080) {
+      this.backgroundImgSrc = "/assets/phone-l/background_day_top.jpg";
+    } else if (this.innerheigth <= 1080 && this.innerheigth >= 768) {
+      this.backgroundImgSrc = "/assets/phone-m/background_day_top.jpg";
+    } else if (this.innerheigth <= 360 && this.innerheigth >= 0) {
+      this.backgroundImgSrc = "/assets/phone-s/background_day_top.jpg";
+    } else if (this.innerheigth <= 2048 && this.innerheigth >= 1536) {
+      this.backgroundImgSrc = "/assets/tablet-l/background.jpg";
+    } else if (this.innerheigth <= 1536 && this.innerheigth >= 1440) {
+      this.backgroundImgSrc = "/assets/tablet-m/background_day_top.jpg";
+    } else if (this.innerheigth <= 768 && this.innerheigth >= 360) {
+      this.backgroundImgSrc = "/assets/tablet-s/background_day_top.jpg";
+    }
   }
   sourceUrl: any;
   openNav(url: any, videoId: any) {
     localStorage.setItem('videoId', videoId);
     this.videoService.startVideo(videoId).subscribe(data => {
-      console.log(data);
     });
     this.sourceUrl = url;
     document.getElementById("myNav").style.display = "block";
@@ -219,18 +234,14 @@ export class FavoritesComponent implements OnInit {
   }
   closeNav() {
     let timeLeft = localStorage.getItem('timeleft').match(/\d+/g).map(Number);
-    console.log(timeLeft[0]);
     this.remainingTime = timeLeft[0] * 60 - this.api.currentTime;
     this.timeInMinut = Math.round(this.remainingTime / 60);
-    console.log(this.timeInMinut);
     localStorage.setItem('timeleft', this.timeInMinut + "" + "Minutes");
     let obj = new Object();
     obj['videoId'] = localStorage.getItem('videoId');
     obj['kidId'] = localStorage.getItem('kidId');
     obj['endedAtSeconds'] = this.remainingTime;
-    console.log(obj);
     this.videoService.EndVideo(obj).subscribe(data => {
-      console.log(data);
     });
     document.getElementById("myNav").style.display = "none";
     this.api.pause();
@@ -251,7 +262,6 @@ export class FavoritesComponent implements OnInit {
         temp.push(subCard);
       }
       this.FavVideo = temp;
-      console.log(this.FavVideo);
     },
       Error => {
         this.spinnerService.hide();
@@ -322,20 +332,15 @@ export class FavoritesComponent implements OnInit {
     this.api.getDefaultMedia().subscriptions.ended.subscribe();
   }
   deleteFav(id: any) {
-    console.log(id);
     let remove = new RemoveFav();
     remove.kidId = localStorage.getItem("kidId");
     remove.videoId = id;
     this.spinnerService.show();
     let index = this.FavVideo.findIndex(a => a[0].id == id);
-    console.log(this.FavVideo);
-    console.log(index);
     if (index > -1) {
-      console.log(index);
       this.FavVideo.splice(index, 1);
     }
     this.favService.RemoveFavorite(remove).subscribe(data => {
-      console.log("test");
 
       this.spinnerService.hide();
     },

@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular
 import { Router } from '@angular/router';
 import { NgxCarousel } from 'ngx-carousel';
 import { FavoriteService } from './../shared/services/favoritesService/index';
+import { routerTransition } from "../animations/index";
 
 
 export enum KEY_CODE {
@@ -16,7 +17,9 @@ export enum KEY_CODE {
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css']
+  styleUrls: ['./settings.component.css'],
+  animations: [routerTransition()],
+  host: { '[@routerTransition]': '' }
 })
 export class SettingsComponent implements OnInit {
   @ViewChild('home') myHomeBtn: ElementRef;
@@ -405,7 +408,6 @@ export class SettingsComponent implements OnInit {
     localStorage.setItem('language', lang);
     this.selectedLanguage = lang;
     this.FavService.SetLanguage(Id).subscribe(data => {
-      console.log(data);
     });
   }
   goToHome() {

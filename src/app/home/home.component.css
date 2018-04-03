@@ -1,6 +1,6 @@
 
 .playlist-setting{
-    background-image: url('/assets/tablet-l/background_day_bottom.jpg');
+    /* background-image: url('/assets/tablet-l/background_day_bottom.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,13 +30,14 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 5%;
+    left: 1%;
     font-size: 25px;
-    width: 20px;
+    width: 45px;
     text-align: center;
     color: #fff;
     font-weight: 500;
     font-family: "Bree Font";
+    word-break: break-all;
     z-index: 2;
 }
 .playlist-icon-top{
@@ -86,21 +87,6 @@
     top: 50%;
     left: 48%;
     transform: translateX(-50%) translateY(-50%);
-}
-.img-thumbnail{
-    position: relative;
-    border: 9px solid #fff !important;
-}
-.img-thumbnail::after{
-    content: '';
-    position: absolute !important;
-    width: 20px;
-    top: 5px;
-    bottom: 5px;
-    box-shadow: 8px 0px 4px 0px #111;
-    border-radius: 10px;
-    right: 0;
-    z-index: 1;
 }
 .leftRs {
     position: absolute;
@@ -319,6 +305,7 @@ ngx-carousel{
     .rightRs{
         left: 100%;
     }
+ 
    
 }
 @media(max-width:1530px) and ( max-height:536px){
@@ -352,6 +339,17 @@ ngx-carousel{
         top: 60% !important;
     }
 }
+@media(width:823px){
+    .background-img{
+        width: 100%;
+    }
+}
+@media(width:568px){
+    .background-img{
+        width: 140%;
+    }
+}
+
 
 @media(width:768px){
     .main-card-container{

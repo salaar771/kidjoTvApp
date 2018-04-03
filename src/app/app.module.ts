@@ -9,11 +9,8 @@ import { VgControlsModule } from 'videogular2/controls';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgBufferingModule } from 'videogular2/buffering';
 import { VgStreamingModule } from 'videogular2/streaming';
-import { HotkeyModule } from 'angular2-hotkeys';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-// import { WalkthroughModule } from 'ngx-walkthrough';
-import { SlicePipe } from '@angular/common';
 
 
 
@@ -44,19 +41,17 @@ import { FolderComponent } from './folder/folder.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     SharedModule.forRoot(),
     RouterModule.forRoot(routes),
     Ng4LoadingSpinnerModule.forRoot(),
-    HotkeyModule.forRoot(),
     NgxCarouselModule,
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    VgStreamingModule,
-    BrowserAnimationsModule
-    // WalkthroughModule
+    VgStreamingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

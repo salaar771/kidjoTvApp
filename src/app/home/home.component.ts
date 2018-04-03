@@ -12,7 +12,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/timer';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
-import { transition, trigger, query, style, animate, group, animateChild } from '@angular/animations';
+import { routerTransition } from './../animations/index';
 
 
 
@@ -23,41 +23,15 @@ export enum KEY_CODE {
   Up_key = 38,
   Down_key = 40
 }
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('animRoutes', [
-      transition('* <=> *', [
-        group([
-          query(
-            ':enter',
-            [
-              style({
-                opacity: 0,
-                transform: 'translateY(9rem) rotate(-10deg)'
-              }),
-              animate(
-                '0.35s cubic-bezier(0, 1.8, 1, 1.8)',
-                style({ opacity: 1, transform: 'translateY(0) rotate(0)' })
-              ),
-              animateChild()
-            ],
-            { optional: true }
-          ),
-          query(
-            ':leave',
-            [animate('0.35s', style({ opacity: 0 })), animateChild()],
-            { optional: true }
-          )
-        ])
-      ])
-    ])
-  ]
+  animations: [routerTransition()],
+  host: { '[@routerTransition]': '' }
 })
 export class HomeComponent implements OnInit {
+  backgroundImgSrc: any;
   countDown;
   @ViewChild('overtime') OverTimeError: ElementRef;
   @ViewChild('setting') mySettingsBtn: ElementRef;
@@ -101,18 +75,16 @@ export class HomeComponent implements OnInit {
     this.refreshWeb();
     if (localStorage.getItem('screenTimeLimit')) {
       this.timerService.getCountdownTimer().subscribe(data => {
-        console.log(data);
         localStorage.setItem('timeleft', data);
         this.countDown = data + "" + "min";
-        console.log(this.countDown);
+        this.timeInSeconds = data * 60 + 's';
         if (localStorage.getItem('screenTimeLimit') == "Off") {
           this.countDown = "Off";
         }
         if (data == 1) {
-          console.log("test");
           this.overTime = true;
         }
-        this.timeInSeconds = this.countDown * 60 + 's';
+
       });
     }
 
@@ -148,7 +120,6 @@ export class HomeComponent implements OnInit {
 
   }
   onmoveFn(data) {
-    // console.log(data);
     this.currentSlide = data.currentSlide;
   }
   GoDown() {
@@ -290,16 +261,28 @@ export class HomeComponent implements OnInit {
       touch: true,
       easing: 'ease'
     }
+    this.innerheigth = window.innerHeight;
+    if (this.innerheigth <= 1440 && this.innerheigth >= 1080) {
+      this.backgroundImgSrc = "/assets/phone-l/background_day_bottom.jpg";
+    } else if (this.innerheigth <= 1080 && this.innerheigth >= 768) {
+      this.backgroundImgSrc = "/assets/phone-m/background_day_bottom.jpg";
+    } else if (this.innerheigth <= 360 && this.innerheigth >= 0) {
+      this.backgroundImgSrc = "/assets/phone-s/background_day_bottom.jpg";
+    } else if (this.innerheigth <= 2048 && this.innerheigth >= 1536) {
+      this.backgroundImgSrc = "/assets/tablet-l/background_day_bottom.jpg";
+    } else if (this.innerheigth <= 1536 && this.innerheigth >= 1440) {
+      this.backgroundImgSrc = "/assets/tablet-m/background_day_bottom.jpg";
+    } else if (this.innerheigth <= 768 && this.innerheigth >= 360) {
+      this.backgroundImgSrc = "/assets/tablet-s/background_day_bottom.jpg";
+    }
 
   }
   refreshWeb() {
 
     this.deviceId = localStorage.getItem('X-Kidjo-DeviceId');
-    // console.log("id do not exist" + this.deviceId);
     if (!this.deviceId) {
 
       this.refreshweb.RefreshWeb().subscribe(data => {
-        console.log(data);
         // this.walkThrough = true;
         this.ImageUrl = data.folderImageUrl;
         this.videoUrl = data.videoUrl;
@@ -366,15 +349,13 @@ export class HomeComponent implements OnInit {
     return url + 'folderImage' + this.bucketName + '/' + id + '.png';
   }
   goToVideoPage(id: any, url: string, color: any) {
-    this.router.navigate(['./video', id, url, color]);
+    this.router.navigate(['./video', id, url, color], { skipLocationChange: true });
   }
   goToFavPage() {
-    this.router.navigate(['./favorites']);
+    this.router.navigate(['./favorites'], { skipLocationChange: true });
   }
   goToSettingsPage() {
-    this.router.navigate(['./settings']);
+    this.router.navigate(['./settings'], { skipLocationChange: true });
   }
-  // gotoAge() {
-  //   this.router.navigate(['./age']);
-  // }
+
 }

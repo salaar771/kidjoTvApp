@@ -1,5 +1,4 @@
-<section class="playlist-setting">
-  <!-- <a (click)="gotoAge()">Age</a> -->
+<section class="playlist-setting" [style.background-image]="'url('+backgroundImgSrc+')'">
   <div class="side-bar">
     <p>{{countDown}}</p>
 
@@ -16,35 +15,39 @@ c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
     </div>
   </div>
 
-  <!-- end of animation -->
+
+
   <div class="playlist-icon-top" (click)="goToFavPage()" #favorite>
     <img src="assets/svgs/navigation_favorites_top.svg">
     <h3 [ngClass]="{'favouriteFocus':1==Favcolor}">Favourite</h3>
-  </div>
-
-  <div class="main-card-container">
-    <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
-      <ngx-tile NgxCarouselItem class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index">
-        <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)" #slider class="sliderFocus">
-          <img class="background-img" [style.background-image]="'url('+folder[0].color+')'" [ngClass]="{'imgActive':i==arrayIndex}"
-            src={{folder[0].imgUrl}}/>
-        </div>
-      </ngx-tile>
-      <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
-      <button NgxCarouselNext #next class='rightRs'>&gt;</button>
-
-    </ngx-carousel>
-  </div>
-
-  <a #overtime (click)="goToSettingsPage()">
-    <div *ngIf="overTime">
-      <app-overtime-error></app-overtime-error>
     </div>
-  </a>
 
-  <div class="playlist-setting-footer " (click)="goToSettingsPage()" #setting>
-    <img src="assets/svgs/navigation_settings_bottom.svg ">
-    <h3 [ngClass]="{'settingFocus':1==settingsColor}">Settings</h3>
-  </div>
+
+
+    <div class="main-card-container">
+      <ngx-carousel [inputs]="carouselTile" [moveToSlide]="arrayIndex" (onMove)="onmoveFn($event)">
+        <ngx-tile NgxCarouselItem class="ngxcarouselPoint" *ngFor="let folder of folders; let i = index">
+          <div (click)="goToVideoPage(folder[0].id,folder[0].imgUrl,folder[0].color)" #slider class="sliderFocus">
+            <img class="background-img" [style.background-image]="'url('+folder[0].color+')'" [ngClass]="{'imgActive':i==arrayIndex}"
+              src={{folder[0].imgUrl}}/>
+          </div>
+        </ngx-tile>
+        <button NgxCarouselPrev #previous class='leftRs'>&lt;</button>
+        <button NgxCarouselNext #next class='rightRs'>&gt;</button>
+      </ngx-carousel>
+    </div>
+
+    <a #overtime (click)="goToSettingsPage()">
+      <div *ngIf="overTime">
+        <app-overtime-error></app-overtime-error>
+      </div>
+    </a>
+
+
+
+    <div class="playlist-setting-footer " (click)="goToSettingsPage()" #setting>
+      <img src="assets/svgs/navigation_settings_bottom.svg ">
+      <h3 [ngClass]="{'settingFocus':1==settingsColor}">Settings</h3>
+    </div>
 
 </section>

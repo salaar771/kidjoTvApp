@@ -1,3 +1,4 @@
+
 .books-section{
     height: 100vh;
     background-color:lightsteelblue;
@@ -11,7 +12,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url('/assets/tablet-l/background_day_bottom.png');
+    /* background-image: url('/assets/tablet-l/background_day_bottom.png'); */
     background-size: cover;
     filter: blur(40px);
     background-repeat: no-repeat;
@@ -33,14 +34,15 @@
 .side-bar p{
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 1%;
     font-size: 25px;
     transform: translateY(-50%);
-    width: 20px;
+    width: 45px;
     text-align: center;
     color: #fff;
     font-weight: 500;
     font-family: "Bree Font";
+    word-break: break-all;
     z-index: 2;
 }
 .books{
@@ -210,7 +212,6 @@ span.imgActive {
     top: 59% !important;
     left: -11% !important;
 }
-
 .activeImg{
     max-width: 100%;
     border-top-left-radius: 10px;
@@ -430,6 +431,8 @@ and (orientation: landscape) {
     .rightRs{
         right: -80% !important;
         top: -44% !important;
+        width: 4%;
+        height: 8%;
     }
     .side-bar p{
         font-size: 20px;
@@ -441,6 +444,7 @@ and (orientation: landscape) {
         transform: scale(.6) translate(-50%);
         top: -20px;
     }
+  
     .activeImg{
         width: 249px !important;
     }
@@ -450,6 +454,49 @@ and (orientation: landscape) {
     .imgActive.Duration{
         margin-top: -7%;
     }
+
+}
+@media(min-width:815px) and (max-width:987px){
+    .activeImg{
+        width: 135px !important;
+    }
+    .caption p{
+        width: 72%;
+    }
+    .imgActive{
+        transform: scale(1.2);
+    }
+    .Duration{
+        top: 52%;
+    }
+    span.imgActive{
+        top: 37% !important;
+        left: -1% !important;
+    }
+    .main-books-container{
+        top: 68%;
+    }
+    .fav-btn{
+        left: 40%;
+    }
+    #button-fav{
+        width: 85px;
+        height: 27px;
+    }
+    @media(width:823px){
+        .caption p{
+            width: 74%;
+        }
+        .fav-btn p{
+            margin-left: 5%;
+        }
+    }
+    /* @media(width:1366px){
+        .books img{
+            max-width: 255px;
+        }
+    } */
+    
 }
 
 
